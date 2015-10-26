@@ -1,0 +1,270 @@
+/**
+ * Static methods for the Player API
+ * @namespace {Class} Player
+ * @example Player.methodName([ arg1[, arg2[, ...argN] ] ]);
+ */
+
+/**
+ * @memberof Player
+ */
+function addItemCreativeInv(int1, int2, int3) {}
+
+/**
+ * Add a specified `quantity` of a specified item or block `id` to the player's inventory.
+ * @memberof Player
+ * @param {int} id       - the item or block ID
+ * @param {int} quantity - how much to add
+ * @param {int} damage   - the damage value of the item
+ * @example
+ * // sticks anyone?
+ * addItemInventory(280, 64, 0);
+ */
+function addItemInventory(id, quantity, damage) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function addExp(int) {}
+
+/**
+ * @memberof Player
+ */
+function canFly() {}
+
+/**
+ * @memberof Player
+ */
+function clearInventorySlot(int_) {}
+
+/**
+ * @memberof Player
+ */
+function getArmorSlot(int_) {}
+
+/**
+ * @memberof Player
+ */
+function getArmorSlotDamage(int_) {}
+
+/**
+ * gci
+ * @memberof Player
+ * @return {number} id
+ */
+function getCarriedItem() {}
+
+/**
+ * gcic
+ * @memberof Player
+ * @return {number} quantity
+ */
+function getCarriedItemCount() {}
+
+/**
+ * gcid
+ * @memberof Player
+ * @return {string} data
+ */
+function getCarriedItemData() {}
+
+/**
+ * @memberof Player
+ */
+function getDimension() {}
+
+/**
+ * return the player's native entity id (*NOT* the same as {@link EntityType})
+ * @memberof Player
+ * @return {number} the player's entity id
+ * @example
+ * // suicide is painless...
+ * Entity.setHealth(Player.getEntity(), 0);
+ * @see {@link Entity.getYaw} for a more detailed example
+ */
+function getEntity() {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function getExhaustion() {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function getExp() {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function getHunger() {}
+
+/**
+ * @memberof Player
+ */
+function getInventorySlot(int_) {}
+
+/**
+ * @memberof Player
+ */
+function getInventorySlotCount(int_) {}
+
+/**
+ * @memberof Player
+ */
+function getInventorySlotData(int_) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function getLevel() {}
+
+/**
+ * @memberof Player
+ */
+function getName(Object_) {}
+
+/**
+ * @memberof Player
+ */
+function getPointedBlockData() {}
+
+/**
+ * @memberof Player
+ */
+function getPointedBlockId() {}
+
+/**
+ * @memberof Player
+ */
+function getPointedBlockSide() {}
+
+/**
+ * @memberof Player
+ */
+function getPointedBlockX() {}
+
+/**
+ * @memberof Player
+ */
+function getPointedBlockY() {}
+
+/**
+ * @memberof Player
+ */
+function getPointedBlockZ() {}
+
+/**
+ * @memberof Player
+ */
+function getPointedEntity() {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function getSaturation() {}
+
+/**
+ * @memberof Player
+ */
+function getSelectedSlotId() {}
+
+/**
+ * return the player's current x coordinate
+ * @memberof Player
+ * @return {number} the player's x coordinate
+ * @example
+ * var x = Math.round(Player.getX());
+ * ModPE.showTipMessage("Your X coordinate is: " + x);
+ */
+function getX() {}
+
+/**
+ * return the player's current y coordinate
+ * @memberof Player
+ * @return {number} the player's y coordinate
+ * @example
+ * var y = Math.round(Player.getY());
+ * ModPE.showTipMessage("Your Y coordinate is: " + y);
+ */
+function getY() {}
+
+/**
+ * return the player's current z coordinate
+ * @memberof Player
+ * @return {number} the player's z coordinate
+ * @example
+ * var z = Math.round(Player.getZ());
+ * ModPE.showTipMessage("Your Z coordinate is: " + z);
+ */
+function getZ() {}
+
+/**
+ * @memberof Player
+ */
+function isFlying() {}
+
+/**
+ * @memberof Player
+ */
+function isPlayer(Object_) {}
+
+/**
+ * @memberof Player
+ */
+function setArmorSlot(int1, int2, int3) {}
+
+/**
+ * @memberof Player
+ */
+function setCanFly(boolean_) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function setExhaustion(double) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function setExp(double) {}
+
+/**
+ * @memberof Player
+ */
+function setFlying(boolean_) {}
+
+/**
+ * @memberof Player
+ */
+function setHealth(int_) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function setHunger(double) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function setLevel(int) {}
+
+/**
+ * BL 1.10.4-beta
+ * @memberof Player
+ */
+function setSaturation(double) {}
+
+/**
+ * @memberof Player
+ */
+function setSelectedSlotId(int_) {}

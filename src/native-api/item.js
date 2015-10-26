@@ -1,0 +1,190 @@
+/**
+ * Static methods for the Item API
+ * @namespace {Class} Item
+ * @example Item.methodName([ arg1[, arg2[, ...argN] ] ]);
+ */
+
+/**
+ * add a new crafting recipe
+ * @memberof Item
+ * @param {int} id            - the `id` of the item to make
+ * @param {int} quantity      - the `quantity` of items to produce
+ * @param {int} damage        - the `damage` value of the new item
+ * @param {int[]} ingredients - the items required to complete the recipe (max 9)
+ *                              as an array: `[id1, qty1, dmg1, id2, qty2, dmg2, ...]`
+ * @example
+ * // make a diamond sword from 1 coal [263, 1, 0] and 3 torches [50, 3, 0]
+ * var ingredients = [
+ *   263, 1, 0,
+ *   50, 3, 0
+ * ];
+ * Item.addCraftRecipe(276, 1, 0, ingredients);
+ */
+function addCraftRecipe(id, quantity, damge, ingredients) {}
+
+/**
+ * add a new smelting recipe
+ * @memberof Item
+ * @param {int} id     - the `id` of the item to make
+ * @param {int} damage - the `damage` value of the new item
+ * @param {int} source - the `source` ingredient
+ * @example
+ * // make a diamond sword from a stick
+ * Item.addFurnaceRecipe(276, 0, 280);
+ */
+function addFurnaceRecipe(id, damge, source) {}
+
+/**
+ * add a new smelting recipe
+ * @memberof Item
+ * @param {int} id            - the `id` of the item to make
+ * @param {int} quantity      - the `quantity` of items to produce
+ * @param {int} damage        - the `damage` value of the new item
+ * @param {string[]} keys     - the layout of the ingredient `keys`
+ * @param {Array} ingredients - the `ingredients`
+ * @see Original shaped recipe script by {@link https://goo.gl/ApLbnm|500 Internal Server Error}
+ * @example
+ * // make an enchantment table
+ * var ENCHANTMENT_TABLE_ID = 240;
+ * var currentWorkbenchX
+ * var currentWorkbenchY
+ * var currentWorkbenchZ;
+ * // define the table block with the textures in the following order: bottom, top, south, north, west, east
+ * // in this case, the side textures are the same, and the top/bottom textures are different.
+ * Block.defineBlock(
+ *   ENCHANTMENT_TABLE_ID, "Enchantment Table",
+ *   [
+ *     ["enchanting_table_bottom", 0],
+ *     ["enchanting_table_top", 0],
+ *     ["enchanting_table_side", 0],
+ *     ["enchanting_table_side", 0],
+ *     ["enchanting_table_side", 0],
+ *     ["enchanting_table_side", 0]
+ *   ]
+ * );
+ * Block.setShape(ENCHANTMENT_TABLE_ID, 0, 0, 0, 1, 3/4, 1);
+ * Block.setDestroyTime(ENCHANTMENT_TABLE_ID, 1);
+ *
+ * // add the shaped recipe to build the table
+ * Item.addShapedRecipe(
+ *   // the item we're making
+ *   ENCHANTMENT_TABLE_ID, 1, 0,
+ *   // the keys in the shape of the recipe
+ *   [
+ *     " b ",
+ *     "dod",
+ *     "ooo"
+ *   ],
+ *   //specify what each character represents. b = book, d = diamond, o = obsidian
+ *   [
+ *     "b", 340, 0,
+ *     "d", 264, 0,
+ *     "o", 49, 0
+ *   ]
+ * );
+ */
+function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
+
+/**
+ * define custom armor
+ * @memberof Item
+ * @param {int}    id           - the new item `id` (see: {@link Reference.ItemIds})
+ * @param {string} iconName     - the name of the icon to use for this item
+ * @param {int}    iconIndex    - the index of the icon to use for this item
+ * @param {string} name         - the name of the new armor item
+ * @param {string} texture      - the texture to use for this item
+ * @param {int}    damageReduce - how much damage is taken when hit
+ * @param {int}    maxDamage    - the maximum amount of damage the item can sustain
+ * @param {int}    type         - the `type` of armor this item is
+ * @see Original armor script by {@link https://goo.gl/sTc5jr|500 Internal Server Error}
+ * @example
+ * // WOOT! Zombie armor!
+ * Item.defineArmor(
+ *   410, "empty_armor_slot_helmet", 0, "Zombie mask",
+ *   "mob/zombie.png", 1, 10, ArmorType.helmet
+ * );
+ * Item.defineArmor(
+ *   411, "empty_armor_slot_chestplate", 0, "Zombie shirt",
+ *   "mob/zombie.png", 1, 10, ArmorType.chestplate
+ * );
+ * Item.defineArmor(
+ *   412, "empty_armor_slot_leggings", 0, "Zombie pants",
+ *   "mob/zombie.png", 1, 10, ArmorType.leggings
+ * );
+ * Item.defineArmor(
+ *   413, "empty_armor_slot_boots", 0, "Zombie shoes",
+ *   "mob/zombie.png", 1, 10, ArmorType.boots
+ * );
+ * function procCmd(cmd) {
+ *   if (cmd == "zombiegear") {
+ *     addItemInventory(411, 1);
+ *     addItemInventory(412, 1);
+ *     addItemInventory(413, 1);
+ *     addItemInventory(414, 1);
+ *   }
+ * }
+ */
+function defineArmor( id, iconName, iconIndex, name, texture, damageReduce, maxDamage, type) {}
+
+/**
+ * return the name of an item
+ * @memberof Item
+ * @param {int} id      - the item `id`
+ * @param {int} damage  - the `damage` value of the item
+ * @param {boolean} raw - if the returned data should be in the `raw` form
+ * @return {string} the item name
+ * @example
+ * // get data in raw form
+ * clientMessage(Item.getName(263, 0, true)); // prints "item.coal.name"
+ * // get data in normal form
+ * clientMessage(Item.getName(263, 0, false)); // prints "Coal"
+ */
+function getName(id, damage, raw) {}
+
+/**
+ * determine if an item is valid
+ * @memberof Item
+ * @param {int} id - the item `id`
+ * @return {boolean} true if the item is valid, false otherwise
+ * @example
+ * // see if coal is a valid item
+ * if (Item.isValidItem(263)) {
+ *   clientMessage("Yay, let's make torches!");
+ * }
+ */
+function isValidItem(id) {}
+
+/**
+ * set the category for an item which will determine where it appears in the
+ * crafting table interface
+ * @memberof Item
+ * @param {int} id       - the `id` of the item to change
+ * @param {int} category - the new `category` the item will be assigned to
+ * @example
+ * Item.setCategory(263, ItemCategory.FOOD);
+ * @see {@link ItemCategory}
+ */
+function setCategory(id, category) {}
+
+/**
+ * set an item to render as a tool
+ * @memberof Item
+ * @param {int} id      - the item `id`
+ * @param {boolean} set - whether or not the item should be `set` as hand equipped
+ * @example
+ * var MY_CUSTOM_ITEM_ID = 220;
+ * Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);
+ */
+function setHandEquipped(id, set) {}
+
+/**
+ * set the amount of damage an item can sustain when used (i.e. the number of
+ * times it can be used before it breaks)
+ * @memberof Item
+ * @param {int} id     - the item `id`
+ * @param {int} damage - the maximum `damage`
+ * @example
+ * // who says wooden pick azes are useless?
+ * Item.setMaxDamage(270, 10000);
+ */
+function setMaxDamage(id, damage) {}
