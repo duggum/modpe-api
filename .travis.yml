@@ -1,5 +1,4 @@
 sudo: false
-script: bash ./deploy.sh
 env:
   global:
   - GH_REF: github.com/duggum/modpe-api.git
@@ -11,3 +10,4 @@ node_js:
 before_install: npm install -g grunt-cli
 install: npm install
 before-script: grunt jsdoc
+script: bash ./deploy.sh

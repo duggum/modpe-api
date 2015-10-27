@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
   "use strict";
   var config = {
-
     jsdoc: {
       dist: {
         src: [ "./src" ],
