@@ -1,1 +1,3 @@
 .editorconfig
+.travis.yml
+deploy.sh
