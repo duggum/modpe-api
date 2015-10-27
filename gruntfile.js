@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   "use strict";
   var config = {
-    pkg: grunt.file.readJSON("package.json"),
+
     jsdoc: {
       dist: {
         src: [ "./src" ],
@@ -14,6 +14,6 @@ module.exports = function(grunt) {
     }
   };
   grunt.initConfig(config);
-  grunt.registerTask("default", ["jsdoc"]);
   grunt.loadNpmTasks("grunt-jsdoc");
+  grunt.registerTask("default", ["jsdoc"]);
 };
