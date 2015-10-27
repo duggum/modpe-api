@@ -10,6 +10,7 @@ set -e # exit with nonzero exit code if anything fails
 echo "Initialize repo . . ."
 cd jsdoc
 git init
+cp ../README.md .
 
 # inside this git repo we'll pretend to be a new user
 git config user.name "Travis CI"
