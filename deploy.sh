@@ -10,7 +10,12 @@ set -e # exit with nonzero exit code if anything fails
 echo "Initialize repo . . ."
 cd jsdoc
 git init
-cp ../README.md .
+
+echo "Creating README file . . ."
+cat > README.md <<EOF
+## ModPE API Documentation
+[![Build Status](https://travis-ci.org/duggum/modpe-api.svg?branch=master)](https://travis-ci.org/duggum/modpe-api)
+EOF
 
 # inside this git repo we'll pretend to be a new user
 git config user.name "Travis CI"
