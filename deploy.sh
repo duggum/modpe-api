@@ -2,8 +2,8 @@
 set -e # exit with nonzero exit code if anything fails
 
 # clear and re-create the out directory
-echo "Removing jsdoc . . ."
-rm -rf jsdoc || exit 0;
+# echo "Removing jsdoc . . ."
+# rm -rf jsdoc || exit 0;
 # mkdir out;
 
 # go to the out directory and create a *new* Git repo
