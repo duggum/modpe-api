@@ -6,10 +6,6 @@ echo "Removing jsdoc . . ."
 rm -rf jsdoc || exit 0;
 # mkdir out;
 
-# run our compile script, discussed above
-echo "Running grunt . . ."
-grunt
-
 # go to the out directory and create a *new* Git repo
 echo "Initialize repo . . ."
 cd jsdoc
