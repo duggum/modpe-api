@@ -8,6 +8,6 @@ env:
 language: node_js
 node_js:
   - "4.2.1"
-before_install: npm install -g npm grunt grunt-cli grunt-jsdoc
+before_install: npm install -g grunt grunt-cli grunt-jsdoc
 install: npm install
 before-script: grunt
