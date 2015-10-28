@@ -9,7 +9,7 @@
  * set the skin image for a valid MCPE entity
  * @memberof Entity
  */
-function addEffect(Object_, int1, int2, int3, boolean1, boolean_) {}
+function addEffect(Object, int1, int2, int3, boolean1, boolean2) {}
 
 /**
  * set the skin image for a valid MCPE entity
