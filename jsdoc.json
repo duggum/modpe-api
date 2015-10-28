@@ -13,7 +13,7 @@
     "src/plugins/staticclasstag"
   ],
   "markdown": {
-    "parser": "gfm",
+    "parser": "evilstreak",
     "hardwrap": true,
     "tags": ["example", "desc", "todo", "see"]
   },

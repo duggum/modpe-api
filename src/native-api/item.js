@@ -184,7 +184,7 @@ function setHandEquipped(id, set) {}
  * @param {int} id     - the item `id`
  * @param {int} damage - the maximum `damage`
  * @example
- * // who says wooden pick azes are useless?
+ * // who says wooden pick axes are useless?
  * Item.setMaxDamage(270, 10000);
  */
 function setMaxDamage(id, damage) {}

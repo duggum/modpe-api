@@ -2,7 +2,6 @@
  * Static methods for the Server API
  * @namespace {Class} Server
  * @example Server.methodName([ arg1[, arg2[, ...argN] ] ]);
- * @todo code examples
  */
 
 /**
