@@ -1,7 +1,6 @@
 /**
  * Static methods for the Entity API
  * @namespace {Class} Entity
- * @static
  * @example Entity.methodName([ arg1[, arg2[, ...argN] ] ]);
  */
 
