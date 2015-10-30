@@ -2,11 +2,11 @@
 set -e # exit with nonzero exit code if anything fails
 
 # go to the out directory and create a *new* Git repo
-echo "Initialize repo . . ."
+echo -e "Initialize repo . . .\n"
 cd jsdoc
 git init
 
-echo "Creating README file . . ."
+echo -e "Creating README file . . .\n"
 cat > README.md <<EOF
 ## ModPE API Documentation
 #### This branch is automatically built by [Travis CI](https://travis-ci.org/)
@@ -20,7 +20,7 @@ git config user.email "duggum@users.noreply.github.com"
 
 # The first and only commit to this new Git repo contains all the
 # files present with the commit message "Deploy to GitHub Pages".
-echo "Commit changes . . ."
+echo -e "Commit changes . . .\n"
 git add .
 git commit -m "Deploy to GitHub Pages"
 
@@ -28,5 +28,5 @@ git commit -m "Deploy to GitHub Pages"
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-echo "Push to gh-pages . . ."
+echo -e "Push to gh-pages . . .\n"
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
