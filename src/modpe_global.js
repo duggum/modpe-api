@@ -1,4 +1,3 @@
-"use strict";
 /**
  * Armor types.
  * @staticclass
@@ -189,9 +188,7 @@ function ItemCategory() {}
  * @property {int} damageResistance 11
  * @property {int} digSlowdown      4
  * @property {int} digSpeed         3
- * @property {HashMap<Integer, String>} effectIds
- *     `{8=jump, ..., 20=wither}` // returns all type IDs matched to name *NOT*
- *     in numerical order
+ * @property {HashMap<Integer, String>} effectIds `{8=jump, ..., 20=wither}` // returns all type IDs matched to name; *NOT* in numerical order
  * @property {int} fireResistance   12
  * @property {int} harm             7
  * @property {int} heal             6
@@ -208,7 +205,8 @@ function ItemCategory() {}
  * @property {int} waterBreathing   13
  * @property {int} weakness         18
  * @property {int} wither           20
- * @example print(MobEffect.jump); // prints 8
+ * @example
+ * print(MobEffect.jump); // prints 8
  */
 function MobEffect() {}
 

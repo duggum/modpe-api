@@ -5,10 +5,19 @@
  */
 
 /**
- * set the skin image for a valid MCPE entity
+ * Add a potion effect to the specified `entity`.
  * @memberof Entity
+ * @param {Object}  entity         - the entity to add the effect to
+ * @param {int}     id             - the {@link MobEffect} to add
+ * @param {int}     duration       - the duration of the effect
+ * @param {int}     amplification  - the amplification level of the effect
+ * @param {boolean} ambient        - ???
+ * @param {boolean} showParticles  - show particle effects if true, otherwise
+ *    false
+ * @todo get more info on `amplification`
+ * @todo figure out what `ambient` is
  */
-function addEffect(Object, int1, int2, int3, boolean1, boolean2) {}
+function addEffect(entity, id, duration, amplification, ambient, showParticles) {}
 
 /**
  * set the skin image for a valid MCPE entity
@@ -16,7 +25,9 @@ function addEffect(Object, int1, int2, int3, boolean1, boolean2) {}
  */
 function getAll() {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getAnimalAge(Object_) {}
 
 /** @memberof Entity */
