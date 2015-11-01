@@ -1,6 +1,6 @@
 {
   "name": "modpe_api",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Documentation for the ModPE API.",
   "main": "./src/modpe_global.js",
   "author": {
