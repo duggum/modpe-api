@@ -14,6 +14,11 @@ li {
   list-style-type: none;
 }
 
+pre {
+  background: #23241F;
+  border-radius: 10px;
+}
+
 #wrap {
   position: relative;
 }
@@ -36,12 +41,42 @@ li {
   background-color: #1a1a1a;
 }
 
+.navigation h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.navigation h2 {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.navigation h3 {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.navigation h4 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navigation h5 {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.navigation h6 {
+  font-weight: bold;
+  font-size: .8em;
+}
+
 .navigation .applicationName {
   margin: 0;
   margin-top: 15px;
   padding: 10px 15px;
-  font: bold 1.25em Helvetica;
   color: #fff;
+  text-align: center;
 }
 
 .navigation .applicationName a {
@@ -134,34 +169,32 @@ li {
 
 .main h1 {
   font-weight: bold;
-  font-size: 1.6em;
-  margin: 0;
+  font-size: 2em;
 }
 
 .main h2 {
   font-weight: bold;
-  font-size: 1.5em;
-  margin: 0;
+  font-size: 1.7em;
 }
 
 .main h3 {
   font-weight: bold;
-  font-size: 12px;
-  margin: 5px 0;
+  font-size: 1.4em;
 }
 
 .main h4 {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .main h5 {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1em;
 }
 
-.main dd {
-  font-size: 12px;
+.main h6 {
+  font-weight: bold;
+  font-size: .9em;
 }
 
 .main h4.name span.type-signature {
@@ -190,15 +223,16 @@ li {
 
 .main h4.name span.returnType {
   margin-left: 3px;
-  background-color: transparent!important;
+  background-color: transparent !important;
   color: gray!important;
 }
 
 .main span.static {
   display: inline-block;
   border-radius: 3px;
-  background-color: #779c34 !important;
-  color: #fff;
+  background-color: #D2F676 !important;
+  color: #425800 !important;
+  border: 1px solid;
   font-size: 0.7em;
   padding: 2px 4px;
   margin-right: 8px;
@@ -225,23 +259,18 @@ li {
 }
 
 .main .subsection-title {
-  font-size: 14px;
   margin-top: 30px;
   color: #779c34;
 }
 
-.main .description {
+.main div.description {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: .85em;
 }
 
 .main .description ul,
 .main .description ol {
   margin-bottom: 15px;
-}
-
-.main .description p {
-  font-size: 13px;
 }
 
 .main .description h2 {
@@ -255,30 +284,106 @@ li {
   margin: 10px 0;
 }
 
-.main .tag-source {
-  font-size: 12px;
+.main dt, .main dd {
+  line-height: 1.2;
 }
 
-.main dt.tag-source {
-  margin-top: 5px;
-}
-
-.main dt.tag-todo {
-  font-size: 10px;
+.tag-author,
+.tag-copyright,
+.tag-default,
+.tag-deprecated,
+.tag-license,
+.tag-see,
+.tag-since,
+.tag-todo,
+.tag-tutorial,
+.tag-version {
+  font-size: .8em;
+  font-weight: bold;
+  border-radius: 3px;
   display: inline-block;
-  background-color: #2a6496;
-  color: #fff;
-  padding: 2px 4px;
-  border-radius: 5px;
+  margin: 10px;
+  padding: 1px 0;
+  text-align: center;
+  width: 20px;
+  border: 1px solid;
+}
+
+.tag-author {
+  color: #828C23;
+  background-color: #EEF7BC;
+}
+
+.tag-copyright {
+  color: #238C87;
+  background-color: #BCF7F1;
+}
+
+.tag-default {
+  color: #75238C;
+  background-color: #D3BCF7;
+}
+
+.tag-deprecated {
+  color: #CC0A0A;
+  background-color: #F7BCBC;
+}
+
+.tag-license {
+  color: #8C2383;
+  background-color: #F7BCF2;
+}
+
+.tag-see {
+  color: #1C8100;
+  background-color: #BCF7C7;
+}
+
+.tag-since {
+  color: #8C4D23;
+  background-color: #F7E5BC;
+}
+
+.tag-todo {
+  color: #39238C;
+  background-color: #BCD3F7;
+}
+.tag-tutorial {
+  color: #8C233C;
+  background-color: #F7BCCA;
+}
+
+.tag-version {
+  color: #235D8C;
+  background-color: #BCF7E6;
+}
+
+.navigation li.icon {
+  border: none;
+  font-size: .8em;
+  color: #8e8e8e;
+  margin: 5px 0;
+  padding: 0;
+  text-align: right;
+}
+
+.navigation li.first {
+  margin-top: 20px;
+}
+
+.navigation li.icon .icon-text {
+  line-height: 1.5;
+}
+
+.navigation li.icon i {
+  font-size: 1em;
+  display: block;
+  float: right;
+  margin: 0 0 0 10px;
+  padding: 1px 0;
 }
 
 .main .type-signature {
-  font-size: 12px;
-}
-
-.main .tag-deprecated {
-  display: inline-block;
-  font-size: 10px;
 }
 
 .main .important {
@@ -312,7 +417,6 @@ li {
   position: absolute;
   top: 17px;
   right: 0;
-  font-size: 10px;
 }
 
 .main .nameContainer .tag-source a {
@@ -329,7 +433,7 @@ li {
 }
 
 .main .nameContainer h4 .signature {
-  font-size: 13px;
+  font-size: .7em;
   font-weight: normal;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -338,10 +442,11 @@ li {
   color: #fff;
 }
 
-
-/*.main pre {
-  font-size: 11px;
-}*/
+.main article dd ul > li {
+  font-size: .8em;
+  margin-left: 5px;
+  list-style-type: none;
+}
 
 .main table {
   width: 100%;
@@ -349,12 +454,21 @@ li {
 }
 
 .main table th {
+  font-size: .85em;
   padding: 3px 3px;
 }
 
 .main table td {
   vertical-align: top;
   padding: 5px 3px;
+}
+
+.main table td.name,
+.main table td.type,
+.main table td.default,
+.main table td.attributes,
+.main table td.description {
+  font-size: .8em;
 }
 
 .main table .name {
@@ -364,17 +478,14 @@ li {
 .main table .type {
   width: 200px;
   color: #aaa;
-  font-size: 11px;
 }
 
 .main table .attributes {
   width: 100px;
   color: #aaa;
-  font-size: 11px;
 }
 
 .main table .description {
-  font-size: 12px;
 }
 
 .main table .description p {
@@ -396,16 +507,13 @@ li {
 .main .readme p {
   margin-top: 15px;
   line-height: 1.2;
-  font-size: 0.85em;
 }
 
-.main .readme h1 {
-  font-size: 1.7em;
-}
+/*.main .readme h1 {
+  font-size: 2em;
+}*/
 
 .main .readme h2 {
-  margin-top: 30px;
-  margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e1e1e1;
 }

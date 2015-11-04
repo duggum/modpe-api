@@ -5,23 +5,51 @@
  */
 
 /**
- * Add a potion effect to the specified `entity`.
+ * Add a potion effect with the specified `id` to the specified `entity`.
  * @memberof Entity
  * @param {Object}  entity         - the entity to add the effect to
  * @param {int}     id             - the {@link MobEffect} to add
- * @param {int}     duration       - the duration of the effect
+ * @param {int}     duration       - the duration of the effect in ticks (1 second = 20 ticks)
  * @param {int}     amplification  - the amplification level of the effect
  * @param {boolean} ambient        - ???
- * @param {boolean} showParticles  - show particle effects if true, otherwise
- *    false
+ * @param {boolean} showParticles  - show particle effects if true, otherwise false
+ * @see {@link MobEffect}
+ * @example
+ * // give that poisonous look
+ * var entity = Player.getPointedEntity(),
+ * var effect = MobEffect.poison;
+ *
+ * // the easiest way to calculate duration is to multiply the number
+ * // of seconds by 20 (30 seconds * 20 ticks/second = 600 ticks)
+ * var duration = 600;
+ *
+ * Entity.addEffect(entity, effect, duration, 0, false, true);
  * @todo get more info on `amplification`
  * @todo figure out what `ambient` is
  */
 function addEffect(entity, id, duration, amplification, ambient, showParticles) {}
 
 /**
- * set the skin image for a valid MCPE entity
+ * Return a list of all entity objects in the current world
  * @memberof Entity
+ * @return {long[]} all entity objects currently in the game
+ * @example <caption>credit: {@link https://goo.gl/5GAKMF|500 Internal Server Error}</caption>
+ * function procCmd(cmd) {
+ *   if (cmd === "removeall") {
+ *     var entitiesList = Entity.getAll();
+ *     for (var i = 0; i < entitiesList.length; i++) {
+ *
+ *       //skip players, otherwise Minecraft glitches
+ *       if (Player.isPlayer(entitiesList[i])) {
+ *         continue;
+ *       }
+ *
+ *       Entity.remove(entitiesList[i]);
+ *     }
+ *   } else {
+ *     return;
+ *   }
+ * }
  */
 function getAll() {}
 
@@ -30,25 +58,38 @@ function getAll() {}
  */
 function getAnimalAge(Object_) {}
 
-/** @memberof Entity */
-function getEntityTypeId(Object_) {}
+/**
+ * @memberof Entity
+ function getEntityTypeId(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getHealth(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getItemEntityCount(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getItemEntityData(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getItemEntityId(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getMobSkin(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getNameTag(Object_) {}
 
 /**
@@ -66,31 +107,49 @@ function getNameTag(Object_) {}
  */
 function getPitch(entity) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getRenderType(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getRider(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getRiding(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getUniqueId(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getVelX(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getVelY(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getVelZ(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getX(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getY(Object_) {}
 
 /**
@@ -140,63 +199,96 @@ function getY(Object_) {}
  */
 function getYaw(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function getZ(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function isSneaking(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function remove(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function removeAllEffects(Object_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function removeEffect(Object_, int_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function rideAnimal(Object1, Object2) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setAnimalAge(Object_, int_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setCape(Object_, String_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setCarriedItem(Object_, int1, int2, int3) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setCollisionSize(Object_, double1, double2) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setFireTicks(Object_, int_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setHealth(Object_, int_) {}
 
 /**
- * set the skin image for a valid MCPE entity
+ * Set the `skin` image for a valid MCPE entity `id`.
  * @memberof Entity
- * @param {number} entityId - the entity ID (see: {@link EntityType})
- * @param {string} skinPath - the skin image path (can be an image found in the `../assets/images` folder of the MCPE apk)
+ * @param {int}    id   - the entity ID (see: {@link EntityType})
+ * @param {string} skin - the skin image path (usually an image found in the
+ *                        `../assets/images` folder of the MCPE apk)
  * @example
  * // make yourself look like a creeper
  * Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");
  */
-function setMobSkin(entityId, skinPath) {}
+function setMobSkin(id, skin) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setNameTag(Object_, String_) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setPosition(Object_, double_, double1, double2) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setPositionRelative(Object_, double_, double1, double2) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setRenderType(Object_, int_) {}
 
 /**
@@ -217,7 +309,9 @@ function setRenderType(Object_, int_) {}
  */
 function setRot(entity, yaw, pitch) {}
 
-/** @memberof Entity */
+/**
+ * @memberof Entity
+ */
 function setSneaking(Object_, boolean_) {}
 
 /**

@@ -188,7 +188,7 @@ function ItemCategory() {}
  * @property {int} damageResistance 11
  * @property {int} digSlowdown      4
  * @property {int} digSpeed         3
- * @property {HashMap<Integer, String>} effectIds `{8=jump, ..., 20=wither}` // returns all type IDs matched to name; *NOT* in numerical order
+ * @property {HashMap<Integer, String>} effectIds all type IDs; *NOT* in numerical order (i.e. `{8=jump, ..., 20=wither}`)
  * @property {int} fireResistance   12
  * @property {int} harm             7
  * @property {int} heal             6
@@ -299,7 +299,8 @@ function bl_spawnMob(x, y, z, id, skin) {}
 /**
  * Display a `message` in the chat buffer.
  * @param {string} message - the message to display
- * @example clientMessage("Don't poke the Zombie Pigmen!!")
+ * @example
+ * clientMessage("Don't poke the Zombie Pigmen!!")
  * @see {@link print}, {@link ModPE.showTipMessage}
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Shell#print.28.5Bexpr_....5D.29
  */
@@ -402,7 +403,7 @@ function getPlayerZ() {}
  * // what did I just step in?
  * function modTick() {
  *   var x = Math.floor(Player.getX());
- *   var y = Math.floor(Player.getY() - 1.6); // -1.6 = feet, not head
+ *   var y = Math.floor(Player.getY() - 1.6); // -1.6 = y @ feet, not head
  *   var z = Math.floor(Player.getZ());
  *   var tileId = getTile(x, y, z);
  *   if (tileId > 0 && tileId < 256) {
@@ -465,10 +466,10 @@ function getYaw(entity) {}
  * @todo better example or add explanatory details
  * @example <caption>credit: {@link https://goo.gl/2Ojy4t|500 Internal Server Error}</caption>
  * function useItem(x, y, z, itemId, blockId) {
- *   if (itemId === 354) {//cake
+ *   if (itemId === 354) { // cake
  *     teleportToFloor(UPWARD);
  *     preventDefault();
- *   } else if (itemId === 344) {//egg
+ *   } else if (itemId === 344) { // egg
  *     teleportToFloor(DOWNWARD);
  *     preventDefault();
  *   }
@@ -542,10 +543,10 @@ function setNightMode(isNight) {}
  * var UPWARD = 1;
  * var DOWNWARD = -1;
  * function useItem(x, y, z, itemId, blockId) {
- *   if (itemId === 354) {//cake
+ *   if (itemId === 354) { // cake
  *     teleportToFloor(UPWARD);
  *     preventDefault();
- *   } else if (itemId === 344) {//egg
+ *   } else if (itemId === 344) { // egg
  *     teleportToFloor(DOWNWARD);
  *     preventDefault();
  *   }
@@ -555,7 +556,7 @@ function setNightMode(isNight) {}
  *   var currentZ = Math.floor(getPlayerZ());
  *   var currentY = Math.floor(getPlayerY() - 1.6); //get player's feet, so subtract 1.6 (player's height)
  *   var beginY = currentY + (direction * 2);
- *   for (var i = beginY; i < 128 && i >= 0; i+=direction) {
+ *   for (var i = beginY; i < 128 && i >= 0; i += direction) {
  *     if (getTile(currentX, i, currentZ) !== 0 && getTile(currentX, i + 1, currentZ) === 0 && getTile(currentX, i + 2, currentZ) === 0) {
  *       var deltaY = (i - currentY);
  *       setPosition(getPlayerEnt(), currentX, getPlayerY() + deltaY + 1, currentZ);
@@ -576,7 +577,7 @@ function setPosition(entity, x, y, z) {}
  * @param {double} z - the z coordinate
  * @example <caption>credit: {@link https://goo.gl/i1ixVy|500 Internal Server Error}</caption>
  * function modTick() {
- *   if (vehicleLoc == null || --vehicleSpeed > 0) return;
+ *   if (vehicleLoc === null || --vehicleSpeed > 0) return;
  *   vehicleSpeed = 5;
  *   for (var x = 0; x < vehicleMaxSize; ++x) {
  *     for (var y = 0; y < vehicleMaxSize; ++y) {

@@ -1,7 +1,8 @@
 (function() {
     var counter = 0;
     var numbered;
-    var source = document.getElementsByClassName('prettyprint source');
+    // var source = document.getElementsByClassName('prettyprint source');
+    var source = document.getElementsByClassName('source');
 
     if (source && source[0]) {
         var linenums = config.linenums;

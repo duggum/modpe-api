@@ -9,7 +9,7 @@
  */
 
 /**
- * define a custom block with the specified `id` and attributes
+ * Define a custom block with the specified `id` and attributes.
  * @memberof Block
  * @param {int} id                     - a valid, unused block ID between 0
  *                                       and 255 (see: {@link Reference.BlockIds})
@@ -44,14 +44,14 @@
 function defineBlock(id, blockName, texture, materialSource, isOpaque, renderType) {}
 
 /**
- * return all available block IDs
+ * Return all available block IDs.
  * @memberof Block
  * @return {int[]} the block IDs
  */
 function getAllBlockIds() {}
 
 /**
- * return the render type (shape) of a block with the specified `id`
+ * Return the render type (shape) of a block with the specified `id`.
  * @memberof Block
  * @param {int} id - the block ID (see: {@link Reference.BlockIds})
  * @return {int} the render type (see: {@link Reference.BlockRenderTypes})
@@ -61,7 +61,7 @@ function getAllBlockIds() {}
 function getRenderType(id) {}
 
 /**
- * set the color of a block with the specified `id` and `color`
+ * Set the color of a block with the specified `id` and `color`.
  * @memberof Block
  * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
  * @param {number[]} color - a hexadecimal color value in the form: `[0xRRGGBB]`
@@ -73,7 +73,7 @@ function getRenderType(id) {}
 function setColor(id, color) {}
 
 /**
- * set the hardness of a block with the specified `id` and `hardness`
+ * Set the hardness of a block with the specified `id` and `hardness`.
  * @memberof Block
  * @param {int} id          - the block ID (see: {@link Reference.BlockIds})
  * @param {double} hardness - the hardness (-1 = unbreakable; destroy time will
@@ -86,7 +86,7 @@ function setColor(id, color) {}
 function setDestroyTime(id, hardness) {}
 
 /**
- * set the explosion resistance of a block with the specified `id` and `resistance`
+ * Set the explosion resistance of a block with the specified `id` and `resistance`.
  * @memberof Block
  * @param {int} id            - the block ID (see: {@link Reference.BlockIds})
  * @param {double} resistance - the explosion resistance
@@ -98,7 +98,7 @@ function setDestroyTime(id, hardness) {}
 function setExplosionResistance(id, resistance) {}
 
 /**
- * set the light level of a block with the specified `id` and `lightLevel`
+ * Set the light level of a block with the specified `id` and `lightLevel`.
  * @memberof Block
  * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
  * @param {int} lightLevel - the light level of the block (0-15)
@@ -110,7 +110,7 @@ function setExplosionResistance(id, resistance) {}
 function setLightLevel(id, lightLevel) {}
 
 /**
- * set the light opacity of a block with the specified `id` and `opacity`
+ * Set the light opacity of a block with the specified `id` and `opacity`.
  * @memberof Block
  * @param {int} id      - the block ID (see: {@link Reference.BlockIds})
  * @param {int} opacity - the block's opacity to light passing through
@@ -119,7 +119,7 @@ function setLightLevel(id, lightLevel) {}
 function setLightOpacity(id, opacity) {}
 
 /**
- * set the render layer for a block with the specified `id` and `layer`
+ * Set the render layer for a block with the specified `id` and `layer`.
  * @memberof Block
  * @param {int} id    - the block ID (see: {@link Reference.BlockIds})
  * @param {int} layer - the render layer [0: opaque, 1: transparent,
@@ -132,7 +132,7 @@ function setLightOpacity(id, opacity) {}
 function setRenderLayer(id, layer) {}
 
 /**
- * set the render type for a block with the specified `id` and `type`
+ * Set the render type for a block with the specified `id` and `type`.
  * @memberof Block
  * @param {int} id   - the block ID (see: {@link Reference.BlockIds})
  * @param {int} type - the type of block to render (see:
@@ -144,7 +144,7 @@ function setRenderLayer(id, layer) {}
 function setRenderType(id, type) {}
 
 /**
- * set the size of a block with the specified `id` and start/finish coordinates
+ * Set the size of a block with the specified `id` and start/finish coordinates.
  * @memberof Block
  * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
  * @param {double} startX  - the starting x coordinate

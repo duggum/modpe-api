@@ -1,6 +1,6 @@
 # ModPE API Documentation
 
-#### v0.0.1
+### v0.0.1
 [![Build Status](https://travis-ci.org/duggum/modpe-api.svg?branch=master)](https://travis-ci.org/duggum/modpe-api)
 
 ## Version Compatibility
@@ -50,3 +50,10 @@
 
 #### Server API
   - done except for fine tuning & better examples
+
+# Foo Bar Baz
+## Foo Bar Baz
+### Foo Bar Baz
+#### Foo Bar Baz
+##### Foo Bar Baz
+###### Foo Bar Baz
