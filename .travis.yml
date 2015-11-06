@@ -1,5 +1,10 @@
 sudo: false
 
+env:
+  global:
+  - GH_REF: github.com/duggum/modpe-api.git
+  - secure: "aWlsyAjcrVYQAgpjJZppGf+VMv4513afkB2JFxOP8LlO5g0hyOEg1x+N4P7Dzz58R6gcha9GLrPVatnM7YP8B+rG5mqAkmh1Er6hp+x6mYWNNpPTphyR14/2UbM7wEQWGeJMJmh6hViaOx+UCe3FGdCK5dMQWK/ifB+WfZ9LI0SUcph26j9+NEtNkr2febAm2MjIStJ3ThBjRPymnzS5+Y4Zu2UkbNxlAfUH/Vld8O888+OdwAlJ7LVVPpe/Pns6Rg6uPwE9ZYJ7nURvzXm4cguLshm6vggFCHkZ5kbpj0nbLDmmdoTJ7zjQVGjhh/xAhIDtgwT94EfCYFit2c9u3SpEXhT0WQh05PpT0+InkL7h0itSlxo587Lxqi0SbxuwuLCohW1jjOzltfcBvcMQYbZYZRH/achCaYpBVY1fQX7KNaWzlq3rTOXLP1WY7CwQfIwcE1KmilrxrbwkMZISkA6w+ziswdBsUPCUhdcWWX1Vc9ZvorQFd4INSn5u/t52CF7JrXUqLU1JtYxivvdR92Pkh28lhmgODb3JNJ3zWVy92XBl/xgnBac+rDMDpeVUW98fbCiJKc71RDyyW0ieu0cVu3Q2m1UA/rZj+UhHieHEqzxZHVmOoFSgTbz0HA6uHt2e6eSYKIVot9HV09RTGiDyhE8GDwPea/q4O/Bagmw="
+
 language: node_js
 node_js:
   - "4.2.1"
