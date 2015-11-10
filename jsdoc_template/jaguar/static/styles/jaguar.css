@@ -548,18 +548,9 @@ h6 {
     list-style-type: none;
 }
 
-
-/*.main article ol,*/
-
 .main article ul {
     margin-left: 0;
 }
-
-
-/*.main article ol > li {
-  list-style-type: decimal;
-  margin-bottom: 5px;
-}*/
 
 .main article ul > li {
     margin-bottom: 5px;
