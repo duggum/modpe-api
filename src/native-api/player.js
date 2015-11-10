@@ -22,7 +22,7 @@ function addItemCreativeInv(int1, int2, int3) {}
 function addItemInventory(id, quantity, damage) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function addExp(int) {}
@@ -74,7 +74,7 @@ function getCarriedItemData() {}
 function getDimension() {}
 
 /**
- * return the player's native entity id (*NOT* the same as {@link EntityType})
+ * return the player's native entity object id (*NOT* the same as {@link EntityType})
  * @memberof Player
  * @return {number} the player's entity id
  * @example
@@ -85,19 +85,21 @@ function getDimension() {}
 function getEntity() {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function getExhaustion() {}
 
 /**
- * BL 1.10.4-beta
+ * Get the player's experience
  * @memberof Player
+ * @since BL 1.10.4
+ * @return {int} the experience level
  */
 function getExp() {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function getHunger() {}
@@ -118,7 +120,7 @@ function getInventorySlotCount(int_) {}
 function getInventorySlotData(int_) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function getLevel() {}
@@ -164,7 +166,7 @@ function getPointedBlockZ() {}
 function getPointedEntity() {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function getSaturation() {}
@@ -225,13 +227,13 @@ function setArmorSlot(int1, int2, int3) {}
 function setCanFly(boolean_) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function setExhaustion(double) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function setExp(double) {}
@@ -247,19 +249,19 @@ function setFlying(boolean_) {}
 function setHealth(int_) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function setHunger(double) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function setLevel(int) {}
 
 /**
- * BL 1.10.4-beta
+ * @since BL 1.10.4
  * @memberof Player
  */
 function setSaturation(double) {}

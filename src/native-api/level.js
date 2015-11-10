@@ -53,7 +53,7 @@ function explode(x, y, z, radius) {}
 /**
  * __THIS THROWS AN ERROR ON ANDROID; IS IT iOS ONLY???___
  * @memberof Level
- * @return __`unknown`__
+ * @return {Object} __`unknown`__
  * @todo figure out what this does
  */
 function getAddress() {}
@@ -193,7 +193,7 @@ function setTime(int1) {}
  * @param {string} skin - the skin image path (usually an image found in the
  *                              `../assets/images` folder of the MCPE apk)
  * @see {@link Entity.spawnMob}, {@link bl_spawnMob}
- * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via 500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var tb = false;
  *
  * function useItem(x, y, z, itemId, blockId, side) {
@@ -222,7 +222,7 @@ function spawnChicken(x, y, z, skin) {}
  * @param {string} skin - the skin image path (usually an image found in the
  *                              `../assets/images` folder of the MCPE apk)
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
- * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via 500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var tb = false;
  *
  * function useItem(x, y, z, itemId, blockId, side) {

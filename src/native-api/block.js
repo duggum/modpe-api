@@ -9,7 +9,8 @@
  */
 
 /**
- * Define a custom block with the specified `id` and attributes.
+ * @function defineBlock
+ * @desc Define a custom block with the specified `id` and attributes.
  * @memberof Block
  * @param {int} id                     - a valid, unused block ID between 0
  *                                       and 255 (see: {@link Reference.BlockIds})
@@ -24,12 +25,15 @@
  * @param {int}  [renderType]          - the type of block to render (see:
  *                                       {@link Reference.BlockRenderTypes})
  * @see {@link http://192.168.1.40:8888/textures/|MCPE Textures}
- * @example <caption>credit: {@link https://goo.gl/58zbrm|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var initialized = false;
  * var ID = 220;
- * // do all this before level is initialized
+ *
  * function selectLevelHook() {
+ *
+ *   // do all this before level is initialized
  *   if (!initialized) {
+ *
  *     // make a Foo Stone
  *     Block.defineBlock(ID, "Foo Stone", ["glass", 0], 1, false, 0);
  *     Block.setDestroyTime(ID, 0);
@@ -41,27 +45,28 @@
  *   }
  * }
  */
-function defineBlock(id, blockName, texture, materialSource, isOpaque, renderType) {}
 
 /**
- * Return all available block IDs.
+ * @function getAllBlockIds
+ * @desc Return all available block IDs.
  * @memberof Block
  * @return {int[]} the block IDs
  */
-function getAllBlockIds() {}
 
 /**
- * Return the render type (shape) of a block with the specified `id`.
+ * @function getRenderType
+ * @desc Return the render type (shape) of a block with the specified `id`.
  * @memberof Block
  * @param {int} id - the block ID (see: {@link Reference.BlockIds})
  * @return {int} the render type (see: {@link Reference.BlockRenderTypes})
+ * @todo test this thing
  * @example // print the rendertype for a cactus
  * print(Block.getRenderType(81));
  */
-function getRenderType(id) {}
 
 /**
- * Set the color of a block with the specified `id` and `color`.
+ * @function setColor
+ * @desc Set the color of a block with the specified `id` and `color`.
  * @memberof Block
  * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
  * @param {number[]} color - a hexadecimal color value in the form: `[0xRRGGBB]`
@@ -70,10 +75,10 @@ function getRenderType(id) {}
  * Block.setColor(220, [0xFF0000])
  * @see {@link http://html-color-codes.info|HTML Color Codes}
  */
-function setColor(id, color) {}
 
 /**
- * Set the hardness of a block with the specified `id` and `hardness`.
+ * @function setDestroyTime
+ * @desc Set the hardness of a block with the specified `id` and `hardness`.
  * @memberof Block
  * @param {int} id          - the block ID (see: {@link Reference.BlockIds})
  * @param {double} hardness - the hardness (-1 = unbreakable; destroy time will
@@ -83,10 +88,10 @@ function setColor(id, color) {}
  * // make Glass Pane unbreakable
  * Block.setDestroyTime(102, -1);
  */
-function setDestroyTime(id, hardness) {}
 
 /**
- * Set the explosion resistance of a block with the specified `id` and `resistance`.
+ * @function setExplosionResistance
+ * @desc Set the explosion resistance of a block with the specified `id` and `resistance`.
  * @memberof Block
  * @param {int} id            - the block ID (see: {@link Reference.BlockIds})
  * @param {double} resistance - the explosion resistance
@@ -95,10 +100,10 @@ function setDestroyTime(id, hardness) {}
  * // make Gorilla Glass by changing Glass Pane from 1.5 to 6000 (same as obsidian)
  * Block.setExplosionResistance(102, 6000);
  */
-function setExplosionResistance(id, resistance) {}
 
 /**
- * Set the light level of a block with the specified `id` and `lightLevel`.
+ * @function setLightLevel
+ * @desc Set the light level of a block with the specified `id` and `lightLevel`.
  * @memberof Block
  * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
  * @param {int} lightLevel - the light level of the block (0-15)
@@ -107,19 +112,19 @@ function setExplosionResistance(id, resistance) {}
  * // tone down that glowstone b
  * Block.setLightLevel(89, 4);
  */
-function setLightLevel(id, lightLevel) {}
 
 /**
- * Set the light opacity of a block with the specified `id` and `opacity`.
+ * @function setLightOpacity
+ * @desc Set the light opacity of a block with the specified `id` and `opacity`.
  * @memberof Block
  * @param {int} id      - the block ID (see: {@link Reference.BlockIds})
  * @param {int} opacity - the block's opacity to light passing through
  * (0-10 where 0 = most light can pass through, 10 = least light can pass through)
  */
-function setLightOpacity(id, opacity) {}
 
 /**
- * Set the render layer for a block with the specified `id` and `layer`.
+ * @function setRenderLayer
+ * @desc Set the render layer for a block with the specified `id` and `layer`.
  * @memberof Block
  * @param {int} id    - the block ID (see: {@link Reference.BlockIds})
  * @param {int} layer - the render layer [0: opaque, 1: transparent,
@@ -129,10 +134,10 @@ function setLightOpacity(id, opacity) {}
  * Block.setRenderLayer(220, 1);
  * @todo find out if translucent (2) is working
  */
-function setRenderLayer(id, layer) {}
 
 /**
- * Set the render type for a block with the specified `id` and `type`.
+ * @function setRenderType
+ * @desc Set the render type for a block with the specified `id` and `type`.
  * @memberof Block
  * @param {int} id   - the block ID (see: {@link Reference.BlockIds})
  * @param {int} type - the type of block to render (see:
@@ -141,10 +146,10 @@ function setRenderLayer(id, layer) {}
  * // render custom block with id 220 using the cactus shape
  * Block.setRenderType(220, 13);
  */
-function setRenderType(id, type) {}
 
 /**
- * Set the size of a block with the specified `id` and start/finish coordinates.
+ * @function setShape
+ * @desc Set the size of a block with the specified `id` and start/finish coordinates.
  * @memberof Block
  * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
  * @param {double} startX  - the starting x coordinate
@@ -157,4 +162,4 @@ function setRenderType(id, type) {}
  * // set the shape of a block to be 1m wide(X) by 1m long(Z) by .75m high(Y)
  * Block.setShape(45, 0, 0, 0, 1, 0.75, 1);
  */
-function setShape(id, startX, startY, startZ, finishX, finishY, finishZ) {}
+

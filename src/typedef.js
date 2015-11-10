@@ -55,10 +55,6 @@
  * __`ModPE`__ A MCPE item object
  * @typedef {Object} item
  */
-/**
- * @typedef Hook
- * @property {function} attackHook {@link attackHook}
- */
 
 ///////////////////////////////
 // JAVA DATA TYPES //

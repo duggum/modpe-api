@@ -1,0 +1,38 @@
+{
+  "name": "zoo-jsdoc",
+  "version": "0.0.1",
+  "description": "Forked Jaguar.js template for JSDoc 3, for zoojs",
+  "main": "Gruntfile.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "connect-livereload": "~0.3.2",
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-jsdoc": "~0.5.1",
+    "grunt-contrib-connect": "~0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dickeylth/zoo-jsdoc.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "jsdoc3",
+    "jaguar.js",
+    "template"
+  ],
+  "author": "弘树",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/dickeylth/zoo-jsdoc/issues"
+  }
+}

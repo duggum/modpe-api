@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ModPE API</title>
+
+    <meta name="description" content="Documentation for the ModPE API" />
+
+    <meta name="keywords" content="modpe, minecraft, pocket, edition, mcpe, blocklauncher, block, launcher" />
+
+    <script src="scripts/vein.js"></script>
+    <script src="scripts/highlight.pack.js"></script>
+    <script src="scripts/hljs-line-numbers.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/jaguar.css" sheet="jaguar">
+    <link type="text/css" rel="stylesheet" href="styles/highlight-monokai-sublime.css">
+    <link type="text/css" rel="stylesheet" href="styles/modpe_api_icons.css">
+    <!-- <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+    <script>
+      var config = {"monospaceLinks":false,"cleverLinks":false,"default":{"outputSourceFiles":true,"staticFiles":{"paths":["src/static"]}},"applicationName":"ModPE API","meta":{"title":"ModPE API","description":"Documentation for the ModPE API","keyword":"modpe, minecraft, pocket, edition, mcpe, blocklauncher, block, launcher"},"linenums":true};
+    </script>
+
+  </head>
+  <body>
+    <div id="wrap" class="clearfix">
+      
+<div class="navigation">
+  <h2 class="applicationName">
+    <a href="index.html">ModPE API</a>
+  </h2>
+  <div class="search">
+    <input id="search" type="text" class="form-control input-sm" placeholder="Search Documentations" />
+  </div>
+  <ul class="list">
+
+    <li class="item" data-name="Global">
+      <span class="title">
+      
+        <a href="global.html">Global</a>
+      
+      
+      </span>
+      <ul class="members itemMembers">
+      
+        <span class="subtitle">Members</span>
+      
+        <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
+      
+        <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
+      
+        <li data-name="EntityRenderType"><a href="global.html#EntityRenderType">EntityRenderType</a></li>
+      
+        <li data-name="EntityType"><a href="global.html#EntityType">EntityType</a></li>
+      
+        <li data-name="ItemCategory"><a href="global.html#ItemCategory">ItemCategory</a></li>
+      
+        <li data-name="MobEffect"><a href="global.html#MobEffect">MobEffect</a></li>
+      
+        <li data-name="ParticleType"><a href="global.html#ParticleType">ParticleType</a></li>
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="addItemInventory"><a href="global.html#addItemInventory">addItemInventory</a></li>
+      
+        <li data-name="bl_setMobSkin"><a href="global.html#bl_setMobSkin">bl_setMobSkin</a></li>
+      
+        <li data-name="bl_spawnMob"><a href="global.html#bl_spawnMob">bl_spawnMob</a></li>
+      
+        <li data-name="clientMessage"><a href="global.html#clientMessage">clientMessage</a></li>
+      
+        <li data-name="explode"><a href="global.html#explode">explode</a></li>
+      
+        <li data-name="getCarriedItem"><a href="global.html#getCarriedItem">getCarriedItem</a></li>
+      
+        <li data-name="getLevel"><a href="global.html#getLevel">getLevel</a></li>
+      
+        <li data-name="getPitch"><a href="global.html#getPitch">getPitch</a></li>
+      
+        <li data-name="getPlayerEnt"><a href="global.html#getPlayerEnt">getPlayerEnt</a></li>
+      
+        <li data-name="getPlayerX"><a href="global.html#getPlayerX">getPlayerX</a></li>
+      
+        <li data-name="getPlayerY"><a href="global.html#getPlayerY">getPlayerY</a></li>
+      
+        <li data-name="getPlayerZ"><a href="global.html#getPlayerZ">getPlayerZ</a></li>
+      
+        <li data-name="getTile"><a href="global.html#getTile">getTile</a></li>
+      
+        <li data-name="getYaw"><a href="global.html#getYaw">getYaw</a></li>
+      
+        <li data-name="preventDefault"><a href="global.html#preventDefault">preventDefault</a></li>
+      
+        <li data-name="print"><a href="global.html#print">print</a></li>
+      
+        <li data-name="rideAnimal"><a href="global.html#rideAnimal">rideAnimal</a></li>
+      
+        <li data-name="setNightMode"><a href="global.html#setNightMode">setNightMode</a></li>
+      
+        <li data-name="setPosition"><a href="global.html#setPosition">setPosition</a></li>
+      
+        <li data-name="setPositionRelative"><a href="global.html#setPositionRelative">setPositionRelative</a></li>
+      
+        <li data-name="setRot"><a href="global.html#setRot">setRot</a></li>
+      
+        <li data-name="setTile"><a href="global.html#setTile">setTile</a></li>
+      
+        <li data-name="setVelX"><a href="global.html#setVelX">setVelX</a></li>
+      
+        <li data-name="setVelY"><a href="global.html#setVelY">setVelY</a></li>
+      
+        <li data-name="setVelZ"><a href="global.html#setVelZ">setVelZ</a></li>
+      
+        <li data-name="spawnChicken"><a href="global.html#spawnChicken">spawnChicken</a></li>
+      
+        <li data-name="spawnCow"><a href="global.html#spawnCow">spawnCow</a></li>
+      
+        <li data-name="spawnPigZombie"><a href="global.html#spawnPigZombie">spawnPigZombie</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      <span class="subtitle">Typedefs</span>
+      
+          <li data-name="block"><a href="global.html#block">block</a></li>
+      
+          <li data-name="boolean"><a href="global.html#boolean">boolean</a></li>
+      
+          <li data-name="byte"><a href="global.html#byte">byte</a></li>
+      
+          <li data-name="char"><a href="global.html#char">char</a></li>
+      
+          <li data-name="Class"><a href="global.html#Class">Class</a></li>
+      
+          <li data-name="double"><a href="global.html#double">double</a></li>
+      
+          <li data-name="entity"><a href="global.html#entity">entity</a></li>
+      
+          <li data-name="float"><a href="global.html#float">float</a></li>
+      
+          <li data-name="HashMap"><a href="global.html#HashMap">HashMap</a></li>
+      
+          <li data-name="int"><a href="global.html#int">int</a></li>
+      
+          <li data-name="item"><a href="global.html#item">item</a></li>
+      
+          <li data-name="long"><a href="global.html#long">long</a></li>
+      
+          <li data-name="NativeApi"><a href="global.html#NativeApi">NativeApi</a></li>
+      
+          <li data-name="number"><a href="global.html#number">number</a></li>
+      
+          <li data-name="player"><a href="global.html#player">player</a></li>
+      
+          <li data-name="Scriptable"><a href="global.html#Scriptable">Scriptable</a></li>
+      
+          <li data-name="ScriptableObject"><a href="global.html#ScriptableObject">ScriptableObject</a></li>
+      
+          <li data-name="short"><a href="global.html#short">short</a></li>
+      
+          <li data-name="string"><a href="global.html#string">string</a></li>
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Block">
+      <span class="title">
+      
+        <a href="Block.html">Block</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Block.defineBlock"><a href="Block.html#.defineBlock">defineBlock</a></li>
+      
+        <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
+      
+        <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
+      
+        <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
+      
+        <li data-name="Block.setDestroyTime"><a href="Block.html#.setDestroyTime">setDestroyTime</a></li>
+      
+        <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
+      
+        <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
+      
+        <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
+      
+        <li data-name="Block.setRenderType"><a href="Block.html#.setRenderType">setRenderType</a></li>
+      
+        <li data-name="Block.setShape"><a href="Block.html#.setShape">setShape</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Entity">
+      <span class="title">
+      
+        <a href="Entity.html">Entity</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Entity.addEffect"><a href="Entity.html#.addEffect">addEffect</a></li>
+      
+        <li data-name="Entity.getAll"><a href="Entity.html#.getAll">getAll</a></li>
+      
+        <li data-name="Entity.getAnimalAge"><a href="Entity.html#.getAnimalAge">getAnimalAge</a></li>
+      
+        <li data-name="Entity.getEntityTypeId"><a href="Entity.html#.getEntityTypeId">getEntityTypeId</a></li>
+      
+        <li data-name="Entity.getHealth"><a href="Entity.html#.getHealth">getHealth</a></li>
+      
+        <li data-name="Entity.getItemEntityCount"><a href="Entity.html#.getItemEntityCount">getItemEntityCount</a></li>
+      
+        <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
+      
+        <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
+      
+        <li data-name="Entity.getNameTag"><a href="Entity.html#.getNameTag">getNameTag</a></li>
+      
+        <li data-name="Entity.getPitch"><a href="Entity.html#.getPitch">getPitch</a></li>
+      
+        <li data-name="Entity.getRenderType"><a href="Entity.html#.getRenderType">getRenderType</a></li>
+      
+        <li data-name="Entity.getRider"><a href="Entity.html#.getRider">getRider</a></li>
+      
+        <li data-name="Entity.getRiding"><a href="Entity.html#.getRiding">getRiding</a></li>
+      
+        <li data-name="Entity.getUniqueId"><a href="Entity.html#.getUniqueId">getUniqueId</a></li>
+      
+        <li data-name="Entity.getVelX"><a href="Entity.html#.getVelX">getVelX</a></li>
+      
+        <li data-name="Entity.getVelY"><a href="Entity.html#.getVelY">getVelY</a></li>
+      
+        <li data-name="Entity.getVelZ"><a href="Entity.html#.getVelZ">getVelZ</a></li>
+      
+        <li data-name="Entity.getX"><a href="Entity.html#.getX">getX</a></li>
+      
+        <li data-name="Entity.getY"><a href="Entity.html#.getY">getY</a></li>
+      
+        <li data-name="Entity.getYaw"><a href="Entity.html#.getYaw">getYaw</a></li>
+      
+        <li data-name="Entity.getZ"><a href="Entity.html#.getZ">getZ</a></li>
+      
+        <li data-name="Entity.isSneaking"><a href="Entity.html#.isSneaking">isSneaking</a></li>
+      
+        <li data-name="Entity.remove"><a href="Entity.html#.remove">remove</a></li>
+      
+        <li data-name="Entity.removeAllEffects"><a href="Entity.html#.removeAllEffects">removeAllEffects</a></li>
+      
+        <li data-name="Entity.removeEffect"><a href="Entity.html#.removeEffect">removeEffect</a></li>
+      
+        <li data-name="Entity.rideAnimal"><a href="Entity.html#.rideAnimal">rideAnimal</a></li>
+      
+        <li data-name="Entity.setAnimalAge"><a href="Entity.html#.setAnimalAge">setAnimalAge</a></li>
+      
+        <li data-name="Entity.setCape"><a href="Entity.html#.setCape">setCape</a></li>
+      
+        <li data-name="Entity.setCarriedItem"><a href="Entity.html#.setCarriedItem">setCarriedItem</a></li>
+      
+        <li data-name="Entity.setCollisionSize"><a href="Entity.html#.setCollisionSize">setCollisionSize</a></li>
+      
+        <li data-name="Entity.setFireTicks"><a href="Entity.html#.setFireTicks">setFireTicks</a></li>
+      
+        <li data-name="Entity.setHealth"><a href="Entity.html#.setHealth">setHealth</a></li>
+      
+        <li data-name="Entity.setMobSkin"><a href="Entity.html#.setMobSkin">setMobSkin</a></li>
+      
+        <li data-name="Entity.setNameTag"><a href="Entity.html#.setNameTag">setNameTag</a></li>
+      
+        <li data-name="Entity.setPosition"><a href="Entity.html#.setPosition">setPosition</a></li>
+      
+        <li data-name="Entity.setPositionRelative"><a href="Entity.html#.setPositionRelative">setPositionRelative</a></li>
+      
+        <li data-name="Entity.setRenderType"><a href="Entity.html#.setRenderType">setRenderType</a></li>
+      
+        <li data-name="Entity.setRot"><a href="Entity.html#.setRot">setRot</a></li>
+      
+        <li data-name="Entity.setSneaking"><a href="Entity.html#.setSneaking">setSneaking</a></li>
+      
+        <li data-name="Entity.setVelX"><a href="Entity.html#.setVelX">setVelX</a></li>
+      
+        <li data-name="Entity.setVelY"><a href="Entity.html#.setVelY">setVelY</a></li>
+      
+        <li data-name="Entity.setVelZ"><a href="Entity.html#.setVelZ">setVelZ</a></li>
+      
+        <li data-name="Entity.spawnMob"><a href="Entity.html#.spawnMob">spawnMob</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Hooks">
+      <span class="title">
+      
+        <a href="Hooks.html">Hooks</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Hooks#attackHook"><a href="Hooks.html#attackHook">attackHook</a></li>
+      
+        <li data-name="Hooks#blockEventHook"><a href="Hooks.html#blockEventHook">blockEventHook</a></li>
+      
+        <li data-name="Hooks#chatHook"><a href="Hooks.html#chatHook">chatHook</a></li>
+      
+        <li data-name="Hooks#chatReceiveHook"><a href="Hooks.html#chatReceiveHook">chatReceiveHook</a></li>
+      
+        <li data-name="Hooks#deathHook"><a href="Hooks.html#deathHook">deathHook</a></li>
+      
+        <li data-name="Hooks#destroyBlock"><a href="Hooks.html#destroyBlock">destroyBlock</a></li>
+      
+        <li data-name="Hooks#eatHook"><a href="Hooks.html#eatHook">eatHook</a></li>
+      
+        <li data-name="Hooks#entityAddedHook"><a href="Hooks.html#entityAddedHook">entityAddedHook</a></li>
+      
+        <li data-name="Hooks#entityRemovedHook"><a href="Hooks.html#entityRemovedHook">entityRemovedHook</a></li>
+      
+        <li data-name="Hooks#explodeHook"><a href="Hooks.html#explodeHook">explodeHook</a></li>
+      
+        <li data-name="Hooks#leaveGame"><a href="Hooks.html#leaveGame">leaveGame</a></li>
+      
+        <li data-name="Hooks#levelEventHook"><a href="Hooks.html#levelEventHook">levelEventHook</a></li>
+      
+        <li data-name="Hooks#modTick"><a href="Hooks.html#modTick">modTick</a></li>
+      
+        <li data-name="Hooks#newLevel"><a href="Hooks.html#newLevel">newLevel</a></li>
+      
+        <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
+      
+        <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
+      
+        <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
+      
+        <li data-name="Hooks#startDestroyBlock"><a href="Hooks.html#startDestroyBlock">startDestroyBlock</a></li>
+      
+        <li data-name="Hooks#useItem"><a href="Hooks.html#useItem">useItem</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Item">
+      <span class="title">
+      
+        <a href="Item.html">Item</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Item.addCraftRecipe"><a href="Item.html#.addCraftRecipe">addCraftRecipe</a></li>
+      
+        <li data-name="Item.addFurnaceRecipe"><a href="Item.html#.addFurnaceRecipe">addFurnaceRecipe</a></li>
+      
+        <li data-name="Item.addShapedRecipe"><a href="Item.html#.addShapedRecipe">addShapedRecipe</a></li>
+      
+        <li data-name="Item.defineArmor"><a href="Item.html#.defineArmor">defineArmor</a></li>
+      
+        <li data-name="Item.getName"><a href="Item.html#.getName">getName</a></li>
+      
+        <li data-name="Item.isValidItem"><a href="Item.html#.isValidItem">isValidItem</a></li>
+      
+        <li data-name="Item.setCategory"><a href="Item.html#.setCategory">setCategory</a></li>
+      
+        <li data-name="Item.setHandEquipped"><a href="Item.html#.setHandEquipped">setHandEquipped</a></li>
+      
+        <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Level">
+      <span class="title">
+      
+        <a href="Level.html">Level</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
+      
+        <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
+      
+        <li data-name="Level.dropItem"><a href="Level.html#.dropItem">dropItem</a></li>
+      
+        <li data-name="Level.explode"><a href="Level.html#.explode">explode</a></li>
+      
+        <li data-name="Level.getAddress"><a href="Level.html#.getAddress">getAddress</a></li>
+      
+        <li data-name="Level.getBiome"><a href="Level.html#.getBiome">getBiome</a></li>
+      
+        <li data-name="Level.getBiomeName"><a href="Level.html#.getBiomeName">getBiomeName</a></li>
+      
+        <li data-name="Level.getBrightness"><a href="Level.html#.getBrightness">getBrightness</a></li>
+      
+        <li data-name="Level.getChestSlot"><a href="Level.html#.getChestSlot">getChestSlot</a></li>
+      
+        <li data-name="Level.getChestSlotCount"><a href="Level.html#.getChestSlotCount">getChestSlotCount</a></li>
+      
+        <li data-name="Level.getChestSlotData"><a href="Level.html#.getChestSlotData">getChestSlotData</a></li>
+      
+        <li data-name="Level.getData"><a href="Level.html#.getData">getData</a></li>
+      
+        <li data-name="Level.getFurnaceSlot"><a href="Level.html#.getFurnaceSlot">getFurnaceSlot</a></li>
+      
+        <li data-name="Level.getFurnaceSlotCount"><a href="Level.html#.getFurnaceSlotCount">getFurnaceSlotCount</a></li>
+      
+        <li data-name="Level.getFurnaceSlotData"><a href="Level.html#.getFurnaceSlotData">getFurnaceSlotData</a></li>
+      
+        <li data-name="Level.getGameMode"><a href="Level.html#.getGameMode">getGameMode</a></li>
+      
+        <li data-name="Level.getGrassColor"><a href="Level.html#.getGrassColor">getGrassColor</a></li>
+      
+        <li data-name="Level.getLightningLevel"><a href="Level.html#.getLightningLevel">getLightningLevel</a></li>
+      
+        <li data-name="Level.getRainLevel"><a href="Level.html#.getRainLevel">getRainLevel</a></li>
+      
+        <li data-name="Level.getSignText"><a href="Level.html#.getSignText">getSignText</a></li>
+      
+        <li data-name="Level.getTile"><a href="Level.html#.getTile">getTile</a></li>
+      
+        <li data-name="Level.getTime"><a href="Level.html#.getTime">getTime</a></li>
+      
+        <li data-name="Level.getWorldDir"><a href="Level.html#.getWorldDir">getWorldDir</a></li>
+      
+        <li data-name="Level.getWorldName"><a href="Level.html#.getWorldName">getWorldName</a></li>
+      
+        <li data-name="Level.playSound"><a href="Level.html#.playSound">playSound</a></li>
+      
+        <li data-name="Level.playSoundEnt"><a href="Level.html#.playSoundEnt">playSoundEnt</a></li>
+      
+        <li data-name="Level.setChestSlot"><a href="Level.html#.setChestSlot">setChestSlot</a></li>
+      
+        <li data-name="Level.setFurnaceSlot"><a href="Level.html#.setFurnaceSlot">setFurnaceSlot</a></li>
+      
+        <li data-name="Level.setGameMode"><a href="Level.html#.setGameMode">setGameMode</a></li>
+      
+        <li data-name="Level.setGrassColor"><a href="Level.html#.setGrassColor">setGrassColor</a></li>
+      
+        <li data-name="Level.setLightningLevel"><a href="Level.html#.setLightningLevel">setLightningLevel</a></li>
+      
+        <li data-name="Level.setNightMode"><a href="Level.html#.setNightMode">setNightMode</a></li>
+      
+        <li data-name="Level.setRainLevel"><a href="Level.html#.setRainLevel">setRainLevel</a></li>
+      
+        <li data-name="Level.setSignText"><a href="Level.html#.setSignText">setSignText</a></li>
+      
+        <li data-name="Level.setSpawn"><a href="Level.html#.setSpawn">setSpawn</a></li>
+      
+        <li data-name="Level.setSpawnerEntityType"><a href="Level.html#.setSpawnerEntityType">setSpawnerEntityType</a></li>
+      
+        <li data-name="Level.setTile"><a href="Level.html#.setTile">setTile</a></li>
+      
+        <li data-name="Level.setTime"><a href="Level.html#.setTime">setTime</a></li>
+      
+        <li data-name="Level.spawnChicken"><a href="Level.html#.spawnChicken">spawnChicken</a></li>
+      
+        <li data-name="Level.spawnCow"><a href="Level.html#.spawnCow">spawnCow</a></li>
+      
+        <li data-name="Level.spawnMob"><a href="Level.html#.spawnMob">spawnMob</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="ModPE">
+      <span class="title">
+      
+        <a href="ModPE.html">ModPE</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="ModPE.dumpVtable"><a href="ModPE.html#.dumpVtable">dumpVtable</a></li>
+      
+        <li data-name="ModPE.getBytesFromTexturePack"><a href="ModPE.html#.getBytesFromTexturePack">getBytesFromTexturePack</a></li>
+      
+        <li data-name="ModPE.getMinecraftVersion"><a href="ModPE.html#.getMinecraftVersion">getMinecraftVersion</a></li>
+      
+        <li data-name="ModPE.langEdit"><a href="ModPE.html#.langEdit">langEdit</a></li>
+      
+        <li data-name="ModPE.leaveGame"><a href="ModPE.html#.leaveGame">leaveGame</a></li>
+      
+        <li data-name="ModPE.log"><a href="ModPE.html#.log">log</a></li>
+      
+        <li data-name="ModPE.openInputStreamFromTexturePack"><a href="ModPE.html#.openInputStreamFromTexturePack">openInputStreamFromTexturePack</a></li>
+      
+        <li data-name="ModPE.overrideTexture"><a href="ModPE.html#.overrideTexture">overrideTexture</a></li>
+      
+        <li data-name="ModPE.readData"><a href="ModPE.html#.readData">readData</a></li>
+      
+        <li data-name="ModPE.removeData"><a href="ModPE.html#.removeData">removeData</a></li>
+      
+        <li data-name="ModPE.resetFov"><a href="ModPE.html#.resetFov">resetFov</a></li>
+      
+        <li data-name="ModPE.resetImages"><a href="ModPE.html#.resetImages">resetImages</a></li>
+      
+        <li data-name="ModPE.saveData"><a href="ModPE.html#.saveData">saveData</a></li>
+      
+        <li data-name="ModPE.selectLevel"><a href="ModPE.html#.selectLevel">selectLevel</a></li>
+      
+        <li data-name="ModPE.setCamera"><a href="ModPE.html#.setCamera">setCamera</a></li>
+      
+        <li data-name="ModPE.setFoodItem"><a href="ModPE.html#.setFoodItem">setFoodItem</a></li>
+      
+        <li data-name="ModPE.setFov"><a href="ModPE.html#.setFov">setFov</a></li>
+      
+        <li data-name="ModPE.setGameSpeed"><a href="ModPE.html#.setGameSpeed">setGameSpeed</a></li>
+      
+        <li data-name="ModPE.setGuiBlocks"><a href="ModPE.html#.setGuiBlocks">setGuiBlocks</a></li>
+      
+        <li data-name="ModPE.setItem"><a href="ModPE.html#.setItem">setItem</a></li>
+      
+        <li data-name="ModPE.setItems"><a href="ModPE.html#.setItems">setItems</a></li>
+      
+        <li data-name="ModPE.setTerrain"><a href="ModPE.html#.setTerrain">setTerrain</a></li>
+      
+        <li data-name="ModPE.showTipMessage"><a href="ModPE.html#.showTipMessage">showTipMessage</a></li>
+      
+        <li data-name="ModPE.takeScreenshot"><a href="ModPE.html#.takeScreenshot">takeScreenshot</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Player">
+      <span class="title">
+      
+        <a href="Player.html">Player</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Player.addExp"><a href="Player.html#.addExp">addExp</a></li>
+      
+        <li data-name="Player.addItemCreativeInv"><a href="Player.html#.addItemCreativeInv">addItemCreativeInv</a></li>
+      
+        <li data-name="Player.addItemInventory"><a href="Player.html#.addItemInventory">addItemInventory</a></li>
+      
+        <li data-name="Player.canFly"><a href="Player.html#.canFly">canFly</a></li>
+      
+        <li data-name="Player.clearInventorySlot"><a href="Player.html#.clearInventorySlot">clearInventorySlot</a></li>
+      
+        <li data-name="Player.getArmorSlot"><a href="Player.html#.getArmorSlot">getArmorSlot</a></li>
+      
+        <li data-name="Player.getArmorSlotDamage"><a href="Player.html#.getArmorSlotDamage">getArmorSlotDamage</a></li>
+      
+        <li data-name="Player.getCarriedItem"><a href="Player.html#.getCarriedItem">getCarriedItem</a></li>
+      
+        <li data-name="Player.getCarriedItemCount"><a href="Player.html#.getCarriedItemCount">getCarriedItemCount</a></li>
+      
+        <li data-name="Player.getCarriedItemData"><a href="Player.html#.getCarriedItemData">getCarriedItemData</a></li>
+      
+        <li data-name="Player.getDimension"><a href="Player.html#.getDimension">getDimension</a></li>
+      
+        <li data-name="Player.getEntity"><a href="Player.html#.getEntity">getEntity</a></li>
+      
+        <li data-name="Player.getExhaustion"><a href="Player.html#.getExhaustion">getExhaustion</a></li>
+      
+        <li data-name="Player.getExp"><a href="Player.html#.getExp">getExp</a></li>
+      
+        <li data-name="Player.getHunger"><a href="Player.html#.getHunger">getHunger</a></li>
+      
+        <li data-name="Player.getInventorySlot"><a href="Player.html#.getInventorySlot">getInventorySlot</a></li>
+      
+        <li data-name="Player.getInventorySlotCount"><a href="Player.html#.getInventorySlotCount">getInventorySlotCount</a></li>
+      
+        <li data-name="Player.getInventorySlotData"><a href="Player.html#.getInventorySlotData">getInventorySlotData</a></li>
+      
+        <li data-name="Player.getLevel"><a href="Player.html#.getLevel">getLevel</a></li>
+      
+        <li data-name="Player.getName"><a href="Player.html#.getName">getName</a></li>
+      
+        <li data-name="Player.getPointedBlockData"><a href="Player.html#.getPointedBlockData">getPointedBlockData</a></li>
+      
+        <li data-name="Player.getPointedBlockId"><a href="Player.html#.getPointedBlockId">getPointedBlockId</a></li>
+      
+        <li data-name="Player.getPointedBlockSide"><a href="Player.html#.getPointedBlockSide">getPointedBlockSide</a></li>
+      
+        <li data-name="Player.getPointedBlockX"><a href="Player.html#.getPointedBlockX">getPointedBlockX</a></li>
+      
+        <li data-name="Player.getPointedBlockY"><a href="Player.html#.getPointedBlockY">getPointedBlockY</a></li>
+      
+        <li data-name="Player.getPointedBlockZ"><a href="Player.html#.getPointedBlockZ">getPointedBlockZ</a></li>
+      
+        <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
+      
+        <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
+      
+        <li data-name="Player.getSelectedSlotId"><a href="Player.html#.getSelectedSlotId">getSelectedSlotId</a></li>
+      
+        <li data-name="Player.getX"><a href="Player.html#.getX">getX</a></li>
+      
+        <li data-name="Player.getY"><a href="Player.html#.getY">getY</a></li>
+      
+        <li data-name="Player.getZ"><a href="Player.html#.getZ">getZ</a></li>
+      
+        <li data-name="Player.isFlying"><a href="Player.html#.isFlying">isFlying</a></li>
+      
+        <li data-name="Player.isPlayer"><a href="Player.html#.isPlayer">isPlayer</a></li>
+      
+        <li data-name="Player.setArmorSlot"><a href="Player.html#.setArmorSlot">setArmorSlot</a></li>
+      
+        <li data-name="Player.setCanFly"><a href="Player.html#.setCanFly">setCanFly</a></li>
+      
+        <li data-name="Player.setExhaustion"><a href="Player.html#.setExhaustion">setExhaustion</a></li>
+      
+        <li data-name="Player.setExp"><a href="Player.html#.setExp">setExp</a></li>
+      
+        <li data-name="Player.setFlying"><a href="Player.html#.setFlying">setFlying</a></li>
+      
+        <li data-name="Player.setHealth"><a href="Player.html#.setHealth">setHealth</a></li>
+      
+        <li data-name="Player.setHunger"><a href="Player.html#.setHunger">setHunger</a></li>
+      
+        <li data-name="Player.setLevel"><a href="Player.html#.setLevel">setLevel</a></li>
+      
+        <li data-name="Player.setSaturation"><a href="Player.html#.setSaturation">setSaturation</a></li>
+      
+        <li data-name="Player.setSelectedSlotId"><a href="Player.html#.setSelectedSlotId">setSelectedSlotId</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Reference">
+      <span class="title">
+      
+        <a href="Reference.html">Reference</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+        <span class="subtitle">Members</span>
+      
+        <li data-name="Reference#BlockIds"><a href="Reference.html#BlockIds">BlockIds</a></li>
+      
+        <li data-name="Reference#BlockRenderTypes"><a href="Reference.html#BlockRenderTypes">BlockRenderTypes</a></li>
+      
+        <li data-name="Reference#ItemIds"><a href="Reference.html#ItemIds">ItemIds</a></li>
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Renderer">
+      <span class="title">
+      
+        <a href="Renderer.html">Renderer</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item" data-name="Server">
+      <span class="title">
+      
+        <a href="Server.html">Server</a>
+      
+      
+        <span class="static">static</span>
+      
+      </span>
+      <ul class="members itemMembers">
+      
+      </ul>
+      <!-- CLASSES -->
+      <ul class="methods itemMembers">
+      
+      </ul>
+      <!-- END CLASSES -->
+      <ul class="methods itemMembers">
+      
+        <span class="subtitle">Methods</span>
+      
+        <li data-name="Server.getAddress"><a href="Server.html#.getAddress">getAddress</a></li>
+      
+        <li data-name="Server.getAllPlayerNames"><a href="Server.html#.getAllPlayerNames">getAllPlayerNames</a></li>
+      
+        <li data-name="Server.getAllPlayers"><a href="Server.html#.getAllPlayers">getAllPlayers</a></li>
+      
+        <li data-name="Server.getPort"><a href="Server.html#.getPort">getPort</a></li>
+      
+        <li data-name="Server.joinServer"><a href="Server.html#.joinServer">joinServer</a></li>
+      
+        <li data-name="Server.sendChat"><a href="Server.html#.sendChat">sendChat</a></li>
+      
+      </ul>
+      <ul class="events itemMembers">
+      
+      </ul>
+      <ul class="typedefs itemMembers">
+      
+      </ul>
+    </li>
+    
+    <li class="item first icon"><span class="icon-text">Author</span><i class="tag-author icon-author" title="Author"></i></li>
+    <li class="item icon"><span class="icon-text">Copyright</span><i class="tag-copyright icon-copyright" title="Copyright"></i></li>
+    <li class="item icon"><span class="icon-text">Default</span><i class="tag-default icon-default" title="Default"></i></li>
+    <li class="item icon"><span class="icon-text">Deprecated</span><i class="tag-deprecated icon-deprecated" title="Deprecated"></i></li>
+    <li class="item icon"><span class="icon-text">License</span><i class="tag-license icon-license" title="License"></i></li>
+    <li class="item icon"><span class="icon-text">See</span><i class="tag-see icon-see" title="See"></i></li>
+    <li class="item icon"><span class="icon-text">Since</span><i class="tag-since icon-since" title="Since"></i></li>
+    <li class="item icon"><span class="icon-text">TODO</span><i class="tag-todo icon-todo" title="TODO"></i></li>
+    <li class="item icon"><span class="icon-text">Tutorial</span><i class="tag-tutorial icon-tutorial" title="Tutorial"></i></li>
+    <li class="item icon"><span class="icon-text">Version</span><i class="tag-version icon-version" title="Version"></i></li>
+  </ul>
+</div>
+
+      <div class="main">
+        <h1 class="page-title" data-filename="reference_reference.js.html">Source: reference/reference.js</h1>
+        
+
+
+    
+<section>
+  <article>
+    <pre><code>/**
+ * __Reference for MCPE data values not included in BlockLauncher.__
+ *
+ * The variables documented here are __*NOT*__ available for use in ModPE scripts!
+ * @namespace Reference
+ * @todo Move these to manual or tutorial
+ */
+
+/**
+ * @lends Reference.prototype
+ */
+var funcs = {
+
+  /**
+   * Block data values.
+   * @property {string} 0 Air
+   * @property {string} 1 Stone
+   * @property {string} 2 Grass Block
+   * @property {string} 3 Dirt
+   * @property {string} 4 Cobblestone
+   * @property {string} 5 Wooden Planks
+   * @property {string} 6 Sapling
+   * @property {string} 7 Bedrock
+   * @property {string} 8 Water
+   * @property {string} 9 Stationary Water
+   * @property {string} 10 Lava
+   * @property {string} 11 Stationary Lava
+   * @property {string} 12 Sand
+   * @property {string} 13 Gravel
+   * @property {string} 14 Gold Ore
+   * @property {string} 15 Iron Ore
+   * @property {string} 16 Coal Ore
+   * @property {string} 17 Wood
+   * @property {string} 18 Leaves
+   * @property {string} 19 Sponge
+   * @property {string} 20 Glass
+   * @property {string} 21 Lapis Lazuli Ore
+   * @property {string} 22 Lapis Lazuli Block
+   * @property {string} 24 Sandstone
+   * @property {string} 26 Bed
+   * @property {string} 27 Powered Rail
+   * @property {string} 30 Cobweb
+   * @property {string} 31 Tall Grass
+   * @property {string} 32 Dead Bush
+   * @property {string} 35 Wool
+   * @property {string} 37 Dandelion
+   * @property {string} 38 Flower
+   * @property {string} 39 Brown Mushroom
+   * @property {string} 40 Red Mushroom
+   * @property {string} 41 Block of Gold
+   * @property {string} 42 Block of Iron
+   * @property {string} 43 Double Stone Slab
+   * @property {string} 44 Stone Slab
+   * @property {string} 45 Bricks
+   * @property {string} 46 TNT
+   * @property {string} 47 Bookshelf
+   * @property {string} 48 Moss Stone
+   * @property {string} 49 Obsidian
+   * @property {string} 50 Torch
+   * @property {string} 51 Fire
+   * @property {string} 52 Monster Spawner
+   * @property {string} 53 Oak Wood Stairs
+   * @property {string} 54 Chest
+   * @property {string} 56 Diamond Ore
+   * @property {string} 57 Block of Diamond
+   * @property {string} 58 Crafting Table
+   * @property {string} 59 Seeds
+   * @property {string} 60 Farmland
+   * @property {string} 61 Furnace
+   * @property {string} 62 Burning Furnace
+   * @property {string} 63 Sign
+   * @property {string} 64 Wooden Door
+   * @property {string} 65 Ladder
+   * @property {string} 66 Rail
+   * @property {string} 67 Cobblestone Stairs
+   * @property {string} 68 Wall Sign
+   * @property {string} 71 Iron Door
+   * @property {string} 73 Redstone Ore
+   * @property {string} 74 Glowing Redstone Ore
+   * @property {string} 78 Snow
+   * @property {string} 79 Ice
+   * @property {string} 80 Snow
+   * @property {string} 81 Cactus
+   * @property {string} 82 Clay
+   * @property {string} 83 Sugar Cane
+   * @property {string} 85 Fence
+   * @property {string} 86 Pumpkin
+   * @property {string} 87 Netherrack
+   * @property {string} 88 Soul Sand
+   * @property {string} 89 Glowstone
+   * @property {string} 91 Jack o'Lantern
+   * @property {string} 92 Cake
+   * @property {string} 95 Invisible Bedrock
+   * @property {string} 96 Trapdoor
+   * @property {string} 97 Monster Egg
+   * @property {string} 98 Stone Brick
+   * @property {string} 99 Brown Mushroom
+   * @property {string} 100 Red Mushroom
+   * @property {string} 101 Iron Bars
+   * @property {string} 102 Glass Pane
+   * @property {string} 103 Melon
+   * @property {string} 104 Pumpkin Stem
+   * @property {string} 105 Melon Stem
+   * @property {string} 106 Vines
+   * @property {string} 107 Fence Gate
+   * @property {string} 108 Brick Stairs
+   * @property {string} 109 Stone Brick Stairs
+   * @property {string} 110 Mycelium
+   * @property {string} 111 Lily Pad
+   * @property {string} 112 Nether Brick
+   * @property {string} 113 Nether Brick Fence
+   * @property {string} 114 Nether Brick Stairs
+   * @property {string} 115 Nether Wart
+   * @property {string} 116 Enchantment Table
+   * @property {string} 117 Brewing Stand
+   * @property {string} 120 End Portal Frame
+   * @property {string} 121 End Stone
+   * @property {string} 126 Cake
+   * @property {string} 127 Cocoa
+   * @property {string} 128 Sandstone Stairs
+   * @property {string} 129 Emerald Ore
+   * @property {string} 133 Block of Emerald
+   * @property {string} 134 Spruce Wood Stairs
+   * @property {string} 135 Birch Wood Stairs
+   * @property {string} 136 Jungle Wood Stairs
+   * @property {string} 139 Cobblestone Wall
+   * @property {string} 140 Flower Pot
+   * @property {string} 141 Carrots
+   * @property {string} 142 Potato
+   * @property {string} 143 Mob head
+   * @property {string} 145 Anvil
+   * @property {string} 152 Block of Redstone
+   * @property {string} 153 Nether Quartz Ore
+   * @property {string} 155 Block of Quartz
+   * @property {string} 156 Quartz Stairs
+   * @property {string} 157 Wooden Double Slab
+   * @property {string} 158 Wooden Slab
+   * @property {string} 159 Stained Clay
+   * @property {string} 161 Acacia/Dark Oak Leaves
+   * @property {string} 162 Acacia/Dark Oak Wood
+   * @property {string} 163 Acacia Wood Stairs
+   * @property {string} 164 Dark Oak Wood Stairs
+   * @property {string} 170 Hay Bale
+   * @property {string} 171 Carpet
+   * @property {string} 172 Hardened Clay
+   * @property {string} 173 Block of Coal
+   * @property {string} 174 Packed Ice
+   * @property {string} 175 Sunflower
+   * @property {string} 183 Spruce Fence Gate
+   * @property {string} 184 Birch Fence Gate
+   * @property {string} 185 Jungle Fence Gate
+   * @property {string} 186 Dark Oak Fence Gate
+   * @property {string} 187 Acacia Fence Gate
+   * @property {string} 198 Grass Path
+   * @property {string} 243 Podzol
+   * @property {string} 244 Beetroot
+   * @property {string} 245 Stone Cutter
+   * @property {string} 246 Glowing Obsidian
+   * @property {string} 247 Nether Reactor Core
+   * @property {string} 248 Update Game Block
+   * @property {string} 249 Update Game Block
+   * @property {string} 255 info_reserved6
+   */
+  BlockIds: {},
+
+  /**
+   * Block render types - determines the shape (NOT size) of a block; useful when
+   * defining custom blocks.
+   *
+   * See: {@link Block.defineBlock}, {@link Block.getRenderType}, {@link Block.setRenderType}
+   * @property {string} 0 Standard
+   * @property {string} 1 Flower
+   * @property {string} 2 Torch
+   * @property {string} 3 Fire
+   * @property {string} 4 Fluid
+   * @property {string} 6 Crops
+   * @property {string} 7 Door
+   * @property {string} 8 Ladder
+   * @property {string} 10 Stairs
+   * @property {string} 11 Fence
+   * @property {string} 13 Cactus
+   * @property {string} 14 Bed
+   * @property {string} 18 Pane
+   * @property {string} 19 Stem
+   * @property {string} 21 Fence Gate
+   */
+  BlockRenderTypes: {},
+
+  /**
+   * Item data values.
+   * @property {string} 256 Iron Shovel
+   * @property {string} 257 Iron Pickaxe
+   * @property {string} 258 Iron Axe
+   * @property {string} 259 Flint and Steel
+   * @property {string} 260 Apple
+   * @property {string} 261 Bow
+   * @property {string} 262 Arrow
+   * @property {string} 263 Coal
+   * @property {string} 264 Diamond
+   * @property {string} 265 Iron Ingot
+   * @property {string} 266 Gold Ingot
+   * @property {string} 267 Iron Sword
+   * @property {string} 268 Wooden Sword
+   * @property {string} 269 Wooden Shovel
+   * @property {string} 270 Wooden Pickaxe
+   * @property {string} 271 Wooden Axe
+   * @property {string} 272 Stone Sword
+   * @property {string} 273 Stone Shovel
+   * @property {string} 274 Stone Pickaxe
+   * @property {string} 275 Stone Axe
+   * @property {string} 276 Diamond Sword
+   * @property {string} 277 Diamond Shovel
+   * @property {string} 278 Diamond Pickaxe
+   * @property {string} 279 Diamond Axe
+   * @property {string} 280 Stick
+   * @property {string} 281 Bowl
+   * @property {string} 282 Mushroom Stew
+   * @property {string} 283 Gold Sword
+   * @property {string} 284 Gold Shovel
+   * @property {string} 285 Gold Pickaxe
+   * @property {string} 286 Gold Axe
+   * @property {string} 287 String
+   * @property {string} 288 Feather
+   * @property {string} 289 Gunpowder
+   * @property {string} 290 Wooden Hoe
+   * @property {string} 291 Stone Hoe
+   * @property {string} 292 Iron Hoe
+   * @property {string} 293 Diamond Hoe
+   * @property {string} 294 Gold Hoe
+   * @property {string} 295 Seeds
+   * @property {string} 296 Wheat
+   * @property {string} 297 Bread
+   * @property {string} 298 Leather Cap
+   * @property {string} 299 Leather Tunic
+   * @property {string} 300 Leather Pants
+   * @property {string} 301 Leather Boots
+   * @property {string} 302 Chain Helmet
+   * @property {string} 303 Chain Chestplate
+   * @property {string} 304 Chain Leggings
+   * @property {string} 305 Chain Boots
+   * @property {string} 306 Iron Helmet
+   * @property {string} 307 Iron Chestplate
+   * @property {string} 308 Iron Leggings
+   * @property {string} 309 Iron Boots
+   * @property {string} 310 Diamond Helmet
+   * @property {string} 311 Diamond Chestplate
+   * @property {string} 312 Diamond Leggings
+   * @property {string} 313 Diamond Boots
+   * @property {string} 314 Golden Helmet
+   * @property {string} 315 Golden Chestplate
+   * @property {string} 316 Golden Leggings
+   * @property {string} 317 Golden Boots
+   * @property {string} 318 Flint
+   * @property {string} 319 Raw Porkchop
+   * @property {string} 320 Cooked Porkchop
+   * @property {string} 321 Painting
+   * @property {string} 322 Golden Apple
+   * @property {string} 323 Sign
+   * @property {string} 324 Wooden Door
+   * @property {string} 325 Bucket
+   * @property {string} 328 Minecart
+   * @property {string} 329 Saddle
+   * @property {string} 330 Iron Door
+   * @property {string} 331 Redstone
+   * @property {string} 332 Snowball
+   * @property {string} 333 Boat
+   * @property {string} 334 Leather
+   * @property {string} 336 Brick
+   * @property {string} 337 Clay
+   * @property {string} 338 Sugar Cane
+   * @property {string} 339 Paper
+   * @property {string} 340 Book
+   * @property {string} 341 Slimeball
+   * @property {string} 344 Egg
+   * @property {string} 345 Compass
+   * @property {string} 346 Fishing Rod
+   * @property {string} 347 Clock
+   * @property {string} 348 Glowstone Dust
+   * @property {string} 349 Raw Fish
+   * @property {string} 350 Cooked Fish
+   * @property {string} 351 Various Dye
+   * @property {string} 352 Bone
+   * @property {string} 353 Sugar
+   * @property {string} 354 Cake
+   * @property {string} 355 Bed
+   * @property {string} 357 Cookie
+   * @property {string} 359 Shears
+   * @property {string} 360 Melon
+   * @property {string} 361 Pumpkin Seeds
+   * @property {string} 362 Melon Seeds
+   * @property {string} 363 Raw Beef
+   * @property {string} 364 Steak
+   * @property {string} 365 Raw Chicken
+   * @property {string} 366 Cooked Chicken
+   * @property {string} 367 Rotten Flesh
+   * @property {string} 368 Blaze Rod
+   * @property {string} 369 Blaze Rod
+   * @property {string} 370 Ghast Tear
+   * @property {string} 371 Gold Nugget
+   * @property {string} 372 Nether Wart
+   * @property {string} 373 Water/Potion Bottle
+   * @property {string} 374 Glass Bottle
+   * @property {string} 375 Spider Eye
+   * @property {string} 376 Fermented Spider Eye
+   * @property {string} 377 Blaze Powder
+   * @property {string} 378 Magma Cream
+   * @property {string} 379 Brewing Stand
+   * @property {string} 382 Glistering Melon
+   * @property {string} 383 Spawn Egg
+   * @property {string} 384 Bottle o' Enchanting
+   * @property {string} 388 Emerald
+   * @property {string} 390 Flower Pot
+   * @property {string} 391 Carrot
+   * @property {string} 392 Potato
+   * @property {string} 393 Baked Potato
+   * @property {string} 394 Poisonous Potato
+   * @property {string} 396 Golden Carrot
+   * @property {string} 397 Mob head
+   * @property {string} 400 Pumpkin Pie
+   * @property {string} 403 Enchanted Book
+   * @property {string} 405 Nether Brick
+   * @property {string} 406 Nether Quartz
+   * @property {string} 414 Rabbit's Foot
+   * @property {string} 438 Splash Potion
+   * @property {string} 457 Beetroot
+   * @property {string} 458 Beetroot Seeds
+   * @property {string} 459 Beetroot Soup
+   */
+  ItemIds: {}
+};
+</code></pre>
+  </article>
+</section>
+
+
+
+
+
+        <footer>
+          <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 09 2015</p>
+          <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
+        </footer>
+      </div>
+    </div>
+    <script type="text/javascript">
+      hljs.configure({ tabReplace: "  " });
+      hljs.initHighlightingOnLoad();
+      hljs.initLineNumbersOnLoad();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() { document.getElementById("cyear").innerHTML = new Date().getFullYear(); };
+    </script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/linenumber.js"></script>
+  </body>
+</html>

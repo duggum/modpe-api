@@ -9,19 +9,17 @@
     "excludePattern": "(^|\\/|\\\\)_"
   },
   "plugins": [
-    "plugins/markdown",
-    "src/plugins/staticclasstag"
+    "plugins/markdown"
   ],
   "markdown": {
-    "parser": "evilstreak",
-    "hardwrap": true,
-    "tags": ["example", "desc", "todo", "see"]
+    "parser": "marked",
+    "tags": ["example"]
   },
   "templates": {
     "cleverLinks": false,
     "monospaceLinks": false,
     "default": {
-      "outputSourceFiles": false,
+      "outputSourceFiles": true,
       "staticFiles": {
         "paths": [
           "src/static"
@@ -31,13 +29,13 @@
     "applicationName": "ModPE API",
     "meta": {
       "title"       : "ModPE API",
-      "description" : "API documentation for ModPE",
+      "description" : "Documentation for the ModPE API",
       "keyword"     : "modpe, minecraft, pocket, edition, mcpe, blocklauncher, block, launcher"
     },
-    "linenums": false
+    "linenums": true
   },
   "opts": {
-    "template"  : "node_modules/jaguarjs-jsdoc-patched/",
+    "template"  : "jsdoc_template/jaguar",
     "encoding"  : "utf8",
     "private"   : true,
     "recurse"   : true,

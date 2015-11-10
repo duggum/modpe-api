@@ -1,0 +1,189 @@
+@import "common.less";
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 4px;
+}
+
+.navigation {
+    position: fixed;
+    float: left;
+    width: @navWidth;
+    height: 100%;
+    background-color: @colorBgNavi;
+
+    font-family: Helvetica;
+    font-weight: 200;
+
+    .header {
+        position: relative;
+        background-color: @colorBgNavi2;
+        padding: 0 20px;
+
+        .logo {
+            position: absolute;
+            top: 12px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .applicationName {
+            margin: 0;
+            padding: 15px 15px 15px 42px;
+            font: 22px Helvetica;
+            color: #fff;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .search {
+        padding: 10px 15px;
+
+        input {
+            background-color: @colorBgNavi2;
+            color: #fff;
+            border: none;
+            border-radius: 45px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: 200;
+            padding: 0 26px;
+        }
+    }
+
+    .list {
+        padding: 10px 0 0 0;
+        position: relative;
+        overflow: auto;
+        width: 100%;
+
+        font-weight: 200;
+
+        .user-select(none);
+    }
+
+    li.item {
+        position: relative;
+        padding: 40px 15px 0 20px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #333;
+        overflow: hidden;
+
+        a {
+            color: @naviSelectedTitleColor;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .title {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            a {
+                color: #e1e1e1;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            display: block;
+            font-size: @naviTitleSize;
+            line-height: 40px;
+            color: @naviSelectedTitleColor;
+            padding-left: 14px;
+
+            .user-select(text);
+
+            .static {
+                .info-bubble();
+                display: block;
+                background-color: @colorStaticBubbleBg;
+                color: @colorStaticBubble;
+
+                float: right;
+                right: 18px;
+                top: 10px;
+                position: relative;
+            }
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font: 400 16px Helvetica;
+            color: @naviSubtitleColor;
+            display: block;
+        }
+
+
+        ul {
+            font-size: 14px;
+
+            & > li {
+                position: relative;
+                margin-left: 8px;
+                padding-left: 15px;
+                margin-top: 2px;
+
+                .user-select(text);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                    bottom: -1px;
+                    border-left: 1px solid @itemBorderLeftColor;
+                }
+
+                &.selected:after {
+                    content: '';
+                    position: absolute;
+                    left: -6px;
+                    top: 2px;
+                    background-color: @itemSelectedIndicatorColor;
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 45px;
+                }
+            }
+
+            & > span {
+                .user-select(text);
+            }
+        }
+
+        .itemMembers {
+            display: none;
+        }
+
+        &.selected {
+            background-color: @colorBgNavi2;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: -23px;
+                top: 6px;
+                background-color: #ffffff;
+                width: 28px;
+                height: 28px;
+                transform: rotate(45deg);
+            }
+
+            .title {
+                background-color: @naviSelectedTitleBgColor;
+                border-left: 6px solid @naviSelectedTitleBorderColor;
+            }
+        }
+    }
+}

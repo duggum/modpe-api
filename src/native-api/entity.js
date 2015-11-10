@@ -1,14 +1,15 @@
 /**
  * Static methods for the Entity API
  * @namespace {Class} Entity
+ * @license CC-BY-SA-4.0
  * @example Entity.methodName([ arg1[, arg2[, ...argN] ] ]);
  */
 
 /**
- * Add a potion effect with the specified `id` to the specified `entity`.
+ * Add a potion effect with the specified `effectId` to the specified `entity`.
  * @memberof Entity
  * @param {Object}  entity         - the entity to add the effect to
- * @param {int}     id             - the {@link MobEffect} to add
+ * @param {int}     effectId       - the {@link MobEffect} to add
  * @param {int}     duration       - the duration of the effect in ticks (1 second = 20 ticks)
  * @param {int}     amplification  - the amplification level of the effect
  * @param {boolean} ambient        - ???
@@ -19,21 +20,21 @@
  * var entity = Player.getPointedEntity(),
  * var effect = MobEffect.poison;
  *
- * // the easiest way to calculate duration is to multiply the number
- * // of seconds by 20 (30 seconds * 20 ticks/second = 600 ticks)
+ * // to calculate duration, multiply the number of seconds by 20
+ * // (i.e. 30 seconds * 20 ticks/second = 600 ticks)
  * var duration = 600;
  *
  * Entity.addEffect(entity, effect, duration, 0, false, true);
  * @todo get more info on `amplification`
  * @todo figure out what `ambient` is
  */
-function addEffect(entity, id, duration, amplification, ambient, showParticles) {}
+function addEffect(entity, effectId, duration, amplification, ambient, showParticles) {}
 
 /**
  * Return a list of all entity objects in the current world
  * @memberof Entity
  * @return {long[]} all entity objects currently in the game
- * @example <caption>credit: {@link https://goo.gl/5GAKMF|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/5GAKMF|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * function procCmd(cmd) {
  *   if (cmd === "removeall") {
  *     var entitiesList = Entity.getAll();
@@ -60,7 +61,8 @@ function getAnimalAge(Object_) {}
 
 /**
  * @memberof Entity
- function getEntityTypeId(Object_) {}
+ */
+function getEntityTypeId(Object_) {}
 
 /**
  * @memberof Entity
@@ -157,8 +159,7 @@ function getY(Object_) {}
  * @memberof Entity
  * @param  {Entity} [entity=Player] - the entity to query
  * @return {number} the yaw value
- * @see Example based on {@link http://goo.gl/fcSYaQ|Anti's DebugPE mod}
- * @example
+ * @example <caption>Based on {@link http://goo.gl/fcSYaQ|Anti's DebugPE mod}</caption>
  * // determine player's cardinal or intermediate direction
  * function getDirection() {
  *   var player = Player.getEntity();
@@ -194,7 +195,7 @@ function getY(Object_) {}
  *   return direction;
  * }
  *
- * // if a zombie kills you as you watch the sun set this should print "West" :-)
+ * // if you die watching the sun set, this should print "West" :-)
  * clientMessage(getDirection());
  */
 function getYaw(Object_) {}
@@ -319,7 +320,7 @@ function setSneaking(Object_, boolean_) {}
  * @memberof Entity
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
- * @example <caption>credit: {@link https://goo.gl/CWKplX|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var playerDir = [0, 0, 0];
  * var DEG_TO_RAD = Math.PI / 180;
  * var playerFlySpeed = 1;

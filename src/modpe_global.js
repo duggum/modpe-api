@@ -1,6 +1,6 @@
 /**
- * Armor types.
- * @staticclass
+ * @var ArmorType
+ * @desc Armor types.
  * @property {int} boots       3
  * @property {int} chestplate  1
  * @property {int} helmet      0
@@ -8,11 +8,11 @@
  * @example
  * print(ArmorType.chestplate); // prints 1
  */
-function ArmorType() {}
 
 /**
- * Chat colors for `clientMessage();`.
- * @staticclass
+ * @var ChatColor
+ * @desc Chat colors for `clientMessage();`.
+ * @static
  * @property {string} AQUA         "§b"
  * @property {string} BEGIN        "§"
  * @property {string} BLACK        "§0"
@@ -35,24 +35,20 @@ function ArmorType() {}
  * @example // you better RUN!
  * clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");
  */
-function ChatColor() {}
 
 /**
- * Dimension IDs.
- * @staticclass
+ * @var DimensionId
+ * @desc Dimension IDs.
  * @property {int} NETHER 1
  * @property {int} NORMAL 0
  * @example
  * print(DimensionId.NETHER); // prints 1
  */
-function DimensionId() {}
 
 /**
- * Entity render types. This determines the shape of creature to render, not
+ * @var EntityRenderType
+ * @desc Entity render types. This determines the shape of creature to render, not
  * the skin. To change the skin see {@link Entity.setMobSkin}.
- *
- * __NOTE: As of BlockLauncher v1.10.3 the render type id for cow (7) is
- * incorrect. It should be 6; 7 is for Mooshrooms.__
  *
  * @example
  * // make all pigs look like cows
@@ -63,14 +59,13 @@ function DimensionId() {}
  *     Entity.setMobSkin(entity, "mob/cow.png");
  *   }
  * }
- * @staticclass
- * @property {int[]} allTypes       [ 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+ * @property {int[]} allTypes       [ 2, . . . 45 ]
  * @property {int}   arrow          32
  * @property {int}   bat            10
  * @property {int}   blaze          18
  * @property {int}   boat           35
  * @property {int}   chicken        5
- * @property {int}   cow            7 __*> should be 6*__
+ * @property {int}   cow            6
  * @property {int}   creeper        22
  * @property {int}   egg            30
  * @property {int}   enderman       24
@@ -108,11 +103,10 @@ function DimensionId() {}
  * @property {int}   zombie         14
  * @property {int}   zombiePigman   15
  */
-function EntityRenderType() {}
 
 /**
- * Entity type variants.
- * @staticclass
+ * @var EntityType
+ * @desc Entity type variants.
  * @property  {int} ARROW             80
  * @property  {int} BAT               19
  * @property  {int} BLAZE             43
@@ -162,11 +156,10 @@ function EntityRenderType() {}
  * var z = Player.getZ();
  * Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");
  */
-function EntityType() {}
 
 /**
- * Item category variants.
- * @staticclass
+ * @var ItemCategory
+ * @desc Item category variants.
  * @property {int} DECORATION 8
  * @property {int} FOOD       4
  * @property {int} INTERNAL   \-1
@@ -174,13 +167,12 @@ function EntityType() {}
  * @property {int} TOOL       2
  * @example print(ItemCategory.FOOD); // prints 4
  */
-function ItemCategory() {}
 
 /**
- * Effects (usually from potions) that can be applied to mobs.
+ * @var MobEffect
+ * @desc Effects (usually from potions) that can be applied to mobs.
  *
  * See: {@link Entity.addEffect}, {@link Entity.removeEffect}, {@link Entity.removeAllEffects}
- * @staticclass
  * @property {int} absorption       22
  * @property {int} blindness        15
  * @property {int} confusion        9
@@ -188,7 +180,7 @@ function ItemCategory() {}
  * @property {int} damageResistance 11
  * @property {int} digSlowdown      4
  * @property {int} digSpeed         3
- * @property {HashMap<Integer, String>} effectIds all type IDs; *NOT* in numerical order (i.e. `{8=jump, ..., 20=wither}`)
+ * @property {HashMap<int, string>} effectIds all type IDs; *NOT* in numerical order (i.e. `{8=jump, ..., 20=wither}`)
  * @property {int} fireResistance   12
  * @property {int} harm             7
  * @property {int} heal             6
@@ -208,13 +200,12 @@ function ItemCategory() {}
  * @example
  * print(MobEffect.jump); // prints 8
  */
-function MobEffect() {}
 
 /**
- * Particle types.
+ * @var ParticleType
+ * @desc Particle types.
  *
  * See: {@link Level.addParticle}
- * @staticclass
  * @property {int} angryVillager     30
  * @property {int} bubble            1
  * @property {int} cloud             4
@@ -254,10 +245,10 @@ function MobEffect() {}
  * var z = Player.getPointedBlockZ();
  * Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);
  */
-function ParticleType() {}
 
 /**
- * Add a specified `quantity` of a specified item or block `id` to the player's inventory.
+ * @function addItemInventory
+ * @desc Add a specified `quantity` of a specified item or block `id` to the player's inventory.
  * @deprecated use {@link Player.addItemInventory} instead
  * @param {int} id       - the item or block ID
  * @param {int} quantity - how much to add
@@ -266,48 +257,48 @@ function ParticleType() {}
  * // sticks anyone?
  * addItemInventory(280, 64, 0);
  */
-function addItemInventory(id, quantity, damage) {}
 
 /**
- * Set the `skin` image for a valid MCPE entity `id`.
+ * @function bl_setMobSkin
+ * @desc Set the `skin` image for a valid MCPE `entityId`.
  * @deprecated use {@link Entity.setMobSkin} instead
- * @param {int} id      - the entity ID (see: {@link EntityType})
- * @param {string} skin - the skin image path (usually an image found in the
- *                        `../assets/images` folder of the MCPE apk)
+ * @param {int}    entityId - the entity ID (see: {@link EntityType})
+ * @param {string} skin     - the skin image path (usually an image found in the
+ *                            `../assets/images` folder of the MCPE apk)
  * @example
  * // make yourself look like a creeper
  * bl_setMobSkin(Player.getEntity(), "mob/creeper.png");
  */
-function bl_setMobSkin(id, skin) {}
 
 /**
- * Spawn a mob with a valid MCPE entity `id` at the specified `x`, `y`, and `z`
+ * @function bl_spawnMob
+ * @desc Spawn a mob with a valid MCPE `entityId` at the specified `x`, `y`, and `z`
  * coordinates using the specified `skin` image.
  * @deprecated use {@link Level.spawnMob} instead
- * @param {double} x    - the x coordinate
- * @param {double} y    - the y coordinate
- * @param {double} z    - the z coordinate
- * @param {int}   id    - the entity ID (see: {@link EntityType})
- * @param {string} skin - the skin image path (usually an image found in the
- *                        `../assets/images` folder of the MCPE apk)
+ * @param {double} x        - the x coordinate
+ * @param {double} y        - the y coordinate
+ * @param {double} z        - the z coordinate
+ * @param {int}    entityId - the entity ID (see: {@link EntityType})
+ * @param {string} skin     - the skin image path (usually an image found in the
+ *                            `../assets/images` folder of the MCPE apk)
  * @example
  * // spawn a skeleton
  * bl_spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
  */
-function bl_spawnMob(x, y, z, id, skin) {}
 
 /**
- * Display a `message` in the chat buffer.
+ * @function clientMessage
+ * @desc Display a `message` in the chat buffer.
  * @param {string} message - the message to display
  * @example
  * clientMessage("Don't poke the Zombie Pigmen!!")
  * @see {@link print}, {@link ModPE.showTipMessage}
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Shell#print.28.5Bexpr_....5D.29
  */
-function clientMessage(message) {}
 
 /**
- * Cause an explosion of the specified `radius` with the center located at the
+ * @function explode
+ * @desc Cause an explosion of the specified `radius` with the center located at the
  * specified `x`, `y` and `z` coordinates.
  * @deprecated use {@link Level.explode} instead
  * @param {double} x the  - x coordinate
@@ -317,42 +308,42 @@ function clientMessage(message) {}
  * @example // underground nuclear warhead testing
  * explode(127, 8, 45, 128);
  */
-function explode(x, y, z, radius) {}
 
 /**
- * Return the id of the item or block the player is currently holding.
+ * @function getCarriedItem
+ * @desc Return the id of the item or block the player is currently holding.
  * @deprecated use {@link Player.getCarriedItem} instead
  * @return {int} the item or block ID
  * @example print("You are carrying a " + getCarriedItem() + "!");
  * @see {@link Player.getCarriedItemCount}, {@link Player.getCarriedItemData}
  */
-function getCarriedItem() {}
 
 /**
- * __THIS THROWS AN ERROR ON ANDROID; IS IT iOS ONLY???___
+ * @function getLevel
+ * @desc __THIS THROWS AN ERROR ON ANDROID; IS IT iOS ONLY???___
  * @deprecated use {@link Level.getAddress} instead
- * @return __`unknown`__
+ * @return {Object} __`unknown`__
  * @todo figure out what this does
  */
-function getLevel() {}
 
 /**
- * Return the up/down head rotation of the given `entity` (range: \-90 to 90).
+ * @function getPitch
+ * @desc Return the up/down head rotation of the given `entity` (range: \-90 to 90).
  * @deprecated use {@link Entity.getPitch} instead
  * @param  {entity} [entity=Player] - the entity to query
  * @return {double} the pitch value
  * @example
  * // no shoe gazing
- * var pitch = getPitch();
+ * var pitch = getPitch(Player.getEntity()); // <-- redundant since Player is default
  * if (pitch < -30) {
  *   clientMessage("Keep your head up!!");
  * }
  * @see {@link getYaw} for a more detailed example
  */
-function getPitch(entity) {}
 
 /**
- * Return the player's native entity id (*NOT* the same as {@link EntityType}).
+ * @function getPlayerEnt
+ * @desc Return the player's native entity id (*NOT* the same as {@link EntityType}).
  * @deprecated use {@link Player.getEntity} instead
  * @return {long} the player's entity id
  * @example
@@ -360,40 +351,40 @@ function getPitch(entity) {}
  * Entity.setHealth(getPlayerEnt(), 0);
  * @see {@link getYaw} for a more detailed example
  */
-function getPlayerEnt() {}
 
 /**
- * Return the player's current x coordinate.
+ * @function getPlayerX
+ * @desc Return the player's current x coordinate.
  * @deprecated use {@link Player.getX} instead
  * @return {double} the player's x coordinate
  * @example
  * var x = Math.round(getPlayerX());
  * ModPE.showTipMessage("Your X coordinate is: " + x);
  */
-function getPlayerX() {}
 
 /**
- * Return the player's current y coordinate.
+ * @function getPlayerY
+ * @desc Return the player's current y coordinate.
  * @deprecated use {@link Player.getY} instead
  * @return {double} the player's y coordinate
  * @example
  * var y = Math.round(getPlayerY());
  * ModPE.showTipMessage("Your Y coordinate is: " + y);
  */
-function getPlayerY() {}
 
 /**
- * Return the player's current z coordinate.
+ * @function getPlayerZ
+ * @desc Return the player's current z coordinate.
  * @deprecated use {@link Player.getZ} instead
  * @return {double} the player's z coordinate
  * @example
  * var z = Math.round(getPlayerZ());
  * ModPE.showTipMessage("Your Z coordinate is: " + z);
  */
-function getPlayerZ() {}
 
 /**
- * return the id of the block located at the specified `x`, `y`, and `z` coordinates
+ * @function getTile
+ * @desc return the id of the block located at the specified `x`, `y`, and `z` coordinates
  * @deprecated use {@link Level.getTile} instead
  * @param  {int} x - the x coordinate
  * @param  {int} y - the y coordinate
@@ -412,10 +403,10 @@ function getPlayerZ() {}
  *   }
  * }
  */
-function getTile(x, y, z) {}
 
 /**
- * Return the left/right head rotation of the given `entity` (range: -∞ to ∞).
+ * @function getYaw
+ * @desc @desc Return the left/right head rotation of the given `entity` (range: -∞ to ∞).
  * @deprecated use {@link Entity.getYaw} instead
  * @param  {entity} [entity=Player] - the entity to query
  * @return {double} the yaw value
@@ -455,16 +446,16 @@ function getTile(x, y, z) {}
  *   return direction;
  * }
  *
- * // if a zombie kills you as you watch the sun set this should print "West" :-)
+ * // if you die watching the sun set, this should print "West" :-)
  * clientMessage(getDirection());
  */
-function getYaw(entity) {}
 
 /**
- * Prevent the default action from taking place.
+ * @function preventDefault
+ * @desc Prevent the default action from taking place.
  * @todo get more information about how this works and precisely what it does
  * @todo better example or add explanatory details
- * @example <caption>credit: {@link https://goo.gl/2Ojy4t|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/2Ojy4t|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * function useItem(x, y, z, itemId, blockId) {
  *   if (itemId === 354) { // cake
  *     teleportToFloor(UPWARD);
@@ -475,23 +466,23 @@ function getYaw(entity) {}
  *   }
  * }
  */
-function preventDefault() {}
 
 /**
- * Display the given `text` as a pop-up toast message.
+ * @function print
+ * @desc Display the given `text` as a pop-up toast message.
  * @param {string} text - the message to be displayed
  * @see {@link clientMessage}, {@link ModPE.showTipMessage}
  * @example
  * print("The creepers are coming!");
  */
-function print(text) {}
 
 /**
- * Make the specified `rider` entity ride the `target` entity.
+ * @function rideAnimal
+ * @desc Make the specified `rider` entity ride the `target` entity.
  * @deprecated use {@link Entity.rideAnimal} instead
  * @param {entity} rider  - the rider
  * @param {entity} target - the target
- * @example <caption>credit: {@link https://goo.gl/ZkEa8H|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/ZkEa8H|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var cart = -1;
  * var playerX;
  * var playerZ;
@@ -517,10 +508,10 @@ function print(text) {}
  *   }
  * }
  */
-function rideAnimal(rider, target) {}
 
 /**
- * Set whether it is night or day.
+ * @function setNightMode
+ * @desc Set whether it is night or day.
  * @deprecated use {@link Level.setNightMode} instead
  * @param {boolean} isNight - night if true, day if false
  * @example
@@ -529,17 +520,17 @@ function rideAnimal(rider, target) {}
  *   setNightMode(false);
  * }
  */
-function setNightMode(isNight) {}
 
 /**
- * Set the location of the specified `entity` to the specified `x`, `y`, `z` coordinates;
+ * @function setPosition
+ * @desc Set the location of the specified `entity` to the specified `x`, `y`, `z` coordinates;
  * If attackHook is not used, {@link Player.getEntity()} can be used as the entity parameter
  * @deprecated use {@link Entity.setPosition} instead
  * @param {entity} entity - the entity to be teleported
  * @param {double} x - the x coordinate
  * @param {double} y - the y coordinate
  * @param {double} z - the z coordinate
- * @example <caption>credit: {@link https://goo.gl/8LAaNU|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/8LAaNU|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var UPWARD = 1;
  * var DOWNWARD = -1;
  * function useItem(x, y, z, itemId, blockId) {
@@ -565,17 +556,17 @@ function setNightMode(isNight) {}
  *   }
  * }
  */
-function setPosition(entity, x, y, z) {}
 
 /**
- * Set the location of the specified `entity` relative to the current `x`, `y`, `z` coordinates.
+ * @function setPositionRelative
+ * @desc Set the location of the specified `entity` relative to the current `x`, `y`, `z` coordinates.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter
  * @deprecated use {@link Entity.setPositionRelative} instead
  * @param {entity} entity - the entity to be teleported
  * @param {double} x - the x coordinate
  * @param {double} y - the y coordinate
  * @param {double} z - the z coordinate
- * @example <caption>credit: {@link https://goo.gl/i1ixVy|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/i1ixVy|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * function modTick() {
  *   if (vehicleLoc === null || --vehicleSpeed > 0) return;
  *   vehicleSpeed = 5;
@@ -603,10 +594,10 @@ function setPosition(entity, x, y, z) {}
  *   setPositionRelative(getPlayerEnt(), vehicleVel[0], vehicleVel[1], vehicleVel[2]);
  * }
  */
-function setPositionRelative(entity, x, y, z) {}
 
 /**
- * Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
+ * @function setRot
+ * @desc Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter.
  * @deprecated use {@link Entity.setRot} instead
  * @param {entity} entity - the target entity that will have its head rotation modified
@@ -621,17 +612,17 @@ function setPositionRelative(entity, x, y, z) {}
  *   y++;
  * }
  */
-function setRot(entity, yaw, pitch) {}
 
 /**
- * Place a tile with the specified `id` and `damage` value at the specified `x`, `y`, `z` coordinates
+ * @function setTile
+ * @desc Place a tile with the specified `id` and `damage` value at the specified `x`, `y`, `z` coordinates
  * @deprecated use {@link Level.setTile} instead
  * @param {int} x          - the x coordinate for the tile
  * @param {int} y          - the y coordinate for the tile
  * @param {int} z          - the z coordinate for the tile
  * @param {int} id         - the tile id
  * @param {int} [damage=0] - the tile's damage value
- * @example <caption>credit: {@link https://goo.gl/X4HRNx| 'Chad' via 500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/X4HRNx| 'Chad' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * // instantly grow a tree when the ground is tapped with an oak sapling.
  * function useItem(x,y,z,itemId,blockId,side) {
  *   if(itemId === 6) {
@@ -670,14 +661,14 @@ function setRot(entity, yaw, pitch) {}
  *   }
  * }
  */
-function setTile(x, y, z, blockId, damage) {}
 
 /**
- * Set the specified `entity`'s `velocity` along the X axis.
+ * @function setVelX
+ * @desc Set the specified `entity`'s `velocity` along the X axis.
  * @deprecated use {@link Entity.setVelX} instead
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
- * @example <caption>credit: {@link https://goo.gl/CWKplX|500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var playerDir = [0, 0, 0];
  * var DEG_TO_RAD = Math.PI / 180;
  * var playerFlySpeed = 1;
@@ -701,28 +692,28 @@ function setTile(x, y, z, blockId, damage) {}
  *   vector[2] = Math.sin(yaw) * Math.cos(pitch);
  * }
  */
-function setVelX(entity, velocity) {}
 
 /**
- * Set the specified `entity`'s `velocity` along the Y axis.
+ * @function setVelY
+ * @desc Set the specified `entity`'s `velocity` along the Y axis.
  * @deprecated use {@link Entity.setVelY} instead
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @see Example at {@link setVelX}
  */
-function setVelY(entity, velocity) {}
 
 /**
- * Set the specified `entity`'s `velocity` along the Z axis.
+ * @function setVelZ
+ * @desc Set the specified `entity`'s `velocity` along the Z axis.
  * @deprecated use {@link Entity.setVelZ} instead
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @see Example at {@link setVelX}
  */
-function setVelZ(entity, velocity) {}
 
 /**
- * Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
+ * @function spawnChicken
+ * @desc Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  * @deprecated use {@link Level.spawnChicken} instead
  * @param {int} x          - the x coordinate
  * @param {int} y          - the y coordinate
@@ -730,7 +721,7 @@ function setVelZ(entity, velocity) {}
  * @param {string} skin    - the skin image path (usually an image found in the
  *                           `../assets/images` folder of the MCPE apk)
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
- * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via 500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var tb = false;
  *
  * function useItem(x, y, z, itemId, blockId, side) {
@@ -748,10 +739,10 @@ function setVelZ(entity, velocity) {}
  *   }
  * }
  */
-function spawnChicken(x, y, z, skin) {}
 
 /**
- * Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
+ * @function spawnCow
+ * @desc Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  * @deprecated use {@link Level.spawnCow} instead
  * @param {int} x          - the x coordinate
  * @param {int} y          - the y coordinate
@@ -759,7 +750,7 @@ function spawnChicken(x, y, z, skin) {}
  * @param {string} skin    - the skin image path (usually an image found in the
  *                           `../assets/images` folder of the MCPE apk)
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
- * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via 500 Internal Server Error}</caption>
+ * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
  * var tb = false;
  *
  * function useItem(x, y, z, itemId, blockId, side) {
@@ -777,10 +768,10 @@ function spawnChicken(x, y, z, skin) {}
  *   }
  * }
  */
-function spawnCow(x, y, z, skin) {}
 
 /**
- * Spawn a zombie pigman entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
+ * @function spawnPigZombie
+ * @desc Spawn a zombie pigman entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
  * The `heldItemId` parameter determines what the zombie pigman will be hold when spawned.
  * @param {int} x          - the x coordinate
@@ -794,4 +785,3 @@ function spawnCow(x, y, z, skin) {}
  * // cannibals!!
  * spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.png");
  */
-function spawnPigZombie(x, y, z, heldItemId, skin) {}

@@ -42,7 +42,7 @@ function addFurnaceRecipe(id, damge, source) {}
  * @param {int} damage        - the `damage` value of the new item
  * @param {string[]} keys     - the layout of the ingredient `keys`
  * @param {Array} ingredients - the `ingredients`
- * @see Original shaped recipe script by {@link https://goo.gl/ApLbnm|500 Internal Server Error}
+ * @see Original shaped recipe script by {@link https://goo.gl/ApLbnm|Zhuowei Zhang (500_Internal_Server_Error)}
  * @example
  * // make an enchantment table
  * var ENCHANTMENT_TABLE_ID = 240;
@@ -96,7 +96,7 @@ function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
  * @param {int}    damageReduce - how much damage is taken when hit
  * @param {int}    maxDamage    - the maximum amount of damage the item can sustain
  * @param {int}    type         - the `type` of armor this item is
- * @see Original armor script by {@link https://goo.gl/sTc5jr|500 Internal Server Error}
+ * @see Original armor script by {@link https://goo.gl/sTc5jr|Zhuowei Zhang (500_Internal_Server_Error)}
  * @example
  * // WOOT! Zombie armor!
  * Item.defineArmor(

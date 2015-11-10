@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      "jsdoc-oblivion",
+      "/Users/dj/Dev/mcpe_mods/modpe-api"
+    ]
+  ],
+  "_from": "jsdoc-oblivion@*",
+  "_id": "jsdoc-oblivion@0.0.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/jsdoc-oblivion",
+  "_npmUser": {
+    "email": "hello@miguelmota.com",
+    "name": "miguelmota"
+  },
+  "_npmVersion": "1.4.19",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "jsdoc-oblivion",
+    "raw": "jsdoc-oblivion",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jsdoc-oblivion/-/jsdoc-oblivion-0.0.4.tgz",
+  "_shasum": "73d4b657e99a335d41d9b2ee264b19a66d5638e7",
+  "_shrinkwrap": null,
+  "_spec": "jsdoc-oblivion",
+  "_where": "/Users/dj/Dev/mcpe_mods/modpe-api",
+  "author": {
+    "email": "hello@miguelmota.com",
+    "name": "Miguel Mota",
+    "url": "http://www.miguelmota.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/miguelmota/jsdoc-oblivion/issues"
+  },
+  "dependencies": {},
+  "description": "A gray and blue theme for JSDoc.",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-jsdoc": "^0.5.7",
+    "jsdoc": "^3.3.0-alpha9"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "73d4b657e99a335d41d9b2ee264b19a66d5638e7",
+    "tarball": "http://registry.npmjs.org/jsdoc-oblivion/-/jsdoc-oblivion-0.0.4.tgz"
+  },
+  "gitHead": "e512ed880dc0a2cc7217c87f021e26a2c1391a8c",
+  "homepage": "https://github.com/miguelmota/jsdoc-oblivion",
+  "keywords": [
+    "javascript",
+    "jsdoc",
+    "oblivion",
+    "template",
+    "theme"
+  ],
+  "license": "MIT",
+  "main": "template/publish.js",
+  "maintainers": [
+    {
+      "name": "miguelmota",
+      "email": "hello@miguelmota.com"
+    }
+  ],
+  "name": "jsdoc-oblivion",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelmota/jsdoc-oblivion.git"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "version": "0.0.4"
+}

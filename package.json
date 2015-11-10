@@ -1,20 +1,31 @@
 {
-  "name": "modpe_api",
+  "name": "modpe-api",
   "version": "0.0.2",
   "description": "Documentation for the ModPE API.",
-  "main": "./src/modpe_global.js",
+  "homepage": "https://github.com/duggum/modpe-api",
+  "bugs": "https://github.com/duggum/modpe-api/issues",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+    "./src"
+  ],
+  "main": "Gruntfile.js",
   "author": {
     "name": "Dave Jopson",
     "email": "duggum@users.noreply.github.com",
-    "url": "https://github.com/duggum/modpe-api"
+    "url": "https://duggum.com"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/duggum/modpe-api.git"
   },
-  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "taffydb": "^2.7.2",
+    "underscore": "^1.7.0"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-jsdoc": "^1.0.0"
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-jsdoc": "^1.0.0",
+    "jsdoc": "^3.3.3"
   }
 }

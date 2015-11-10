@@ -1,0 +1,16 @@
+{
+  "name": "jsdoc-oblivion",
+  "version": "0.0.4",
+  "homepage": "https://github.com/miguelmota/jsdoc-oblivion",
+  "authors": [
+    "Miguel Mota <miguelmota2@gmail.com>"
+  ],
+  "description": "A gray and blue JSDoc template theme.",
+  "main": "template/publish.js",
+  "keywords": [
+    "jsdoc",
+    "template"
+  ],
+  "license": "MIT",
+  "private": true
+}
