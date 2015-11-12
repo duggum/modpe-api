@@ -13,7 +13,7 @@
   ],
   "markdown": {
     "parser": "marked",
-    "tags": ["example"]
+    "tags": ["example", "see"]
   },
   "templates": {
     "cleverLinks": false,

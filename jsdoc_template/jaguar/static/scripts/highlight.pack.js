@@ -314,7 +314,6 @@
           closeSpan   = leaveOpen ? '' : '</span>';
 
       openSpan += classname + '">';
-
       return openSpan + insideSpan + closeSpan;
     }
 
@@ -761,136 +760,303 @@
     begin: hljs.UNDERSCORE_IDENT_RE,
     relevance: 0
   };
+  hljs.JSDOC_UNDERSCORE_IDENT_RE = '[a-zA-Z_0-9]\\w*';
+  hljs.JSDOC_PROPERTY_NAME_RE = '[a-zA-Z_0-9\/\'&;]\\w*';
+  hljs.JSDOC_COMMENT_MODE = (function () {
+    var mode = hljs.inherit({
+      className: 'jsdoc-comment',
+      begin: /(\/\*{2})/, end: /(\*{3}\/)/,
+      contains: []
+    });
+    mode.contains.push({
+      className:"jsdoc-example",
+      begin:/\/\/\s.+$/,
+      end:/\*\n[ ]+\*[ ]{1}/,
+      excludeBegin: true,
+      excludeEnd: true,
+      contains:[
+        {
+          className:"jsdoc-example-code",
+          begin:/\s\*(?!\n|\*)/,
+          end: /$|\*/,
+          excludeBegin: true,
+          excludeEnd: true,
+          contains: [{
+            begin:/.+/,
+            subLanguage:"javascript"
+          }]
+        }
+      ]
+    });
+    // caption
+    mode.contains.push({
+      className:"jsdoc-angle-brackets",
+      begin:/\<|\<\//,
+      end:/\>/,
+      contains: [
+        {
+          className:"jsdoc-caption",
+          begin:/\bcaption\b/
+        }
+      ]
+    });
+    // type
+    mode.contains.push({
+      className:"jsdoc-type",
+      begin:/\@type/,
+      end:/$|\*/,
+      excludeEnd: true,
+      contains:[
+        {
+          className:"jsdoc-brackets",
+          begin:/\{/,
+          end:/\}/,
+          contains: [
+            {
+              className:"jsdoc-type-name",
+              begin:/[a-zA-Z<>,\[\]\s]+/
+            }
+          ]
+        }
+      ]
+    });
+    // property
+    mode.contains.push({
+      className:"jsdoc-prop",
+      begin:/\@property|\@prop/,
+      end:/\-/,
+      excludeEnd: true,
+      contains:[
+        {
+          className:"jsdoc-brackets",
+          begin:/\{/,
+          end:/\}/,
+          contains: [
+            {
+              className:"jsdoc-prop-type",
+              begin:/[a-zA-Z<>,\[\]\s]+/
+            }
+          ]
+        },
+        {
+          className:"jsdoc-prop-name",
+          begin:hljs.JSDOC_PROPERTY_NAME_RE
+        }
+      ]
+    });
+    // return
+    mode.contains.push({
+      className:"jsdoc-return",
+      begin:/\@returns|\@return/,
+      end:/\-/,
+      excludeEnd: true,
+      contains:[
+        {
+          className:"jsdoc-brackets",
+          begin:/\{/,
+          end:/\}/,
+          contains: [
+            {
+              className:"jsdoc-return-type",
+              begin:/[a-zA-Z<>,\[\]\s]+/
+            }
+          ]
+        }
+      ]
+    });
+    // param
+    mode.contains.push({
+      className:"jsdoc-param",
+      begin:/\@param/,
+      end:/\-/,
+      excludeEnd: true,
+      contains:[
+        {
+          className:"jsdoc-brackets",
+          begin:/\{/,
+          end:/\}/,
+          contains: [
+            {
+              className:"jsdoc-param-type",
+              begin:/[a-zA-Z<>,\[\]\s]+/
+            }
+          ]
+        },
+        {
+          className:"jsdoc-param-default-brackets",
+          begin:/\[/,
+          end:/\]/,
+          contains: [
+            {
+              className:"jsdoc-param-default-name",
+              begin:hljs.JSDOC_UNDERSCORE_IDENT_RE
+            },
+            {
+              className:"jsdoc-param-default-equal",
+              begin:/\s[=]{1}\s/,
+              relevance: 0
+            },
+            {
+              className:"jsdoc-param-default-value",
+              begin:hljs.JSDOC_UNDERSCORE_IDENT_RE
+            }
+          ]
+        },
+        {
+          className:"jsdoc-param-name",
+          begin:'\\s'+hljs.JSDOC_UNDERSCORE_IDENT_RE+'\\s'
+        }
+      ]
+    });
+    mode.contains.push({
+      className:"jsdoc-todo",
+      begin:/\@todo/
+    });
+    mode.contains.push({
+      className:"jsdoc-deprecated",
+      begin:/\@deprecated/
+    });
+    mode.contains.push({
+      className:"jsdoc-tag",
+      begin:/\@(virtual|version|variation|var|typedef|tutorial|throws|this|summary|static|since|see|requires|readonly|public|protected|private|overview|override|namespace|name|module|mixin|mixes|method|memberof|member|listens|linkplain|linkcode|link|license|lends|kind|interface|instance|inner|inheritdoc|implements|ignore|host|global|function|func|fires|fileoverview|file|external|extends|exports|exception|example|event|enum|emits|description|desc|defaultvalue|default|copyright|constructs|constructor|constant|const|classdesc|class|callback|borrows|author|augments|argument|arg|alias|access|abstract)/g,
+    });
+    mode.contains.push(hljs.PHRASAL_WORDS_MODE);
+    return mode;
+  })();
+// END CUSTOMIZATION
 
-hljs.registerLanguage('javascript', function(hljs) {
-  return {
-    aliases: ['js'],
-    keywords: {
-      keyword:
-        'in of if for while finally var new function do return void else break catch ' +
-        'instanceof with throw case default try this switch continue typeof delete ' +
-        'let yield const export super debugger as async await',
-      literal:
-        'true false null undefined NaN Infinity',
-      built_in:
-        'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent ' +
-        'encodeURI encodeURIComponent escape unescape Object Function Boolean Error ' +
-        'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError ' +
-        'TypeError URIError Number Math Date String RegExp Array Float32Array ' +
-        'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
-        'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
-        'module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect ' +
-        'Promise'
-    },
-    contains: [
-      {
-        className: 'pi',
-        relevance: 10,
-        begin: /^\s*['"]use (strict|asm)['"]/
+  hljs.registerLanguage('javascript', function(hljs) {
+    return {
+      aliases: ['js'],
+      keywords: {
+        keyword:
+          'in of if for while finally var new function do return void else break catch ' +
+          'instanceof with throw case default try this switch continue typeof delete ' +
+          'let yield const export super debugger as async await',
+        literal:
+          'true false null undefined NaN Infinity',
+        built_in:
+          'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent ' +
+          'encodeURI encodeURIComponent escape unescape Object Function Boolean Error ' +
+          'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError ' +
+          'TypeError URIError Number Math Date String RegExp Array Float32Array ' +
+          'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
+          'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
+          'module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect ' +
+          'Promise'
       },
-      hljs.APOS_STRING_MODE,
-      hljs.QUOTE_STRING_MODE,
-      { // template string
-        className: 'string',
-        begin: '`', end: '`',
-        contains: [
-          hljs.BACKSLASH_ESCAPE,
-          {
-            className: 'subst',
-            begin: '\\$\\{', end: '\\}'
-          }
-        ]
-      },
-      hljs.C_LINE_COMMENT_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
-      {
-        className: 'number',
-        variants: [
-          { begin: '\\b(0[bB][01]+)' },
-          { begin: '\\b(0[oO][0-7]+)' },
-          { begin: hljs.C_NUMBER_RE }
-        ],
-        relevance: 0
-      },
-      { // "value" container
-        begin: '(' + hljs.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
-        keywords: 'return throw case',
-        contains: [
-          hljs.C_LINE_COMMENT_MODE,
-          hljs.C_BLOCK_COMMENT_MODE,
-          hljs.REGEXP_MODE,
-          { // E4X / JSX
-            begin: /</, end: />\s*[);\]]/,
-            relevance: 0,
-            subLanguage: 'xml'
-          }
-        ],
-        relevance: 0
-      },
-      {
-        className: 'function',
-        beginKeywords: 'function', end: /\{/, excludeEnd: true,
-        contains: [
-          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][0-9A-Za-z$_]*/}),
-          {
-            className: 'params',
-            begin: /\(/, end: /\)/,
-            excludeBegin: true,
-            excludeEnd: true,
-            contains: [
-              hljs.C_LINE_COMMENT_MODE,
-              hljs.C_BLOCK_COMMENT_MODE
-            ]
-          }
-        ],
-        illegal: /\[|%/
-      },
-      // customizations
-      {
-        className:"starters",
-        begin:"\\s(!|!=|!==|%|%=|&|&&|&=|\\*|\\*\\*|\\*=|\\*\\*=|\\+=|-=|/=|/|:|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\^|\\^=|\\||\\|=|\\|\\||~)\\s"
-      },
-      {
-        className:"starters",
-        begin:/\s(-|\+){1}\s/
-      },
-      {
-        className:"modpe",
-        begin:/\b(Block|Entity|Item|Level|ModPE|Player|Renderer|Server)\b/,end:/\./,excludeEnd:!0
-      },
-      {
-        className:"modpe-static",
-        begin:/\b(ArmorType|ChatColor|DimensionId|EntityRenderType|EntityType|ItemCategory|MobEffect|ParticleType)\b/
-      },
-      // end customizations
-      {
-        begin: /\$[(.]/ // relevance booster for a pattern common to JS libs: `$(something)` and `$.something`
-      },
-      {
-        begin: '\\.' + hljs.IDENT_RE, relevance: 0 // hack: prevents detection of keywords after dots
-      },
-      // ECMAScript 6 modules import
-      {
-        beginKeywords: 'import', end: '[;$]',
-        keywords: 'import from as',
-        contains: [
-          hljs.APOS_STRING_MODE,
-          hljs.QUOTE_STRING_MODE
-        ]
-      },
-      { // ES6 class
-        className: 'class',
-        beginKeywords: 'class', end: /[{;=]/, excludeEnd: true,
-        illegal: /[:"\[\]]/,
-        contains: [
-          {beginKeywords: 'extends'},
-          hljs.UNDERSCORE_TITLE_MODE
-        ]
-      }
-    ],
-    illegal: /#/
-  };
-});
+      contains: [
+        {
+          className: 'pi',
+          relevance: 10,
+          begin: /^\s*['"]use (strict|asm)['"]/
+        },
+        hljs.APOS_STRING_MODE,
+        hljs.QUOTE_STRING_MODE,
+        { // template string
+          className: 'string',
+          begin: '`', end: '`',
+          contains: [
+            hljs.BACKSLASH_ESCAPE,
+            {
+              className: 'subst',
+              begin: '\\$\\{', end: '\\}'
+            }
+          ]
+        },
+        hljs.JSDOC_COMMENT_MODE,
+        hljs.C_LINE_COMMENT_MODE,
+        hljs.C_BLOCK_COMMENT_MODE,
+        {
+          className: 'number',
+          variants: [
+            { begin: '\\b(0[bB][01]+)' },
+            { begin: '\\b(0[oO][0-7]+)' },
+            { begin: hljs.C_NUMBER_RE }
+          ],
+          relevance: 0
+        },
+        { // "value" container
+          begin: '(' + hljs.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
+          keywords: 'return throw case',
+          contains: [
+            hljs.JSDOC_COMMENT_MODE,
+            hljs.C_LINE_COMMENT_MODE,
+            hljs.C_BLOCK_COMMENT_MODE,
+            hljs.REGEXP_MODE,
+            { // E4X / JSX
+              begin: /</, end: />\s*[);\]]/,
+              relevance: 0,
+              subLanguage: 'xml'
+            }
+          ],
+          relevance: 0
+        },
+        {
+          className: 'function',
+          beginKeywords: 'function', end: /\{/, excludeEnd: true,
+          contains: [
+            hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][0-9A-Za-z$_]*/}),
+            {
+              className: 'params',
+              begin: /\(/, end: /\)/,
+              excludeBegin: true,
+              excludeEnd: true,
+              contains: [
+                hljs.JSDOC_COMMENT_MODE,
+                hljs.C_LINE_COMMENT_MODE,
+                hljs.C_BLOCK_COMMENT_MODE
+              ]
+            }
+          ],
+          illegal: /\[|%/
+        },
+        // customizations
+        {
+          className:"starters",
+          begin:"\\s(!|!=|!==|%|%=|&|&&|&=|\\*|\\*\\*|\\*=|\\*\\*=|\\+=|-=|/=|/|:|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\^|\\^=|\\||\\|=|\\|\\||~)\\s"
+        },
+        {
+          className:"starters",
+          begin:/\s(-|\+){1}\s/
+        },
+        {
+          className:"modpe",
+          begin:/\b(Block|Entity|Item|Level|ModPE|Player|Renderer|Server)\b/,end:/\./,excludeEnd:!0
+        },
+        {
+          className:"modpe-static",
+          begin:/\b(ArmorType|ChatColor|DimensionId|EntityRenderType|EntityType|ItemCategory|MobEffect|ParticleType)\b/
+        },
+        // end customizations
+        {
+          begin: /\$[(.]/ // relevance booster for a pattern common to JS libs: `$(something)` and `$.something`
+        },
+        {
+          begin: '\\.' + hljs.IDENT_RE, relevance: 0 // hack: prevents detection of keywords after dots
+        },
+        // ECMAScript 6 modules import
+        {
+          beginKeywords: 'import', end: '[;$]',
+          keywords: 'import from as',
+          contains: [
+            hljs.APOS_STRING_MODE,
+            hljs.QUOTE_STRING_MODE
+          ]
+        },
+        { // ES6 class
+          className: 'class',
+          beginKeywords: 'class', end: /[{;=]/, excludeEnd: true,
+          illegal: /[:"\[\]]/,
+          contains: [
+            {beginKeywords: 'extends'},
+            hljs.UNDERSCORE_TITLE_MODE
+          ]
+        }
+      ],
+      illegal: /#/
+    };
+  });
 
   return hljs;
 }));

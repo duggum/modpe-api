@@ -28,12 +28,11 @@
 
           numbered = Array.prototype.slice.apply(source.children);
           numbered = numbered.map(function(item) {
-              counter++;
-              item.id = 'line' + counter;
+            counter++;
+            item.id = 'line' + counter;
           });
 
           if (config.linenums) {
-
             // adjust width for line numbers based on lines of code
             var width;
             var len = numbered.length;

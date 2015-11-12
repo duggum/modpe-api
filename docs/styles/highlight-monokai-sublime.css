@@ -137,6 +137,14 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
   color: #e6db74;
 }
 
+.hljs-jsdoc-brackets,
+.hljs-jsdoc-param-default-brackets,
+.hljs-jsdoc-param-default-equal,
+.hljs-jsdoc-comment {
+  color: #75715e;
+  font-style: italic;
+}
+
 .hljs-comment,
 .hljs-annotation,
 .hljs-decorator,
@@ -160,3 +168,70 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .php .xml {
   opacity: 0.5;
 }
+
+.hljs-jsdoc-angle-brackets,
+.hljs-jsdoc-example-code {
+  color: #F1F2E9;
+}
+
+.hljs-jsdoc-caption {
+  color: #C9314D;
+}
+
+.hljs-jsdoc-tag {
+  color: #857AFA;
+}
+
+.hljs-jsdoc-todo {
+  color: #AFAC7A;
+}
+
+.hljs-jsdoc-deprecated {
+  color: #F92D34;
+}
+
+.hljs-jsdoc-param {
+  color: #B156AA;
+}
+
+.hljs-jsdoc-example-caption,
+.hljs-jsdoc-type-name,
+.hljs-jsdoc-param-type,
+.hljs-jsdoc-return-type,
+.hljs-jsdoc-prop-type {
+  color: #7EC875;
+}
+
+.hljs-jsdoc-param-default-name,
+.hljs-jsdoc-param-name {
+  color: #DC7A00;
+}
+
+.hljs-jsdoc-param-default-value {
+  color: #AF8F7E;
+}
+
+.hljs-jsdoc-return {
+  color: #2BB1AD;
+}
+
+.hljs-jsdoc-type {
+  color: #BBAC27;
+}
+
+.hljs-jsdoc-prop {
+  color: #DF3E74;
+}
+
+.hljs-jsdoc-prop-name {
+  color: #CFA995;
+}
+,
+        {
+          className:"jsdoc-prop-name",
+          begin:/\}/,
+          end:/(?:-)/,
+          excludeBegin:true,
+          excludeEnd:true,
+          relevance: 0
+        },

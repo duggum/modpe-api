@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
+      
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
       
         <li data-name="EntityRenderType"><a href="global.html#EntityRenderType">EntityRenderType</a></li>
@@ -904,335 +906,353 @@
 <section>
   <article>
     <pre><code>/**
- * __Reference for MCPE data values not included in BlockLauncher.__
  *
- * The variables documented here are __*NOT*__ available for use in ModPE scripts!
- * @namespace Reference
- * @todo Move these to manual or tutorial
- */
-
-/**
- * @lends Reference.prototype
- */
-var funcs = {
-
-  /**
-   * Block data values.
-   * @property {string} 0 Air
-   * @property {string} 1 Stone
-   * @property {string} 2 Grass Block
-   * @property {string} 3 Dirt
-   * @property {string} 4 Cobblestone
-   * @property {string} 5 Wooden Planks
-   * @property {string} 6 Sapling
-   * @property {string} 7 Bedrock
-   * @property {string} 8 Water
-   * @property {string} 9 Stationary Water
-   * @property {string} 10 Lava
-   * @property {string} 11 Stationary Lava
-   * @property {string} 12 Sand
-   * @property {string} 13 Gravel
-   * @property {string} 14 Gold Ore
-   * @property {string} 15 Iron Ore
-   * @property {string} 16 Coal Ore
-   * @property {string} 17 Wood
-   * @property {string} 18 Leaves
-   * @property {string} 19 Sponge
-   * @property {string} 20 Glass
-   * @property {string} 21 Lapis Lazuli Ore
-   * @property {string} 22 Lapis Lazuli Block
-   * @property {string} 24 Sandstone
-   * @property {string} 26 Bed
-   * @property {string} 27 Powered Rail
-   * @property {string} 30 Cobweb
-   * @property {string} 31 Tall Grass
-   * @property {string} 32 Dead Bush
-   * @property {string} 35 Wool
-   * @property {string} 37 Dandelion
-   * @property {string} 38 Flower
-   * @property {string} 39 Brown Mushroom
-   * @property {string} 40 Red Mushroom
-   * @property {string} 41 Block of Gold
-   * @property {string} 42 Block of Iron
-   * @property {string} 43 Double Stone Slab
-   * @property {string} 44 Stone Slab
-   * @property {string} 45 Bricks
-   * @property {string} 46 TNT
-   * @property {string} 47 Bookshelf
-   * @property {string} 48 Moss Stone
-   * @property {string} 49 Obsidian
-   * @property {string} 50 Torch
-   * @property {string} 51 Fire
-   * @property {string} 52 Monster Spawner
-   * @property {string} 53 Oak Wood Stairs
-   * @property {string} 54 Chest
-   * @property {string} 56 Diamond Ore
-   * @property {string} 57 Block of Diamond
-   * @property {string} 58 Crafting Table
-   * @property {string} 59 Seeds
-   * @property {string} 60 Farmland
-   * @property {string} 61 Furnace
-   * @property {string} 62 Burning Furnace
-   * @property {string} 63 Sign
-   * @property {string} 64 Wooden Door
-   * @property {string} 65 Ladder
-   * @property {string} 66 Rail
-   * @property {string} 67 Cobblestone Stairs
-   * @property {string} 68 Wall Sign
-   * @property {string} 71 Iron Door
-   * @property {string} 73 Redstone Ore
-   * @property {string} 74 Glowing Redstone Ore
-   * @property {string} 78 Snow
-   * @property {string} 79 Ice
-   * @property {string} 80 Snow
-   * @property {string} 81 Cactus
-   * @property {string} 82 Clay
-   * @property {string} 83 Sugar Cane
-   * @property {string} 85 Fence
-   * @property {string} 86 Pumpkin
-   * @property {string} 87 Netherrack
-   * @property {string} 88 Soul Sand
-   * @property {string} 89 Glowstone
-   * @property {string} 91 Jack o'Lantern
-   * @property {string} 92 Cake
-   * @property {string} 95 Invisible Bedrock
-   * @property {string} 96 Trapdoor
-   * @property {string} 97 Monster Egg
-   * @property {string} 98 Stone Brick
-   * @property {string} 99 Brown Mushroom
-   * @property {string} 100 Red Mushroom
-   * @property {string} 101 Iron Bars
-   * @property {string} 102 Glass Pane
-   * @property {string} 103 Melon
-   * @property {string} 104 Pumpkin Stem
-   * @property {string} 105 Melon Stem
-   * @property {string} 106 Vines
-   * @property {string} 107 Fence Gate
-   * @property {string} 108 Brick Stairs
-   * @property {string} 109 Stone Brick Stairs
-   * @property {string} 110 Mycelium
-   * @property {string} 111 Lily Pad
-   * @property {string} 112 Nether Brick
-   * @property {string} 113 Nether Brick Fence
-   * @property {string} 114 Nether Brick Stairs
-   * @property {string} 115 Nether Wart
-   * @property {string} 116 Enchantment Table
-   * @property {string} 117 Brewing Stand
-   * @property {string} 120 End Portal Frame
-   * @property {string} 121 End Stone
-   * @property {string} 126 Cake
-   * @property {string} 127 Cocoa
-   * @property {string} 128 Sandstone Stairs
-   * @property {string} 129 Emerald Ore
-   * @property {string} 133 Block of Emerald
-   * @property {string} 134 Spruce Wood Stairs
-   * @property {string} 135 Birch Wood Stairs
-   * @property {string} 136 Jungle Wood Stairs
-   * @property {string} 139 Cobblestone Wall
-   * @property {string} 140 Flower Pot
-   * @property {string} 141 Carrots
-   * @property {string} 142 Potato
-   * @property {string} 143 Mob head
-   * @property {string} 145 Anvil
-   * @property {string} 152 Block of Redstone
-   * @property {string} 153 Nether Quartz Ore
-   * @property {string} 155 Block of Quartz
-   * @property {string} 156 Quartz Stairs
-   * @property {string} 157 Wooden Double Slab
-   * @property {string} 158 Wooden Slab
-   * @property {string} 159 Stained Clay
-   * @property {string} 161 Acacia/Dark Oak Leaves
-   * @property {string} 162 Acacia/Dark Oak Wood
-   * @property {string} 163 Acacia Wood Stairs
-   * @property {string} 164 Dark Oak Wood Stairs
-   * @property {string} 170 Hay Bale
-   * @property {string} 171 Carpet
-   * @property {string} 172 Hardened Clay
-   * @property {string} 173 Block of Coal
-   * @property {string} 174 Packed Ice
-   * @property {string} 175 Sunflower
-   * @property {string} 183 Spruce Fence Gate
-   * @property {string} 184 Birch Fence Gate
-   * @property {string} 185 Jungle Fence Gate
-   * @property {string} 186 Dark Oak Fence Gate
-   * @property {string} 187 Acacia Fence Gate
-   * @property {string} 198 Grass Path
-   * @property {string} 243 Podzol
-   * @property {string} 244 Beetroot
-   * @property {string} 245 Stone Cutter
-   * @property {string} 246 Glowing Obsidian
-   * @property {string} 247 Nether Reactor Core
-   * @property {string} 248 Update Game Block
-   * @property {string} 249 Update Game Block
-   * @property {string} 255 info_reserved6
-   */
-  BlockIds: {},
+ * @namespace   Reference
+ * @description __Reference for MCPE data values not included in BlockLauncher.__
+ *              The variables documented here are __*NOT*__ available for use in ModPE scripts!
+ *
+ * @todo Move these to a manual or tutorial page
+ *
+ * ***/
+function Reference() {
 
   /**
-   * Block render types - determines the shape (NOT size) of a block; useful when
-   * defining custom blocks.
    *
-   * See: {@link Block.defineBlock}, {@link Block.getRenderType}, {@link Block.setRenderType}
-   * @property {string} 0 Standard
-   * @property {string} 1 Flower
-   * @property {string} 2 Torch
-   * @property {string} 3 Fire
-   * @property {string} 4 Fluid
-   * @property {string} 6 Crops
-   * @property {string} 7 Door
-   * @property {string} 8 Ladder
-   * @property {string} 10 Stairs
-   * @property {string} 11 Fence
-   * @property {string} 13 Cactus
-   * @property {string} 14 Bed
-   * @property {string} 18 Pane
-   * @property {string} 19 Stem
-   * @property {string} 21 Fence Gate
-   */
-  BlockRenderTypes: {},
+   * @lends    Reference.prototype
+   *
+   * ***/
+  var ref = {
 
   /**
-   * Item data values.
-   * @property {string} 256 Iron Shovel
-   * @property {string} 257 Iron Pickaxe
-   * @property {string} 258 Iron Axe
-   * @property {string} 259 Flint and Steel
-   * @property {string} 260 Apple
-   * @property {string} 261 Bow
-   * @property {string} 262 Arrow
-   * @property {string} 263 Coal
-   * @property {string} 264 Diamond
-   * @property {string} 265 Iron Ingot
-   * @property {string} 266 Gold Ingot
-   * @property {string} 267 Iron Sword
-   * @property {string} 268 Wooden Sword
-   * @property {string} 269 Wooden Shovel
-   * @property {string} 270 Wooden Pickaxe
-   * @property {string} 271 Wooden Axe
-   * @property {string} 272 Stone Sword
-   * @property {string} 273 Stone Shovel
-   * @property {string} 274 Stone Pickaxe
-   * @property {string} 275 Stone Axe
-   * @property {string} 276 Diamond Sword
-   * @property {string} 277 Diamond Shovel
-   * @property {string} 278 Diamond Pickaxe
-   * @property {string} 279 Diamond Axe
-   * @property {string} 280 Stick
-   * @property {string} 281 Bowl
-   * @property {string} 282 Mushroom Stew
-   * @property {string} 283 Gold Sword
-   * @property {string} 284 Gold Shovel
-   * @property {string} 285 Gold Pickaxe
-   * @property {string} 286 Gold Axe
-   * @property {string} 287 String
-   * @property {string} 288 Feather
-   * @property {string} 289 Gunpowder
-   * @property {string} 290 Wooden Hoe
-   * @property {string} 291 Stone Hoe
-   * @property {string} 292 Iron Hoe
-   * @property {string} 293 Diamond Hoe
-   * @property {string} 294 Gold Hoe
-   * @property {string} 295 Seeds
-   * @property {string} 296 Wheat
-   * @property {string} 297 Bread
-   * @property {string} 298 Leather Cap
-   * @property {string} 299 Leather Tunic
-   * @property {string} 300 Leather Pants
-   * @property {string} 301 Leather Boots
-   * @property {string} 302 Chain Helmet
-   * @property {string} 303 Chain Chestplate
-   * @property {string} 304 Chain Leggings
-   * @property {string} 305 Chain Boots
-   * @property {string} 306 Iron Helmet
-   * @property {string} 307 Iron Chestplate
-   * @property {string} 308 Iron Leggings
-   * @property {string} 309 Iron Boots
-   * @property {string} 310 Diamond Helmet
-   * @property {string} 311 Diamond Chestplate
-   * @property {string} 312 Diamond Leggings
-   * @property {string} 313 Diamond Boots
-   * @property {string} 314 Golden Helmet
-   * @property {string} 315 Golden Chestplate
-   * @property {string} 316 Golden Leggings
-   * @property {string} 317 Golden Boots
-   * @property {string} 318 Flint
-   * @property {string} 319 Raw Porkchop
-   * @property {string} 320 Cooked Porkchop
-   * @property {string} 321 Painting
-   * @property {string} 322 Golden Apple
-   * @property {string} 323 Sign
-   * @property {string} 324 Wooden Door
-   * @property {string} 325 Bucket
-   * @property {string} 328 Minecart
-   * @property {string} 329 Saddle
-   * @property {string} 330 Iron Door
-   * @property {string} 331 Redstone
-   * @property {string} 332 Snowball
-   * @property {string} 333 Boat
-   * @property {string} 334 Leather
-   * @property {string} 336 Brick
-   * @property {string} 337 Clay
-   * @property {string} 338 Sugar Cane
-   * @property {string} 339 Paper
-   * @property {string} 340 Book
-   * @property {string} 341 Slimeball
-   * @property {string} 344 Egg
-   * @property {string} 345 Compass
-   * @property {string} 346 Fishing Rod
-   * @property {string} 347 Clock
-   * @property {string} 348 Glowstone Dust
-   * @property {string} 349 Raw Fish
-   * @property {string} 350 Cooked Fish
-   * @property {string} 351 Various Dye
-   * @property {string} 352 Bone
-   * @property {string} 353 Sugar
-   * @property {string} 354 Cake
-   * @property {string} 355 Bed
-   * @property {string} 357 Cookie
-   * @property {string} 359 Shears
-   * @property {string} 360 Melon
-   * @property {string} 361 Pumpkin Seeds
-   * @property {string} 362 Melon Seeds
-   * @property {string} 363 Raw Beef
-   * @property {string} 364 Steak
-   * @property {string} 365 Raw Chicken
-   * @property {string} 366 Cooked Chicken
-   * @property {string} 367 Rotten Flesh
-   * @property {string} 368 Blaze Rod
-   * @property {string} 369 Blaze Rod
-   * @property {string} 370 Ghast Tear
-   * @property {string} 371 Gold Nugget
-   * @property {string} 372 Nether Wart
-   * @property {string} 373 Water/Potion Bottle
-   * @property {string} 374 Glass Bottle
-   * @property {string} 375 Spider Eye
-   * @property {string} 376 Fermented Spider Eye
-   * @property {string} 377 Blaze Powder
-   * @property {string} 378 Magma Cream
-   * @property {string} 379 Brewing Stand
-   * @property {string} 382 Glistering Melon
-   * @property {string} 383 Spawn Egg
-   * @property {string} 384 Bottle o' Enchanting
-   * @property {string} 388 Emerald
-   * @property {string} 390 Flower Pot
-   * @property {string} 391 Carrot
-   * @property {string} 392 Potato
-   * @property {string} 393 Baked Potato
-   * @property {string} 394 Poisonous Potato
-   * @property {string} 396 Golden Carrot
-   * @property {string} 397 Mob head
-   * @property {string} 400 Pumpkin Pie
-   * @property {string} 403 Enchanted Book
-   * @property {string} 405 Nether Brick
-   * @property {string} 406 Nether Quartz
-   * @property {string} 414 Rabbit's Foot
-   * @property {string} 438 Splash Potion
-   * @property {string} 457 Beetroot
-   * @property {string} 458 Beetroot Seeds
-   * @property {string} 459 Beetroot Soup
-   */
-  ItemIds: {}
-};
+   *
+   * BlockIds
+   * @description Block data values.
+   *
+   * @property {int} Air                                 - 0
+   * @property {int} Stone                               - 1
+   * @property {int} Grass&amp;nbsp;Block                    - 2
+   * @property {int} Dirt                                - 3
+   * @property {int} Cobblestone                         - 4
+   * @property {int} Wooden&amp;nbsp;Planks                  - 5
+   * @property {int} Sapling                             - 6
+   * @property {int} Bedrock                             - 7
+   * @property {int} Water                               - 8
+   * @property {int} Stationary&amp;nbsp;Water               - 9
+   * @property {int} Lava                                - 10
+   * @property {int} Stationary&amp;nbsp;Lava                - 11
+   * @property {int} Sand                                - 12
+   * @property {int} Gravel                              - 13
+   * @property {int} Gold&amp;nbsp;Ore                       - 14
+   * @property {int} Iron&amp;nbsp;Ore                       - 15
+   * @property {int} Coal&amp;nbsp;Ore                       - 16
+   * @property {int} Wood                                - 17
+   * @property {int} Leaves                              - 18
+   * @property {int} Sponge                              - 19
+   * @property {int} Glass                               - 20
+   * @property {int} Lapis&amp;nbsp;Lazuli&amp;nbsp;Ore          - 21
+   * @property {int} Lapis&amp;nbsp;Lazuli&amp;nbsp;Block        - 22
+   * @property {int} Sandstone                           - 24
+   * @property {int} Bed                                 - 26
+   * @property {int} Powered&amp;nbsp;Rail                   - 27
+   * @property {int} Cobweb                              - 30
+   * @property {int} Tall&amp;nbsp;Grass                     - 31
+   * @property {int} Dead&amp;nbsp;Bush                      - 32
+   * @property {int} Wool                                - 35
+   * @property {int} Dandelion                           - 37
+   * @property {int} Flower                              - 38
+   * @property {int} Brown&amp;nbsp;Mushroom                 - 39
+   * @property {int} Red&amp;nbsp;Mushroom                   - 40
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Gold             - 41
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Iron             - 42
+   * @property {int} Double&amp;nbsp;Stone&amp;nbsp;Slab         - 43
+   * @property {int} Stone&amp;nbsp;Slab                     - 44
+   * @property {int} Bricks                              - 45
+   * @property {int} TNT                                 - 46
+   * @property {int} Bookshelf                           - 47
+   * @property {int} Moss&amp;nbsp;Stone                     - 48
+   * @property {int} Obsidian                            - 49
+   * @property {int} Torch                               - 50
+   * @property {int} Fire                                - 51
+   * @property {int} Monster&amp;nbsp;Spawner                - 52
+   * @property {int} Oak&amp;nbsp;Wood&amp;nbsp;Stairs           - 53
+   * @property {int} Chest                               - 54
+   * @property {int} Diamond&amp;nbsp;Ore                    - 56
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Diamond          - 57
+   * @property {int} Crafting&amp;nbsp;Table                 - 58
+   * @property {int} Seeds                               - 59
+   * @property {int} Farmland                            - 60
+   * @property {int} Furnace                             - 61
+   * @property {int} Burning&amp;nbsp;Furnace                - 62
+   * @property {int} Sign                                - 63
+   * @property {int} Wooden&amp;nbsp;Door                    - 64
+   * @property {int} Ladder                              - 65
+   * @property {int} Rail                                - 66
+   * @property {int} Cobblestone&amp;nbsp;Stairs             - 67
+   * @property {int} Wall&amp;nbsp;Sign                      - 68
+   * @property {int} Iron&amp;nbsp;Door                      - 71
+   * @property {int} Redstone&amp;nbsp;Ore                   - 73
+   * @property {int} Glowing&amp;nbsp;Redstone&amp;nbsp;Ore      - 74
+   * @property {int} Snow                                - 78
+   * @property {int} Ice                                 - 79
+   * @property {int} Snow                                - 80
+   * @property {int} Cactus                              - 81
+   * @property {int} Clay                                - 82
+   * @property {int} Sugar&amp;nbsp;Cane                     - 83
+   * @property {int} Fence                               - 85
+   * @property {int} Pumpkin                             - 86
+   * @property {int} Netherrack                          - 87
+   * @property {int} Soul&amp;nbsp;Sand                      - 88
+   * @property {int} Glowstone                           - 89
+   * @property {int} Jack&amp;nbsp;o'Lantern                 - 91
+   * @property {int} Cake                                - 92
+   * @property {int} Invisible&amp;nbsp;Bedrock              - 95
+   * @property {int} Trapdoor                            - 96
+   * @property {int} Monster&amp;nbsp;Egg                    - 97
+   * @property {int} Stone&amp;nbsp;Brick                    - 98
+   * @property {int} Brown&amp;nbsp;Mushroom                 - 99
+   * @property {int} Red&amp;nbsp;Mushroom                   - 100
+   * @property {int} Iron&amp;nbsp;Bars                      - 101
+   * @property {int} Glass&amp;nbsp;Pane                     - 102
+   * @property {int} Melon                               - 103
+   * @property {int} Pumpkin&amp;nbsp;Stem                   - 104
+   * @property {int} Melon&amp;nbsp;Stem                     - 105
+   * @property {int} Vines                               - 106
+   * @property {int} Fence&amp;nbsp;Gate                     - 107
+   * @property {int} Brick&amp;nbsp;Stairs                   - 108
+   * @property {int} Stone&amp;nbsp;Brick&amp;nbsp;Stairs        - 109
+   * @property {int} Mycelium                            - 110
+   * @property {int} Lily&amp;nbsp;Pad                       - 111
+   * @property {int} Nether&amp;nbsp;Brick                   - 112
+   * @property {int} Nether&amp;nbsp;Brick&amp;nbsp;Fence        - 113
+   * @property {int} Nether&amp;nbsp;Brick&amp;nbsp;Stairs       - 114
+   * @property {int} Nether&amp;nbsp;Wart                    - 115
+   * @property {int} Enchantment&amp;nbsp;Table              - 116
+   * @property {int} Brewing&amp;nbsp;Stand                  - 117
+   * @property {int} End&amp;nbsp;Portal&amp;nbsp;Frame          - 120
+   * @property {int} End&amp;nbsp;Stone                      - 121
+   * @property {int} Cake                                - 126
+   * @property {int} Cocoa                               - 127
+   * @property {int} Sandstone&amp;nbsp;Stairs               - 128
+   * @property {int} Emerald&amp;nbsp;Ore                    - 129
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Emerald          - 133
+   * @property {int} Spruce&amp;nbsp;Wood&amp;nbsp;Stairs        - 134
+   * @property {int} Birch&amp;nbsp;Wood&amp;nbsp;Stairs         - 135
+   * @property {int} Jungle&amp;nbsp;Wood&amp;nbsp;Stairs        - 136
+   * @property {int} Cobblestone&amp;nbsp;Wall               - 139
+   * @property {int} Flower&amp;nbsp;Pot                     - 140
+   * @property {int} Carrots                             - 141
+   * @property {int} Potato                              - 142
+   * @property {int} Mob&amp;nbsp;head                       - 143
+   * @property {int} Anvil                               - 145
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Redstone         - 152
+   * @property {int} Nether&amp;nbsp;Quartz&amp;nbsp;Ore         - 153
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Quartz           - 155
+   * @property {int} Quartz&amp;nbsp;Stairs                  - 156
+   * @property {int} Wooden&amp;nbsp;Double&amp;nbsp;Slab        - 157
+   * @property {int} Wooden&amp;nbsp;Slab                    - 158
+   * @property {int} Stained&amp;nbsp;Clay                   - 159
+   * @property {int} Acacia/Dark&amp;nbsp;Oak&amp;nbsp;Leaves    - 161
+   * @property {int} Acacia/Dark&amp;nbsp;Oak&amp;nbsp;Wood      - 162
+   * @property {int} Acacia&amp;nbsp;Wood&amp;nbsp;Stairs        - 163
+   * @property {int} Dark&amp;nbsp;Oak&amp;nbsp;Wood&amp;nbsp;Stairs - 164
+   * @property {int} Hay&amp;nbsp;Bale                       - 170
+   * @property {int} Carpet                              - 171
+   * @property {int} Hardened&amp;nbsp;Clay                  - 172
+   * @property {int} Block&amp;nbsp;of&amp;nbsp;Coal             - 173
+   * @property {int} Packed&amp;nbsp;Ice                     - 174
+   * @property {int} Sunflower                           - 175
+   * @property {int} Spruce&amp;nbsp;Fence&amp;nbsp;Gate         - 183
+   * @property {int} Birch&amp;nbsp;Fence&amp;nbsp;Gate          - 184
+   * @property {int} Jungle&amp;nbsp;Fence&amp;nbsp;Gate         - 185
+   * @property {int} Dark&amp;nbsp;Oak&amp;nbsp;Fence&amp;nbsp;Gate  - 186
+   * @property {int} Acacia&amp;nbsp;Fence&amp;nbsp;Gate         - 187
+   * @property {int} Grass&amp;nbsp;Path                     - 198
+   * @property {int} Podzol                              - 243
+   * @property {int} Beetroot                            - 244
+   * @property {int} Stone&amp;nbsp;Cutter                   - 245
+   * @property {int} Glowing&amp;nbsp;Obsidian               - 246
+   * @property {int} Nether&amp;nbsp;Reactor&amp;nbsp;Core       - 247
+   * @property {int} Update&amp;nbsp;Game&amp;nbsp;Block         - 248
+   * @property {int} Update&amp;nbsp;Game&amp;nbsp;Block         - 249
+   * @property {int} info_reserved6                      - 255
+   *
+   * ***/
+   BlockIds: {},
+
+  /**
+   *
+   * BlockRenderTypes
+   * @description Block render types - determines the shape (NOT size) of a block;
+   *              useful when defining custom blocks.
+   *
+   * @see {@link Block.defineBlock}, {@link Block.getRenderType}, {@link Block.setRenderType}
+   *
+   * @property {int} Standard        - 0
+   * @property {int} Flower          - 1
+   * @property {int} Torch           - 2
+   * @property {int} Fire            - 3
+   * @property {int} Fluid           - 4
+   * @property {int} Crops           - 6
+   * @property {int} Door            - 7
+   * @property {int} Ladder          - 8
+   * @property {int} Stairs          - 10
+   * @property {int} Fence           - 11
+   * @property {int} Cactus          - 13
+   * @property {int} Bed             - 14
+   * @property {int} Pane            - 18
+   * @property {int} Stem            - 19
+   * @property {int} Fence&amp;nbsp;Gate - 21
+   *
+   * ***/
+   BlockRenderTypes: {},
+
+  /**
+   *
+   * ItemIds
+   * @description Item data values.
+   *
+   * @property {int} Iron&amp;nbsp;Shovel               - 256
+   * @property {int} Iron&amp;nbsp;Pickaxe              - 257
+   * @property {int} Iron&amp;nbsp;Axe                  - 258
+   * @property {int} Flint&amp;nbsp;and&amp;nbsp;Steel      - 259
+   * @property {int} Apple                          - 260
+   * @property {int} Bow                            - 261
+   * @property {int} Arrow                          - 262
+   * @property {int} Coal                           - 263
+   * @property {int} Diamond                        - 264
+   * @property {int} Iron&amp;nbsp;Ingot                - 265
+   * @property {int} Gold&amp;nbsp;Ingot                - 266
+   * @property {int} Iron&amp;nbsp;Sword                - 267
+   * @property {int} Wooden&amp;nbsp;Sword              - 268
+   * @property {int} Wooden&amp;nbsp;Shovel             - 269
+   * @property {int} Wooden&amp;nbsp;Pickaxe            - 270
+   * @property {int} Wooden&amp;nbsp;Axe                - 271
+   * @property {int} Stone&amp;nbsp;Sword               - 272
+   * @property {int} Stone&amp;nbsp;Shovel              - 273
+   * @property {int} Stone&amp;nbsp;Pickaxe             - 274
+   * @property {int} Stone&amp;nbsp;Axe                 - 275
+   * @property {int} Diamond&amp;nbsp;Sword             - 276
+   * @property {int} Diamond&amp;nbsp;Shovel            - 277
+   * @property {int} Diamond&amp;nbsp;Pickaxe           - 278
+   * @property {int} Diamond&amp;nbsp;Axe               - 279
+   * @property {int} Stick                          - 280
+   * @property {int} Bowl                           - 281
+   * @property {int} Mushroom&amp;nbsp;Stew             - 282
+   * @property {int} Gold&amp;nbsp;Sword                - 283
+   * @property {int} Gold&amp;nbsp;Shovel               - 284
+   * @property {int} Gold&amp;nbsp;Pickaxe              - 285
+   * @property {int} Gold&amp;nbsp;Axe                  - 286
+   * @property {int} String                         - 287
+   * @property {int} Feather                        - 288
+   * @property {int} Gunpowder                      - 289
+   * @property {int} Wooden&amp;nbsp;Hoe                - 290
+   * @property {int} Stone&amp;nbsp;Hoe                 - 291
+   * @property {int} Iron&amp;nbsp;Hoe                  - 292
+   * @property {int} Diamond&amp;nbsp;Hoe               - 293
+   * @property {int} Gold&amp;nbsp;Hoe                  - 294
+   * @property {int} Seeds                          - 295
+   * @property {int} Wheat                          - 296
+   * @property {int} Bread                          - 297
+   * @property {int} Leather&amp;nbsp;Cap               - 298
+   * @property {int} Leather&amp;nbsp;Tunic             - 299
+   * @property {int} Leather&amp;nbsp;Pants             - 300
+   * @property {int} Leather&amp;nbsp;Boots             - 301
+   * @property {int} Chain&amp;nbsp;Helmet              - 302
+   * @property {int} Chain&amp;nbsp;Chestplate          - 303
+   * @property {int} Chain&amp;nbsp;Leggings            - 304
+   * @property {int} Chain&amp;nbsp;Boots               - 305
+   * @property {int} Iron&amp;nbsp;Helmet               - 306
+   * @property {int} Iron&amp;nbsp;Chestplate           - 307
+   * @property {int} Iron&amp;nbsp;Leggings             - 308
+   * @property {int} Iron&amp;nbsp;Boots                - 309
+   * @property {int} Diamond&amp;nbsp;Helmet            - 310
+   * @property {int} Diamond&amp;nbsp;Chestplate        - 311
+   * @property {int} Diamond&amp;nbsp;Leggings          - 312
+   * @property {int} Diamond&amp;nbsp;Boots             - 313
+   * @property {int} Golden&amp;nbsp;Helmet             - 314
+   * @property {int} Golden&amp;nbsp;Chestplate         - 315
+   * @property {int} Golden&amp;nbsp;Leggings           - 316
+   * @property {int} Golden&amp;nbsp;Boots              - 317
+   * @property {int} Flint                          - 318
+   * @property {int} Raw&amp;nbsp;Porkchop              - 319
+   * @property {int} Cooked&amp;nbsp;Porkchop           - 320
+   * @property {int} Painting                       - 321
+   * @property {int} Golden&amp;nbsp;Apple              - 322
+   * @property {int} Sign                           - 323
+   * @property {int} Wooden&amp;nbsp;Door               - 324
+   * @property {int} Bucket                         - 325
+   * @property {int} Minecart                       - 328
+   * @property {int} Saddle                         - 329
+   * @property {int} Iron&amp;nbsp;Door                 - 330
+   * @property {int} Redstone                       - 331
+   * @property {int} Snowball                       - 332
+   * @property {int} Boat                           - 333
+   * @property {int} Leather                        - 334
+   * @property {int} Brick                          - 336
+   * @property {int} Clay                           - 337
+   * @property {int} Sugar&amp;nbsp;Cane                - 338
+   * @property {int} Paper                          - 339
+   * @property {int} Book                           - 340
+   * @property {int} Slimeball                      - 341
+   * @property {int} Egg                            - 344
+   * @property {int} Compass                        - 345
+   * @property {int} Fishing&amp;nbsp;Rod               - 346
+   * @property {int} Clock                          - 347
+   * @property {int} Glowstone&amp;nbsp;Dust            - 348
+   * @property {int} Raw&amp;nbsp;Fish                  - 349
+   * @property {int} Cooked&amp;nbsp;Fish               - 350
+   * @property {int} Various&amp;nbsp;Dye               - 351
+   * @property {int} Bone                           - 352
+   * @property {int} Sugar                          - 353
+   * @property {int} Cake                           - 354
+   * @property {int} Bed                            - 355
+   * @property {int} Cookie                         - 357
+   * @property {int} Shears                         - 359
+   * @property {int} Melon                          - 360
+   * @property {int} Pumpkin&amp;nbsp;Seeds             - 361
+   * @property {int} Melon&amp;nbsp;Seeds               - 362
+   * @property {int} Raw&amp;nbsp;Beef                  - 363
+   * @property {int} Steak                          - 364
+   * @property {int} Raw&amp;nbsp;Chicken               - 365
+   * @property {int} Cooked&amp;nbsp;Chicken            - 366
+   * @property {int} Rotten&amp;nbsp;Flesh              - 367
+   * @property {int} Blaze&amp;nbsp;Rod                 - 368
+   * @property {int} Blaze&amp;nbsp;Rod                 - 369
+   * @property {int} Ghast&amp;nbsp;Tear                - 370
+   * @property {int} Gold&amp;nbsp;Nugget               - 371
+   * @property {int} Nether&amp;nbsp;Wart               - 372
+   * @property {int} Water/Potion&amp;nbsp;Bottle       - 373
+   * @property {int} Glass&amp;nbsp;Bottle              - 374
+   * @property {int} Spider&amp;nbsp;Eye                - 375
+   * @property {int} Fermented&amp;nbsp;Spider&amp;nbsp;Eye - 376
+   * @property {int} Blaze&amp;nbsp;Powder              - 377
+   * @property {int} Magma&amp;nbsp;Cream               - 378
+   * @property {int} Brewing&amp;nbsp;Stand             - 379
+   * @property {int} Glistering&amp;nbsp;Melon          - 382
+   * @property {int} Spawn&amp;nbsp;Egg                 - 383
+   * @property {int} Bottle&amp;nbsp;o'&amp;nbsp;Enchanting - 384
+   * @property {int} Emerald                        - 388
+   * @property {int} Flower&amp;nbsp;Pot                - 390
+   * @property {int} Carrot                         - 391
+   * @property {int} Potato                         - 392
+   * @property {int} Baked&amp;nbsp;Potato              - 393
+   * @property {int} Poisonous&amp;nbsp;Potato          - 394
+   * @property {int} Golden&amp;nbsp;Carrot             - 396
+   * @property {int} Mob&amp;nbsp;head                  - 397
+   * @property {int} Pumpkin&amp;nbsp;Pie               - 400
+   * @property {int} Enchanted&amp;nbsp;Book            - 403
+   * @property {int} Nether&amp;nbsp;Brick              - 405
+   * @property {int} Nether&amp;nbsp;Quartz             - 406
+   * @property {int} Rabbit's&amp;nbsp;Foot             - 414
+   * @property {int} Splash&amp;nbsp;Potion             - 438
+   * @property {int} Beetroot                       - 457
+   * @property {int} Beetroot&amp;nbsp;Seeds            - 458
+   * @property {int} Beetroot&amp;nbsp;Soup             - 459
+   *
+   * ***/
+   ItemIds: {}
+ };
+}
 </code></pre>
   </article>
 </section>
@@ -1243,7 +1263,7 @@ var funcs = {
 
         <footer>
           <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 09 2015</p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
           <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>
@@ -1257,6 +1277,5 @@ var funcs = {
       window.onload = function() { document.getElementById("cyear").innerHTML = new Date().getFullYear(); };
     </script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/linenumber.js"></script>
   </body>
 </html>

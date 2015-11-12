@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
+      
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
       
         <li data-name="EntityRenderType"><a href="global.html#EntityRenderType">EntityRenderType</a></li>
@@ -1101,7 +1103,8 @@
         
 
     
-      <pre><code>print(ArmorType.chestplate); // prints 1</code></pre>
+      <pre><code>// prints 1
+print(ArmorType.chestplate);</code></pre>
     
 
 
@@ -1112,11 +1115,11 @@
             
 <dt>
     <div class="nameContainer">
-        <h4 class="name" id="ChatColor"><span class="type-signature static">static</span> ChatColor</h4>
+        <h4 class="name" id="ChatColor">ChatColor</h4>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line12">line 12</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line17">line 17</a>
         </div>
         
     </div>
@@ -1641,7 +1644,7 @@ clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line39">line 39</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line48">line 48</a>
         </div>
         
     </div>
@@ -1742,7 +1745,8 @@ clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");</code></pre>
         
 
     
-      <pre><code>print(DimensionId.NETHER); // prints 1</code></pre>
+      <pre><code>// prints 1
+print(DimensionId.NETHER);</code></pre>
     
 
 
@@ -1757,7 +1761,7 @@ clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line48">line 48</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line62">line 62</a>
         </div>
         
     </div>
@@ -1768,7 +1772,7 @@ clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");</code></pre>
     
     <div class="description">
         <p>Entity render types. This determines the shape of creature to render, not
-the skin. To change the skin see <a href="Entity.html#.setMobSkin">Entity.setMobSkin</a>.</p>
+             the skin. To change the skin see <a href="Entity.html#.setMobSkin">Entity.setMobSkin</a>.</p>
     </div>
     
 
@@ -2865,7 +2869,7 @@ function entityAddedHook(entity) {
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line107">line 107</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line124">line 124</a>
         </div>
         
     </div>
@@ -3945,7 +3949,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line160">line 160</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line181">line 181</a>
         </div>
         
     </div>
@@ -4118,7 +4122,8 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
         
 
     
-      <pre><code>print(ItemCategory.FOOD); // prints 4</code></pre>
+      <pre><code>// prints 4
+print(ItemCategory.FOOD);</code></pre>
     
 
 
@@ -4133,7 +4138,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line171">line 171</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line198">line 198</a>
         </div>
         
     </div>
@@ -4143,8 +4148,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 <dd>
     
     <div class="description">
-        <p>Effects (usually from potions) that can be applied to mobs.</p>
-<p>See: <a href="Entity.html#.addEffect">Entity.addEffect</a>, <a href="Entity.html#.removeEffect">Entity.removeEffect</a>, <a href="Entity.html#.removeAllEffects">Entity.removeAllEffects</a></p>
+        <p>Effects (think potions) that can be applied to mobs.</p>
     </div>
     
 
@@ -4361,7 +4365,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
             
             
             
-            <td class="description last"><p>all type IDs; <em>NOT</em> in numerical order (i.e. <code>{8=jump, ..., 20=wither}</code>)</p></td>
+            <td class="description last"><p>all type IDs; <em>NOT</em> in numerical order (i.e. `{8=jump, ..., 20=wither} )</p></td>
         </tr>
 	
 	
@@ -4754,6 +4758,9 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
 <ul>
 
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a href="Entity.html#.addEffect">Entity.addEffect</a>, <a href="Entity.html#.removeEffect">Entity.removeEffect</a>,
+     <a href="Entity.html#.removeAllEffects">Entity.removeAllEffects</a></span></li>
+
   </ul>
 </div>
 
@@ -4763,7 +4770,8 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
         
 
     
-      <pre><code>print(MobEffect.jump); // prints 8</code></pre>
+      <pre><code>// prints 8
+print(MobEffect.jump);</code></pre>
     
 
 
@@ -4778,7 +4786,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line204">line 204</a>
+            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line237">line 237</a>
         </div>
         
     </div>
@@ -5630,7 +5638,7 @@ addItemInventory(<span class="signature">id, quantity, damage</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line249">line 249</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line286">line 286</a>
     </div>
 
   </div>
@@ -5788,7 +5796,7 @@ bl_setMobSkin(<span class="signature">entityId, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line261">line 261</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line303">line 303</a>
     </div>
 
   </div>
@@ -5923,7 +5931,7 @@ bl_spawnMob(<span class="signature">x, y, z, entityId, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line273">line 273</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line320">line 320</a>
     </div>
 
   </div>
@@ -5932,8 +5940,8 @@ bl_spawnMob(<span class="signature">x, y, z, entityId, skin</span>)
 <dd>
 
   <div class="description">
-    <p>Spawn a mob with a valid MCPE <code>entityId</code> at the specified <code>x</code>, <code>y</code>, and <code>z</code>
-coordinates using the specified <code>skin</code> image.</p>
+    <p>Spawn a mob with a valid MCPE <code>entityId</code> at the specified
+             <code>x</code>, <code>y</code>, and <code>z</code> coordinates using the specified <code>skin</code> image.</p>
   </div>
 
 
@@ -6131,7 +6139,7 @@ clientMessage(<span class="signature">message</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line289">line 289</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line341">line 341</a>
     </div>
 
   </div>
@@ -6224,7 +6232,8 @@ clientMessage(<span class="signature">message</span>)
 
 
     
-      <pre><code>clientMessage("Don't poke the Zombie Pigmen!!")</code></pre>
+      <pre><code>// you've been warned
+clientMessage("Don't poke the Zombie Pigmen!!")</code></pre>
     
 
 
@@ -6242,7 +6251,7 @@ explode(<span class="signature">x, y, z, radius</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line299">line 299</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line357">line 357</a>
     </div>
 
   </div>
@@ -6252,7 +6261,7 @@ explode(<span class="signature">x, y, z, radius</span>)
 
   <div class="description">
     <p>Cause an explosion of the specified <code>radius</code> with the center located at the
-specified <code>x</code>, <code>y</code> and <code>z</code> coordinates.</p>
+             specified <code>x</code>, <code>y</code> and <code>z</code> coordinates.</p>
   </div>
 
 
@@ -6299,7 +6308,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates.</p>
 
             <td class="description last">
                 
-                <p>the  - x coordinate</p></td>
+                <p>the x coordinate</p></td>
         </tr>
 
 	
@@ -6323,7 +6332,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates.</p>
 
             <td class="description last">
                 
-                <p>the  - y coordinate</p></td>
+                <p>the y coordinate</p></td>
         </tr>
 
 	
@@ -6347,7 +6356,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates.</p>
 
             <td class="description last">
                 
-                <p>the  - z coordinate</p></td>
+                <p>the z coordinate</p></td>
         </tr>
 
 	
@@ -6425,7 +6434,7 @@ getCarriedItem(<span class="signature"></span>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line312">line 312</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line376">line 376</a>
     </div>
 
   </div>
@@ -6479,7 +6488,9 @@ getCarriedItem(<span class="signature"></span>)<span class="glyphicon glyphicon-
                         
                     
             </td>
-            <td class="description last">the item or block ID</td>
+            <td class="description last"><ul>
+<li>the item or block ID</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -6506,7 +6517,8 @@ getCarriedItem(<span class="signature"></span>)<span class="glyphicon glyphicon-
 
 
     
-      <pre><code>print("You are carrying a " + getCarriedItem() + "!");</code></pre>
+      <pre><code>// where did I put that ... ?
+print("You are carrying a " + getCarriedItem() + "!");</code></pre>
     
 
 
@@ -6524,7 +6536,7 @@ getLevel(<span class="signature"></span>)<span class="glyphicon glyphicon-circle
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line321">line 321</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line393">line 393</a>
     </div>
 
   </div>
@@ -6578,7 +6590,9 @@ getLevel(<span class="signature"></span>)<span class="glyphicon glyphicon-circle
                         
                     
             </td>
-            <td class="description last"><strong><code>unknown</code></strong></td>
+            <td class="description last"><ul>
+<li><strong><code>unknown</code></strong> *</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -6614,7 +6628,7 @@ getPitch(<span class="signature"><span class="optional">entity</span></span>)<sp
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line329">line 329</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line406">line 406</a>
     </div>
 
   </div>
@@ -6730,7 +6744,9 @@ getPitch(<span class="signature"><span class="optional">entity</span></span>)<sp
                         
                     
             </td>
-            <td class="description last">the pitch value</td>
+            <td class="description last"><ul>
+<li>the pitch value</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -6779,7 +6795,7 @@ getPlayerEnt(<span class="signature"></span>)<span class="glyphicon glyphicon-ci
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line344">line 344</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line427">line 427</a>
     </div>
 
   </div>
@@ -6788,7 +6804,8 @@ getPlayerEnt(<span class="signature"></span>)<span class="glyphicon glyphicon-ci
 <dd>
 
   <div class="description">
-    <p>Return the player's native entity id (<em>NOT</em> the same as <a href="global.html#EntityType">EntityType</a>).</p>
+    <p>Return the player's native entity id (<em>NOT</em> the
+             same as <a href="global.html#EntityType">EntityType</a>).</p>
   </div>
 
 
@@ -6833,7 +6850,9 @@ getPlayerEnt(<span class="signature"></span>)<span class="glyphicon glyphicon-ci
                         
                     
             </td>
-            <td class="description last">the player's entity id</td>
+            <td class="description last"><ul>
+<li>the player's entity id</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -6879,7 +6898,7 @@ getPlayerX(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line355">line 355</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line445">line 445</a>
     </div>
 
   </div>
@@ -6933,7 +6952,9 @@ getPlayerX(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
                         
                     
             </td>
-            <td class="description last">the player's x coordinate</td>
+            <td class="description last"><ul>
+<li>the player's x coordinate</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -6958,7 +6979,8 @@ getPlayerX(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
 
 
     
-      <pre><code>var x = Math.round(getPlayerX());
+      <pre><code>// where in the X am I?
+var x = Math.round(getPlayerX());
 ModPE.showTipMessage("Your X coordinate is: " + x);</code></pre>
     
 
@@ -6977,7 +6999,7 @@ getPlayerY(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line365">line 365</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line461">line 461</a>
     </div>
 
   </div>
@@ -7031,7 +7053,9 @@ getPlayerY(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
                         
                     
             </td>
-            <td class="description last">the player's y coordinate</td>
+            <td class="description last"><ul>
+<li>the player's y coordinate</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -7056,7 +7080,8 @@ getPlayerY(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
 
 
     
-      <pre><code>var y = Math.round(getPlayerY());
+      <pre><code>// where in the Y am I?
+var y = Math.round(getPlayerY());
 ModPE.showTipMessage("Your Y coordinate is: " + y);</code></pre>
     
 
@@ -7075,7 +7100,7 @@ getPlayerZ(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line375">line 375</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line477">line 477</a>
     </div>
 
   </div>
@@ -7129,7 +7154,9 @@ getPlayerZ(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
                         
                     
             </td>
-            <td class="description last">the player's z coordinate</td>
+            <td class="description last"><ul>
+<li>the player's z coordinate</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -7154,7 +7181,8 @@ getPlayerZ(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
 
 
     
-      <pre><code>var z = Math.round(getPlayerZ());
+      <pre><code>// where in the Z am I?
+var z = Math.round(getPlayerZ());
 ModPE.showTipMessage("Your Z coordinate is: " + z);</code></pre>
     
 
@@ -7173,7 +7201,7 @@ getTile(<span class="signature">x, y, z</span>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line385">line 385</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line493">line 493</a>
     </div>
 
   </div>
@@ -7322,7 +7350,9 @@ getTile(<span class="signature">x, y, z</span>)<span class="glyphicon glyphicon-
                         
                     
             </td>
-            <td class="description last">the block id</td>
+            <td class="description last"><ul>
+<li>the block id</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -7375,7 +7405,7 @@ getYaw(<span class="signature"><span class="optional">entity</span></span>)<span
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line407">line 407</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line520">line 520</a>
     </div>
 
   </div>
@@ -7384,7 +7414,7 @@ getYaw(<span class="signature"><span class="optional">entity</span></span>)<span
 <dd>
 
   <div class="description">
-    <p>@desc Return the left/right head rotation of the given <code>entity</code> (range: -∞ to ∞).</p>
+    <p>Return the left/right head rotation of the given <code>entity</code> (range: -∞ to ∞).</p>
   </div>
 
 
@@ -7491,7 +7521,9 @@ getYaw(<span class="signature"><span class="optional">entity</span></span>)<span
                         
                     
             </td>
-            <td class="description last">the yaw value</td>
+            <td class="description last"><ul>
+<li>the yaw value</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -7572,7 +7604,7 @@ preventDefault(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line453">line 453</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line573">line 573</a>
     </div>
 
   </div>
@@ -7620,7 +7652,8 @@ preventDefault(<span class="signature"></span>)
     
 
     
-      <pre><code>function useItem(x, y, z, itemId, blockId) {
+      <pre><code>// ???
+function useItem(x, y, z, itemId, blockId) {
   if (itemId === 354) { // cake
     teleportToFloor(UPWARD);
     preventDefault();
@@ -7646,7 +7679,7 @@ print(<span class="signature">text</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line470">line 470</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line597">line 597</a>
     </div>
 
   </div>
@@ -7737,7 +7770,8 @@ print(<span class="signature">text</span>)
 
 
     
-      <pre><code>print("The creepers are coming!");</code></pre>
+      <pre><code>// onoz!!
+print("The creepers are coming!");</code></pre>
     
 
 
@@ -7755,7 +7789,7 @@ rideAnimal(<span class="signature">rider, target</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line479">line 479</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line612">line 612</a>
     </div>
 
   </div>
@@ -7872,7 +7906,8 @@ rideAnimal(<span class="signature">rider, target</span>)
     
 
     
-      <pre><code>var cart = -1;
+      <pre><code>// weeeee!
+var cart = -1;
 var playerX;
 var playerZ;
 var stairBlocks = [53, 67, 108, 109, 114, 128, 134, 135, 136, 156];
@@ -7913,7 +7948,7 @@ setNightMode(<span class="signature">isNight</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line512">line 512</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line653">line 653</a>
     </div>
 
   </div>
@@ -8025,7 +8060,7 @@ setPosition(<span class="signature">entity, x, y, z</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line524">line 524</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line670">line 670</a>
     </div>
 
   </div>
@@ -8191,7 +8226,8 @@ If attackHook is not used, Player.getEntity() can be used as the entity paramete
     
 
     
-      <pre><code>var UPWARD = 1;
+      <pre><code>// teleporting? check for flies!!
+var UPWARD = 1;
 var DOWNWARD = -1;
 function useItem(x, y, z, itemId, blockId) {
   if (itemId === 354) { // cake
@@ -8232,7 +8268,7 @@ setPositionRelative(<span class="signature">entity, x, y, z</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line560">line 560</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line714">line 714</a>
     </div>
 
   </div>
@@ -8398,7 +8434,8 @@ If attackHook is not used, Player.getEntity() should be used as the entity param
     
 
     
-      <pre><code>function modTick() {
+      <pre><code>// build vehicles out of blocks, fly them by tapping with an iron hoe
+function modTick() {
   if (vehicleLoc === null || --vehicleSpeed > 0) return;
   vehicleSpeed = 5;
   for (var x = 0; x < vehicleMaxSize; ++x) {
@@ -8441,7 +8478,7 @@ setRot(<span class="signature">entity, yaw, pitch</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line598">line 598</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line760">line 760</a>
     </div>
 
   </div>
@@ -8606,7 +8643,7 @@ setTile(<span class="signature">x, y, z, id, <span class="optional">damage</span
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line616">line 616</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line784">line 784</a>
     </div>
 
   </div>
@@ -8900,7 +8937,7 @@ setVelX(<span class="signature">entity, velocity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line665">line 665</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line840">line 840</a>
     </div>
 
   </div>
@@ -9017,7 +9054,8 @@ setVelX(<span class="signature">entity, velocity</span>)
     
 
     
-      <pre><code>var playerDir = [0, 0, 0];
+      <pre><code>// jetpack
+var playerDir = [0, 0, 0];
 var DEG_TO_RAD = Math.PI / 180;
 var playerFlySpeed = 1;
 
@@ -9056,7 +9094,7 @@ setVelY(<span class="signature">entity, velocity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line696">line 696</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line879">line 879</a>
     </div>
 
   </div>
@@ -9182,7 +9220,7 @@ setVelZ(<span class="signature">entity, velocity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line705">line 705</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line893">line 893</a>
     </div>
 
   </div>
@@ -9308,7 +9346,7 @@ spawnChicken(<span class="signature">x, y, z, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line714">line 714</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line907">line 907</a>
     </div>
 
   </div>
@@ -9476,7 +9514,8 @@ spawnChicken(<span class="signature">x, y, z, skin</span>)
     
 
     
-      <pre><code>var tb = false;
+      <pre><code>// yay! chickens
+var tb = false;
 
 function useItem(x, y, z, itemId, blockId, side) {
   if (itemId == 280 && !tb) { // if the item is a stick and items hasn't been initialized
@@ -9509,7 +9548,7 @@ spawnCow(<span class="signature">x, y, z, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line743">line 743</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line945">line 945</a>
     </div>
 
   </div>
@@ -9677,7 +9716,8 @@ spawnCow(<span class="signature">x, y, z, skin</span>)
     
 
     
-      <pre><code>var tb = false;
+      <pre><code>// moo!
+var tb = false;
 
 function useItem(x, y, z, itemId, blockId, side) {
   if (itemId == 280 && !tb) { // if the item is a stick and items hasn't been initialized
@@ -9710,7 +9750,7 @@ spawnPigZombie(<span class="signature">x, y, z, heldItemId, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line772">line 772</a>
+      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line983">line 983</a>
     </div>
 
   </div>
@@ -10875,7 +10915,7 @@ and the Rhino JavaScript engine.</p>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 09 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>
@@ -10889,6 +10929,5 @@ and the Rhino JavaScript engine.</p>
       window.onload = function() { document.getElementById("cyear").innerHTML = new Date().getFullYear(); };
     </script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/linenumber.js"></script>
   </body>
 </html>

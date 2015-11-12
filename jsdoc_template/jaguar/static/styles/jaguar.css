@@ -292,6 +292,7 @@ h6 {
     line-height: 1.2;
 }
 
+/* detail icons */
 .tag-author,
 .tag-copyright,
 .tag-default,
@@ -362,6 +363,7 @@ h6 {
     color: #235D8C;
     background-color: #BCF7E6;
 }
+/* END detail icons */
 
 .navigation li.icon {
     border: none;
@@ -479,8 +481,7 @@ h6 {
 .main table td.name,
 .main table td.type,
 .main table td.default,
-.main table td.attributes,
-.main table td.description {
+.main table td.attributes {
     font-size: .8em;
 }
 
@@ -502,7 +503,8 @@ h6 {
     color: #aaa;
 }
 
-.main table .description {}
+.main table .description {
+    font-size: .8em;}
 
 .main table .description p {
     margin: 0;

@@ -1,34 +1,44 @@
 /**
- * Static methods for the Block API
- * @namespace {Class} Block
- * @example Block.methodName([ arg1[, arg2[, ...argN] ] ]);
+ *
+ * @namespace   {Class} Block
+ * @description Static methods for the Block API
+ *
  * @see http://www.minecraftforum.net/forums/minecraft-pocket-edition/mcpe-mods-tools/mcpe-mod-tool-discussion/1987726-custom-blocks-tutorial
  * @see https://github.com/Connor4898/ModPE-Scripts/wiki/Custom-blocks
  * @see https://github.com/zhuowei/ModPEScripts/blob/master/500ise_blocktest.js
  * @see https://github.com/zhuowei/ModPEScripts/blob/master/500ise_enchantingbench.js
- */
+ *
+ * @example
+ * // Requires class name since all methods are static
+ * Block.methodName([ arg1[, arg2[, ...argN] ] ]);
+ *
+ * ***/
 
 /**
- * @function defineBlock
- * @desc Define a custom block with the specified `id` and attributes.
- * @memberof Block
- * @param {int} id                     - a valid, unused block ID between 0
- *                                       and 255 (see: {@link Reference.BlockIds})
- * @param {string} blockName           - the block name
- * @param {Array<string, int>} texture - the texture and offset used to decorate
- *                                       this block
- * @param {int} [materialSource]       - the material (block ID) this block is
- *                                       based on (useful for determining which
- *                                       tool is best used to break your block;
- *                                       see: {@link Reference.BlockIds})
- * @param {boolean} [isOpaque]         - opaque if true, transparent if false
- * @param {int}  [renderType]          - the type of block to render (see:
- *                                       {@link Reference.BlockRenderTypes})
- * @see {@link http://192.168.1.40:8888/textures/|MCPE Textures}
- * @example <caption>credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ *
+ * @function    defineBlock
+ * @memberof    Block
+ * @description Define a custom block with the specified `blockId` and attributes.
+ *              See __*[MCPE Textures](textures)*__ for a list of current textures.
+ *
+ * @param {int}                blockId          - a valid, unused block ID between 0 and 255;
+ *                                                see: {@link Reference.BlockIds}
+ * @param {string}             blockName        - the block name
+ * @param {Array<string, int>} texture          - the texture and offset used to decorate this block
+ * @param {int}                [materialSource] - the material (block ID) this block is
+ *                                                based on (useful for determining which
+ *                                                tool is best used to break your block;
+ *                                                see: {@link Reference.BlockIds})
+ * @param {boolean}            [isOpaque]       - opaque if true, transparent if false
+ * @param {int}                [renderType]     - the type of block to render
+ *                                                see: {@link Reference.BlockRenderTypes}
+ *
+ * @example
+ * <caption>credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ *
+ * // create new block at level startup
  * var initialized = false;
  * var ID = 220;
- *
  * function selectLevelHook() {
  *
  *   // do all this before level is initialized
@@ -44,122 +54,163 @@
  *     initialized = true;
  *   }
  * }
- */
+ *
+ * ***/
 
 /**
- * @function getAllBlockIds
- * @desc Return all available block IDs.
- * @memberof Block
- * @return {int[]} the block IDs
- */
+ *
+ * @function    getAllBlockIds
+ * @memberof    Block
+ * @description Return all available block IDs.
+ *
+ * @return {int[]} - the block IDs
+ *
+ * ***/
 
 /**
- * @function getRenderType
- * @desc Return the render type (shape) of a block with the specified `id`.
- * @memberof Block
- * @param {int} id - the block ID (see: {@link Reference.BlockIds})
- * @return {int} the render type (see: {@link Reference.BlockRenderTypes})
+ *
  * @todo test this thing
- * @example // print the rendertype for a cactus
- * print(Block.getRenderType(81));
- */
+ *
+ * @function    getRenderType
+ * @memberof    Block
+ * @description Return the render type (shape) of a block with the specified `blockId`.
+ *
+ * @param  {int} blockId - the block ID (see: {@link Reference.BlockIds})
+ * @return {int}         - the render type (see: {@link Reference.BlockRenderTypes})
+ *
+ * ***/
 
 /**
- * @function setColor
- * @desc Set the color of a block with the specified `id` and `color`.
- * @memberof Block
- * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
- * @param {number[]} color - a hexadecimal color value in the form: `[0xRRGGBB]`
+ *
+ * @function    setColor
+ * @memberof    Block
+ * @description Set the color of a block with the specified `blockId` and `color`.
+ *
+ * @param {int}      blockId - the block ID (see: {@link Reference.BlockIds})
+ * @param {number[]} color   - a hexadecimal color value in the form: `[0xRRGGBB]`
+ *
+ * @see {@link http://html-color-codes.info|HTML Color Codes}
+ *
  * @example
  * // make a block red
  * Block.setColor(220, [0xFF0000])
- * @see {@link http://html-color-codes.info|HTML Color Codes}
- */
+ *
+ * ***/
 
 /**
- * @function setDestroyTime
- * @desc Set the hardness of a block with the specified `id` and `hardness`.
- * @memberof Block
- * @param {int} id          - the block ID (see: {@link Reference.BlockIds})
+ *
+ * @function    setDestroyTime
+ * @memberof    Block
+ * @description Set the hardness of a block with the specified `blockId` and `hardness`.
+ *
+ * @param {int}    blockId  - the block ID (see: {@link Reference.BlockIds})
  * @param {double} hardness - the hardness (-1 = unbreakable; destroy time will
  *                            vary depending on tool used)
+ *
  * @see {@link http://minecraft.gamepedia.com/Breaking#Blocks_by_hardness|Block Hardness}
+ *
  * @example
  * // make Glass Pane unbreakable
  * Block.setDestroyTime(102, -1);
- */
+ *
+ * ***/
 
 /**
- * @function setExplosionResistance
- * @desc Set the explosion resistance of a block with the specified `id` and `resistance`.
- * @memberof Block
- * @param {int} id            - the block ID (see: {@link Reference.BlockIds})
+ *
+ * @function    setExplosionResistance
+ * @memberof    Block
+ * @description Set the explosion resistance of a block with the specified `blockId` and `resistance`.
+ *
+ * @param {int}    blockId    - the block ID (see: {@link Reference.BlockIds})
  * @param {double} resistance - the explosion resistance
+ *
  * @see {@link http://minecraft.gamepedia.com/Explosion#Blast_resistance|Blast Resistance}
+ *
  * @example
  * // make Gorilla Glass by changing Glass Pane from 1.5 to 6000 (same as obsidian)
  * Block.setExplosionResistance(102, 6000);
- */
+ *
+ * ***/
 
 /**
- * @function setLightLevel
- * @desc Set the light level of a block with the specified `id` and `lightLevel`.
- * @memberof Block
- * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
+ *
+ * @function    setLightLevel
+ * @memberof    Block
+ * @description Set the light level of a block with the specified `blockId` and `lightLevel`.
+ *
+ * @param {int} blockId    - the block ID (see: {@link Reference.BlockIds})
  * @param {int} lightLevel - the light level of the block (0-15)
+ *
  * @see {@link http://minecraft.gamepedia.com/Light#Brightness|Brightness}
+ *
  * @example
- * // tone down that glowstone b
+ * // tone down that glowstone
  * Block.setLightLevel(89, 4);
- */
+ *
+ * ***/
 
 /**
- * @function setLightOpacity
- * @desc Set the light opacity of a block with the specified `id` and `opacity`.
- * @memberof Block
- * @param {int} id      - the block ID (see: {@link Reference.BlockIds})
+ *
+ * @function    setLightOpacity
+ * @memberof    Block
+ * @description Set the light opacity of a block with the specified `blockId` and `opacity`.
+ *
+ * @param {int} blockId - the block ID (see: {@link Reference.BlockIds})
  * @param {int} opacity - the block's opacity to light passing through
- * (0-10 where 0 = most light can pass through, 10 = least light can pass through)
- */
+ *                        (0-10 where 0 = most light can pass through,
+ *                        10 = least light can pass through)
+ *
+ * ***/
 
 /**
- * @function setRenderLayer
- * @desc Set the render layer for a block with the specified `id` and `layer`.
- * @memberof Block
- * @param {int} id    - the block ID (see: {@link Reference.BlockIds})
- * @param {int} layer - the render layer [0: opaque, 1: transparent,
- * 2: translucent - __broken?__]
+ *
+ * @todo find out if translucent (2) is working
+ *
+ * @function    setRenderLayer
+ * @memberof    Block
+ * @description Set the render layer for a block with the specified `blockId` and `layer`.
+ *
+ * @param {int} blockId - the block ID (see: {@link Reference.BlockIds})
+ * @param {int} layer   - the render layer [0: opaque, 1: transparent, 2 : translucent - __broken?__]
+ *
  * @example
  * // render a transparent block
  * Block.setRenderLayer(220, 1);
- * @todo find out if translucent (2) is working
- */
+ *
+ * ***/
 
 /**
- * @function setRenderType
- * @desc Set the render type for a block with the specified `id` and `type`.
- * @memberof Block
- * @param {int} id   - the block ID (see: {@link Reference.BlockIds})
- * @param {int} type - the type of block to render (see:
+ *
+ * @function    setRenderType
+ * @memberof    Block
+ * @description Set the render type for a block with the specified `blockId` and `type`.
+ *
+ * @param {int} blockId - the block ID (see: {@link Reference.BlockIds})
+ * @param {int} type    - the type of block to render (see:
  *                        {@link Reference.BlockRenderTypes})
+ *
  * @example
- * // render custom block with id 220 using the cactus shape
+ * // render custom block with blockId 220 using the cactus shape
  * Block.setRenderType(220, 13);
- */
+ *
+ * ***/
 
 /**
- * @function setShape
- * @desc Set the size of a block with the specified `id` and start/finish coordinates.
- * @memberof Block
- * @param {int} id         - the block ID (see: {@link Reference.BlockIds})
+ *
+ * @function    setShape
+ * @memberof    Block
+ * @description Set the size of a block with the specified `blockId` and start/finish coordinates.
+ *
+ * @param {int}    blockId - the block ID (see: {@link Reference.BlockIds})
  * @param {double} startX  - the starting x coordinate
  * @param {double} startY  - the starting y coordinate
  * @param {double} startZ  - the starting z coordinate
  * @param {double} finishX - the finishing x coordinate
  * @param {double} finishY - the finishing y coordinate
  * @param {double} finishZ - the finishing z coordinate
+ *
  * @example
  * // set the shape of a block to be 1m wide(X) by 1m long(Z) by .75m high(Y)
  * Block.setShape(45, 0, 0, 0, 1, 0.75, 1);
- */
-
+ *
+ * ***/

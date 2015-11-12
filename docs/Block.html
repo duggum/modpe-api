@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
+      
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
       
         <li data-name="EntityRenderType"><a href="global.html#EntityRenderType">EntityRenderType</a></li>
@@ -944,7 +946,8 @@
             
 
     
-      <pre><code>Block.methodName([ arg1[, arg2[, ...argN] ] ]);</code></pre>
+      <pre><code>// Requires class name since all methods are static
+Block.methodName([ arg1[, arg2[, ...argN] ] ]);</code></pre>
     
 
 
@@ -974,11 +977,11 @@
 
     <h4 class="name" id=".defineBlock">
 
-<span class="type-signature static">static</span>Block.defineBlock(<span class="signature">id, blockName, texture, <span class="optional">materialSource</span>, <span class="optional">isOpaque</span>, <span class="optional">renderType</span></span>)
+<span class="type-signature static">static</span>Block.defineBlock(<span class="signature">blockId, blockName, texture, <span class="optional">materialSource</span>, <span class="optional">isOpaque</span>, <span class="optional">renderType</span></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line11">line 11</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line17">line 17</a>
     </div>
 
   </div>
@@ -987,7 +990,8 @@
 <dd>
 
   <div class="description">
-    <p>Define a custom block with the specified <code>id</code> and attributes.</p>
+    <p>Define a custom block with the specified <code>blockId</code> and attributes.
+             See <strong><em><a href="textures">MCPE Textures</a></em></strong> for a list of current textures.</p>
   </div>
 
 
@@ -1017,7 +1021,7 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -1039,8 +1043,8 @@
 
                     
                 
-                <p>a valid, unused block ID between 0
-                                      and 255 (see: Reference.BlockIds)</p></td>
+                <p>a valid, unused block ID between 0 and 255;
+                                               see: Reference.BlockIds</p></td>
         </tr>
 
 	
@@ -1098,8 +1102,7 @@
 
                     
                 
-                <p>the texture and offset used to decorate
-                                      this block</p></td>
+                <p>the texture and offset used to decorate this block</p></td>
         </tr>
 
 	
@@ -1131,9 +1134,9 @@
                     
                 
                 <p>the material (block ID) this block is
-                                      based on (useful for determining which
-                                      tool is best used to break your block;
-                                      see: Reference.BlockIds)</p></td>
+                                               based on (useful for determining which
+                                               tool is best used to break your block;
+                                               see: Reference.BlockIds)</p></td>
         </tr>
 
 	
@@ -1195,8 +1198,8 @@
 
                     
                 
-                <p>the type of block to render (see:
-                                      Reference.BlockRenderTypes)</p></td>
+                <p>the type of block to render
+                                               see: Reference.BlockRenderTypes</p></td>
         </tr>
 
 	
@@ -1220,8 +1223,6 @@
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="http://192.168.1.40:8888/textures/">MCPE Textures</a></span></li>
-
   </ul>
 </div>
 
@@ -1233,9 +1234,9 @@
     
 
     
-      <pre><code>var initialized = false;
+      <pre><code>// create new block at level startup
+var initialized = false;
 var ID = 220;
-
 function selectLevelHook() {
 
   // do all this before level is initialized
@@ -1268,7 +1269,7 @@ function selectLevelHook() {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line49">line 49</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line60">line 60</a>
     </div>
 
   </div>
@@ -1322,7 +1323,9 @@ function selectLevelHook() {
                         
                     
             </td>
-            <td class="description last">the block IDs</td>
+            <td class="description last"><ul>
+<li>the block IDs</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1350,11 +1353,11 @@ function selectLevelHook() {
 
     <h4 class="name" id=".getRenderType">
 
-<span class="type-signature static">static</span>Block.getRenderType(<span class="signature">id</span>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
+<span class="type-signature static">static</span>Block.getRenderType(<span class="signature">blockId</span>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line56">line 56</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line70">line 70</a>
     </div>
 
   </div>
@@ -1363,7 +1366,7 @@ function selectLevelHook() {
 <dd>
 
   <div class="description">
-    <p>Return the render type (shape) of a block with the specified <code>id</code>.</p>
+    <p>Return the render type (shape) of a block with the specified <code>blockId</code>.</p>
   </div>
 
 
@@ -1393,7 +1396,7 @@ function selectLevelHook() {
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -1455,7 +1458,9 @@ function selectLevelHook() {
                         
                     
             </td>
-            <td class="description last">the render type (see: Reference.BlockRenderTypes)</td>
+            <td class="description last"><ul>
+<li>the render type (see: Reference.BlockRenderTypes)</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1476,16 +1481,6 @@ function selectLevelHook() {
 
 
 
-<h5>Example</h5>
-
-
-    
-      <pre><code>// print the rendertype for a cactus
-print(Block.getRenderType(81));</code></pre>
-    
-
-
-
 </dd>
 
         
@@ -1495,11 +1490,11 @@ print(Block.getRenderType(81));</code></pre>
 
     <h4 class="name" id=".setColor">
 
-<span class="type-signature static">static</span>Block.setColor(<span class="signature">id, color</span>)
+<span class="type-signature static">static</span>Block.setColor(<span class="signature">blockId, color</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line67">line 67</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line83">line 83</a>
     </div>
 
   </div>
@@ -1508,7 +1503,7 @@ print(Block.getRenderType(81));</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the color of a block with the specified <code>id</code> and <code>color</code>.</p>
+    <p>Set the color of a block with the specified <code>blockId</code> and <code>color</code>.</p>
   </div>
 
 
@@ -1538,7 +1533,7 @@ print(Block.getRenderType(81));</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -1629,11 +1624,11 @@ Block.setColor(220, [0xFF0000])</code></pre>
 
     <h4 class="name" id=".setDestroyTime">
 
-<span class="type-signature static">static</span>Block.setDestroyTime(<span class="signature">id, hardness</span>)
+<span class="type-signature static">static</span>Block.setDestroyTime(<span class="signature">blockId, hardness</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line79">line 79</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line100">line 100</a>
     </div>
 
   </div>
@@ -1642,7 +1637,7 @@ Block.setColor(220, [0xFF0000])</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the hardness of a block with the specified <code>id</code> and <code>hardness</code>.</p>
+    <p>Set the hardness of a block with the specified <code>blockId</code> and <code>hardness</code>.</p>
   </div>
 
 
@@ -1672,7 +1667,7 @@ Block.setColor(220, [0xFF0000])</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -1764,11 +1759,11 @@ Block.setDestroyTime(102, -1);</code></pre>
 
     <h4 class="name" id=".setExplosionResistance">
 
-<span class="type-signature static">static</span>Block.setExplosionResistance(<span class="signature">id, resistance</span>)
+<span class="type-signature static">static</span>Block.setExplosionResistance(<span class="signature">blockId, resistance</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line92">line 92</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line118">line 118</a>
     </div>
 
   </div>
@@ -1777,7 +1772,7 @@ Block.setDestroyTime(102, -1);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the explosion resistance of a block with the specified <code>id</code> and <code>resistance</code>.</p>
+    <p>Set the explosion resistance of a block with the specified <code>blockId</code> and <code>resistance</code>.</p>
   </div>
 
 
@@ -1807,7 +1802,7 @@ Block.setDestroyTime(102, -1);</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -1898,11 +1893,11 @@ Block.setExplosionResistance(102, 6000);</code></pre>
 
     <h4 class="name" id=".setLightLevel">
 
-<span class="type-signature static">static</span>Block.setLightLevel(<span class="signature">id, lightLevel</span>)
+<span class="type-signature static">static</span>Block.setLightLevel(<span class="signature">blockId, lightLevel</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line104">line 104</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line135">line 135</a>
     </div>
 
   </div>
@@ -1911,7 +1906,7 @@ Block.setExplosionResistance(102, 6000);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the light level of a block with the specified <code>id</code> and <code>lightLevel</code>.</p>
+    <p>Set the light level of a block with the specified <code>blockId</code> and <code>lightLevel</code>.</p>
   </div>
 
 
@@ -1941,7 +1936,7 @@ Block.setExplosionResistance(102, 6000);</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -2017,7 +2012,7 @@ Block.setExplosionResistance(102, 6000);</code></pre>
 
 
     
-      <pre><code>// tone down that glowstone b
+      <pre><code>// tone down that glowstone
 Block.setLightLevel(89, 4);</code></pre>
     
 
@@ -2032,11 +2027,11 @@ Block.setLightLevel(89, 4);</code></pre>
 
     <h4 class="name" id=".setLightOpacity">
 
-<span class="type-signature static">static</span>Block.setLightOpacity(<span class="signature">id, opacity</span>)
+<span class="type-signature static">static</span>Block.setLightOpacity(<span class="signature">blockId, opacity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line116">line 116</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line152">line 152</a>
     </div>
 
   </div>
@@ -2045,7 +2040,7 @@ Block.setLightLevel(89, 4);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the light opacity of a block with the specified <code>id</code> and <code>opacity</code>.</p>
+    <p>Set the light opacity of a block with the specified <code>blockId</code> and <code>opacity</code>.</p>
   </div>
 
 
@@ -2075,7 +2070,7 @@ Block.setLightLevel(89, 4);</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -2117,7 +2112,8 @@ Block.setLightLevel(89, 4);</code></pre>
             <td class="description last">
                 
                 <p>the block's opacity to light passing through
-(0-10 where 0 = most light can pass through, 10 = least light can pass through)</p></td>
+                       (0-10 where 0 = most light can pass through,
+                       10 = least light can pass through)</p></td>
         </tr>
 
 	
@@ -2155,11 +2151,11 @@ Block.setLightLevel(89, 4);</code></pre>
 
     <h4 class="name" id=".setRenderLayer">
 
-<span class="type-signature static">static</span>Block.setRenderLayer(<span class="signature">id, layer</span>)
+<span class="type-signature static">static</span>Block.setRenderLayer(<span class="signature">blockId, layer</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line125">line 125</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line165">line 165</a>
     </div>
 
   </div>
@@ -2168,7 +2164,7 @@ Block.setLightLevel(89, 4);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the render layer for a block with the specified <code>id</code> and <code>layer</code>.</p>
+    <p>Set the render layer for a block with the specified <code>blockId</code> and <code>layer</code>.</p>
   </div>
 
 
@@ -2198,7 +2194,7 @@ Block.setLightLevel(89, 4);</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -2239,8 +2235,7 @@ Block.setLightLevel(89, 4);</code></pre>
 
             <td class="description last">
                 
-                <p>the render layer [0: opaque, 1: transparent,
-2: translucent - <strong>broken?</strong>]</p></td>
+                <p>the render layer [0: opaque, 1: transparent, 2 : translucent - <strong>broken?</strong>]</p></td>
         </tr>
 
 	
@@ -2290,11 +2285,11 @@ Block.setRenderLayer(220, 1);</code></pre>
 
     <h4 class="name" id=".setRenderType">
 
-<span class="type-signature static">static</span>Block.setRenderType(<span class="signature">id, type</span>)
+<span class="type-signature static">static</span>Block.setRenderType(<span class="signature">blockId, type</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line138">line 138</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line182">line 182</a>
     </div>
 
   </div>
@@ -2303,7 +2298,7 @@ Block.setRenderLayer(220, 1);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the render type for a block with the specified <code>id</code> and <code>type</code>.</p>
+    <p>Set the render type for a block with the specified <code>blockId</code> and <code>type</code>.</p>
   </div>
 
 
@@ -2333,7 +2328,7 @@ Block.setRenderLayer(220, 1);</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -2408,7 +2403,7 @@ Block.setRenderLayer(220, 1);</code></pre>
 
 
     
-      <pre><code>// render custom block with id 220 using the cactus shape
+      <pre><code>// render custom block with blockId 220 using the cactus shape
 Block.setRenderType(220, 13);</code></pre>
     
 
@@ -2423,11 +2418,11 @@ Block.setRenderType(220, 13);</code></pre>
 
     <h4 class="name" id=".setShape">
 
-<span class="type-signature static">static</span>Block.setShape(<span class="signature">id, startX, startY, startZ, finishX, finishY, finishZ</span>)
+<span class="type-signature static">static</span>Block.setShape(<span class="signature">blockId, startX, startY, startZ, finishX, finishY, finishZ</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line150">line 150</a>
+      <a href="native-api_block.js.html">native-api/block.js</a>, <a href="native-api_block.js.html#line198">line 198</a>
     </div>
 
   </div>
@@ -2436,7 +2431,7 @@ Block.setRenderType(220, 13);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the size of a block with the specified <code>id</code> and start/finish coordinates.</p>
+    <p>Set the size of a block with the specified <code>blockId</code> and start/finish coordinates.</p>
   </div>
 
 
@@ -2466,7 +2461,7 @@ Block.setRenderType(220, 13);</code></pre>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>blockId</code></td>
             
 
             <td class="type">
@@ -2683,7 +2678,7 @@ Block.setShape(45, 0, 0, 0, 1, 0.75, 1);</code></pre>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 09 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>
@@ -2697,6 +2692,5 @@ Block.setShape(45, 0, 0, 0, 1, 0.75, 1);</code></pre>
       window.onload = function() { document.getElementById("cyear").innerHTML = new Date().getFullYear(); };
     </script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/linenumber.js"></script>
   </body>
 </html>

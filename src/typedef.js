@@ -24,14 +24,14 @@
  * __`Rhino`__ JavaScript objects that allow access to the MCPE library via BlockLauncher
  * and the Rhino JavaScript engine.
  * @typedef {ScriptableObject} NativeApi
- * @property {Class} NativeBlockApi    public static class for the {@link Block|Block API}
- * @property {Class} NativeEntityApi   public static class for the {@link Entity|Entity API}
- * @property {Class} NativeItemApi     public static class for the {@link Item|Item API}
- * @property {Class} NativeLevelApi    public static class for the {@link Level|Level API}
- * @property {Class} NativeModPEApi    public static class for the {@link ModPE|ModPE API}
- * @property {Class} NativePlayerApi   public static class for the {@link Player|Player API}
- * @property {Class} NativeRendererApi public static class for the {@link Renderer|Renderer API}
- * @property {Class} NativeServerApi   public static class for the {@link Server|Server API}
+ * @property {Class} NativeBlockApi    - public static class for the {@link Block|Block API}
+ * @property {Class} NativeEntityApi   - public static class for the {@link Entity|Entity API}
+ * @property {Class} NativeItemApi     - public static class for the {@link Item|Item API}
+ * @property {Class} NativeLevelApi    - public static class for the {@link Level|Level API}
+ * @property {Class} NativeModPEApi    - public static class for the {@link ModPE|ModPE API}
+ * @property {Class} NativePlayerApi   - public static class for the {@link Player|Player API}
+ * @property {Class} NativeRendererApi - public static class for the {@link Renderer|Renderer API}
+ * @property {Class} NativeServerApi   - public static class for the {@link Server|Server API}
  * @see https://mozilla.github.io/rhino/
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
  */
