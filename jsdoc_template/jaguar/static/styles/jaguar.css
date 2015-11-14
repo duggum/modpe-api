@@ -568,6 +568,7 @@ ol.linenums > li {
 }
 
 ol.linenums > li:before {
+    font-size: 1em;
     float: left;
     text-align: right;
     background-color: #323227;

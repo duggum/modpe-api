@@ -321,6 +321,8 @@
       
         <li data-name="Entity.setHealth"><a href="Entity.html#.setHealth">setHealth</a></li>
       
+        <li data-name="Entity.setMaxHealth"><a href="Entity.html#.setMaxHealth">setMaxHealth</a></li>
+      
         <li data-name="Entity.setMobSkin"><a href="Entity.html#.setMobSkin">setMobSkin</a></li>
       
         <li data-name="Entity.setNameTag"><a href="Entity.html#.setNameTag">setNameTag</a></li>
@@ -934,15 +936,6 @@
 </div>
 
         
-            <h3>Example</h3>
-            
-
-    
-      <pre><code>Server.methodName([ arg1[, arg2[, ...argN] ] ]);</code></pre>
-    
-
-
-        
     
     </div>
 
@@ -972,7 +965,7 @@
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_server.js.html">native-api/server.js</a>, <a href="native-api_server.js.html#line13">line 13</a>
+      <a href="native-api_server.jsdoc.html">native-api/server.jsdoc</a>, <a href="native-api_server.jsdoc.html#line8">line 8</a>
     </div>
 
   </div>
@@ -981,7 +974,7 @@
 <dd>
 
   <div class="description">
-    <p>return the server IP address</p>
+    <p>Return the server IP address.</p>
   </div>
 
 
@@ -1026,7 +1019,9 @@
                         
                     
             </td>
-            <td class="description last">the IP address</td>
+            <td class="description last"><ul>
+<li>the IP address</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1049,7 +1044,8 @@
 
 
     
-      <pre><code>clientMessage(Server.getAddress()); // prints '84.45.129.7'</code></pre>
+      <pre><code>// ?
+clientMessage(Server.getAddress()); // prints '84.45.129.7'</code></pre>
     
 
 
@@ -1067,7 +1063,7 @@
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_server.js.html">native-api/server.js</a>, <a href="native-api_server.js.html#line26">line 26</a>
+      <a href="native-api_server.jsdoc.html">native-api/server.jsdoc</a>, <a href="native-api_server.jsdoc.html#line22">line 22</a>
     </div>
 
   </div>
@@ -1076,7 +1072,7 @@
 <dd>
 
   <div class="description">
-    <p>return the names of all players on the server</p>
+    <p>Return the names of all players on the server.</p>
   </div>
 
 
@@ -1121,7 +1117,9 @@
                         
                     
             </td>
-            <td class="description last">the player names</td>
+            <td class="description last"><ul>
+<li>the player names</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1166,7 +1164,7 @@ for (var i = 0; i < players.length; i++) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_server.js.html">native-api/server.js</a>, <a href="native-api_server.js.html#line39">line 39</a>
+      <a href="native-api_server.jsdoc.html">native-api/server.jsdoc</a>, <a href="native-api_server.jsdoc.html#line39">line 39</a>
     </div>
 
   </div>
@@ -1175,7 +1173,7 @@ for (var i = 0; i < players.length; i++) {
 <dd>
 
   <div class="description">
-    <p>return the entity IDs of all players on the server</p>
+    <p>Return the entity IDs of all players on the server.</p>
   </div>
 
 
@@ -1220,7 +1218,9 @@ for (var i = 0; i < players.length; i++) {
                         
                     
             </td>
-            <td class="description last">the player IDs</td>
+            <td class="description last"><ul>
+<li>the player IDs</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1265,7 +1265,7 @@ for (var i = 0; i < players.length; i++) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_server.js.html">native-api/server.js</a>, <a href="native-api_server.js.html#line48">line 48</a>
+      <a href="native-api_server.jsdoc.html">native-api/server.jsdoc</a>, <a href="native-api_server.jsdoc.html#line56">line 56</a>
     </div>
 
   </div>
@@ -1274,7 +1274,7 @@ for (var i = 0; i < players.length; i++) {
 <dd>
 
   <div class="description">
-    <p>return the port number of the current remote connection</p>
+    <p>Return the port number of the current remote connection.</p>
   </div>
 
 
@@ -1319,7 +1319,9 @@ for (var i = 0; i < players.length; i++) {
                         
                     
             </td>
-            <td class="description last">the port number</td>
+            <td class="description last"><ul>
+<li>the port number</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1342,7 +1344,8 @@ for (var i = 0; i < players.length; i++) {
 
 
     
-      <pre><code>clientMessage("The current server port is: " + Server.getPort());</code></pre>
+      <pre><code>// ?
+clientMessage("The current server port is: " + Server.getPort());</code></pre>
     
 
 
@@ -1360,7 +1363,7 @@ for (var i = 0; i < players.length; i++) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_server.js.html">native-api/server.js</a>, <a href="native-api_server.js.html#line58">line 58</a>
+      <a href="native-api_server.jsdoc.html">native-api/server.jsdoc</a>, <a href="native-api_server.jsdoc.html#line70">line 70</a>
     </div>
 
   </div>
@@ -1369,7 +1372,7 @@ for (var i = 0; i < players.length; i++) {
 <dd>
 
   <div class="description">
-    <p>connect to a remote server</p>
+    <p>Connect to a remote server.</p>
   </div>
 
 
@@ -1473,7 +1476,8 @@ for (var i = 0; i < players.length; i++) {
 
 
     
-      <pre><code>Server.joinServer("84.45.129.7", 19132);</code></pre>
+      <pre><code>// ?
+Server.joinServer("84.45.129.7", 19132);</code></pre>
     
 
 
@@ -1491,7 +1495,7 @@ for (var i = 0; i < players.length; i++) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_server.js.html">native-api/server.js</a>, <a href="native-api_server.js.html#line67">line 67</a>
+      <a href="native-api_server.jsdoc.html">native-api/server.jsdoc</a>, <a href="native-api_server.jsdoc.html#line85">line 85</a>
     </div>
 
   </div>
@@ -1500,7 +1504,7 @@ for (var i = 0; i < players.length; i++) {
 <dd>
 
   <div class="description">
-    <p>send a chat message</p>
+    <p>Send a chat message.</p>
   </div>
 
 
@@ -1580,7 +1584,8 @@ for (var i = 0; i < players.length; i++) {
 
 
     
-      <pre><code>Server.sendChat("Herobrine is fake!!");</code></pre>
+      <pre><code>// ?
+Server.sendChat("Herobrine is fake!!");</code></pre>
     
 
 
@@ -1602,7 +1607,7 @@ for (var i = 0; i < players.length; i++) {
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Sat Nov 14 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

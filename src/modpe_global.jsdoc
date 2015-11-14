@@ -12,7 +12,7 @@
  * // prints 1
  * print(ArmorType.chestplate);
  *
- * ***/
+ *////
 
 /**
  *
@@ -41,9 +41,9 @@
  *
  * @example
  * // you better RUN!
- * clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");
+ * clientMessage(ChatColor.RED + "There's a Magma Cube behind you!" + ChatColor.RESET);
  *
- * ***/
+ *////
 
 /**
  *
@@ -57,13 +57,14 @@
  * // prints 1
  * print(DimensionId.NETHER);
  *
- * ***/
+ *////
 
 /**
  *
  * @member      EntityRenderType
- * @description Entity render types. This determines the shape of creature to render, not
- *              the skin. To change the skin see {@link Entity.setMobSkin}.
+ * @description Determines the shape of creature to render, not the skin.
+ *              To change the skin see {@link http://devd.io:8000/modpe_global.jsdoc.html#line62|Entity.setMobSkin}.
+ *              Also see the {@tutorial foo|Foo} for great win.
  *
  * @property {int[]} allTypes       - [ 2, . . . 45 ]
  * @property {int}   arrow          - 32
@@ -87,6 +88,7 @@
  * @property {int}   lavaSlime      - 16
  * @property {int}   lightningBolt  - 41
  * @property {int}   minecart       - 34
+ * @property {int}   mushroomCow    - 7
  * @property {int}   ocelot         - 43
  * @property {int}   pig            - 8
  * @property {int}   player         - 27
@@ -119,7 +121,7 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
@@ -176,7 +178,7 @@
  * var z = Player.getZ();
  * Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");
  *
- * ***/
+ *////
 
 /**
  *
@@ -193,7 +195,7 @@
  * // prints 4
  * print(ItemCategory.FOOD);
  *
- * ***/
+ *////
 
 /**
  *
@@ -210,7 +212,8 @@
  * @property {int}                  damageResistance - 11
  * @property {int}                  digSlowdown      - 4
  * @property {int}                  digSpeed         - 3
- * @property {HashMap<int, string>} effectIds        - all type IDs; *NOT* in numerical order (i.e. `{8=jump, ..., 20=wither} )
+ * @property {HashMap<int, string>} effectIds        - all type IDs; *NOT* in numerical order
+ *                                                     (i.e. `{8=jump, ..., 20=wither} )
  * @property {int}                  fireResistance   - 12
  * @property {int}                  harm             - 7
  * @property {int}                  heal             - 6
@@ -228,11 +231,7 @@
  * @property {int}                  weakness         - 18
  * @property {int}                  wither           - 20
  *
- * @example
- * // prints 8
- * print(MobEffect.jump);
- *
- * ***/
+ *////
 
 /**
  *
@@ -281,7 +280,7 @@
  * var z = Player.getPointedBlockZ();
  * Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);
  *
- * ***/
+ *////
 
 /**
  *
@@ -298,7 +297,7 @@
  * // sticks anyone?
  * addItemInventory(280, 64, 0);
  *
- * ***/
+ *////
 
 /**
  *
@@ -315,7 +314,7 @@
  * // make yourself look like a creeper
  * bl_setMobSkin(Player.getEntity(), "mob/creeper.png");
  *
- * ***/
+ *////
 
 /**
  *
@@ -336,7 +335,7 @@
  * // spawn a skeleton
  * bl_spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
  *
- * ***/
+ *////
 
 /**
  *
@@ -352,7 +351,7 @@
  * // you've been warned
  * clientMessage("Don't poke the Zombie Pigmen!!")
  *
- * ***/
+ *////
 
 /**
  *
@@ -371,7 +370,7 @@
  * // underground nuclear warhead testing
  * explode(127, 8, 45, 128);
  *
- * ***/
+ *////
 
 /**
  *
@@ -388,7 +387,7 @@
  * // where did I put that ... ?
  * print("You are carrying a " + getCarriedItem() + "!");
  *
- * ***/
+ *////
 
 /**
  *
@@ -401,7 +400,7 @@
  *
  * @return {Object} - __`unknown`__ *
  *
- * ***/
+ *////
 
 /**
  *
@@ -422,13 +421,13 @@
  *   clientMessage("Keep your head up!!");
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Player.getEntity} instead
  *
- * @function getPlayerEnt
+ * @function    getPlayerEnt
  * @description Return the player's native entity id (*NOT* the
  *              same as {@link EntityType}).
  *
@@ -440,7 +439,7 @@
  * // suicide is painless...
  * Entity.setHealth(getPlayerEnt(), 0);
  *
- * ***/
+ *////
 
 /**
  *
@@ -456,7 +455,7 @@
  * var x = Math.round(getPlayerX());
  * ModPE.showTipMessage("Your X coordinate is: " + x);
  *
- * ***/
+ *////
 
 /**
  *
@@ -472,7 +471,7 @@
  * var y = Math.round(getPlayerY());
  * ModPE.showTipMessage("Your Y coordinate is: " + y);
  *
- * ***/
+ *////
 
 /**
  *
@@ -488,7 +487,7 @@
  * var z = Math.round(getPlayerZ());
  * ModPE.showTipMessage("Your Z coordinate is: " + z);
  *
- * ***/
+ *////
 
 /**
  *
@@ -515,13 +514,13 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.getYaw} instead
  *
- * @function getYaw
+ * @function    getYaw
  * @description Return the left/right head rotation of the given `entity` (range: -∞ to ∞).
  *
  * @param  {entity} [entity = Player] - the entity to query
@@ -568,18 +567,18 @@
  * // if you die watching the sun set, this should print "West" :-)
  * clientMessage(getDirection());
  *
- * ***/
+ *////
 
 /**
- *
- * @function preventDefault
- * @description Prevent the default action from taking place.
  *
  * @todo get more information about how this works and precisely what it does
  * @todo better example or add explanatory details
  *
+ * @function    preventDefault
+ * @description Prevent the default action from taking place.
+ *
  * @example
- * <caption>credit: {@link https://goo.gl/2Ojy4t|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/2Ojy4t|Zhuowei Zhang}</caption>
  *
  * // ???
  * function useItem(x, y, z, itemId, blockId) {
@@ -592,11 +591,11 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
- * @function print
+ * @function    print
  * @description Display the given `text` as a pop-up toast message.
  *
  * @param {string} text - the message to be displayed
@@ -607,20 +606,20 @@
  * // onoz!!
  * print("The creepers are coming!");
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.rideAnimal} instead
  *
- * @function rideAnimal
+ * @function    rideAnimal
  * @description Make the specified `rider` entity ride the `target` entity.
  *
  * @param {entity} rider  - the rider
  * @param {entity} target - the target
  *
  * @example
- * <caption>credit: {@link https://goo.gl/ZkEa8H|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/ZkEa8H|Zhuowei Zhang}</caption>
  *
  * // weeeee!
  * var cart = -1;
@@ -648,13 +647,13 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Level.setNightMode} instead
  *
- * @function setNightMode
+ * @function    setNightMode
  * @description Set whether it is night or day.
  *
  * @param {boolean} isNight - night if true, day if false
@@ -665,13 +664,13 @@
  *   setNightMode(false);
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.setPosition} instead
  *
- * @function setPosition
+ * @function    setPosition
  * @description Set the location of the specified `entity` to the specified `x`, `y`, `z` coordinates;
  * If attackHook is not used, {@link Player.getEntity()} can be used as the entity parameter
  *
@@ -681,7 +680,7 @@
  * @param {double} z      - the z coordinate
  *
  * @example
- * <caption>credit: {@link https://goo.gl/8LAaNU|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/8LAaNU|Zhuowei Zhang}</caption>
  *
  * // teleporting? check for flies!!
  * var UPWARD = 1;
@@ -698,10 +697,13 @@
  * function teleportToFloor(direction) {
  *   var currentX = Math.floor(getPlayerX());
  *   var currentZ = Math.floor(getPlayerZ());
- *   var currentY = Math.floor(getPlayerY() - 1.6); //get player's feet, so subtract 1.6 (player's height)
+ *   //get player's feet, so subtract 1.6 (player's height)
+ *   var currentY = Math.floor(getPlayerY() - 1.6);
  *   var beginY = currentY + (direction * 2);
  *   for (var i = beginY; i < 128 && i >= 0; i += direction) {
- *     if (getTile(currentX, i, currentZ) !== 0 && getTile(currentX, i + 1, currentZ) === 0 && getTile(currentX, i + 2, currentZ) === 0) {
+ *     if (getTile(currentX, i, currentZ) !== 0
+ *         && getTile(currentX, i + 1, currentZ) === 0
+ *         && getTile(currentX, i + 2, currentZ) === 0) {
  *       var deltaY = (i - currentY);
  *       setPosition(getPlayerEnt(), currentX, getPlayerY() + deltaY + 1, currentZ);
  *       break;
@@ -709,13 +711,13 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.setPositionRelative} instead
  *
- * @function setPositionRelative
+ * @function    setPositionRelative
  * @description Set the location of the specified `entity` relative to the current `x`, `y`, `z` coordinates.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter
  *
@@ -725,7 +727,7 @@
  * @param {double} z - the z coordinate
  *
  * @example
- * <caption>credit: {@link https://goo.gl/i1ixVy|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/i1ixVy|Zhuowei Zhang}</caption>
  *
  * // build vehicles out of blocks, fly them by tapping with an iron hoe
  * function modTick() {
@@ -755,13 +757,13 @@
  *   setPositionRelative(getPlayerEnt(), vehicleVel[0], vehicleVel[1], vehicleVel[2]);
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.setRot} instead
  *
- * @function setRot
+ * @function    setRot
  * @description Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter.
  *
@@ -779,13 +781,13 @@
  *   y++;
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Level.setTile} instead
  *
- * @function setTile
+ * @function    setTile
  * @description Place a tile with the specified `id` and `damage` value at the specified `x`, `y`, `z` coordinates
  *
  * @param {int} x            - the x coordinate for the tile
@@ -795,7 +797,7 @@
  * @param {int} [damage = 0] - the tile's damage value
  *
  * @example
- * <caption>credit: {@link https://goo.gl/X4HRNx| 'Chad' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/X4HRNx| 'Chad' via Zhuowei Zhang}</caption>
  *
  * // instantly grow a tree when the ground is tapped with an oak sapling.
  * function useItem(x,y,z,itemId,blockId,side) {
@@ -835,20 +837,20 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.setVelX} instead
  *
- * @function setVelX
+ * @function    setVelX
  * @description Set the specified `entity`'s `velocity` along the X axis.
  *
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
  *
  * @example
- * <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang}</caption>
  *
  * // jetpack
  * var playerDir = [0, 0, 0];
@@ -874,13 +876,13 @@
  *   vector[2] = Math.sin(yaw) * Math.cos(pitch);
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.setVelY} instead
  *
- * @function setVelY
+ * @function    setVelY
  * @description Set the specified `entity`'s `velocity` along the Y axis.
  *
  * @param {entity} entity   - the target entity
@@ -888,13 +890,13 @@
  *
  * @see Example at {@link setVelX}
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Entity.setVelZ} instead
  *
- * @function setVelZ
+ * @function    setVelZ
  * @description Set the specified `entity`'s `velocity` along the Z axis.
  *
  * @param {entity} entity   - the target entity
@@ -902,13 +904,13 @@
  *
  * @see Example at {@link setVelX}
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Level.spawnChicken} instead
  *
- * @function spawnChicken
+ * @function    spawnChicken
  * @description Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
  * @param {int} x          - the x coordinate
@@ -920,7 +922,7 @@
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
  *
  * @example
- * <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang}</caption>
  *
  * // yay! chickens
  * var tb = false;
@@ -940,13 +942,13 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
  * @deprecated use {@link Level.spawnCow} instead
  *
- * @function spawnCow
+ * @function    spawnCow
  * @description Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
  * @param {int} x          - the x coordinate
@@ -958,7 +960,7 @@
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
  *
  * @example
- * <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang}</caption>
  *
  * // moo!
  * var tb = false;
@@ -978,14 +980,15 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
- * @function spawnPigZombie
- * @description Spawn a zombie pigman entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
- *
- * The `heldItemId` parameter determines what the zombie pigman will be hold when spawned.
+ * @function    spawnPigZombie
+ * @description Spawn a zombie pigman entity at the specified `x`, `y`,
+ *              and `z` coordinates using the specified `skin` image.
+ *              The `heldItemId` parameter determines what the zombie
+ *              pigman will be hold when spawned.
  *
  * @param {int} x          - the x coordinate
  * @param {int} y          - the y coordinate
@@ -998,6 +1001,12 @@
  *
  * @example
  * // cannibals!!
- * spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.png");
+ * var x = getPlayerX() + 2;
+ * var y = getPlayerY();
+ * var z = getPlayerZ() + 2;
+ * var held = 320;
+ * var img = "mob/char.png";
  *
- * ***/
+ * spawnPigZombie(x, y, z, held, img);
+ *
+ *////

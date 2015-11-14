@@ -13,7 +13,7 @@ function getBytesFromTexturePack(String_) {}
 /**
  * return the current game version (i.e. `0.12.2`)
  * @memberof ModPE
- * @return   {string} the game version
+ * @return   {string} - the game version
  * @example
  * var version = ModPE.getMinecraftVersion();
  * print(version); // "0.12.2"

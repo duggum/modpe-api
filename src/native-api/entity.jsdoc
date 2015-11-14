@@ -1,20 +1,28 @@
 /**
- * Static methods for the Entity API
- * @namespace {Class} Entity
- * @license CC-BY-SA-4.0
- * @example Entity.methodName([ arg1[, arg2[, ...argN] ] ]);
- */
+ *
+ * @namespace   {Class} Entity
+ * @description Static methods for the Entity API
+ *
+ *////
 
 /**
- * Add a potion effect with the specified `effectId` to the specified `entity`.
- * @memberof Entity
- * @param {Object}  entity         - the entity to add the effect to
- * @param {int}     effectId       - the {@link MobEffect} to add
- * @param {int}     duration       - the duration of the effect in ticks (1 second = 20 ticks)
- * @param {int}     amplification  - the amplification level of the effect
- * @param {boolean} ambient        - ???
- * @param {boolean} showParticles  - show particle effects if true, otherwise false
+ *
+ * @todo get more info on `amplification`
+ * @todo figure out what `ambient` is
+ *
+ * @function    addEffect
+ * @memberof    Entity
+ * @description Add a potion effect with the specified `effectId` to the specified `entity`.
+ *
+ * @param {Object}  entity        - the entity to add the effect to
+ * @param {int}     effectId      - the {@link MobEffect} to add
+ * @param {int}     duration      - the duration of the effect in ticks (1 second = 20 ticks)
+ * @param {int}     amplification - the amplification level of the effect
+ * @param {boolean} ambient       - ???
+ * @param {boolean} showParticles - show particle effects if true, otherwise false
+ *
  * @see {@link MobEffect}
+ *
  * @example
  * // give that poisonous look
  * var entity = Player.getPointedEntity(),
@@ -25,16 +33,20 @@
  * var duration = 600;
  *
  * Entity.addEffect(entity, effect, duration, 0, false, true);
- * @todo get more info on `amplification`
- * @todo figure out what `ambient` is
- */
-function addEffect(entity, effectId, duration, amplification, ambient, showParticles) {}
+ *
+ *////
 
 /**
+ *
  * Return a list of all entity objects in the current world
  * @memberof Entity
- * @return {long[]} all entity objects currently in the game
- * @example <caption>credit: {@link https://goo.gl/5GAKMF|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ *
+ * @return {long[]} - all entity objects currently in the game
+ *
+ * @example
+ * <caption>credit: {@link https://goo.gl/5GAKMF|Zhuowei Zhang}</caption>
+ *
+ * // triggered via a custom command (/removeall)
  * function procCmd(cmd) {
  *   if (cmd === "removeall") {
  *     var entitiesList = Entity.getAll();
@@ -51,115 +63,159 @@ function addEffect(entity, effectId, duration, amplification, ambient, showParti
  *     return;
  *   }
  * }
- */
+ *
+ *////
 function getAll() {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getAnimalAge(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getEntityTypeId(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getHealth(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getItemEntityCount(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getItemEntityData(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getItemEntityId(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getMobSkin(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getNameTag(Object_) {}
 
 /**
+ *
  * return the up/down head rotation of the given `entity` (range: \-90 to 90)
  * @memberof Entity
+ *
  * @param  {Entity} [entity=Player] - the entity to query
- * @return {number} the pitch value
+ * @return {number} - the pitch value
+ *
+ * @see {@link Entity.getYaw} for a more detailed example
+ *
  * @example
  * // no shoe gazing
  * var pitch = Entity.getPitch();
  * if (pitch < -30) {
  *   clientMessage("Keep your head up!!");
  * }
- * @see {@link Entity.getYaw} for a more detailed example
- */
+ *
+ *////
 function getPitch(entity) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getRenderType(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getRider(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getRiding(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getUniqueId(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getVelX(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getVelY(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getVelZ(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getX(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getY(Object_) {}
 
 /**
+ *
  * return the left/right head rotation of the given `entity` (range: -∞ to ∞)
  * @memberof Entity
  * @param  {Entity} [entity=Player] - the entity to query
- * @return {number} the yaw value
- * @example <caption>Based on {@link http://goo.gl/fcSYaQ|Anti's DebugPE mod}</caption>
+ * @return {number} - the yaw value
+ *
+ * @example
+ * <caption>Based on {@link http://goo.gl/fcSYaQ|Anti's DebugPE mod}</caption>
+ *
  * // determine player's cardinal or intermediate direction
  * function getDirection() {
  *   var player = Player.getEntity();
@@ -197,70 +253,103 @@ function getY(Object_) {}
  *
  * // if you die watching the sun set, this should print "West" :-)
  * clientMessage(getDirection());
- */
+ *
+ *////
 function getYaw(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function getZ(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function isSneaking(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function remove(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function removeAllEffects(Object_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function removeEffect(Object_, int_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function rideAnimal(Object1, Object2) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setAnimalAge(Object_, int_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setCape(Object_, String_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setCarriedItem(Object_, int1, int2, int3) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setCollisionSize(Object_, double1, double2) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setFireTicks(Object_, int_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setHealth(Object_, int_) {}
 
 /**
+ *
+ * @memberof Entity
+ *
+ *////
+function setMaxHealth(Object_, int_) {}
+
+/**
+ *
  * Set the `skin` image for a valid MCPE entity `id`.
  * @memberof Entity
  * @param {int}    id   - the entity ID (see: {@link EntityType})
@@ -269,30 +358,40 @@ function setHealth(Object_, int_) {}
  * @example
  * // make yourself look like a creeper
  * Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");
- */
+ *
+ *////
 function setMobSkin(id, skin) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setNameTag(Object_, String_) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setPosition(Object_, double_, double1, double2) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setPositionRelative(Object_, double_, double1, double2) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setRenderType(Object_, int_) {}
 
 /**
+ *
  * Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter.
  * @memberof Entity
@@ -307,20 +406,24 @@ function setRenderType(Object_, int_) {}
  *   setRot(Player.getEntity(), y, 0);
  *   y++;
  * }
- */
+ *
+ *////
 function setRot(entity, yaw, pitch) {}
 
 /**
+ *
  * @memberof Entity
- */
+ *
+ *////
 function setSneaking(Object_, boolean_) {}
 
 /**
+ *
  * Set the specified `entity`'s `velocity` along the X axis.
  * @memberof Entity
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
- * @example <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * @example <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang}</caption>
  * var playerDir = [0, 0, 0];
  * var DEG_TO_RAD = Math.PI / 180;
  * var playerFlySpeed = 1;
@@ -343,28 +446,34 @@ function setSneaking(Object_, boolean_) {}
  *   vector[1] = Math.sin(pitch);
  *   vector[2] = Math.sin(yaw) * Math.cos(pitch);
  * }
- */
+ *
+ *////
 function setVelX(entity, velocity) {}
 
 /**
+ *
  * Set the specified `entity`'s `velocity` along the Y axis.
  * @memberof Entity
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @see Example at {@link Entity.setVelX}
- */
+ *
+ *////
 function setVelY(entity, velocity) {}
 
 /**
+ *
  * Set the specified `entity`'s `velocity` along the Z axis.
  * @memberof Entity
  * @param {entity} entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @see Example at {@link Entity.setVelX}
- */
+ *
+ *////
 function setVelZ(entity, velocity) {}
 
 /**
+ *
  * spawn a valid MCPE entity with the specified `id` at the given `x`, `y`, and
  * `z` coordinates using the specified `skin` image
  * @memberof Entity
@@ -378,5 +487,6 @@ function setVelZ(entity, velocity) {}
  * @example
  * // spawn a skeleton
  * Entity.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
- */
+ *
+ *////
 function spawnMob(x, y, z, id, skin) {}

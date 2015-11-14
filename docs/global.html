@@ -321,6 +321,8 @@
       
         <li data-name="Entity.setHealth"><a href="Entity.html#.setHealth">setHealth</a></li>
       
+        <li data-name="Entity.setMaxHealth"><a href="Entity.html#.setMaxHealth">setMaxHealth</a></li>
+      
         <li data-name="Entity.setMobSkin"><a href="Entity.html#.setMobSkin">setMobSkin</a></li>
       
         <li data-name="Entity.setNameTag"><a href="Entity.html#.setNameTag">setNameTag</a></li>
@@ -954,7 +956,7 @@
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line1">line 1</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line1">line 1</a>
         </div>
         
     </div>
@@ -1119,7 +1121,7 @@ print(ArmorType.chestplate);</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line17">line 17</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line17">line 17</a>
         </div>
         
     </div>
@@ -1629,7 +1631,7 @@ print(ArmorType.chestplate);</code></pre>
 
     
       <pre><code>// you better RUN!
-clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");</code></pre>
+clientMessage(ChatColor.RED + "There's a Magma Cube behind you!" + ChatColor.RESET);</code></pre>
     
 
 
@@ -1644,7 +1646,7 @@ clientMessage(ChatColor.RED + "There's a Magma Cube behind you!");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line48">line 48</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line48">line 48</a>
         </div>
         
     </div>
@@ -1761,7 +1763,7 @@ print(DimensionId.NETHER);</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line62">line 62</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line62">line 62</a>
         </div>
         
     </div>
@@ -1771,8 +1773,9 @@ print(DimensionId.NETHER);</code></pre>
 <dd>
     
     <div class="description">
-        <p>Entity render types. This determines the shape of creature to render, not
-             the skin. To change the skin see <a href="Entity.html#.setMobSkin">Entity.setMobSkin</a>.</p>
+        <p>Determines the shape of creature to render, not the skin.
+             To change the skin see <a target="_blank" href="http://devd.io:8000/modpe_global.jsdoc.html#line62">Entity.setMobSkin</a>.
+             Also see the foo|Foo for great win.</p>
     </div>
     
 
@@ -2332,6 +2335,30 @@ print(DimensionId.NETHER);</code></pre>
 	
         <tr>
             
+                <td class="name"><code>mushroomCow</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>7</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
                 <td class="name"><code>ocelot</code></td>
             
             
@@ -2869,7 +2896,7 @@ function entityAddedHook(entity) {
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line124">line 124</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line126">line 126</a>
         </div>
         
     </div>
@@ -3949,7 +3976,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line181">line 181</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line183">line 183</a>
         </div>
         
     </div>
@@ -4138,7 +4165,7 @@ print(ItemCategory.FOOD);</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line198">line 198</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line200">line 200</a>
         </div>
         
     </div>
@@ -4365,7 +4392,8 @@ print(ItemCategory.FOOD);</code></pre>
             
             
             
-            <td class="description last"><p>all type IDs; <em>NOT</em> in numerical order (i.e. `{8=jump, ..., 20=wither} )</p></td>
+            <td class="description last"><p>all type IDs; <em>NOT</em> in numerical order
+                                                    (i.e. `{8=jump, ..., 20=wither} )</p></td>
         </tr>
 	
 	
@@ -4766,16 +4794,6 @@ print(ItemCategory.FOOD);</code></pre>
 
 
     
-        <h5>Example</h5>
-        
-
-    
-      <pre><code>// prints 8
-print(MobEffect.jump);</code></pre>
-    
-
-
-    
 </dd>
 
         
@@ -4786,7 +4804,7 @@ print(MobEffect.jump);</code></pre>
 
         
         <div class="tag-source">
-            <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line237">line 237</a>
+            <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line236">line 236</a>
         </div>
         
     </div>
@@ -5638,7 +5656,7 @@ addItemInventory(<span class="signature">id, quantity, damage</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line286">line 286</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line285">line 285</a>
     </div>
 
   </div>
@@ -5796,7 +5814,7 @@ bl_setMobSkin(<span class="signature">entityId, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line303">line 303</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line302">line 302</a>
     </div>
 
   </div>
@@ -5931,7 +5949,7 @@ bl_spawnMob(<span class="signature">x, y, z, entityId, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line320">line 320</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line319">line 319</a>
     </div>
 
   </div>
@@ -6139,7 +6157,7 @@ clientMessage(<span class="signature">message</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line341">line 341</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line340">line 340</a>
     </div>
 
   </div>
@@ -6251,7 +6269,7 @@ explode(<span class="signature">x, y, z, radius</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line357">line 357</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line356">line 356</a>
     </div>
 
   </div>
@@ -6434,7 +6452,7 @@ getCarriedItem(<span class="signature"></span>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line376">line 376</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line375">line 375</a>
     </div>
 
   </div>
@@ -6536,7 +6554,7 @@ getLevel(<span class="signature"></span>)<span class="glyphicon glyphicon-circle
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line393">line 393</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line392">line 392</a>
     </div>
 
   </div>
@@ -6628,7 +6646,7 @@ getPitch(<span class="signature"><span class="optional">entity</span></span>)<sp
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line406">line 406</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line405">line 405</a>
     </div>
 
   </div>
@@ -6795,7 +6813,7 @@ getPlayerEnt(<span class="signature"></span>)<span class="glyphicon glyphicon-ci
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line427">line 427</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line426">line 426</a>
     </div>
 
   </div>
@@ -6898,7 +6916,7 @@ getPlayerX(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line445">line 445</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line444">line 444</a>
     </div>
 
   </div>
@@ -6999,7 +7017,7 @@ getPlayerY(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line461">line 461</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line460">line 460</a>
     </div>
 
   </div>
@@ -7100,7 +7118,7 @@ getPlayerZ(<span class="signature"></span>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line477">line 477</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line476">line 476</a>
     </div>
 
   </div>
@@ -7201,7 +7219,7 @@ getTile(<span class="signature">x, y, z</span>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line493">line 493</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line492">line 492</a>
     </div>
 
   </div>
@@ -7405,7 +7423,7 @@ getYaw(<span class="signature"><span class="optional">entity</span></span>)<span
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line520">line 520</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line519">line 519</a>
     </div>
 
   </div>
@@ -7604,7 +7622,7 @@ preventDefault(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line573">line 573</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line572">line 572</a>
     </div>
 
   </div>
@@ -7648,7 +7666,7 @@ preventDefault(<span class="signature"></span>)
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/2Ojy4t">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/2Ojy4t">Zhuowei Zhang</a></p>
     
 
     
@@ -7679,7 +7697,7 @@ print(<span class="signature">text</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line597">line 597</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line596">line 596</a>
     </div>
 
   </div>
@@ -7789,7 +7807,7 @@ rideAnimal(<span class="signature">rider, target</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line612">line 612</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line611">line 611</a>
     </div>
 
   </div>
@@ -7902,7 +7920,7 @@ rideAnimal(<span class="signature">rider, target</span>)
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/ZkEa8H">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/ZkEa8H">Zhuowei Zhang</a></p>
     
 
     
@@ -7948,7 +7966,7 @@ setNightMode(<span class="signature">isNight</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line653">line 653</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line652">line 652</a>
     </div>
 
   </div>
@@ -8060,7 +8078,7 @@ setPosition(<span class="signature">entity, x, y, z</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line670">line 670</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line669">line 669</a>
     </div>
 
   </div>
@@ -8222,7 +8240,7 @@ If attackHook is not used, Player.getEntity() can be used as the entity paramete
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/8LAaNU">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/8LAaNU">Zhuowei Zhang</a></p>
     
 
     
@@ -8241,10 +8259,13 @@ function useItem(x, y, z, itemId, blockId) {
 function teleportToFloor(direction) {
   var currentX = Math.floor(getPlayerX());
   var currentZ = Math.floor(getPlayerZ());
-  var currentY = Math.floor(getPlayerY() - 1.6); //get player's feet, so subtract 1.6 (player's height)
+  //get player's feet, so subtract 1.6 (player's height)
+  var currentY = Math.floor(getPlayerY() - 1.6);
   var beginY = currentY + (direction * 2);
   for (var i = beginY; i < 128 && i >= 0; i += direction) {
-    if (getTile(currentX, i, currentZ) !== 0 && getTile(currentX, i + 1, currentZ) === 0 && getTile(currentX, i + 2, currentZ) === 0) {
+    if (getTile(currentX, i, currentZ) !== 0
+        && getTile(currentX, i + 1, currentZ) === 0
+        && getTile(currentX, i + 2, currentZ) === 0) {
       var deltaY = (i - currentY);
       setPosition(getPlayerEnt(), currentX, getPlayerY() + deltaY + 1, currentZ);
       break;
@@ -8268,7 +8289,7 @@ setPositionRelative(<span class="signature">entity, x, y, z</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line714">line 714</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line716">line 716</a>
     </div>
 
   </div>
@@ -8430,7 +8451,7 @@ If attackHook is not used, Player.getEntity() should be used as the entity param
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/i1ixVy">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/i1ixVy">Zhuowei Zhang</a></p>
     
 
     
@@ -8478,7 +8499,7 @@ setRot(<span class="signature">entity, yaw, pitch</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line760">line 760</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line762">line 762</a>
     </div>
 
   </div>
@@ -8643,7 +8664,7 @@ setTile(<span class="signature">x, y, z, id, <span class="optional">damage</span
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line784">line 784</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line786">line 786</a>
     </div>
 
   </div>
@@ -8879,7 +8900,7 @@ setTile(<span class="signature">x, y, z, id, <span class="optional">damage</span
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/X4HRNx"> 'Chad' via Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/X4HRNx"> 'Chad' via Zhuowei Zhang</a></p>
     
 
     
@@ -8937,7 +8958,7 @@ setVelX(<span class="signature">entity, velocity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line840">line 840</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line842">line 842</a>
     </div>
 
   </div>
@@ -9050,7 +9071,7 @@ setVelX(<span class="signature">entity, velocity</span>)
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/CWKplX">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/CWKplX">Zhuowei Zhang</a></p>
     
 
     
@@ -9094,7 +9115,7 @@ setVelY(<span class="signature">entity, velocity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line879">line 879</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line881">line 881</a>
     </div>
 
   </div>
@@ -9220,7 +9241,7 @@ setVelZ(<span class="signature">entity, velocity</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line893">line 893</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line895">line 895</a>
     </div>
 
   </div>
@@ -9346,7 +9367,7 @@ spawnChicken(<span class="signature">x, y, z, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line907">line 907</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line909">line 909</a>
     </div>
 
   </div>
@@ -9510,7 +9531,7 @@ spawnChicken(<span class="signature">x, y, z, skin</span>)
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/byNRuF">'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/byNRuF">'Treebl' via Zhuowei Zhang</a></p>
     
 
     
@@ -9548,7 +9569,7 @@ spawnCow(<span class="signature">x, y, z, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line945">line 945</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line947">line 947</a>
     </div>
 
   </div>
@@ -9712,7 +9733,7 @@ spawnCow(<span class="signature">x, y, z, skin</span>)
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/byNRuF">'Treebl' via Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/byNRuF">'Treebl' via Zhuowei Zhang</a></p>
     
 
     
@@ -9750,7 +9771,7 @@ spawnPigZombie(<span class="signature">x, y, z, heldItemId, skin</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="modpe_global.js.html">modpe_global.js</a>, <a href="modpe_global.js.html#line983">line 983</a>
+      <a href="modpe_global.jsdoc.html">modpe_global.jsdoc</a>, <a href="modpe_global.jsdoc.html#line985">line 985</a>
     </div>
 
   </div>
@@ -9759,8 +9780,10 @@ spawnPigZombie(<span class="signature">x, y, z, heldItemId, skin</span>)
 <dd>
 
   <div class="description">
-    <p>Spawn a zombie pigman entity at the specified <code>x</code>, <code>y</code>, and <code>z</code> coordinates using the specified <code>skin</code> image.</p>
-<p>The <code>heldItemId</code> parameter determines what the zombie pigman will be hold when spawned.</p>
+    <p>Spawn a zombie pigman entity at the specified <code>x</code>, <code>y</code>,
+             and <code>z</code> coordinates using the specified <code>skin</code> image.
+             The <code>heldItemId</code> parameter determines what the zombie
+             pigman will be hold when spawned.</p>
   </div>
 
 
@@ -9940,7 +9963,13 @@ spawnPigZombie(<span class="signature">x, y, z, heldItemId, skin</span>)
 
     
       <pre><code>// cannibals!!
-spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.png");</code></pre>
+var x = getPlayerX() + 2;
+var y = getPlayerY();
+var z = getPlayerZ() + 2;
+var held = 320;
+var img = "mob/char.png";
+
+spawnPigZombie(x, y, z, held, img);</code></pre>
     
 
 
@@ -9963,7 +9992,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line42">line 42</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line56">line 56</a>
         </div>
         
     </div>
@@ -9997,7 +10026,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line125">line 125</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line177">line 177</a>
         </div>
         
     </div>
@@ -10016,7 +10045,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/pzCjsZ">JavaScript Boolean</a></span></li>
 
   </ul>
 </div>
@@ -10033,7 +10062,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line87">line 87</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line129">line 129</a>
         </div>
         
     </div>
@@ -10052,7 +10081,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10069,7 +10098,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line92">line 92</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line138">line 138</a>
         </div>
         
     </div>
@@ -10088,7 +10117,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10105,7 +10134,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line17">line 17</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line26">line 26</a>
         </div>
         
     </div>
@@ -10124,7 +10153,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/ScriptableObject.html#defineClass(org.mozilla.javascript.Scriptable,%20java.lang.Class)">https://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/ScriptableObject.html#defineClass(org.mozilla.javascript.Scriptable, java.lang.Class)</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/0FxrW3">Rhino ScriptableObject.defineClass</a></span></li>
 
   </ul>
 </div>
@@ -10141,7 +10170,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line62">line 62</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line84">line 84</a>
         </div>
         
     </div>
@@ -10160,7 +10189,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10177,7 +10206,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line46">line 46</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line63">line 63</a>
         </div>
         
     </div>
@@ -10211,7 +10240,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line67">line 67</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line93">line 93</a>
         </div>
         
     </div>
@@ -10230,7 +10259,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10243,11 +10272,11 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
                 
 <dt>
     <div class="nameContainer">
-        <h4 class="name" id="HashMap">HashMap<span class="type-signature type object">Object</span> </h4>
+        <h4 class="name" id="HashMap">HashMap<span class="type-signature type java.util.hashmap.<k, v>">java.util.HashMap.&lt;K, V></span> </h4>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line102">line 102</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line156">line 156</a>
         </div>
         
     </div>
@@ -10257,68 +10286,17 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 <dd>
     
     <div class="description">
-        <p><strong><code>Java</code></strong> A hash table based implementation of the Map interface.</p>
-<p><strong>Type Parameters:</strong></p>
-<p>K - the type of keys maintained by this map</p>
-<p>V - the type of mapped values</p>
+        <p><strong><code>Java</code></strong> A hash table based implementation of the Map interface.
+             Data is stored as key-value pairs.</p>
     </div>
     
 
     
 <div class="details">
 
-  <h5 class="subsection-title">Properties:</h5>
-  <div class="properties">
-
-<table class="props">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-            
-            <td class="type">
-            
-                
-  <span class="param-type">Object</span>
-
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>value</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table></div>
-
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/hLBli9">java.util.HashMap</a></span></li>
 
   </ul>
 </div>
@@ -10335,7 +10313,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line77">line 77</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line111">line 111</a>
         </div>
         
     </div>
@@ -10354,7 +10332,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10371,7 +10349,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line54">line 54</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line77">line 77</a>
         </div>
         
     </div>
@@ -10405,7 +10383,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line82">line 82</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line120">line 120</a>
         </div>
         
     </div>
@@ -10424,7 +10402,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10441,7 +10419,7 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line23">line 23</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line36">line 36</a>
         </div>
         
     </div>
@@ -10451,8 +10429,8 @@ spawnPigZombie(getPlayerX() + 2, getPlayerY(), getPlayerZ() + 2, 320, "mob/char.
 <dd>
     
     <div class="description">
-        <p><strong><code>Rhino</code></strong> JavaScript objects that allow access to the MCPE library via BlockLauncher
-and the Rhino JavaScript engine.</p>
+        <p><strong><code>Rhino</code></strong> JavaScript objects that allow access to the MCPE library
+             via BlockLauncher and the Rhino JavaScript engine.</p>
     </div>
     
 
@@ -10678,9 +10656,9 @@ and the Rhino JavaScript engine.</p>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://mozilla.github.io/rhino/">https://mozilla.github.io/rhino/</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/vpuxfe">Rhino Project</a></span></li>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino">https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/fbqeqS">Rhino Docs</a></span></li>
 
   </ul>
 </div>
@@ -10697,7 +10675,7 @@ and the Rhino JavaScript engine.</p>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line119">line 119</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line166">line 166</a>
         </div>
         
     </div>
@@ -10707,8 +10685,9 @@ and the Rhino JavaScript engine.</p>
 <dd>
     
     <div class="description">
-        <p><strong><code>JavaScript</code></strong> According to the ECMAScript standard, there is only one number type: the double-precision
-64-bit binary format IEEE 754 value (number between -(253 -1) and 253 -1).</p>
+        <p><strong><code>JavaScript</code></strong> According to the ECMAScript standard, there is only
+             one number type: the double-precision 64-bit binary format IEEE 754
+             value (number between -(253 -1) and 253 -1).</p>
     </div>
     
 
@@ -10717,7 +10696,7 @@ and the Rhino JavaScript engine.</p>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/OBvlsb">JavaScript Number</a></span></li>
 
   </ul>
 </div>
@@ -10734,7 +10713,7 @@ and the Rhino JavaScript engine.</p>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line50">line 50</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line70">line 70</a>
         </div>
         
     </div>
@@ -10768,7 +10747,7 @@ and the Rhino JavaScript engine.</p>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line7">line 7</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line8">line 8</a>
         </div>
         
     </div>
@@ -10787,7 +10766,7 @@ and the Rhino JavaScript engine.</p>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/Scriptable.html">https://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/Scriptable.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/BBw9vp">Rhino Scriptable</a></span></li>
 
   </ul>
 </div>
@@ -10804,7 +10783,7 @@ and the Rhino JavaScript engine.</p>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line12">line 12</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line17">line 17</a>
         </div>
         
     </div>
@@ -10823,7 +10802,7 @@ and the Rhino JavaScript engine.</p>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/ScriptableObject.html">https://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/ScriptableObject.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/RVwY6V">Rhino ScriptableObject</a></span></li>
 
   </ul>
 </div>
@@ -10840,7 +10819,7 @@ and the Rhino JavaScript engine.</p>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line72">line 72</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line102">line 102</a>
         </div>
         
     </div>
@@ -10859,7 +10838,7 @@ and the Rhino JavaScript engine.</p>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/X1Onst">Java Data Types</a></span></li>
 
   </ul>
 </div>
@@ -10876,7 +10855,7 @@ and the Rhino JavaScript engine.</p>
 
         
         <div class="tag-source">
-            <a href="typedef.js.html">typedef.js</a>, <a href="typedef.js.html#line97">line 97</a>
+            <a href="typedef.jsdoc.html">typedef.jsdoc</a>, <a href="typedef.jsdoc.html#line147">line 147</a>
         </div>
         
     </div>
@@ -10895,7 +10874,7 @@ and the Rhino JavaScript engine.</p>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">https://docs.oracle.com/javase/8/docs/api/java/lang/String.html</a></span></li>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a target="_blank" href="https://goo.gl/HTKUtf">java.lang.String</a></span></li>
 
   </ul>
 </div>
@@ -10915,7 +10894,7 @@ and the Rhino JavaScript engine.</p>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Sat Nov 14 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

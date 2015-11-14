@@ -1,0 +1,178 @@
+/**
+ *
+ * @namespace   Hooks
+ *
+ *////
+function Hooks() {
+
+  /** @lends Hooks.prototype *////
+  var funcs = {
+
+    /**
+     *
+     * attackHook
+     * @description Called when an entity is attacked.
+     *
+     * @param {int} attackerId - the attacker's id
+     * @param {int} victimId   - the victim's id
+     *
+     *////
+    attackHook: function(attackerId, victimId) {},
+
+    /**
+     *
+     * blockEventHook
+     * @description blockEventHook description
+     *
+     * @param   {int}    x    - description
+     * @param   {int}    y    - description
+     * @param   {int}    z    - description
+     * @param   {Object} type - description
+     * @param   {Object} data - description
+     *
+     * @example
+     * <caption>[credit for example]</caption>
+     *
+     * // [opening comment]
+     * [example code]
+     *
+     *////
+    blockEventHook: function(x, y, z, type, data) {},
+
+    /**
+     *
+     * chatHook
+     * @description ?
+     *
+     *////
+    chatHook: function(text) {},
+
+    /**
+     *
+     * chatReceiveHook
+     * @description ?
+     *
+     *////
+    chatReceiveHook: function(String_text, String_senderName) {},
+
+    /**
+     *
+     * deathHook
+     * @description ?
+     *
+     *////
+    deathHook: function(int_attackerId, int_victimId) {},
+
+    /**
+     *
+     * destroyBlock
+     * @description ?
+     *
+     *////
+    destroyBlock: function(int_x, int_y, int_z, int_side) {},
+
+    /**
+     *
+     * eatHook
+     * @description ?
+     *
+     *////
+    eatHook: function(hearts, saturationRatio) {},
+
+    /**
+     *
+     * entityAddedHook
+     * @description ?
+     *
+     *////
+    entityAddedHook: function(int_entityId) {},
+
+    /**
+     *
+     * entityRemovedHook
+     * @description ?
+     *
+     *////
+    entityRemovedHook: function(int_entityId) {},
+
+    /**
+     *
+     * explodeHook
+     * @description ?
+     *
+     *////
+    explodeHook: function(entity, x, y, z, power, onFire) {},
+
+    /**
+     *
+     * leaveGame
+     * @description ?
+     *
+     *////
+    leaveGame: function() {},
+
+    /**
+     *
+     * levelEventHook
+     * @description ?
+     *
+     *////
+    levelEventHook: function(player, eventType, x, y, z, data) {},
+
+    /**
+     *
+     * modTick
+     * @description ?
+     *
+     *////
+    modTick: function() {},
+
+    /**
+     *
+     * newLevel
+     * @description ?
+     *
+     *////
+    newLevel: function() {},
+
+    /**
+     *
+     * procCmd
+     * @description ?
+     *
+     *////
+    procCmd: function(String_cmd) {},
+
+    /**
+     *
+     * selectLevelHook
+     * @description ?
+     *
+     *////
+    selectLevelHook: function() {},
+
+    /**
+     *
+     * serverMessageReceiveHook
+     * @description ?
+     *
+     *////
+    serverMessageReceiveHook: function(String_str) {},
+
+    /**
+     *
+     * startDestroyBlock
+     * @description ?
+     *
+     *////
+    startDestroyBlock: function(int_x, int_y, int_z, int_side) {},
+
+    /**
+     *
+     * useItem
+     * @description ?
+     *
+     *////
+    useItem: function(int_x, int_y, int_z, int_itemid, int_blockid, int_side, int_itemDamage, int_blockDamage) {}
+  };
+}

@@ -321,6 +321,8 @@
       
         <li data-name="Entity.setHealth"><a href="Entity.html#.setHealth">setHealth</a></li>
       
+        <li data-name="Entity.setMaxHealth"><a href="Entity.html#.setMaxHealth">setMaxHealth</a></li>
+      
         <li data-name="Entity.setMobSkin"><a href="Entity.html#.setMobSkin">setMobSkin</a></li>
       
         <li data-name="Entity.setNameTag"><a href="Entity.html#.setNameTag">setNameTag</a></li>
@@ -930,19 +932,8 @@
 
 <ul>
 
-    <li class="icon"><i class="tag-license icon-license" title="License"></i><span class="icon-text">CC-BY-SA-4.0</span></li>
-
   </ul>
 </div>
-
-        
-            <h3>Example</h3>
-            
-
-    
-      <pre><code>Entity.methodName([ arg1[, arg2[, ...argN] ] ]);</code></pre>
-    
-
 
         
     
@@ -974,7 +965,7 @@
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line31">line 31</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line8">line 8</a>
     </div>
 
   </div>
@@ -1215,7 +1206,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line55">line 55</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line68">line 68</a>
     </div>
 
   </div>
@@ -1269,7 +1260,9 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
                         
                     
             </td>
-            <td class="description last">all entity objects currently in the game</td>
+            <td class="description last"><ul>
+<li>all entity objects currently in the game</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1290,11 +1283,12 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/5GAKMF">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/5GAKMF">Zhuowei Zhang</a></p>
     
 
     
-      <pre><code>function procCmd(cmd) {
+      <pre><code>// triggered via a custom command (/removeall)
+function procCmd(cmd) {
   if (cmd === "removeall") {
     var entitiesList = Entity.getAll();
     for (var i = 0; i < entitiesList.length; i++) {
@@ -1327,7 +1321,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line60">line 60</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line75">line 75</a>
     </div>
 
   </div>
@@ -1374,7 +1368,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line65">line 65</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line82">line 82</a>
     </div>
 
   </div>
@@ -1421,7 +1415,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line70">line 70</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line89">line 89</a>
     </div>
 
   </div>
@@ -1468,7 +1462,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line75">line 75</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line96">line 96</a>
     </div>
 
   </div>
@@ -1515,7 +1509,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line80">line 80</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line103">line 103</a>
     </div>
 
   </div>
@@ -1562,7 +1556,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line85">line 85</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line110">line 110</a>
     </div>
 
   </div>
@@ -1609,7 +1603,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line90">line 90</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line117">line 117</a>
     </div>
 
   </div>
@@ -1656,7 +1650,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line95">line 95</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line124">line 124</a>
     </div>
 
   </div>
@@ -1703,7 +1697,7 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line110">line 110</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line144">line 144</a>
     </div>
 
   </div>
@@ -1819,7 +1813,9 @@ Entity.addEffect(entity, effect, duration, 0, false, true);</code></pre>
                         
                     
             </td>
-            <td class="description last">the pitch value</td>
+            <td class="description last"><ul>
+<li>the pitch value</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -1866,7 +1862,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line115">line 115</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line151">line 151</a>
     </div>
 
   </div>
@@ -1913,7 +1909,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line120">line 120</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line158">line 158</a>
     </div>
 
   </div>
@@ -1960,7 +1956,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line125">line 125</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line165">line 165</a>
     </div>
 
   </div>
@@ -2007,7 +2003,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line130">line 130</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line172">line 172</a>
     </div>
 
   </div>
@@ -2054,7 +2050,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line135">line 135</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line179">line 179</a>
     </div>
 
   </div>
@@ -2101,7 +2097,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line140">line 140</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line186">line 186</a>
     </div>
 
   </div>
@@ -2148,7 +2144,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line145">line 145</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line193">line 193</a>
     </div>
 
   </div>
@@ -2195,7 +2191,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line150">line 150</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line200">line 200</a>
     </div>
 
   </div>
@@ -2242,7 +2238,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line155">line 155</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line207">line 207</a>
     </div>
 
   </div>
@@ -2289,7 +2285,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line201">line 201</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line258">line 258</a>
     </div>
 
   </div>
@@ -2405,7 +2401,9 @@ if (pitch < -30) {
                         
                     
             </td>
-            <td class="description last">the yaw value</td>
+            <td class="description last"><ul>
+<li>the yaw value</li>
+</ul></td>
         </tr>
     
     </tbody>
@@ -2484,7 +2482,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line206">line 206</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line265">line 265</a>
     </div>
 
   </div>
@@ -2531,7 +2529,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line211">line 211</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line272">line 272</a>
     </div>
 
   </div>
@@ -2578,7 +2576,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line216">line 216</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line279">line 279</a>
     </div>
 
   </div>
@@ -2625,7 +2623,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line221">line 221</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line286">line 286</a>
     </div>
 
   </div>
@@ -2672,7 +2670,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line226">line 226</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line293">line 293</a>
     </div>
 
   </div>
@@ -2719,7 +2717,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line231">line 231</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line300">line 300</a>
     </div>
 
   </div>
@@ -2766,7 +2764,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line236">line 236</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line307">line 307</a>
     </div>
 
   </div>
@@ -2813,7 +2811,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line241">line 241</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line314">line 314</a>
     </div>
 
   </div>
@@ -2860,7 +2858,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line246">line 246</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line321">line 321</a>
     </div>
 
   </div>
@@ -2907,7 +2905,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line251">line 251</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line328">line 328</a>
     </div>
 
   </div>
@@ -2954,7 +2952,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line256">line 256</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line335">line 335</a>
     </div>
 
   </div>
@@ -3001,7 +2999,54 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line261">line 261</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line342">line 342</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".setMaxHealth">
+
+<span class="type-signature static">static</span>Entity.setMaxHealth(<span class="signature"></span>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line349">line 349</a>
     </div>
 
   </div>
@@ -3048,7 +3093,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line273">line 273</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line363">line 363</a>
     </div>
 
   </div>
@@ -3181,7 +3226,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line278">line 278</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line370">line 370</a>
     </div>
 
   </div>
@@ -3228,7 +3273,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line283">line 283</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line377">line 377</a>
     </div>
 
   </div>
@@ -3275,7 +3320,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line288">line 288</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line384">line 384</a>
     </div>
 
   </div>
@@ -3322,7 +3367,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line293">line 293</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line391">line 391</a>
     </div>
 
   </div>
@@ -3369,7 +3414,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line311">line 311</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line411">line 411</a>
     </div>
 
   </div>
@@ -3532,7 +3577,7 @@ while (y <= 360) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line316">line 316</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line418">line 418</a>
     </div>
 
   </div>
@@ -3579,7 +3624,7 @@ while (y <= 360) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line347">line 347</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line451">line 451</a>
     </div>
 
   </div>
@@ -3690,7 +3735,7 @@ while (y <= 360) {
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/CWKplX">Zhuowei Zhang (500_Internal_Server_Error)</a></p>
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/CWKplX">Zhuowei Zhang</a></p>
     
 
     
@@ -3733,7 +3778,7 @@ function toDirectionalVector(vector, yaw, pitch) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line356">line 356</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line462">line 462</a>
     </div>
 
   </div>
@@ -3857,7 +3902,7 @@ function toDirectionalVector(vector, yaw, pitch) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line365">line 365</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line473">line 473</a>
     </div>
 
   </div>
@@ -3981,7 +4026,7 @@ function toDirectionalVector(vector, yaw, pitch) {
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_entity.js.html">native-api/entity.js</a>, <a href="native-api_entity.js.html#line382">line 382</a>
+      <a href="native-api_entity.jsdoc.html">native-api/entity.jsdoc</a>, <a href="native-api_entity.jsdoc.html#line492">line 492</a>
     </div>
 
   </div>
@@ -4193,7 +4238,7 @@ Entity.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");</code></p
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Sat Nov 14 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

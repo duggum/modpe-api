@@ -1,0 +1,184 @@
+/**
+ *
+ * @file Custom type definitions to link Java, ModPE, and Rhino data types to
+ *       JavaScript primitives, or to provide clearer documentation.
+ *
+ *////
+
+/**
+ *
+ * @typedef     {org.mozilla.javascript.Scriptable} Scriptable
+ * @description __`Rhino`__ Java interface that all objects in JavaScript must implement.
+ *
+ * @see {@link https://goo.gl/BBw9vp|Rhino Scriptable}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {org.mozilla.javascript.ScriptableObject} ScriptableObject
+ * @description __`Rhino`__ This is the default implementation of the Scriptable interface in Rhino.
+ *
+ * @see {@link https://goo.gl/RVwY6V|Rhino ScriptableObject}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {java.lang.Class<Scriptable>} Class
+ * @description __`Rhino`__ JavaScript object created by the Rhino Javascript engine.
+ *
+ * @extends ScriptableObject
+ * @see {@link https://goo.gl/0FxrW3|Rhino ScriptableObject.defineClass}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {ScriptableObject} NativeApi
+ * @description __`Rhino`__ JavaScript objects that allow access to the MCPE library
+ *              via BlockLauncher and the Rhino JavaScript engine.
+ *
+ * @property {Class} NativeBlockApi    - public static class for the {@link Block|Block API}
+ * @property {Class} NativeEntityApi   - public static class for the {@link Entity|Entity API}
+ * @property {Class} NativeItemApi     - public static class for the {@link Item|Item API}
+ * @property {Class} NativeLevelApi    - public static class for the {@link Level|Level API}
+ * @property {Class} NativeModPEApi    - public static class for the {@link ModPE|ModPE API}
+ * @property {Class} NativePlayerApi   - public static class for the {@link Player|Player API}
+ * @property {Class} NativeRendererApi - public static class for the {@link Renderer|Renderer API}
+ * @property {Class} NativeServerApi   - public static class for the {@link Server|Server API}
+ *
+ * @see {@link https://goo.gl/vpuxfe|Rhino Project}
+ * @see {@link https://goo.gl/fbqeqS|Rhino Docs}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {Object} block
+ * @description __`ModPE`__ A MCPE block object
+ *
+ *////
+
+/**
+ *
+ * @typedef     {Object} entity
+ * @description __`ModPE`__ A MCPE entity object
+ *
+ *////
+
+/**
+ *
+ * @typedef     {Object} player
+ * @description __`ModPE`__ A MCPE player object
+ *
+ *////
+
+/**
+ *
+ * @typedef     {Object} item
+ * @description __`ModPE`__ A MCPE item object
+ *
+ *////
+
+/**
+ *
+ * @typedef     {number} double
+ * @description __`Java`__ A double-precision 64-bit floating point
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {number} float
+ * @description __`Java`__ A single precision 32-bit floating point
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {number} short
+ * @description __`Java`__ A 16-bit integer value
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {number} int
+ * @description __`Java`__ A 32-bit integer value
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {number} long
+ * @description __`Java`__ A 64-bit integer value
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef    {number} byte
+ * @description __`Java`__ An 8-bit integer value
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {string} char
+ * @description __`Java`__ A single 16-bit Unicode character
+ *
+ * @see {@link https://goo.gl/X1Onst|Java Data Types}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {string} string
+ * @description __`Java`__ A string of characters
+ *
+ * @see {@link https://goo.gl/HTKUtf|java.lang.String}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {java.util.HashMap<K,V>} HashMap
+ * @description __`Java`__ A hash table based implementation of the Map interface.
+ *              Data is stored as key-value pairs.
+ *
+ * @see {@link https://goo.gl/hLBli9|java.util.HashMap}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {number} number
+ * @description __`JavaScript`__ According to the ECMAScript standard, there is only
+ *              one number type: the double-precision 64-bit binary format IEEE 754
+ *              value (number between -(253 -1) and 253 -1).
+ *
+ * @see {@link https://goo.gl/OBvlsb|JavaScript Number}
+ *
+ *////
+
+/**
+ *
+ * @typedef     {boolean} boolean
+ * @description __`JavaScript`__ A logical entity with two values: true, and false.
+ *
+ * @see {@link https://goo.gl/pzCjsZ|JavaScript Boolean}
+ *
+ *////

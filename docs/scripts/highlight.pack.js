@@ -765,20 +765,26 @@
   hljs.JSDOC_COMMENT_MODE = (function () {
     var mode = hljs.inherit({
       className: 'jsdoc-comment',
-      begin: /(\/\*{2})/, end: /(\*{3}\/)/,
+      begin: /\/\*{2}/, end: /\/{3}$/,
       contains: []
     });
     mode.contains.push({
       className:"jsdoc-example",
+      begin:/\@example/,
+      end:/$/
+    });
+    mode.contains.push({
+      className:"jsdoc-example-block",
       begin:/\/\/\s.+$/,
-      end:/\*\n[ ]+\*[ ]{1}/,
+      end:/\*\//,
       excludeBegin: true,
       excludeEnd: true,
       contains:[
         {
           className:"jsdoc-example-code",
-          begin:/\s\*(?!\n|\*)/,
-          end: /$|\*/,
+          //begin:/\s*\*(?!\n|\*)/,
+          begin:/[ ]\*[ ]{1}/,
+          end: /$/,
           excludeBegin: true,
           excludeEnd: true,
           contains: [{
@@ -800,11 +806,31 @@
         }
       ]
     });
+    // typedef
+    mode.contains.push({
+      className:"jsdoc-typedef",
+      begin:/\@typedef\b/,
+      end:/$/,
+      excludeEnd: true,
+      contains:[
+        {
+          className:"jsdoc-brackets",
+          begin:/\{/,
+          end:/\}/,
+          contains: [
+            {
+              className:"jsdoc-typedef-name",
+              begin:/[a-zA-Z<>,.\[\]\s]+/
+            }
+          ]
+        }
+      ]
+    });
     // type
     mode.contains.push({
       className:"jsdoc-type",
-      begin:/\@type/,
-      end:/$|\*/,
+      begin:/\@type\b/,
+      end:/$/,
       excludeEnd: true,
       contains:[
         {
@@ -823,7 +849,7 @@
     // property
     mode.contains.push({
       className:"jsdoc-prop",
-      begin:/\@property|\@prop/,
+      begin:/\@(property|@prop)/,
       end:/\-/,
       excludeEnd: true,
       contains:[
@@ -843,6 +869,33 @@
           begin:hljs.JSDOC_PROPERTY_NAME_RE
         }
       ]
+    });
+    // inline
+    mode.contains.push({
+      className:"jsdoc-inline",
+      begin:/\{/,
+      end:/\}/,
+      contains:[
+        {
+          className:"jsdoc-inline-tag",
+          begin:/\@(linkplain|linkcode|link|tutorial)[ ]{1}/
+        },
+        {
+          className:"jsdoc-inline-link",
+          begin:/[\w\d\.,=?#\(\)\/:_-\s]+/
+        },
+        {
+          className:"jsdoc-inline-bar",
+          begin:/\|{1}/,
+          contains: [
+            {
+              className:"jsdoc-inline-link-text",
+              begin:/[\w\d:.<>\s_-]+/
+            }
+          ]
+        }
+      ],
+      endsWithParent: true
     });
     // return
     mode.contains.push({
@@ -908,6 +961,29 @@
         }
       ]
     });
+    // namespace
+    mode.contains.push({
+      className:"jsdoc-namespace",
+      begin:/\@namespace/,
+      end:/$/,
+      contains:[
+        {
+          className:"jsdoc-brackets",
+          begin:/\{/,
+          end:/\}/,
+          contains: [
+            {
+              className:"jsdoc-namespace-type",
+              begin:/[a-zA-Z<>,\[\]\s]+/
+            }
+          ]
+        },
+        {
+          className:"jsdoc-namespace-name",
+          begin:/[a-zA-Z_]+/
+        }
+      ]
+    });
     mode.contains.push({
       className:"jsdoc-todo",
       begin:/\@todo/
@@ -918,7 +994,7 @@
     });
     mode.contains.push({
       className:"jsdoc-tag",
-      begin:/\@(virtual|version|variation|var|typedef|tutorial|throws|this|summary|static|since|see|requires|readonly|public|protected|private|overview|override|namespace|name|module|mixin|mixes|method|memberof|member|listens|linkplain|linkcode|link|license|lends|kind|interface|instance|inner|inheritdoc|implements|ignore|host|global|function|func|fires|fileoverview|file|external|extends|exports|exception|example|event|enum|emits|description|desc|defaultvalue|default|copyright|constructs|constructor|constant|const|classdesc|class|callback|borrows|author|augments|argument|arg|alias|access|abstract)/g,
+      begin:/\@(virtual|version|variation|var|tutorial|throws|this|summary|static|since|see|requires|readonly|public|protected|private|overview|override|namespace|name|module|mixin|mixes|method|memberof|member|listens|license|lends|kind|interface|instance|inner|inheritdoc|implements|ignore|host|global|function|func|fires|fileoverview|file|external|extends|exports|exception|event|enum|emits|description|desc|defaultvalue|default|copyright|constructs|constructor|constant|const|classdesc|class|callback|borrows|author|augments|argument|arg|alias|access|abstract)/g,
     });
     mode.contains.push(hljs.PHRASAL_WORDS_MODE);
     return mode;

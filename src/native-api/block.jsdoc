@@ -8,11 +8,7 @@
  * @see https://github.com/zhuowei/ModPEScripts/blob/master/500ise_blocktest.js
  * @see https://github.com/zhuowei/ModPEScripts/blob/master/500ise_enchantingbench.js
  *
- * @example
- * // Requires class name since all methods are static
- * Block.methodName([ arg1[, arg2[, ...argN] ] ]);
- *
- * ***/
+ *////
 
 /**
  *
@@ -34,7 +30,7 @@
  *                                                see: {@link Reference.BlockRenderTypes}
  *
  * @example
- * <caption>credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang (500_Internal_Server_Error)}</caption>
+ * <caption>credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang}</caption>
  *
  * // create new block at level startup
  * var initialized = false;
@@ -55,7 +51,7 @@
  *   }
  * }
  *
- * ***/
+ *////
 
 /**
  *
@@ -65,7 +61,7 @@
  *
  * @return {int[]} - the block IDs
  *
- * ***/
+ *////
 
 /**
  *
@@ -78,7 +74,7 @@
  * @param  {int} blockId - the block ID (see: {@link Reference.BlockIds})
  * @return {int}         - the render type (see: {@link Reference.BlockRenderTypes})
  *
- * ***/
+ *////
 
 /**
  *
@@ -95,7 +91,7 @@
  * // make a block red
  * Block.setColor(220, [0xFF0000])
  *
- * ***/
+ *////
 
 /**
  *
@@ -113,7 +109,7 @@
  * // make Glass Pane unbreakable
  * Block.setDestroyTime(102, -1);
  *
- * ***/
+ *////
 
 /**
  *
@@ -130,7 +126,7 @@
  * // make Gorilla Glass by changing Glass Pane from 1.5 to 6000 (same as obsidian)
  * Block.setExplosionResistance(102, 6000);
  *
- * ***/
+ *////
 
 /**
  *
@@ -147,7 +143,7 @@
  * // tone down that glowstone
  * Block.setLightLevel(89, 4);
  *
- * ***/
+ *////
 
 /**
  *
@@ -160,7 +156,7 @@
  *                        (0-10 where 0 = most light can pass through,
  *                        10 = least light can pass through)
  *
- * ***/
+ *////
 
 /**
  *
@@ -177,7 +173,7 @@
  * // render a transparent block
  * Block.setRenderLayer(220, 1);
  *
- * ***/
+ *////
 
 /**
  *
@@ -193,13 +189,13 @@
  * // render custom block with blockId 220 using the cactus shape
  * Block.setRenderType(220, 13);
  *
- * ***/
+ *////
 
 /**
  *
  * @function    setShape
  * @memberof    Block
- * @description Set the size of a block with the specified `blockId` and start/finish coordinates.
+ * @descriptio * @license CC-BY-SA-4.0 * @license CC-BY-SA-4.0n Set the size of a block with the specified `blockId` and start/finish coordinates.
  *
  * @param {int}    blockId - the block ID (see: {@link Reference.BlockIds})
  * @param {double} startX  - the starting x coordinate
@@ -213,4 +209,4 @@
  * // set the shape of a block to be 1m wide(X) by 1m long(Z) by .75m high(Y)
  * Block.setShape(45, 0, 0, 0, 1, 0.75, 1);
  *
- * ***/
+ *////

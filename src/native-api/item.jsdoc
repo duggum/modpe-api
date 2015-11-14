@@ -42,7 +42,7 @@ function addFurnaceRecipe(id, damge, source) {}
  * @param {int} damage        - the `damage` value of the new item
  * @param {string[]} keys     - the layout of the ingredient `keys`
  * @param {Array} ingredients - the `ingredients`
- * @see Original shaped recipe script by {@link https://goo.gl/ApLbnm|Zhuowei Zhang (500_Internal_Server_Error)}
+ * @see Original shaped recipe script by {@link https://goo.gl/ApLbnm|Zhuowei Zhang}
  * @example
  * // make an enchantment table
  * var ENCHANTMENT_TABLE_ID = 240;
@@ -96,7 +96,7 @@ function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
  * @param {int}    damageReduce - how much damage is taken when hit
  * @param {int}    maxDamage    - the maximum amount of damage the item can sustain
  * @param {int}    type         - the `type` of armor this item is
- * @see Original armor script by {@link https://goo.gl/sTc5jr|Zhuowei Zhang (500_Internal_Server_Error)}
+ * @see Original armor script by {@link https://goo.gl/sTc5jr|Zhuowei Zhang}
  * @example
  * // WOOT! Zombie armor!
  * Item.defineArmor(
@@ -132,7 +132,7 @@ function defineArmor( id, iconName, iconIndex, name, texture, damageReduce, maxD
  * @param {int} id      - the item `id`
  * @param {int} damage  - the `damage` value of the item
  * @param {boolean} raw - if the returned data should be in the `raw` form
- * @return {string} the item name
+ * @return {string}     - the item name
  * @example
  * // get data in raw form
  * clientMessage(Item.getName(263, 0, true)); // prints "item.coal.name"
@@ -144,8 +144,8 @@ function getName(id, damage, raw) {}
 /**
  * determine if an item is valid
  * @memberof Item
- * @param {int} id - the item `id`
- * @return {boolean} true if the item is valid, false otherwise
+ * @param {int} id   - the item `id`
+ * @return {boolean} - true if the item is valid, false otherwise
  * @example
  * // see if coal is a valid item
  * if (Item.isValidItem(263)) {

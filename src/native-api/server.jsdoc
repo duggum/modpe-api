@@ -1,0 +1,97 @@
+/**
+ *
+ * @namespace   {Class} Server
+ * @description Static methods for the Server API
+ *
+ *////
+
+/**
+ *
+ * @function    getAddress
+ * @memberof    Server
+ * @description Return the server IP address.
+ *
+ * @return {string} - the IP address
+ *
+ * @example
+ * // ?
+ * clientMessage(Server.getAddress()); // prints '84.45.129.7'
+ *
+ *////
+
+/**
+ *
+ * @function    getAllPlayerNames
+ * @memberof    Server
+ * @description Return the names of all players on the server.
+ *
+ * @return {string[]} - the player names
+ *
+ * @example
+ * // announce all players online
+ * var players = Server.getAllPlayerNames();
+ * for (var i = 0; i < players.length; i++) {
+ *   clientMessage(players[i] + " is online!");
+ * }
+ *
+ *////
+
+/**
+ *
+ * @function    getAllPlayers
+ * @memberof    Server
+ * @description Return the entity IDs of all players on the server.
+ *
+ * @return {long[]} - the player IDs
+ *
+ * @example
+ * // announce all players online
+ * var players = Server.getAllPlayers();
+ * for (var i = 0; i < players.length; i++) {
+ *   clientMessage(Player.getName(players[i]) + " is online!");
+ * }
+ *
+ *////
+
+/**
+ *
+ * @function    getPort
+ * @memberof    Server
+ * @description Return the port number of the current remote connection.
+ *
+ * @return {int} - the port number
+ *
+ * @example
+ * // ?
+ * clientMessage("The current server port is: " + Server.getPort());
+ *
+ *////
+
+/**
+ *
+ * @function    joinServer
+ * @memberof    Server
+ * @description Connect to a remote server.
+ *
+ * @param {string} address - the server's IP address
+ * @param {int}    port    - the port number
+ *
+ * @example
+ * // ?
+ * Server.joinServer("84.45.129.7", 19132);
+ *
+ *////
+
+/**
+ *
+ * @function    sendChat
+ * @memberof    Server
+ * @description Send a chat message.
+ *
+ * @param {string} text - the message text
+ *
+ * @example
+ * // ?
+ * Server.sendChat("Herobrine is fake!!");
+ *
+ *////

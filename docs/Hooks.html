@@ -321,6 +321,8 @@
       
         <li data-name="Entity.setHealth"><a href="Entity.html#.setHealth">setHealth</a></li>
       
+        <li data-name="Entity.setMaxHealth"><a href="Entity.html#.setMaxHealth">setMaxHealth</a></li>
+      
         <li data-name="Entity.setMobSkin"><a href="Entity.html#.setMobSkin">setMobSkin</a></li>
       
         <li data-name="Entity.setNameTag"><a href="Entity.html#.setNameTag">setNameTag</a></li>
@@ -957,11 +959,11 @@
 
     <h4 class="name" id="attackHook">
 
-attackHook(<span class="signature">int_attackerId, int_victimId</span>)
+attackHook(<span class="signature">attackerId, victimId</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line15">line 15</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line20">line 20</a>
     </div>
 
   </div>
@@ -1000,7 +1002,7 @@ attackHook(<span class="signature">int_attackerId, int_victimId</span>)
 
         <tr>
             
-                <td class="name"><code>int_attackerId</code></td>
+                <td class="name"><code>attackerId</code></td>
             
 
             <td class="type">
@@ -1024,7 +1026,7 @@ attackHook(<span class="signature">int_attackerId, int_victimId</span>)
 
         <tr>
             
-                <td class="name"><code>int_victimId</code></td>
+                <td class="name"><code>victimId</code></td>
             
 
             <td class="type">
@@ -1079,11 +1081,11 @@ attackHook(<span class="signature">int_attackerId, int_victimId</span>)
 
     <h4 class="name" id="blockEventHook">
 
-blockEventHook(<span class="signature"></span>)
+blockEventHook(<span class="signature">x, y, z, type, data</span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line20">line 20</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line40">line 40</a>
     </div>
 
   </div>
@@ -1092,12 +1094,155 @@ blockEventHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>blockEventHook</p>
+    <p>blockEventHook description</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>description</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>description</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>z</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>description</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>description</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>description</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1121,6 +1266,18 @@ blockEventHook(<span class="signature"></span>)
 
 
 
+<h5>Example</h5>
+
+        <p class="code-caption">[credit for example]</p>
+    
+
+    
+      <pre><code>// [opening comment]
+[example code]</code></pre>
+    
+
+
+
 </dd>
 
         
@@ -1134,7 +1291,7 @@ chatHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line25">line 25</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line48">line 48</a>
     </div>
 
   </div>
@@ -1143,7 +1300,7 @@ chatHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>chatHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1185,7 +1342,7 @@ chatReceiveHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line30">line 30</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line56">line 56</a>
     </div>
 
   </div>
@@ -1194,7 +1351,7 @@ chatReceiveHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>chatReceiveHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1236,7 +1393,7 @@ deathHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line35">line 35</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line64">line 64</a>
     </div>
 
   </div>
@@ -1245,7 +1402,7 @@ deathHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>deathHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1287,7 +1444,7 @@ destroyBlock(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line40">line 40</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line72">line 72</a>
     </div>
 
   </div>
@@ -1296,7 +1453,7 @@ destroyBlock(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>destroyBlock</p>
+    <p>?</p>
   </div>
 
 
@@ -1338,7 +1495,7 @@ eatHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line45">line 45</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line80">line 80</a>
     </div>
 
   </div>
@@ -1347,7 +1504,7 @@ eatHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>eatHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1389,7 +1546,7 @@ entityAddedHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line50">line 50</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line88">line 88</a>
     </div>
 
   </div>
@@ -1398,7 +1555,7 @@ entityAddedHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>entityAddedHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1440,7 +1597,7 @@ entityRemovedHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line55">line 55</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line96">line 96</a>
     </div>
 
   </div>
@@ -1449,7 +1606,7 @@ entityRemovedHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>entityRemovedHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1491,7 +1648,7 @@ explodeHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line60">line 60</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line104">line 104</a>
     </div>
 
   </div>
@@ -1500,7 +1657,7 @@ explodeHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>explodeHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1542,7 +1699,7 @@ leaveGame(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line65">line 65</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line112">line 112</a>
     </div>
 
   </div>
@@ -1551,7 +1708,7 @@ leaveGame(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>leaveGame</p>
+    <p>?</p>
   </div>
 
 
@@ -1593,7 +1750,7 @@ levelEventHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line70">line 70</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line120">line 120</a>
     </div>
 
   </div>
@@ -1602,7 +1759,7 @@ levelEventHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>levelEventHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1644,7 +1801,7 @@ modTick(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line75">line 75</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line128">line 128</a>
     </div>
 
   </div>
@@ -1653,7 +1810,7 @@ modTick(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>modTick</p>
+    <p>?</p>
   </div>
 
 
@@ -1695,7 +1852,7 @@ newLevel(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line80">line 80</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line136">line 136</a>
     </div>
 
   </div>
@@ -1704,7 +1861,7 @@ newLevel(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>newLevel</p>
+    <p>?</p>
   </div>
 
 
@@ -1746,7 +1903,7 @@ procCmd(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line85">line 85</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line144">line 144</a>
     </div>
 
   </div>
@@ -1755,7 +1912,7 @@ procCmd(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>procCmd</p>
+    <p>?</p>
   </div>
 
 
@@ -1797,7 +1954,7 @@ selectLevelHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line90">line 90</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line152">line 152</a>
     </div>
 
   </div>
@@ -1806,7 +1963,7 @@ selectLevelHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>selectLevelHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1848,7 +2005,7 @@ serverMessageReceiveHook(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line95">line 95</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line160">line 160</a>
     </div>
 
   </div>
@@ -1857,7 +2014,7 @@ serverMessageReceiveHook(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>serverMessageReceiveHook</p>
+    <p>?</p>
   </div>
 
 
@@ -1899,7 +2056,7 @@ startDestroyBlock(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line100">line 100</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line168">line 168</a>
     </div>
 
   </div>
@@ -1908,7 +2065,7 @@ startDestroyBlock(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>startDestroyBlock</p>
+    <p>?</p>
   </div>
 
 
@@ -1950,7 +2107,7 @@ useItem(<span class="signature"></span>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks_hooks.js.html">hooks/hooks.js</a>, <a href="hooks_hooks.js.html#line105">line 105</a>
+      <a href="hooks_hooks.jsdoc.html">hooks/hooks.jsdoc</a>, <a href="hooks_hooks.jsdoc.html#line176">line 176</a>
     </div>
 
   </div>
@@ -1959,7 +2116,7 @@ useItem(<span class="signature"></span>)
 <dd>
 
   <div class="description">
-    <p>useItem</p>
+    <p>?</p>
   </div>
 
 
@@ -2005,7 +2162,7 @@ useItem(<span class="signature"></span>)
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 12 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Sat Nov 14 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

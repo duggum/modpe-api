@@ -1,6 +1,6 @@
 # Documentation for the ModPE API
 
-#### v0.0.1
+#### v0.0.2
 [![Build Status](https://travis-ci.org/duggum/modpe-api.svg?branch=master)][travis]
 
 [travis]: https://travis-ci.org/duggum/modpe-api "Travis CI Build Status"
@@ -8,7 +8,7 @@
 ## Version Compatibility
 
 - Minecraft Pocket Edition: `0.12.3`
-- BlockLauncher: `1.10.4`  
+- BlockLauncher: `1.10.5`  
 
 ## TODO
 #### General
