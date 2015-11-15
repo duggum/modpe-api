@@ -2,3 +2,7 @@
 .tern*
 node_modules/**
 docs/**
+jsdoc_template/gameclosure/**
+jsdoc_template/jsdoc-oblivion/**
+jsdoc_template/one-page/**
+jsdoc_template/zoo-jsdoc-master/**
