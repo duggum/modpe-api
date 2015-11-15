@@ -3,7 +3,7 @@ set -e # exit with nonzero exit code if anything fails
 
 # go to the out directory and create a *new* Git repo
 echo -e "Initialize repo . . .\n"
-cd jsdoc
+cd docs
 git init
 
 echo -e "Creating README file . . .\n"
