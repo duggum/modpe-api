@@ -1,6 +1,6 @@
 # Documentation for the ModPE API
 
-#### v0.0.2
+#### v0.0.3
 [![Build Status](https://travis-ci.org/duggum/modpe-api.svg?branch=master)][travis]
 
 [travis]: https://travis-ci.org/duggum/modpe-api "Travis CI Build Status"
@@ -52,7 +52,19 @@
 #### Server API
 - done except for fine tuning & better examples
 
+## Graphics Credits
+
+#### Minecraft Block
+&emsp;[Minecraft Block][block]
+&emsp;From: [Vector.me][Vector.me] (by Tavin)
+
 ## Font License Info
+
+#### Minecrafter Font
+&emsp;Copyright &copy; 2014 by MadPixel Designs  
+&emsp;Author:   MadPixel Designs  
+&emsp;License:  [CC][(http://creativecommons.org/licenses)  
+&emsp;Homepage: [dafont](http://www.dafont.com/minecrafter.font)
 
 #### Glyphicons Halflings
 &emsp;From [Bootstrap Components][bs]:
@@ -84,6 +96,8 @@
 &emsp;License:   [SIL][sil]  
 &emsp;Homepage:  [Web Symbols][web_symbols]
 
+[block]: http://vector.me/browse/286710/minecraft_block "Minecraft Block"
+[vector.me]: http://vector.me "Vector.me"
 [bs]: http://getbootstrap.com/components/ "Bootstrap Components"
 [sil]: http://scripts.sil.org/OFL "SIL Open Font License"
 [glyphicons]: http://glyphicons.com "Glyphicons Halflings"

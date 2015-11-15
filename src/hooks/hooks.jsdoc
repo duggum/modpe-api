@@ -1,6 +1,11 @@
 /**
  *
  * @namespace   Hooks
+ * @description Event listeners for the ModPE API. These functions are
+ *              used to execute other functions when certain actions are
+ *              performed.
+ *
+ * @todo code examples
  *
  *////
 function Hooks() {
@@ -11,10 +16,25 @@ function Hooks() {
     /**
      *
      * attackHook
-     * @description Called when an entity is attacked.
+     * @listens     attack Event
+     * @description Event listener that is triggered when an entity is attacked
+     *              When the event is fired, the following data is sent as
+     *              arguments to this function:
      *
-     * @param {int} attackerId - the attacker's id
-     * @param {int} victimId   - the victim's id
+     * @param {entity} attackerId - the attacker's native entity id
+     * @param {entity} victimId   - the victim's native entity id
+     *
+     * @example
+     * <caption>Credit: {@link https://goo.gl/4FYd5w|Connor4898}</caption>
+     *
+     * // who is attacking who?
+     * function attackHook(attacker, victim) {
+     *   if (attacker == Player.getEntity()) {
+     *     clientMessage("Sir, you shouldn't attack others.");
+     *   } else {
+     *     clientMessage("Sir, you are under attack!");
+     *   }
+     * }
      *
      *////
     attackHook: function(attackerId, victimId) {},
@@ -22,6 +42,7 @@ function Hooks() {
     /**
      *
      * blockEventHook
+     * @listens     block Event
      * @description blockEventHook description
      *
      * @param   {int}    x    - description
@@ -36,13 +57,22 @@ function Hooks() {
      * // [opening comment]
      * [example code]
      *
+     * @example
+     *
+     * // code here
+     *
      *////
     blockEventHook: function(x, y, z, type, data) {},
 
     /**
      *
      * chatHook
+     * @listens     chat Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     chatHook: function(text) {},
@@ -50,7 +80,12 @@ function Hooks() {
     /**
      *
      * chatReceiveHook
+     * @listens     chatReceive Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     chatReceiveHook: function(String_text, String_senderName) {},
@@ -58,7 +93,12 @@ function Hooks() {
     /**
      *
      * deathHook
+     * @listens     death Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     deathHook: function(int_attackerId, int_victimId) {},
@@ -66,7 +106,12 @@ function Hooks() {
     /**
      *
      * destroyBlock
+     * @listens     destroyBlock Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     destroyBlock: function(int_x, int_y, int_z, int_side) {},
@@ -74,7 +119,12 @@ function Hooks() {
     /**
      *
      * eatHook
+     * @listens     eat Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     eatHook: function(hearts, saturationRatio) {},
@@ -82,15 +132,21 @@ function Hooks() {
     /**
      *
      * entityAddedHook
+     * @listens     entityAdded Event
      * @description ?
      *
-     *////
+     ///
     entityAddedHook: function(int_entityId) {},
 
     /**
      *
      * entityRemovedHook
+     * @listens     entityRemoved Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     entityRemovedHook: function(int_entityId) {},
@@ -98,7 +154,12 @@ function Hooks() {
     /**
      *
      * explodeHook
+     * @listens     explode Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     explodeHook: function(entity, x, y, z, power, onFire) {},
@@ -106,7 +167,12 @@ function Hooks() {
     /**
      *
      * leaveGame
+     * @listens     leaveGame Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     leaveGame: function() {},
@@ -114,7 +180,12 @@ function Hooks() {
     /**
      *
      * levelEventHook
+     * @listens     levelEvent
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     levelEventHook: function(player, eventType, x, y, z, data) {},
@@ -122,7 +193,12 @@ function Hooks() {
     /**
      *
      * modTick
+     * @listens     modTick Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     modTick: function() {},
@@ -130,7 +206,12 @@ function Hooks() {
     /**
      *
      * newLevel
+     * @listens     newLevel Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     newLevel: function() {},
@@ -138,7 +219,12 @@ function Hooks() {
     /**
      *
      * procCmd
+     * @listens     procCmd Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     procCmd: function(String_cmd) {},
@@ -146,7 +232,12 @@ function Hooks() {
     /**
      *
      * selectLevelHook
+     * @listens     selectLevel Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     selectLevelHook: function() {},
@@ -154,7 +245,12 @@ function Hooks() {
     /**
      *
      * serverMessageReceiveHook
+     * @listens     serverMessageReceive Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     serverMessageReceiveHook: function(String_str) {},
@@ -162,7 +258,12 @@ function Hooks() {
     /**
      *
      * startDestroyBlock
+     * @listens     startDestroyBlock Event
      * @description ?
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     startDestroyBlock: function(int_x, int_y, int_z, int_side) {},
@@ -170,7 +271,23 @@ function Hooks() {
     /**
      *
      * useItem
-     * @description ?
+     * @listens     useItem Event
+     * @description Event listener that is triggered when an item is used
+     *              to tap or destroy a block. When the event is fired, the
+     *              following data is sent as arguments to this function:
+     *
+     * @param {int} x           - the x coordinate of the block
+     * @param {int} y           - the y coordinate of the block
+     * @param {int} z           - the z coordinate of the block
+     * @param {int} itemid      - the ID of the item used
+     * @param {int} blockid     - the ID of the block
+     * @param {int} blockSide   - the side of the block that was tapped
+     * @param {int} itemDamage  - the damage/data/durability data for the item
+     * @param {int} blockDamage - the damage data for the block
+     *
+     * @example
+     *
+     * // code here
      *
      *////
     useItem: function(int_x, int_y, int_z, int_itemid, int_blockid, int_side, int_itemDamage, int_blockDamage) {}
