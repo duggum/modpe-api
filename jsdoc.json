@@ -35,7 +35,7 @@
     "linenums": true
   },
   "opts": {
-    "template"  : "jsdoc_template/jaguar",
+    "template"  : "jsdoc/template/jaguar",
     "encoding"  : "utf8",
     "private"   : true,
     "recurse"   : true,

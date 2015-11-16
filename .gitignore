@@ -1,7 +1,8 @@
 .tags*
 .tern*
 node_modules/**
-jsdoc_template/gameclosure/**
-jsdoc_template/jsdoc-oblivion/**
-jsdoc_template/one-page/**
-jsdoc_template/zoo-jsdoc-master/**
+jsdoc/template/gameclosure/**
+jsdoc/template/jsdoc-oblivion/**
+jsdoc/template/one-page/**
+jsdoc/template/zoo-jsdoc-master/**
+
