@@ -1,7 +1,7 @@
 /**
  *
- * @file Custom type definitions to link Java, ModPE, and Rhino data types to
- *       JavaScript primitives, or to provide clearer documentation.
+ * @description Custom type definitions to link Java, ModPE, and Rhino data types to
+ *              JavaScript primitives, or to provide clearer documentation.
  *
  *////
 

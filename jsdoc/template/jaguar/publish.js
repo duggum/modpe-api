@@ -1,18 +1,18 @@
 /* global env: true */
 "use strict";
-var template           = require('jsdoc/template');
-var fs                 = require('jsdoc/fs');
-var path               = require('jsdoc/path');
-var taffy              = require('taffydb').taffy;
-var handle             = require('jsdoc/util/error').handle;
-var helper             = require('jsdoc/util/templateHelper');
-var _                  = require('underscore');
-var htmlsafe           = helper.htmlsafe;
-var linkto             = helper.linkto;
+var template = require('jsdoc/template');
+var fs = require('jsdoc/fs');
+var path = require('jsdoc/path');
+var taffy = require('taffydb').taffy;
+var handle = require('jsdoc/util/error').handle;
+var helper = require('jsdoc/util/templateHelper');
+var _ = require('underscore');
+var htmlsafe = helper.htmlsafe;
+var linkto = helper.linkto;
 var resolveAuthorLinks = helper.resolveAuthorLinks;
-var scopeToPunc        = helper.scopeToPunc;
-var hasOwnProp         = Object.prototype.hasOwnProperty;
-var outdir             = env.opts.destination;
+var scopeToPunc = helper.scopeToPunc;
+var hasOwnProp = Object.prototype.hasOwnProperty;
+var outdir = env.opts.destination;
 var data;
 var view;
 
@@ -136,8 +136,8 @@ function generate(title, docs, filename, resolveLinks) {
     docs: docs
   };
 
-  var outpath = path.join(outdir, filename),
-    html = view.render('container.tmpl', docData);
+  var outpath = path.join(outdir, filename);
+  var html = view.render('container.tmpl', docData);
 
   if (resolveLinks) {
     html = helper.resolveLinks(html); // turn {@link foo} into <a href="foodoc.html">foo</a>
@@ -255,10 +255,6 @@ function buildNav(members) {
         }),
         classes: find({
           kind: 'class',
-          memberof: v.longname
-        }),
-        staticclasses: find({
-          kind: 'staticclass',
           memberof: v.longname
         }),
         methods: find({
@@ -460,7 +456,6 @@ exports.publish = function(taffyData, opts, tutorials) {
       addAttribs(doclet);
     }
   });
-
   // do this after the urls have all been generated
   data().each(function(doclet) {
     doclet.ancestors = getAncestorLinks(doclet);

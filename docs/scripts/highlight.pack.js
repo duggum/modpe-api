@@ -965,7 +965,7 @@
     mode.contains.push({
       className:"jsdoc-namespace",
       begin:/\@namespace/,
-      end:/$/,
+      end:/\s*(?=\*)|$/,
       contains:[
         {
           className:"jsdoc-brackets",

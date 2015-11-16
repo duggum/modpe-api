@@ -915,290 +915,297 @@
  * @todo code examples
  *
  *////
-function Hooks() {
 
-  /** @lends Hooks.prototype *////
-  var funcs = {
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    attackHook
+ * @description Event listener that is triggered when an entity is attacked
+ *              When the event is fired, the following data is sent as
+ *              arguments to this function:
+ *
+ * @param {entity} attackerId - the attacker's native entity id
+ * @param {entity} victimId   - the victim's native entity id
+ *
+ * @example
+ * &lt;caption>Credit: {@link https://goo.gl/4FYd5w|Connor4898}&lt;/caption>
+ *
+ * // who is attacking who?
+ * function attackHook(attacker, victim) {
+ *   if (attacker == Player.getEntity()) {
+ *     clientMessage("Sir, you shouldn't attack others.");
+ *   } else {
+ *     clientMessage("Sir, you are under attack!");
+ *   }
+ * }
+ *
+ *////
 
-    /**
-     *
-     * attackHook
-     * @listens     attack Event
-     * @description Event listener that is triggered when an entity is attacked
-     *              When the event is fired, the following data is sent as
-     *              arguments to this function:
-     *
-     * @param {entity} attackerId - the attacker's native entity id
-     * @param {entity} victimId   - the victim's native entity id
-     *
-     * @example
-     * &lt;caption>Credit: {@link https://goo.gl/4FYd5w|Connor4898}&lt;/caption>
-     *
-     * // who is attacking who?
-     * function attackHook(attacker, victim) {
-     *   if (attacker == Player.getEntity()) {
-     *     clientMessage("Sir, you shouldn't attack others.");
-     *   } else {
-     *     clientMessage("Sir, you are under attack!");
-     *   }
-     * }
-     *
-     *////
-    attackHook: function(attackerId, victimId) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    blockEventHook
+ * @description blockEventHook description
+ *
+ * @param   {int}    x    - description
+ * @param   {int}    y    - description
+ * @param   {int}    z    - description
+ * @param   {Object} type - description
+ * @param   {Object} data - description
+ *
+ * @example
+ * &lt;caption>[credit for example]&lt;/caption>
+ *
+ * // [opening comment]
+ * [example code]
+ *
+ *////
+function blockEventHook(x, y, z, type, data) {}
 
-    /**
-     *
-     * blockEventHook
-     * @listens     block Eventduggum@gmail.com
-     * @description blockEventHook description
-     *
-     * @param   {int}    x    - description
-     * @param   {int}    y    - description
-     * @param   {int}    z    - description
-     * @param   {Object} type - description
-     * @param   {Object} data - description
-     *
-     * @example
-     * &lt;caption>[credit for example]&lt;/caption>
-     *
-     * // [opening comment]
-     * [example code]
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    blockEventHook: function(x, y, z, type, data) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    chatHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function chatHook(text) {}
 
-    /**
-     *
-     * chatHook
-     * @listens     chat Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    chatHook: function(text) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    chatReceiveHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function chatReceiveHook(String_text, String_senderName) {}
 
-    /**
-     *
-     * chatReceiveHook
-     * @listens     chatReceive Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    chatReceiveHook: function(String_text, String_senderName) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    deathHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function deathHook(int_attackerId, int_victimId) {}
 
-    /**
-     *
-     * deathHook
-     * @listens     death Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    deathHook: function(int_attackerId, int_victimId) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    destroyBlock
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function destroyBlock(int_x, int_y, int_z, int_side) {}
 
-    /**
-     *
-     * destroyBlock
-     * @listens     destroyBlock Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    destroyBlock: function(int_x, int_y, int_z, int_side) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    eatHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function eatHook(hearts, saturationRatio) {}
 
-    /**
-     *
-     * eatHook
-     * @listens     eat Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    eatHook: function(hearts, saturationRatio) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    entityAddedHook
+ * @description ?
+ *
+ ///
+function entityAddedHook(int_entityId) {}
 
-    /**
-     *
-     * entityAddedHook
-     * @listens     entityAdded Event
-     * @description ?
-     *
-     ///
-    entityAddedHook: function(int_entityId) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    entityRemovedHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function entityRemovedHook(int_entityId) {}
 
-    /**
-     *
-     * entityRemovedHook
-     * @listens     entityRemoved Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    entityRemovedHook: function(int_entityId) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    explodeHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function explodeHook(entity, x, y, z, power, onFire) {}
 
-    /**
-     *
-     * explodeHook
-     * @listens     explode Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    explodeHook: function(entity, x, y, z, power, onFire) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    leaveGame
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function leaveGame() {}
 
-    /**
-     *
-     * leaveGame
-     * @listens     leaveGame Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    leaveGame: function() {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    levelEventHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function levelEventHook(player, eventType, x, y, z, data) {}
 
-    /**
-     *
-     * levelEventHook
-     * @listens     levelEvent
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    levelEventHook: function(player, eventType, x, y, z, data) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    modTick
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function modTick() {}
 
-    /**
-     *
-     * modTick
-     * @listens     modTick Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    modTick: function() {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    newLevel
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function newLevel() {}
 
-    /**
-     *
-     * newLevel
-     * @listens     newLevel Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    newLevel: function() {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    procCmd
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function procCmd(String_cmd) {}
 
-    /**
-     *
-     * procCmd
-     * @listens     procCmd Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    procCmd: function(String_cmd) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    selectLevelHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function selectLevelHook() {}
 
-    /**
-     *
-     * selectLevelHook
-     * @listens     selectLevel Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    selectLevelHook: function() {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    serverMessageReceiveHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function serverMessageReceiveHook(String_str) {}
 
-    /**
-     *
-     * serverMessageReceiveHook
-     * @listens     serverMessageReceive Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    serverMessageReceiveHook: function(String_str) {},
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    startDestroyBlock
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function startDestroyBlock(int_x, int_y, int_z, int_side) {}
 
-    /**
-     *
-     * startDestroyBlock
-     * @listens     startDestroyBlock Event
-     * @description ?
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    startDestroyBlock: function(int_x, int_y, int_z, int_side) {},
-
-    /**
-     *
-     * useItem
-     * @listens     useItem Event
-     * @description Event listener that is triggered when an item is used
-     *              to tap or destroy a block. When the event is fired, the
-     *              following data is sent as arguments to this function:
-     *
-     * @param {int} x           - the x coordinate of the block
-     * @param {int} y           - the y coordinate of the block
-     * @param {int} z           - the z coordinate of the block
-     * @param {int} itemid      - the ID of the item used
-     * @param {int} blockid     - the ID of the block
-     * @param {int} blockSide   - the side of the block that was tapped
-     * d@param {int} blockDamage - the damage data for the block
-     *
-     * @example
-     *
-     * // code here
-     *
-     *////
-    useItem: function(int_x, int_y, int_z, int_itemid, int_blockid, int_side, int_itemDamage, int_blockDamage) {}
-  };
-}
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    useItem
+ * @description Event listener that is triggered when an item is used
+ *              to tap or destroy a block. When the event is fired, the
+ *              following data is sent as arguments to this function:
+ *
+ * @param {int} x           - the x coordinate of the block
+ * @param {int} y           - the y coordinate of the block
+ * @param {int} z           - the z coordinate of the block
+ * @param {int} itemid      - the ID of the item used
+ * @param {int} blockid     - the ID of the block
+ * @param {int} blockSide   - the side of the block that was tapped
+ * @param {int} blockDamage - the damage data for the block
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
 </code></pre>
   </article>
 </section>
@@ -1209,7 +1216,7 @@ function Hooks() {
 
         <footer>
           <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Sun Nov 15 2015</p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 16 2015</p>
           <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>
