@@ -1,0 +1,31 @@
+<?js
+    var exceptions = obj;
+    var self = this;
+?>
+
+<table class="params">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th class="last">When</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <?js exceptions.forEach(function(exception) { ?>
+        <tr>
+            <td class="type">
+                <?js if (exception.type && exception.type.names) {?>
+                    <?js= self.partial('type.tmpl', exception.type.names) ?>
+                <?js } ?>
+            </td>
+            <td class="description last">
+                <?js if (exception.description) { ?>
+                    <?js= exception.description ?>
+                <?js } ?>
+            </td>
+        </tr>
+    <?js }); ?>
+
+    </tbody>
+</table>

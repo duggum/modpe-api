@@ -1,0 +1,79 @@
+<?js
+var data = obj;
+var self = this;
+?>
+<div class="details">
+<?js
+var properties = data.properties;
+if (properties && properties.length && properties.forEach) {
+?>
+  <h5 class="subsection-title">Properties:</h5>
+  <div class="properties"><?js= this.partial('properties.tmpl', properties) ?></div>
+<?js
+}
+?>
+<ul>
+<?js
+if (data.version) {
+?>
+    <li class="icon"><i class="tag-version icon-version" title="Version"></i><span class="icon-text"><?js= version ?></span></li>
+<?js
+}
+if (data.since) {
+?>
+    <li class="icon"><i class="tag-since icon-since" title="Since"></i><span class="icon-text"><?js= since ?></span></li>
+<?js
+}
+if (data.deprecated) {
+  var text = data.deprecated;
+  if (text === true) { text = "Yes"; }
+?>
+    <li class="icon"><i class="tag-deprecated icon-deprecated" title="Deprecated"></i><span class="icon-text"><?js= text ?></span></li>
+<?js
+}
+if (data.author && author.length) {
+  author.forEach(function(a) {
+?>
+    <li class="icon"><i class="tag-author icon-author" title="Author"></i><span class="icon-text"><?js= self.resolveAuthorLinks(a) ?></span></li>
+<?js
+  });
+}
+if (data.copyright) {
+?>
+    <li class="icon"><i class="tag-copyright icon-copyright" title="Copyright"></i><span class="icon-text"><?js= copyright ?></span></li>
+<?js
+}
+if (data.license) {
+?>
+    <li class="icon"><i class="tag-license icon-license" title="License"></i><span class="icon-text"><?js= license ?></span></li>
+<?js
+}
+if (data.defaultvalue) {
+?>
+    <li class="icon"><i class="tag-default icon-default" title="Default"></i><span class="icon-text"><?js= data.defaultvalue ?></span></li>
+<?js
+}
+if (data.tutorials && tutorials.length) {
+  tutorials.forEach(function(t) {
+?>
+    <li class="icon"><i class="tag-tutorial icon-tutorial" title="Tutorial"></i><span class="icon-text"><?js= self.tutoriallink(t) ?></span></li>
+<?js
+  });
+}
+if (data.see && see.length) {
+  see.forEach(function(s) {
+?>
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><?js= self.linkto(s) ?></span></li>
+<?js
+  });
+}
+if (data.todo && todo.length) {
+  todo.forEach(function(t) {
+?>
+    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text"><?js= self.linkto(t) ?></span></li>
+<?js
+  });
+}
+?>
+  </ul>
+</div>
