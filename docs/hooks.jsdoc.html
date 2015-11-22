@@ -141,8 +141,6 @@
       
       <span class="subtitle">Typedefs</span>
       
-          <li data-name="block"><a href="global.html#block">block</a></li>
-      
           <li data-name="boolean"><a href="global.html#boolean">boolean</a></li>
       
           <li data-name="byte"><a href="global.html#byte">byte</a></li>
@@ -153,23 +151,17 @@
       
           <li data-name="double"><a href="global.html#double">double</a></li>
       
-          <li data-name="entity"><a href="global.html#entity">entity</a></li>
-      
           <li data-name="float"><a href="global.html#float">float</a></li>
       
           <li data-name="HashMap"><a href="global.html#HashMap">HashMap</a></li>
       
           <li data-name="int"><a href="global.html#int">int</a></li>
       
-          <li data-name="item"><a href="global.html#item">item</a></li>
-      
           <li data-name="long"><a href="global.html#long">long</a></li>
       
           <li data-name="NativeApi"><a href="global.html#NativeApi">NativeApi</a></li>
       
           <li data-name="number"><a href="global.html#number">number</a></li>
-      
-          <li data-name="player"><a href="global.html#player">player</a></li>
       
           <li data-name="Scriptable"><a href="global.html#Scriptable">Scriptable</a></li>
       
@@ -898,7 +890,7 @@
 </div>
 
       <div class="main">
-        <h1 class="page-title" data-filename="native-api_modpe.jsdoc.html">Source: native-api/modpe.jsdoc</h1>
+        <h1 class="page-title" data-filename="hooks.jsdoc.html">Source: hooks.jsdoc</h1>
         
 
 
@@ -906,92 +898,306 @@
 <section>
   <article>
     <pre><code>/**
- * Static methods for the ModPE API
- * @namespace {Class} ModPE
- * @example ModPE.methodName([ arg1[, arg2[, ...argN] ] ]);
- */
-
-/** @memberof ModPE */
-function dumpVtable(String_, int_) {}
-
-/** @memberof ModPE */
-function getBytesFromTexturePack(String_) {}
+ *
+ * @namespace   Hooks
+ * @description Hook functions for the ModPE API. These functions are used to
+ *              execute other functions when certain game events occur.
+ *
+ * @todo code examples
+ *
+ *////
 
 /**
- * return the current game version (i.e. `0.12.2`)
- * @memberof ModPE
- * @return   {string} - the game version
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    attackHook
+ * @description Callback that is triggered when an entity is attacked.
+ *
+ * @param {long} attackerId - the attacker's native entity id
+ * @param {long} victimId   - the victim's native entity id
+ *
  * @example
- * var version = ModPE.getMinecraftVersion();
- * print(version); // "0.12.2"
- */
-function getMinecraftVersion() {}
+ * &lt;caption>Credit: {@link https://goo.gl/4FYd5w|Connor4898}&lt;/caption>
+ *
+ * // who is attacking who?
+ * function attackHook(attacker, victim) {
+ *   if (attacker == Player.getEntity()) {
+ *     clientMessage("Sir, you shouldn't attack others.");
+ *   } else {
+ *     clientMessage("Sir, you are under attack!");
+ *   }
+ * }
+ *
+ *////
 
-/** @memberof ModPE */
-function langEdit(String1, String2) {}
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    blockEventHook
+ * @description blockEventHook description
+ *
+ * @param   {int} x    - the chest's x coordiante
+ * @param   {int} y    - the chest's y coordiante
+ * @param   {int} z    - the chest's z coordiante
+ * @param   {int} type - the event type (seems to always be 1)
+ * @param   {int} data - the open/close data (0 = closing, 1 = opening, 2 = open)
+ *
+ * @example
+ * // Announce the opening of a chest
+ * function blockEventHook(x, y, z, eventType, data) {
+ *   if (data === 1) {
+ *     clientMessage("A chest was opened at location " + x + " : " + y + " : " + z);
+ *   } else if (data === 0) {
+ *     clientMessage("The chest has been closed");
+ *   }
+ * }
+ *////
 
-/** @memberof ModPE */
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    chatHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function chatHook(text) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    chatReceiveHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function chatReceiveHook(String_text, String_senderName) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    deathHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function deathHook(int_attackerId, int_victimId) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    destroyBlock
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function destroyBlock(int_x, int_y, int_z, int_side) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    eatHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function eatHook(hearts, saturationRatio) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    entityAddedHook
+ * @description ?
+ *
+ ///
+function entityAddedHook(int_entityId) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    entityRemovedHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function entityRemovedHook(int_entityId) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    explodeHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function explodeHook(entity, x, y, z, power, onFire) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    leaveGame
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
 function leaveGame() {}
 
-/** @memberof ModPE */
-function log(String_) {}
-
-/** @memberof ModPE */
-function openInputStreamFromTexturePack(String_) {}
-
-/** @memberof ModPE */
-function overrideTexture(String1, String2) {}
-
-/** @memberof ModPE */
-function readData(String_) {}
-
-/** @memberof ModPE */
-function removeData(String_) {}
-
-/** @memberof ModPE */
-function resetFov() {}
-
-/** @memberof ModPE */
-function resetImages() {}
-
-/** @memberof ModPE */
-function saveData(String1, String2) {}
-
-/** @memberof ModPE */
-function selectLevel(String_) {}
-
-/** @memberof ModPE */
-function setCamera(Object_) {}
-
-/** @memberof ModPE */
-function setFoodItem(int1, String1, int2, int3, String2, int4) {}
-
-/** @memberof ModPE */
-function setFov(double_) {}
-
-/** @memberof ModPE */
-function setGameSpeed(double_) {}
-
-/** @memberof ModPE */
-function setGuiBlocks(String_) {}
-
-/** @memberof ModPE */
-function setItem(int1, String1, int2, String2, int3) {}
-
-/** @memberof ModPE */
-function setItems(String_) {}
-
-/** @memberof ModPE */
-function setTerrain(String_) {}
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    levelEventHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function levelEventHook(player, eventType, x, y, z, data) {}
 
 /**
- * @memberof ModPE
- * @see {@link print}, {@link clientMessage}
- */
-function showTipMessage(String_) {}
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    modTick
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function modTick() {}
 
-/** @memberof ModPE */
-function takeScreenshot(String_) {}
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    newLevel
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function newLevel() {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    procCmd
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function procCmd(String_cmd) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    selectLevelHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function selectLevelHook() {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    serverMessageReceiveHook
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function serverMessageReceiveHook(String_str) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    startDestroyBlock
+ * @description ?
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
+function startDestroyBlock(int_x, int_y, int_z, int_side) {}
+
+/**
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    useItem
+ * @description Event listener that is triggered when an item is used
+ *              to tap or destroy a block. When the event is fired, the
+ *              following data is sent as arguments to this function:
+ *
+ * @param {int} x           - the x coordinate of the block
+ * @param {int} y           - the y coordinate of the block
+ * @param {int} z           - the z coordinate of the block
+ * @param {int} itemid      - the ID of the item used
+ * @param {int} blockid     - the ID of the block
+ * @param {int} blockSide   - the side of the block that was tapped
+ * @param {int} blockDamage - the damage data for the block
+ *
+ * @example
+ *
+ * // code here
+ *
+ *////
 </code></pre>
   </article>
 </section>
@@ -1002,7 +1208,7 @@ function takeScreenshot(String_) {}
 
         <footer>
           <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 16 2015</p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Wed Nov 18 2015</p>
           <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

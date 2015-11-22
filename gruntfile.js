@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         jsdoc: "./node_modules/.bin/jsdoc",
         options: {
           destination: "./docs",
-          configure: "./jsdoc.json"
+          configure: "jsdoc.json"
         }
       }
     }

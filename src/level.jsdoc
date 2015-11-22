@@ -1,111 +1,219 @@
 /**
- * Static methods for the Level API
- * @namespace {Class} Level
- * @example Level.methodName([ arg1[, arg2[, ...argN] ] ]);
- */
+ *
+ * @namespace   Level
+ * @description Static methods for the Level API
+ *
+ *////
 
 /**
- * add particle effects to a block
- * @memberof Level
- * @since BlockLauncher 1.10.3
- * @param {number} particleType - the particle type
- * @param {number} blockX the - block's x coordinate
- * @param {number} blockY the - block's y coordinate
- * @param {number} blockZ the - block's z coordinate
- * @param {number} velocityX - __???__
- * @param {number} velocityY - __???__
- * @param {number} velocityZ - __???__
- * @param {number} size - __???__ the particle size (smoke and ink require
- * 100 or greater; itemBreak requires 256 or greater)
+ *
+ * @memberof    Level
+ * @function    addParticle
+ * @description add particle effects to a block
+ *
+ * @param {int}    particleType - the particle type
+ * @param {double} blockX       - the block's x coordinate
+ * @param {double} blockY       - the block's y coordinate
+ * @param {double} blockZ       - the block's z coordinate
+ * @param {double} velocityX    - particle velocity along the x axis
+ * @param {double} velocityY    - particle velocity along the y axis
+ * @param {double} velocityZ    - particle velocity along the z axis
+ * @param {int}    size         - the particle size (smoke and ink require 100 or
+ *                                greater; itemBreak requires 256 or greater)
+ *
  * @see {@link ParticleType}
+ *
  * @example
+ *
  * // add hearts to the block you're looking at
  * var x = Player.getPointedBlockX();
  * var y = Player.getPointedBlockY();
  * var z = Player.getPointedBlockZ();
+ *
  * Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);
- * @todo figure out what exactly the last four params do
- */
-function addParticle(particleType, blockX, blockY, blockZ, velocityX, velocityY, velocityZ, size) {}
+ *
+ *////
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function biomeIdToName(int1) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function destroyBlock(int1, int2, int3, boolean_) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function dropItem(double1, double2, double3, double4, int1, int2, int3) {}
 
 /**
- * cause an explosion of the specified `radius` with the center located at the
- * specified `x`, `y` and `z` coordinates
- * @memberof Level
- * @param {number} x the  - x coordinate
- * @param {number} y the  - y coordinate
- * @param {number} z the  - z coordinate
- * @param {number} radius - the radius
- * @example // underground nuclear warhead testing
- * explode(127, 8, 45, 128);
- */
-function explode(x, y, z, radius) {}
+ *
+ * @memberof    Level
+ * @function    explode
+ * @description Cause an explosion of the specified `radius` with the center
+ *              located at the specified `x`, `y` and `z` coordinates.
+ *
+ * @param {double}  x       - the x coordinate
+ * @param {double}  y       - the y coordinate
+ * @param {double}  z       - the z coordinate
+ * @param {double}  radius  - the radius
+ * @param {boolean} hasFire - if true the explosion produces fire, false otherwise
+ *
+ * @example
+ *
+ * // underground nuclear warhead testing
+ * explode(127, 8, 45, 256, false);
+ *
+ *////
 
 /**
+ *
  * __THIS THROWS AN ERROR ON ANDROID; IS IT iOS ONLY???___
  * @memberof Level
+ * @function
  * @return {Object} - __`unknown`__
  * @todo figure out what this does
- */
+ *
+ *////
 function getAddress() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getBiome(int1, int2) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getBiomeName(int1, int2) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getBrightness(int1, int2, int3) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getChestSlot(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getChestSlotCount(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getChestSlotData(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getData(int1, int2, int3) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getFurnaceSlot(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getFurnaceSlotCount(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getFurnaceSlotData(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getGameMode() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getGrassColor(int1, int2) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getLightningLevel() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getRainLevel() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getSignText(int1, int2, int3, int4) {}
 
 /**
+ *
  * return the id of the block located at the specified `x`, `y`, and `z` coordinates
  * @memberof Level
+ * @function
  * @param  {double} x - the x coordinate
  * @param  {double} y - the y coordinate
  * @param  {double} z - the z coordinate
@@ -122,71 +230,155 @@ function getSignText(int1, int2, int3, int4) {}
  *     ModPE.showTipMessage("You just stepped in poo! (or " + poo + ")");
  *   }
  * }
- */
+ *
+ *////
 function getTile(x, y, z) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getTime() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getWorldDir() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function getWorldName() {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function playSound(double1, double2, double3, String_, double4, double5) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function playSoundEnt(Object_, String_, double1, double2) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setChestSlot(int1, int2, int3, int4, int5, int6, int7) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setFurnaceSlot(int1, int2, int3, int4, int5, int6, int7) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setGameMode(int1) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setGrassColor(int1, int2, int3) {}
 
 /**
+ *
  * BL 1.10.4-beta
  * @memberof Level
+ * @function
  * @param {double} level The lighting level?
- */
+ *
+ *////
 function setLightningLevel(double_level) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setNightMode(boolean_) {}
 
 /**
+ *
  * BL 1.10.4-beta
  * @memberof Level
+ * @function
  * @param {double} level The rain level?
- */
+ *
+ *////
 function setRainLevel(double_level) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setSignText(int1, int2, int3, int4, String_) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setSpawn(int1, int2, int3) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setSpawnerEntityType(int1, int2, int3, int4) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setTile(int1, int2, int3, int4, int5) {}
 
-/** @memberof Level */
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function setTime(int1) {}
 
 /**
+ *
  * Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  * @memberof Level
+ * @function
  * @param {double} x    - the x coordinate
  * @param {double} y    - the y coordinate
  * @param {double} z    - the z coordinate
@@ -210,12 +402,15 @@ function setTime(int1) {}
  *     Level.spawnChicken(x, y + 1, z, "mob/chicken.png");
  *   }
  * }
- */
+ *
+ *////
 function spawnChicken(x, y, z, skin) {}
 
 /**
- * Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
+ *
  * @memberof Level
+ * @function spawnCow
+ * @description Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  * @param {double} x    - the x coordinate
  * @param {double} y    - the y coordinate
  * @param {double} z    - the z coordinate
@@ -239,12 +434,16 @@ function spawnChicken(x, y, z, skin) {}
  *     Level.spawnChicken(x, y + 1, z, "mob/cow.png");
  *   }
  * }
- */
+ *
+ *////
 function spawnCow(x, y, z, skin) {}
 
 /**
+ *
  * spawn a valid MCPE entity at the specified x, y, and z coordinates using the specified skin image
  * @memberof Level
+ * @function
+ *
  * @param {number} x    - the x coordinate
  * @param {number} y    - the y coordinate
  * @param {number} z    - the z coordinate
@@ -255,5 +454,6 @@ function spawnCow(x, y, z, skin) {}
  * @example
  * // spawn a skeleton
  * Level.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
- */
+ *
+ *////
   function spawnMob(x, y, z, entityId, skinPath) {}

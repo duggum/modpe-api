@@ -1,6 +1,6 @@
 /**
  * Static methods for the Item API
- * @namespace {Class} Item
+ * @namespace Item
  * @example Item.methodName([ arg1[, arg2[, ...argN] ] ]);
  */
 

@@ -1,6 +1,6 @@
 /**
  *
- * @namespace   {Class} Block
+ * @namespace   Block
  * @description Static methods for the Block API
  *
  * @see http://www.minecraftforum.net/forums/minecraft-pocket-edition/mcpe-mods-tools/mcpe-mod-tool-discussion/1987726-custom-blocks-tutorial
@@ -12,8 +12,8 @@
 
 /**
  *
- * @function    defineBlock
  * @memberof    Block
+ * @function    defineBlock
  * @description Define a custom block with the specified `blockId` and attributes.
  *              See __*[MCPE Textures](textures)*__ for a list of current textures.
  *
@@ -55,8 +55,8 @@
 
 /**
  *
- * @function    getAllBlockIds
  * @memberof    Block
+ * @function    getAllBlockIds
  * @description Return all available block IDs.
  *
  * @return {int[]} - the block IDs
@@ -67,8 +67,8 @@
  *
  * @todo test this thing
  *
- * @function    getRenderType
  * @memberof    Block
+ * @function    getRenderType
  * @description Return the render type (shape) of a block with the specified `blockId`.
  *
  * @param  {int} blockId - the block ID (see: {@link Reference.BlockIds})
@@ -78,8 +78,8 @@
 
 /**
  *
- * @function    setColor
  * @memberof    Block
+ * @function    setColor
  * @description Set the color of a block with the specified `blockId` and `color`.
  *
  * @param {int}      blockId - the block ID (see: {@link Reference.BlockIds})
@@ -95,8 +95,8 @@
 
 /**
  *
- * @function    setDestroyTime
  * @memberof    Block
+ * @function    setDestroyTime
  * @description Set the hardness of a block with the specified `blockId` and `hardness`.
  *
  * @param {int}    blockId  - the block ID (see: {@link Reference.BlockIds})
@@ -113,8 +113,8 @@
 
 /**
  *
- * @function    setExplosionResistance
  * @memberof    Block
+ * @function    setExplosionResistance
  * @description Set the explosion resistance of a block with the specified `blockId` and `resistance`.
  *
  * @param {int}    blockId    - the block ID (see: {@link Reference.BlockIds})
@@ -130,8 +130,8 @@
 
 /**
  *
- * @function    setLightLevel
  * @memberof    Block
+ * @function    setLightLevel
  * @description Set the light level of a block with the specified `blockId` and `lightLevel`.
  *
  * @param {int} blockId    - the block ID (see: {@link Reference.BlockIds})
@@ -147,8 +147,8 @@
 
 /**
  *
- * @function    setLightOpacity
  * @memberof    Block
+ * @function    setLightOpacity
  * @description Set the light opacity of a block with the specified `blockId` and `opacity`.
  *
  * @param {int} blockId - the block ID (see: {@link Reference.BlockIds})
@@ -162,8 +162,8 @@
  *
  * @todo find out if translucent (2) is working
  *
- * @function    setRenderLayer
  * @memberof    Block
+ * @function    setRenderLayer
  * @description Set the render layer for a block with the specified `blockId` and `layer`.
  *
  * @param {int} blockId - the block ID (see: {@link Reference.BlockIds})
@@ -177,8 +177,8 @@
 
 /**
  *
- * @function    setRenderType
  * @memberof    Block
+ * @function    setRenderType
  * @description Set the render type for a block with the specified `blockId` and `type`.
  *
  * @param {int} blockId - the block ID (see: {@link Reference.BlockIds})
@@ -193,8 +193,8 @@
 
 /**
  *
- * @function    setShape
  * @memberof    Block
+ * @function    setShape
  * @descriptio * @license CC-BY-SA-4.0 * @license CC-BY-SA-4.0n Set the size of a block with the specified `blockId` and start/finish coordinates.
  *
  * @param {int}    blockId - the block ID (see: {@link Reference.BlockIds})

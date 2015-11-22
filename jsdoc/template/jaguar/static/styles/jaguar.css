@@ -447,10 +447,11 @@ h6 {
 }
 
 .main .nameContainer h4 .signature {
-    font-size: .9em;
+    font-size: .8em;
     font-weight: normal;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    */
+    font-style: italic;
+    color: #4126C8;
 }
 
 .main .nameContainer h4 .type-signature.type a {
@@ -482,7 +483,7 @@ h6 {
 .main table td.type,
 .main table td.default,
 .main table td.attributes {
-    font-size: .8em;
+    font-size: .9em;
 }
 
 .param-type {
@@ -491,6 +492,11 @@ h6 {
 
 .main table .name {
     width: 200px;
+    color: #4126C8;
+}
+
+.main table td.name > code {
+    color: #4126C8;
 }
 
 .main table .type {

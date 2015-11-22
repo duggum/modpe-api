@@ -141,8 +141,6 @@
       
       <span class="subtitle">Typedefs</span>
       
-          <li data-name="block"><a href="global.html#block">block</a></li>
-      
           <li data-name="boolean"><a href="global.html#boolean">boolean</a></li>
       
           <li data-name="byte"><a href="global.html#byte">byte</a></li>
@@ -153,23 +151,17 @@
       
           <li data-name="double"><a href="global.html#double">double</a></li>
       
-          <li data-name="entity"><a href="global.html#entity">entity</a></li>
-      
           <li data-name="float"><a href="global.html#float">float</a></li>
       
           <li data-name="HashMap"><a href="global.html#HashMap">HashMap</a></li>
       
           <li data-name="int"><a href="global.html#int">int</a></li>
       
-          <li data-name="item"><a href="global.html#item">item</a></li>
-      
           <li data-name="long"><a href="global.html#long">long</a></li>
       
           <li data-name="NativeApi"><a href="global.html#NativeApi">NativeApi</a></li>
       
           <li data-name="number"><a href="global.html#number">number</a></li>
-      
-          <li data-name="player"><a href="global.html#player">player</a></li>
       
           <li data-name="Scriptable"><a href="global.html#Scriptable">Scriptable</a></li>
       
@@ -898,7 +890,7 @@
 </div>
 
       <div class="main">
-        <h1 class="page-title" data-filename="native-api_renderer.jsdoc.html">Source: native-api/renderer.jsdoc</h1>
+        <h1 class="page-title" data-filename="level.jsdoc.html">Source: level.jsdoc</h1>
         
 
 
@@ -906,11 +898,464 @@
 <section>
   <article>
     <pre><code>/**
- * Static methods for the Renderer API
- * @namespace {Class} Renderer
- * @static
- * @example Renderer.methodName([ arg1[, arg2[, ...argN] ] ]);
- */
+ *
+ * @namespace   Level
+ * @description Static methods for the Level API
+ *
+ *////
+
+/**
+ *
+ * @memberof    Level
+ * @function    addParticle
+ * @description add particle effects to a block
+ *
+ * @param {int}    particleType - the particle type
+ * @param {double} blockX       - the block's x coordinate
+ * @param {double} blockY       - the block's y coordinate
+ * @param {double} blockZ       - the block's z coordinate
+ * @param {double} velocityX    - particle velocity along the x axis
+ * @param {double} velocityY    - particle velocity along the y axis
+ * @param {double} velocityZ    - particle velocity along the z axis
+ * @param {int}    size         - the particle size (smoke and ink require 100 or
+ *                                greater; itemBreak requires 256 or greater)
+ *
+ * @see {@link ParticleType}
+ *
+ * @example
+ *
+ * // add hearts to the block you're looking at
+ * var x = Player.getPointedBlockX();
+ * var y = Player.getPointedBlockY();
+ * var z = Player.getPointedBlockZ();
+ *
+ * Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);
+ *
+ *////
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function biomeIdToName(int1) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function destroyBlock(int1, int2, int3, boolean_) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function dropItem(double1, double2, double3, double4, int1, int2, int3) {}
+
+/**
+ *
+ * @memberof    Level
+ * @function    explode
+ * @description Cause an explosion of the specified `radius` with the center
+ *              located at the specified `x`, `y` and `z` coordinates.
+ *
+ * @param {double}  x       - the x coordinate
+ * @param {double}  y       - the y coordinate
+ * @param {double}  z       - the z coordinate
+ * @param {double}  radius  - the radius
+ * @param {boolean} hasFire - if true the explosion produces fire, false otherwise
+ *
+ * @example
+ *
+ * // underground nuclear warhead testing
+ * explode(127, 8, 45, 256, false);
+ *
+ *////
+
+/**
+ *
+ * __THIS THROWS AN ERROR ON ANDROID; IS IT iOS ONLY???___
+ * @memberof Level
+ * @function
+ * @return {Object} - __`unknown`__
+ * @todo figure out what this does
+ *
+ *////
+function getAddress() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getBiome(int1, int2) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getBiomeName(int1, int2) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getBrightness(int1, int2, int3) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getChestSlot(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getChestSlotCount(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getChestSlotData(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getData(int1, int2, int3) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getFurnaceSlot(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getFurnaceSlotCount(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getFurnaceSlotData(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getGameMode() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getGrassColor(int1, int2) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getLightningLevel() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getRainLevel() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getSignText(int1, int2, int3, int4) {}
+
+/**
+ *
+ * return the id of the block located at the specified `x`, `y`, and `z` coordinates
+ * @memberof Level
+ * @function
+ * @param  {double} x - the x coordinate
+ * @param  {double} y - the y coordinate
+ * @param  {double} z - the z coordinate
+ * @return {int}      - the block id
+ * @example
+ * // what did I just step in?
+ * function modTick() {
+ *   var x = Player.getX();
+ *   var y = Player.getY() - 2;   // -2 = feet, not head
+ *   var z = Player.getZ();
+ *   var tileId = Level.getTile(x, y, z);
+ *   if (tileId > 0 &amp;&amp; tileId &lt; 256) {
+ *     var poo = Item.getName(tileId, 0, false);
+ *     ModPE.showTipMessage("You just stepped in poo! (or " + poo + ")");
+ *   }
+ * }
+ *
+ *////
+function getTile(x, y, z) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getTime() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getWorldDir() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getWorldName() {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function playSound(double1, double2, double3, String_, double4, double5) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function playSoundEnt(Object_, String_, double1, double2) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setChestSlot(int1, int2, int3, int4, int5, int6, int7) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setFurnaceSlot(int1, int2, int3, int4, int5, int6, int7) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setGameMode(int1) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setGrassColor(int1, int2, int3) {}
+
+/**
+ *
+ * BL 1.10.4-beta
+ * @memberof Level
+ * @function
+ * @param {double} level The lighting level?
+ *
+ *////
+function setLightningLevel(double_level) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setNightMode(boolean_) {}
+
+/**
+ *
+ * BL 1.10.4-beta
+ * @memberof Level
+ * @function
+ * @param {double} level The rain level?
+ *
+ *////
+function setRainLevel(double_level) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setSignText(int1, int2, int3, int4, String_) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setSpawn(int1, int2, int3) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setSpawnerEntityType(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setTile(int1, int2, int3, int4, int5) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function setTime(int1) {}
+
+/**
+ *
+ * Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
+ * @memberof Level
+ * @function
+ * @param {double} x    - the x coordinate
+ * @param {double} y    - the y coordinate
+ * @param {double} z    - the z coordinate
+ * @param {string} skin - the skin image path (usually an image found in the
+ *                              `../assets/images` folder of the MCPE apk)
+ * @see {@link Entity.spawnMob}, {@link bl_spawnMob}
+ * @example &lt;caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang}&lt;/caption>
+ * var tb = false;
+ *
+ * function useItem(x, y, z, itemId, blockId, side) {
+ *   if (itemId == 280 &amp;&amp; !tb) { // if the item is a stick and items hasn't been initialized
+ *     ModPE.setItem(392, "stick", 0, "Wand");
+ *     ModPE.setFoodItem(393, "cookie", 0, 5, "Cookie");
+ *     Player.addItemInventory(392, 5);
+ *     Player.addItemInventory(393, 1);
+ *     tb = true;
+ *   } else if (itemId == 280) { // else: if the item is a stick
+ *     Player.addItemInventory(392, 5);
+ *     Player.addItemInventory(393, 1);
+ *   } else if (itemId == 392) { // else: if the item is a wand
+ *     Level.spawnChicken(x, y + 1, z, "mob/chicken.png");
+ *   }
+ * }
+ *
+ *////
+function spawnChicken(x, y, z, skin) {}
+
+/**
+ *
+ * @memberof Level
+ * @function spawnCow
+ * @description Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
+ * @param {double} x    - the x coordinate
+ * @param {double} y    - the y coordinate
+ * @param {double} z    - the z coordinate
+ * @param {string} skin - the skin image path (usually an image found in the
+ *                              `../assets/images` folder of the MCPE apk)
+ * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
+ * @example &lt;caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang}&lt;/caption>
+ * var tb = false;
+ *
+ * function useItem(x, y, z, itemId, blockId, side) {
+ *   if (itemId == 280 &amp;&amp; !tb) { // if the item is a stick and items hasn't been initialized
+ *     ModPE.setItem(392, "stick", 0, "Wand");
+ *     ModPE.setFoodItem(393, "cookie", 0, 5, "Cookie");
+ *     Player.addItemInventory(392, 5);
+ *     Player.addItemInventory(393, 1);
+ *     tb = true;
+ *   } else if (itemId == 280) { // else: if the item is a stick
+ *     Player.addItemInventory(392, 5);
+ *     Player.addItemInventory(393, 1);
+ *   } else if (itemId == 392) { // else: if the item is a wand
+ *     Level.spawnChicken(x, y + 1, z, "mob/cow.png");
+ *   }
+ * }
+ *
+ *////
+function spawnCow(x, y, z, skin) {}
+
+/**
+ *
+ * spawn a valid MCPE entity at the specified x, y, and z coordinates using the specified skin image
+ * @memberof Level
+ * @function
+ *
+ * @param {number} x    - the x coordinate
+ * @param {number} y    - the y coordinate
+ * @param {number} z    - the z coordinate
+ * @param {number} id   - the entity ID (see: {@link EntityType})
+ * @param {string} skin - the skin image path (an image found in the
+ *                        `../assets/images` folder of the MCPE apk)
+ * @see {@link Entity.spawnMob}, {@link bl_spawnMob}
+ * @example
+ * // spawn a skeleton
+ * Level.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
+ *
+ *////
+  function spawnMob(x, y, z, entityId, skinPath) {}
 </code></pre>
   </article>
 </section>
@@ -921,7 +1366,7 @@
 
         <footer>
           <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 16 2015</p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Wed Nov 18 2015</p>
           <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

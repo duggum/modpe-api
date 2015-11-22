@@ -1,9 +1,8 @@
 /**
  *
  * @namespace   Hooks
- * @description Event listeners for the ModPE API. These functions are
- *              used to execute other functions when certain actions are
- *              performed.
+ * @description Hook functions for the ModPE API. These functions are used to
+ *              execute other functions when certain game events occur.
  *
  * @todo code examples
  *
@@ -14,12 +13,10 @@
  * @instance
  * @memberof    Hooks
  * @function    attackHook
- * @description Event listener that is triggered when an entity is attacked
- *              When the event is fired, the following data is sent as
- *              arguments to this function:
+ * @description Callback that is triggered when an entity is attacked.
  *
- * @param {entity} attackerId - the attacker's native entity id
- * @param {entity} victimId   - the victim's native entity id
+ * @param {long} attackerId - the attacker's native entity id
+ * @param {long} victimId   - the victim's native entity id
  *
  * @example
  * <caption>Credit: {@link https://goo.gl/4FYd5w|Connor4898}</caption>
@@ -42,20 +39,23 @@
  * @function    blockEventHook
  * @description blockEventHook description
  *
- * @param   {int}    x    - description
- * @param   {int}    y    - description
- * @param   {int}    z    - description
- * @param   {Object} type - description
- * @param   {Object} data - description
+ * @param   {int} x    - the chest's x coordiante
+ * @param   {int} y    - the chest's y coordiante
+ * @param   {int} z    - the chest's z coordiante
+ * @param   {int} type - the event type (seems to always be 1)
+ * @param   {int} data - the open/close data (0 = closing, 1 = opening, 2 = open)
  *
  * @example
- * <caption>[credit for example]</caption>
- *
- * // [opening comment]
- * [example code]
- *
+ * // Announce the opening of a chest
+ * function blockEventHook(x, y, z, eventType, data) {
+ *   if (data === 1) {
+ *     clientMessage("A chest was opened at location " + x + " : " + y + " : " + z);
+ *   } else if (data === 0) {
+ *     clientMessage("The chest has been closed");
+ *   }
+ * }
  *////
-function blockEventHook(x, y, z, type, data) {}
+
 
 /**
  *

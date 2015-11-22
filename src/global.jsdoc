@@ -358,17 +358,19 @@
  * @deprecated use {@link Level.explode} instead
  *
  * @function    explode
- * @description Cause an explosion of the specified `radius` with the center located at the
- *              specified `x`, `y` and `z` coordinates.
+ * @description Cause an explosion of the specified `radius` with the center
+ *              located at the specified `x`, `y` and `z` coordinates.
  *
- * @param {double} x      - the x coordinate
- * @param {double} y      - the y coordinate
- * @param {double} z      - the z coordinate
- * @param {double} radius - the radius
+ * @param {double}  x       - the x coordinate
+ * @param {double}  y       - the y coordinate
+ * @param {double}  z       - the z coordinate
+ * @param {double}  radius  - the radius
+ * @param {boolean} hasFire - if true the explosion produces fire, false otherwise
  *
  * @example
+ *
  * // underground nuclear warhead testing
- * explode(127, 8, 45, 128);
+ * explode(127, 8, 45, 256, false);
  *
  *////
 
@@ -409,7 +411,7 @@
  * @function    getPitch
  * @description Return the up/down head rotation of the given `entity` (range: \-90 to 90).
  *
- * @param  {entity} [entity = Player] - the entity to query
+ * @param  {long}   [entity = Player] - the entity to query
  * @return {double}                   - the pitch value
  *
  * @see {@link getYaw} for a more detailed example
@@ -523,7 +525,7 @@
  * @function    getYaw
  * @description Return the left/right head rotation of the given `entity` (range: -∞ to ∞).
  *
- * @param  {entity} [entity = Player] - the entity to query
+ * @param  {long}   [entity = Player] - the entity to query
  * @return {double}                   - the yaw value
  *
  * @example
@@ -615,8 +617,8 @@
  * @function    rideAnimal
  * @description Make the specified `rider` entity ride the `target` entity.
  *
- * @param {entity} rider  - the rider
- * @param {entity} target - the target
+ * @param {long}   rider  - the rider
+ * @param {long}   target - the target
  *
  * @example
  * <caption>credit: {@link https://goo.gl/ZkEa8H|Zhuowei Zhang}</caption>
@@ -674,7 +676,7 @@
  * @description Set the location of the specified `entity` to the specified `x`, `y`, `z` coordinates;
  * If attackHook is not used, {@link Player.getEntity()} can be used as the entity parameter
  *
- * @param {entity} entity - the entity to be teleported
+ * @param {long}   entity - the entity to be teleported
  * @param {double} x      - the x coordinate
  * @param {double} y      - the y coordinate
  * @param {double} z      - the z coordinate
@@ -721,7 +723,7 @@
  * @description Set the location of the specified `entity` relative to the current `x`, `y`, `z` coordinates.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter
  *
- * @param {entity} entity - the entity to be teleported
+ * @param {long}   entity - the entity to be teleported
  * @param {double} x - the x coordinate
  * @param {double} y - the y coordinate
  * @param {double} z - the z coordinate
@@ -767,7 +769,7 @@
  * @description Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter.
  *
- * @param {entity} entity - the target entity that will have its head rotation modified
+ * @param {long}   entity - the target entity that will have its head rotation modified
  * @param {double} yaw    - the desired `yaw` of the entity
  * @param {double} pitch  - the desired `pitch` of the entity
  *
@@ -846,7 +848,7 @@
  * @function    setVelX
  * @description Set the specified `entity`'s `velocity` along the X axis.
  *
- * @param {entity} entity   - the target entity
+ * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
  *
  * @example
@@ -885,7 +887,7 @@
  * @function    setVelY
  * @description Set the specified `entity`'s `velocity` along the Y axis.
  *
- * @param {entity} entity   - the target entity
+ * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
  *
  * @see Example at {@link setVelX}
@@ -899,7 +901,7 @@
  * @function    setVelZ
  * @description Set the specified `entity`'s `velocity` along the Z axis.
  *
- * @param {entity} entity   - the target entity
+ * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
  *
  * @see Example at {@link setVelX}

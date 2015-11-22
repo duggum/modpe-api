@@ -1,6 +1,6 @@
 /**
  *
- * @namespace   {Class} Entity
+ * @namespace   Entity
  * @description Static methods for the Entity API
  *
  *////
@@ -395,7 +395,7 @@ function setRenderType(Object_, int_) {}
  * Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
  * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter.
  * @memberof Entity
- * @param {entity} entity - the target entity that will have its head rotation modified
+ * @param {long}   entity - the target entity that will have its head rotation modified
  * @param {double} yaw    - the desired `yaw` of the entity
  * @param {double} pitch  - the desired `pitch` of the entity
  * @see {@link getYaw} for a more detailed example
@@ -421,7 +421,7 @@ function setSneaking(Object_, boolean_) {}
  *
  * Set the specified `entity`'s `velocity` along the X axis.
  * @memberof Entity
- * @param {entity} entity   - the target entity
+ * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @example <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang}</caption>
  * var playerDir = [0, 0, 0];
@@ -454,7 +454,7 @@ function setVelX(entity, velocity) {}
  *
  * Set the specified `entity`'s `velocity` along the Y axis.
  * @memberof Entity
- * @param {entity} entity   - the target entity
+ * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @see Example at {@link Entity.setVelX}
  *
@@ -465,7 +465,7 @@ function setVelY(entity, velocity) {}
  *
  * Set the specified `entity`'s `velocity` along the Z axis.
  * @memberof Entity
- * @param {entity} entity   - the target entity
+ * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
  * @see Example at {@link Entity.setVelX}
  *

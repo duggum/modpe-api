@@ -55,34 +55,6 @@
 
 /**
  *
- * @typedef     {Object} block
- * @description __`ModPE`__ A MCPE block object
- *
- *////
-
-/**
- *
- * @typedef     {Object} entity
- * @description __`ModPE`__ A MCPE entity object
- *
- *////
-
-/**
- *
- * @typedef     {Object} player
- * @description __`ModPE`__ A MCPE player object
- *
- *////
-
-/**
- *
- * @typedef     {Object} item
- * @description __`ModPE`__ A MCPE item object
- *
- *////
-
-/**
- *
  * @typedef     {number} double
  * @description __`Java`__ A double-precision 64-bit floating point
  *

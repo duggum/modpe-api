@@ -141,8 +141,6 @@
       
       <span class="subtitle">Typedefs</span>
       
-          <li data-name="block"><a href="global.html#block">block</a></li>
-      
           <li data-name="boolean"><a href="global.html#boolean">boolean</a></li>
       
           <li data-name="byte"><a href="global.html#byte">byte</a></li>
@@ -153,23 +151,17 @@
       
           <li data-name="double"><a href="global.html#double">double</a></li>
       
-          <li data-name="entity"><a href="global.html#entity">entity</a></li>
-      
           <li data-name="float"><a href="global.html#float">float</a></li>
       
           <li data-name="HashMap"><a href="global.html#HashMap">HashMap</a></li>
       
           <li data-name="int"><a href="global.html#int">int</a></li>
       
-          <li data-name="item"><a href="global.html#item">item</a></li>
-      
           <li data-name="long"><a href="global.html#long">long</a></li>
       
           <li data-name="NativeApi"><a href="global.html#NativeApi">NativeApi</a></li>
       
           <li data-name="number"><a href="global.html#number">number</a></li>
-      
-          <li data-name="player"><a href="global.html#player">player</a></li>
       
           <li data-name="Scriptable"><a href="global.html#Scriptable">Scriptable</a></li>
       
@@ -934,15 +926,6 @@
 </div>
 
         
-            <h3>Example</h3>
-            
-
-    
-      <pre><code>Level.methodName([ arg1[, arg2[, ...argN] ] ]);</code></pre>
-    
-
-
-        
     
     </div>
 
@@ -968,11 +951,11 @@
 
     <h4 class="name" id=".addParticle">
 
-<span class="type-signature static">static</span>Level.addParticle(<span class="signature">particleType, blockX, blockY, blockZ, velocityX, velocityY, velocityZ, size</span>)
+<span class="type-signature static">static</span>Level.addParticle(<code class="signature">particleType, blockX, blockY, blockZ, velocityX, velocityY, velocityZ, size</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line29">line 29</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line8">line 8</a>
     </div>
 
   </div>
@@ -1017,7 +1000,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#int">int</a></span>
 
 
 
@@ -1041,7 +1024,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1052,7 +1035,7 @@
 
             <td class="description last">
                 
-                <p>the - block's x coordinate</p></td>
+                <p>the block's x coordinate</p></td>
         </tr>
 
 	
@@ -1065,7 +1048,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1076,7 +1059,7 @@
 
             <td class="description last">
                 
-                <p>the - block's y coordinate</p></td>
+                <p>the block's y coordinate</p></td>
         </tr>
 
 	
@@ -1089,7 +1072,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1100,7 +1083,7 @@
 
             <td class="description last">
                 
-                <p>the - block's z coordinate</p></td>
+                <p>the block's z coordinate</p></td>
         </tr>
 
 	
@@ -1113,7 +1096,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1124,7 +1107,7 @@
 
             <td class="description last">
                 
-                <p><strong>???</strong></p></td>
+                <p>particle velocity along the x axis</p></td>
         </tr>
 
 	
@@ -1137,7 +1120,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1148,7 +1131,7 @@
 
             <td class="description last">
                 
-                <p><strong>???</strong></p></td>
+                <p>particle velocity along the y axis</p></td>
         </tr>
 
 	
@@ -1161,7 +1144,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1172,7 +1155,7 @@
 
             <td class="description last">
                 
-                <p><strong>???</strong></p></td>
+                <p>particle velocity along the z axis</p></td>
         </tr>
 
 	
@@ -1185,7 +1168,7 @@
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#int">int</a></span>
 
 
 
@@ -1196,8 +1179,8 @@
 
             <td class="description last">
                 
-                <p><strong>???</strong> the particle size (smoke and ink require
-100 or greater; itemBreak requires 256 or greater)</p></td>
+                <p>the particle size (smoke and ink require 100 or
+                               greater; itemBreak requires 256 or greater)</p></td>
         </tr>
 
 	
@@ -1221,11 +1204,7 @@
 
 <ul>
 
-    <li class="icon"><i class="tag-since icon-since" title="Since"></i><span class="icon-text">BlockLauncher 1.10.3</span></li>
-
     <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text"><a href="global.html#ParticleType">ParticleType</a></span></li>
-
-    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">figure out what exactly the last four params do</span></li>
 
   </ul>
 </div>
@@ -1240,6 +1219,7 @@
 var x = Player.getPointedBlockX();
 var y = Player.getPointedBlockY();
 var z = Player.getPointedBlockZ();
+
 Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
     
 
@@ -1254,11 +1234,11 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
 
     <h4 class="name" id=".biomeIdToName">
 
-<span class="type-signature static">static</span>Level.biomeIdToName(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.biomeIdToName(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line32">line 32</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line43">line 43</a>
     </div>
 
   </div>
@@ -1301,11 +1281,11 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
 
     <h4 class="name" id=".destroyBlock">
 
-<span class="type-signature static">static</span>Level.destroyBlock(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.destroyBlock(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line35">line 35</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line51">line 51</a>
     </div>
 
   </div>
@@ -1348,11 +1328,11 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
 
     <h4 class="name" id=".dropItem">
 
-<span class="type-signature static">static</span>Level.dropItem(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.dropItem(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line38">line 38</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line59">line 59</a>
     </div>
 
   </div>
@@ -1395,11 +1375,11 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
 
     <h4 class="name" id=".explode">
 
-<span class="type-signature static">static</span>Level.explode(<span class="signature">x, y, z, radius</span>)
+<span class="type-signature static">static</span>Level.explode(<code class="signature">x, y, z, radius, hasFire</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line51">line 51</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line61">line 61</a>
     </div>
 
   </div>
@@ -1408,8 +1388,8 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
 <dd>
 
   <div class="description">
-    <p>cause an explosion of the specified <code>radius</code> with the center located at the
-specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
+    <p>Cause an explosion of the specified <code>radius</code> with the center
+             located at the specified <code>x</code>, <code>y</code> and <code>z</code> coordinates.</p>
   </div>
 
 
@@ -1445,7 +1425,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1456,7 +1436,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
 
             <td class="description last">
                 
-                <p>the  - x coordinate</p></td>
+                <p>the x coordinate</p></td>
         </tr>
 
 	
@@ -1469,7 +1449,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1480,7 +1460,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
 
             <td class="description last">
                 
-                <p>the  - y coordinate</p></td>
+                <p>the y coordinate</p></td>
         </tr>
 
 	
@@ -1493,7 +1473,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1504,7 +1484,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
 
             <td class="description last">
                 
-                <p>the  - z coordinate</p></td>
+                <p>the z coordinate</p></td>
         </tr>
 
 	
@@ -1517,7 +1497,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
             <td class="type">
             
                 
-  <span class="param-type"><a href="global.html#number">number</a></span>
+  <span class="param-type"><a href="global.html#double">double</a></span>
 
 
 
@@ -1529,6 +1509,30 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
             <td class="description last">
                 
                 <p>the radius</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>hasFire</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#boolean">boolean</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>if true the explosion produces fire, false otherwise</p></td>
         </tr>
 
 	
@@ -1562,7 +1566,7 @@ specified <code>x</code>, <code>y</code> and <code>z</code> coordinates</p>
 
     
       <pre><code>// underground nuclear warhead testing
-explode(127, 8, 45, 128);</code></pre>
+explode(127, 8, 45, 256, false);</code></pre>
     
 
 
@@ -1576,11 +1580,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getAddress">
 
-<span class="type-signature static">static</span>Level.getAddress(<span class="signature"></span>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
+<span class="type-signature static">static</span>Level.getAddress(<code class="signature"></code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line59">line 59</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line90">line 90</a>
     </div>
 
   </div>
@@ -1666,11 +1670,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getBiome">
 
-<span class="type-signature static">static</span>Level.getBiome(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getBiome(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line62">line 62</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line98">line 98</a>
     </div>
 
   </div>
@@ -1713,11 +1717,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getBiomeName">
 
-<span class="type-signature static">static</span>Level.getBiomeName(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getBiomeName(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line65">line 65</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line106">line 106</a>
     </div>
 
   </div>
@@ -1760,11 +1764,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getBrightness">
 
-<span class="type-signature static">static</span>Level.getBrightness(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getBrightness(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line68">line 68</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line114">line 114</a>
     </div>
 
   </div>
@@ -1807,11 +1811,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getChestSlot">
 
-<span class="type-signature static">static</span>Level.getChestSlot(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getChestSlot(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line71">line 71</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line122">line 122</a>
     </div>
 
   </div>
@@ -1854,11 +1858,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getChestSlotCount">
 
-<span class="type-signature static">static</span>Level.getChestSlotCount(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getChestSlotCount(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line74">line 74</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line130">line 130</a>
     </div>
 
   </div>
@@ -1901,11 +1905,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getChestSlotData">
 
-<span class="type-signature static">static</span>Level.getChestSlotData(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getChestSlotData(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line77">line 77</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line138">line 138</a>
     </div>
 
   </div>
@@ -1948,11 +1952,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getData">
 
-<span class="type-signature static">static</span>Level.getData(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getData(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line80">line 80</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line146">line 146</a>
     </div>
 
   </div>
@@ -1995,11 +1999,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getFurnaceSlot">
 
-<span class="type-signature static">static</span>Level.getFurnaceSlot(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getFurnaceSlot(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line83">line 83</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line154">line 154</a>
     </div>
 
   </div>
@@ -2042,11 +2046,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getFurnaceSlotCount">
 
-<span class="type-signature static">static</span>Level.getFurnaceSlotCount(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getFurnaceSlotCount(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line86">line 86</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line162">line 162</a>
     </div>
 
   </div>
@@ -2089,11 +2093,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getFurnaceSlotData">
 
-<span class="type-signature static">static</span>Level.getFurnaceSlotData(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getFurnaceSlotData(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line89">line 89</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line170">line 170</a>
     </div>
 
   </div>
@@ -2136,11 +2140,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getGameMode">
 
-<span class="type-signature static">static</span>Level.getGameMode(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getGameMode(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line92">line 92</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line178">line 178</a>
     </div>
 
   </div>
@@ -2183,11 +2187,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getGrassColor">
 
-<span class="type-signature static">static</span>Level.getGrassColor(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getGrassColor(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line95">line 95</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line186">line 186</a>
     </div>
 
   </div>
@@ -2230,11 +2234,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getLightningLevel">
 
-<span class="type-signature static">static</span>Level.getLightningLevel(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getLightningLevel(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line98">line 98</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line194">line 194</a>
     </div>
 
   </div>
@@ -2277,11 +2281,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getRainLevel">
 
-<span class="type-signature static">static</span>Level.getRainLevel(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getRainLevel(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line101">line 101</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line202">line 202</a>
     </div>
 
   </div>
@@ -2324,11 +2328,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getSignText">
 
-<span class="type-signature static">static</span>Level.getSignText(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getSignText(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line104">line 104</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line210">line 210</a>
     </div>
 
   </div>
@@ -2371,11 +2375,11 @@ explode(127, 8, 45, 128);</code></pre>
 
     <h4 class="name" id=".getTile">
 
-<span class="type-signature static">static</span>Level.getTile(<span class="signature">x, y, z</span>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
+<span class="type-signature static">static</span>Level.getTile(<code class="signature">x, y, z</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line126">line 126</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line235">line 235</a>
     </div>
 
   </div>
@@ -2573,11 +2577,11 @@ function modTick() {
 
     <h4 class="name" id=".getTime">
 
-<span class="type-signature static">static</span>Level.getTime(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getTime(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line129">line 129</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line243">line 243</a>
     </div>
 
   </div>
@@ -2620,11 +2624,11 @@ function modTick() {
 
     <h4 class="name" id=".getWorldDir">
 
-<span class="type-signature static">static</span>Level.getWorldDir(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getWorldDir(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line132">line 132</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line251">line 251</a>
     </div>
 
   </div>
@@ -2667,11 +2671,11 @@ function modTick() {
 
     <h4 class="name" id=".getWorldName">
 
-<span class="type-signature static">static</span>Level.getWorldName(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.getWorldName(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line135">line 135</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line259">line 259</a>
     </div>
 
   </div>
@@ -2714,11 +2718,11 @@ function modTick() {
 
     <h4 class="name" id=".playSound">
 
-<span class="type-signature static">static</span>Level.playSound(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.playSound(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line138">line 138</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line267">line 267</a>
     </div>
 
   </div>
@@ -2761,11 +2765,11 @@ function modTick() {
 
     <h4 class="name" id=".playSoundEnt">
 
-<span class="type-signature static">static</span>Level.playSoundEnt(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.playSoundEnt(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line141">line 141</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line275">line 275</a>
     </div>
 
   </div>
@@ -2808,11 +2812,11 @@ function modTick() {
 
     <h4 class="name" id=".setChestSlot">
 
-<span class="type-signature static">static</span>Level.setChestSlot(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setChestSlot(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line144">line 144</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line283">line 283</a>
     </div>
 
   </div>
@@ -2855,11 +2859,11 @@ function modTick() {
 
     <h4 class="name" id=".setFurnaceSlot">
 
-<span class="type-signature static">static</span>Level.setFurnaceSlot(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setFurnaceSlot(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line147">line 147</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line291">line 291</a>
     </div>
 
   </div>
@@ -2902,11 +2906,11 @@ function modTick() {
 
     <h4 class="name" id=".setGameMode">
 
-<span class="type-signature static">static</span>Level.setGameMode(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setGameMode(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line150">line 150</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line299">line 299</a>
     </div>
 
   </div>
@@ -2949,11 +2953,11 @@ function modTick() {
 
     <h4 class="name" id=".setGrassColor">
 
-<span class="type-signature static">static</span>Level.setGrassColor(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setGrassColor(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line153">line 153</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line307">line 307</a>
     </div>
 
   </div>
@@ -2996,11 +3000,11 @@ function modTick() {
 
     <h4 class="name" id=".setLightningLevel">
 
-<span class="type-signature static">static</span>Level.setLightningLevel(<span class="signature">level</span>)
+<span class="type-signature static">static</span>Level.setLightningLevel(<code class="signature">level</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line160">line 160</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line317">line 317</a>
     </div>
 
   </div>
@@ -3094,11 +3098,11 @@ function modTick() {
 
     <h4 class="name" id=".setNightMode">
 
-<span class="type-signature static">static</span>Level.setNightMode(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setNightMode(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line163">line 163</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line325">line 325</a>
     </div>
 
   </div>
@@ -3141,11 +3145,11 @@ function modTick() {
 
     <h4 class="name" id=".setRainLevel">
 
-<span class="type-signature static">static</span>Level.setRainLevel(<span class="signature">level</span>)
+<span class="type-signature static">static</span>Level.setRainLevel(<code class="signature">level</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line170">line 170</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line335">line 335</a>
     </div>
 
   </div>
@@ -3239,11 +3243,11 @@ function modTick() {
 
     <h4 class="name" id=".setSignText">
 
-<span class="type-signature static">static</span>Level.setSignText(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setSignText(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line173">line 173</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line343">line 343</a>
     </div>
 
   </div>
@@ -3286,11 +3290,11 @@ function modTick() {
 
     <h4 class="name" id=".setSpawn">
 
-<span class="type-signature static">static</span>Level.setSpawn(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setSpawn(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line176">line 176</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line351">line 351</a>
     </div>
 
   </div>
@@ -3333,11 +3337,11 @@ function modTick() {
 
     <h4 class="name" id=".setSpawnerEntityType">
 
-<span class="type-signature static">static</span>Level.setSpawnerEntityType(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setSpawnerEntityType(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line179">line 179</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line359">line 359</a>
     </div>
 
   </div>
@@ -3380,11 +3384,11 @@ function modTick() {
 
     <h4 class="name" id=".setTile">
 
-<span class="type-signature static">static</span>Level.setTile(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setTile(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line182">line 182</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line367">line 367</a>
     </div>
 
   </div>
@@ -3427,11 +3431,11 @@ function modTick() {
 
     <h4 class="name" id=".setTime">
 
-<span class="type-signature static">static</span>Level.setTime(<span class="signature"></span>)
+<span class="type-signature static">static</span>Level.setTime(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line185">line 185</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line375">line 375</a>
     </div>
 
   </div>
@@ -3474,11 +3478,11 @@ function modTick() {
 
     <h4 class="name" id=".spawnChicken">
 
-<span class="type-signature static">static</span>Level.spawnChicken(<span class="signature">x, y, z, skin</span>)
+<span class="type-signature static">static</span>Level.spawnChicken(<code class="signature">x, y, z, skin</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line214">line 214</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line407">line 407</a>
     </div>
 
   </div>
@@ -3673,11 +3677,11 @@ function useItem(x, y, z, itemId, blockId, side) {
 
     <h4 class="name" id=".spawnCow">
 
-<span class="type-signature static">static</span>Level.spawnCow(<span class="signature">x, y, z, skin</span>)
+<span class="type-signature static">static</span>Level.spawnCow(<code class="signature">x, y, z, skin</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line243">line 243</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line409">line 409</a>
     </div>
 
   </div>
@@ -3872,11 +3876,11 @@ function useItem(x, y, z, itemId, blockId, side) {
 
     <h4 class="name" id=".spawnMob">
 
-<span class="type-signature static">static</span>Level.spawnMob(<span class="signature">x, y, z, id, skin</span>)
+<span class="type-signature static">static</span>Level.spawnMob(<code class="signature">x, y, z, id, skin</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="native-api_level.jsdoc.html">native-api/level.jsdoc</a>, <a href="native-api_level.jsdoc.html#line259">line 259</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line459">line 459</a>
     </div>
 
   </div>
@@ -4087,7 +4091,7 @@ Level.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");</code></pr
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Mon Nov 16 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Wed Nov 18 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>
