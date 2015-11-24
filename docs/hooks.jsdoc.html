@@ -253,6 +253,10 @@
       
         <li data-name="Entity.getAnimalAge"><a href="Entity.html#.getAnimalAge">getAnimalAge</a></li>
       
+        <li data-name="Entity.getArmor"><a href="Entity.html#.getArmor">getArmor</a></li>
+      
+        <li data-name="Entity.getArmorDamage"><a href="Entity.html#.getArmorDamage">getArmorDamage</a></li>
+      
         <li data-name="Entity.getEntityTypeId"><a href="Entity.html#.getEntityTypeId">getEntityTypeId</a></li>
       
         <li data-name="Entity.getHealth"><a href="Entity.html#.getHealth">getHealth</a></li>
@@ -302,6 +306,8 @@
         <li data-name="Entity.rideAnimal"><a href="Entity.html#.rideAnimal">rideAnimal</a></li>
       
         <li data-name="Entity.setAnimalAge"><a href="Entity.html#.setAnimalAge">setAnimalAge</a></li>
+      
+        <li data-name="Entity.setArmor"><a href="Entity.html#.setArmor">setArmor</a></li>
       
         <li data-name="Entity.setCape"><a href="Entity.html#.setCape">setCape</a></li>
       
@@ -380,6 +386,8 @@
         <li data-name="Hooks#destroyBlock"><a href="Hooks.html#destroyBlock">destroyBlock</a></li>
       
         <li data-name="Hooks#eatHook"><a href="Hooks.html#eatHook">eatHook</a></li>
+      
+        <li data-name="Hooks#entityAddedHook"><a href="Hooks.html#entityAddedHook">entityAddedHook</a></li>
       
         <li data-name="Hooks#entityRemovedHook"><a href="Hooks.html#entityRemovedHook">entityRemovedHook</a></li>
       
@@ -936,13 +944,13 @@
  * @instance
  * @memberof    Hooks
  * @function    blockEventHook
- * @description blockEventHook description
+ * @description Callback that is triggered when a chest is opened or closed.
  *
- * @param   {int} x    - the chest's x coordiante
- * @param   {int} y    - the chest's y coordiante
- * @param   {int} z    - the chest's z coordiante
- * @param   {int} type - the event type (seems to always be 1)
- * @param   {int} data - the open/close data (0 = closing, 1 = opening, 2 = open)
+ * @param {int} x    - the chest's x coordiante
+ * @param {int} y    - the chest's y coordiante
+ * @param {int} z    - the chest's z coordiante
+ * @param {int} type - the event type (seems to always be 1)
+ * @param {int} data - the open/close data (0 = closing, 1 = opening, 2 = open)
  *
  * @example
  * // Announce the opening of a chest
@@ -953,6 +961,7 @@
  *     clientMessage("The chest has been closed");
  *   }
  * }
+ *
  *////
 
 
@@ -961,14 +970,17 @@
  * @instance
  * @memberof    Hooks
  * @function    chatHook
- * @description ?
+ * @description Callback that is triggered when a chat message is sent
+ *
+ * @param {string} text - the message text
  *
  * @example
- *
- * // code here
+ * // repeat after me
+ * function chatHook(text) {
+ *   clientMessage(ChatColor.RED + text);
+ * }
  *
  *////
-function chatHook(text) {}
 
 /**
  *
@@ -978,7 +990,6 @@ function chatHook(text) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -992,7 +1003,6 @@ function chatReceiveHook(String_text, String_senderName) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1006,7 +1016,6 @@ function deathHook(int_attackerId, int_victimId) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1020,7 +1029,6 @@ function destroyBlock(int_x, int_y, int_z, int_side) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1033,7 +1041,7 @@ function eatHook(hearts, saturationRatio) {}
  * @function    entityAddedHook
  * @description ?
  *
- ///
+ *////
 function entityAddedHook(int_entityId) {}
 
 /**
@@ -1044,7 +1052,6 @@ function entityAddedHook(int_entityId) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1058,7 +1065,6 @@ function entityRemovedHook(int_entityId) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1072,7 +1078,6 @@ function explodeHook(entity, x, y, z, power, onFire) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1080,17 +1085,31 @@ function leaveGame() {}
 
 /**
  *
+ * @todo better example once this is working in 0.13
+ *
  * @instance
  * @memberof    Hooks
  * @function    levelEventHook
- * @description ?
+ * @description Callback that is triggered when a door is opened or closed.
+ *
+ * @param {int} player    - the player entity that activated the door
+ * @param {int} eventType - the event type (seems to always be 1)
+ * @param {int} x         - the door's x coordiante
+ * @param {int} y         - the door's y coordiante
+ * @param {int} z         - the door's z coordiante
+ * @param {int} data      - the open/close data (0 = closing, 1 = opening, 2 = open)
  *
  * @example
- *
- * // code here
+ * // Announce the opening of a door
+ * function levelEventHook(player, eventType, x, y, z, data) {
+ *   if (data === 1) {
+ *     clientMessage("A door was opened at location " + x + " : " + y + " : " + z);
+ *   } else if (data === 0) {
+ *     clientMessage("The door has been closed");
+ *   }
+ * }
  *
  *////
-function levelEventHook(player, eventType, x, y, z, data) {}
 
 /**
  *
@@ -1100,7 +1119,6 @@ function levelEventHook(player, eventType, x, y, z, data) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1114,7 +1132,6 @@ function modTick() {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1128,7 +1145,6 @@ function newLevel() {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1142,7 +1158,6 @@ function procCmd(String_cmd) {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1156,7 +1171,6 @@ function selectLevelHook() {}
  * @description ?
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1164,26 +1178,31 @@ function serverMessageReceiveHook(String_str) {}
 
 /**
  *
+ * @todo confirm this and refine description
+ *
  * @instance
  * @memberof    Hooks
  * @function    startDestroyBlock
- * @description ?
+ * @description Callback function that is triggered when a block
+ *              starts being destroyed.
+ *
+ * @param {int} x         - the x coordinate of the block
+ * @param {int} y         - the y coordinate of the block
+ * @param {int} z         - the z coordinate of the block
+ * @param {int} blockSide - the side of the block that was tapped
  *
  * @example
- *
  * // code here
  *
  *////
-function startDestroyBlock(int_x, int_y, int_z, int_side) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    useItem
- * @description Event listener that is triggered when an item is used
- *              to tap or destroy a block. When the event is fired, the
- *              following data is sent as arguments to this function:
+ * @description Callback function that is triggered when an item is used
+ *              on a block.
  *
  * @param {int} x           - the x coordinate of the block
  * @param {int} y           - the y coordinate of the block
@@ -1194,7 +1213,6 @@ function startDestroyBlock(int_x, int_y, int_z, int_side) {}
  * @param {int} blockDamage - the damage data for the block
  *
  * @example
- *
  * // code here
  *
  *////
@@ -1208,7 +1226,7 @@ function startDestroyBlock(int_x, int_y, int_z, int_side) {}
 
         <footer>
           <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Wed Nov 18 2015</p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Tue Nov 24 2015</p>
           <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

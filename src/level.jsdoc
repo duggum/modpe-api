@@ -74,7 +74,7 @@ function dropItem(double1, double2, double3, double4, int1, int2, int3) {}
  * @example
  *
  * // underground nuclear warhead testing
- * explode(127, 8, 45, 256, false);
+ * Level.explode(127, 8, 45, 256, false);
  *
  *////
 

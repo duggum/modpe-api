@@ -64,7 +64,6 @@
  * @member      EntityRenderType
  * @description Determines the shape of creature to render, not the skin.
  *              To change the skin see {@link http://devd.io:8000/modpe_global.jsdoc.html#line62|Entity.setMobSkin}.
- *              Also see the {@tutorial foo|Foo} for great win.
  *
  * @property {int[]} allTypes       - [ 2, . . . 45 ]
  * @property {int}   arrow          - 32

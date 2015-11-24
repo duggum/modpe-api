@@ -79,6 +79,20 @@ function getAnimalAge(Object_) {}
  * @memberof Entity
  *
  *////
+function getArmor(Object, int) {}
+
+/**
+ *
+ * @memberof Entity
+ *
+ *////
+function getArmorDamage(Object, int) {}
+
+/**
+ *
+ * @memberof Entity
+ *
+ *////
 function getEntityTypeId(Object_) {}
 
 /**
@@ -305,6 +319,13 @@ function rideAnimal(Object1, Object2) {}
  *
  *////
 function setAnimalAge(Object_, int_) {}
+
+/**
+ *
+ * @memberof Entity
+ *
+ *////
+function setArmor(Object, int1, int2, int3) {}
 
 /**
  *

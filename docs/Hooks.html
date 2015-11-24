@@ -253,6 +253,10 @@
       
         <li data-name="Entity.getAnimalAge"><a href="Entity.html#.getAnimalAge">getAnimalAge</a></li>
       
+        <li data-name="Entity.getArmor"><a href="Entity.html#.getArmor">getArmor</a></li>
+      
+        <li data-name="Entity.getArmorDamage"><a href="Entity.html#.getArmorDamage">getArmorDamage</a></li>
+      
         <li data-name="Entity.getEntityTypeId"><a href="Entity.html#.getEntityTypeId">getEntityTypeId</a></li>
       
         <li data-name="Entity.getHealth"><a href="Entity.html#.getHealth">getHealth</a></li>
@@ -302,6 +306,8 @@
         <li data-name="Entity.rideAnimal"><a href="Entity.html#.rideAnimal">rideAnimal</a></li>
       
         <li data-name="Entity.setAnimalAge"><a href="Entity.html#.setAnimalAge">setAnimalAge</a></li>
+      
+        <li data-name="Entity.setArmor"><a href="Entity.html#.setArmor">setArmor</a></li>
       
         <li data-name="Entity.setCape"><a href="Entity.html#.setCape">setCape</a></li>
       
@@ -380,6 +386,8 @@
         <li data-name="Hooks#destroyBlock"><a href="Hooks.html#destroyBlock">destroyBlock</a></li>
       
         <li data-name="Hooks#eatHook"><a href="Hooks.html#eatHook">eatHook</a></li>
+      
+        <li data-name="Hooks#entityAddedHook"><a href="Hooks.html#entityAddedHook">entityAddedHook</a></li>
       
         <li data-name="Hooks#entityRemovedHook"><a href="Hooks.html#entityRemovedHook">entityRemovedHook</a></li>
       
@@ -1107,7 +1115,7 @@ blockEventHook(<code class="signature">x, y, z, type, data</code>)
 <dd>
 
   <div class="description">
-    <p>blockEventHook description</p>
+    <p>Callback that is triggered when a chest is opened or closed.</p>
   </div>
 
 
@@ -1304,11 +1312,11 @@ function blockEventHook(x, y, z, eventType, data) {
 
     <h4 class="name" id="chatHook">
 
-chatHook(<code class="signature"></code>)
+chatHook(<code class="signature">text</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line60">line 60</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line61">line 61</a>
     </div>
 
   </div>
@@ -1317,12 +1325,59 @@ chatHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback that is triggered when a chat message is sent</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#string">string</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the message text</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1350,7 +1405,10 @@ chatHook(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// repeat after me
+function chatHook(text) {
+  clientMessage(ChatColor.RED + text);
+}</code></pre>
     
 
 
@@ -1368,7 +1426,7 @@ chatReceiveHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line74">line 74</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line78">line 78</a>
     </div>
 
   </div>
@@ -1428,7 +1486,7 @@ deathHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line88">line 88</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line91">line 91</a>
     </div>
 
   </div>
@@ -1488,7 +1546,7 @@ destroyBlock(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line102">line 102</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line104">line 104</a>
     </div>
 
   </div>
@@ -1548,7 +1606,7 @@ eatHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line116">line 116</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line117">line 117</a>
     </div>
 
   </div>
@@ -1602,13 +1660,64 @@ eatHook(<code class="signature"></code>)
 <dt>
   <div class="nameContainer">
 
+    <h4 class="name" id="entityAddedHook">
+
+entityAddedHook(<code class="signature"></code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line130">line 130</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>?</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
     <h4 class="name" id="entityRemovedHook">
 
 entityRemovedHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line130">line 130</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line140">line 140</a>
     </div>
 
   </div>
@@ -1668,7 +1777,7 @@ explodeHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line154">line 154</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line153">line 153</a>
     </div>
 
   </div>
@@ -1728,7 +1837,7 @@ leaveGame(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line168">line 168</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line166">line 166</a>
     </div>
 
   </div>
@@ -1784,11 +1893,11 @@ leaveGame(<code class="signature"></code>)
 
     <h4 class="name" id="levelEventHook">
 
-levelEventHook(<code class="signature"></code>)
+levelEventHook(<code class="signature">player, eventType, x, y, z, data</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line182">line 182</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line179">line 179</a>
     </div>
 
   </div>
@@ -1797,12 +1906,179 @@ levelEventHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback that is triggered when a door is opened or closed.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the player entity that activated the door</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>eventType</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the event type (seems to always be 1)</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the door's x coordiante</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the door's y coordiante</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>z</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the door's z coordiante</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the open/close data (0 = closing, 1 = opening, 2 = open)</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1821,6 +2097,8 @@ levelEventHook(<code class="signature"></code>)
 
 <ul>
 
+    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">better example once this is working in 0.13</span></li>
+
   </ul>
 </div>
 
@@ -1830,7 +2108,14 @@ levelEventHook(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// Announce the opening of a door
+function levelEventHook(player, eventType, x, y, z, data) {
+  if (data === 1) {
+    clientMessage("A door was opened at location " + x + " : " + y + " : " + z);
+  } else if (data === 0) {
+    clientMessage("The door has been closed");
+  }
+}</code></pre>
     
 
 
@@ -1848,7 +2133,7 @@ modTick(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line196">line 196</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line207">line 207</a>
     </div>
 
   </div>
@@ -1908,7 +2193,7 @@ newLevel(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line210">line 210</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line220">line 220</a>
     </div>
 
   </div>
@@ -1968,7 +2253,7 @@ procCmd(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line224">line 224</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line233">line 233</a>
     </div>
 
   </div>
@@ -2028,7 +2313,7 @@ selectLevelHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line238">line 238</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line246">line 246</a>
     </div>
 
   </div>
@@ -2088,7 +2373,7 @@ serverMessageReceiveHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line252">line 252</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line259">line 259</a>
     </div>
 
   </div>
@@ -2144,11 +2429,11 @@ serverMessageReceiveHook(<code class="signature"></code>)
 
     <h4 class="name" id="startDestroyBlock">
 
-startDestroyBlock(<code class="signature"></code>)
+startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line266">line 266</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line272">line 272</a>
     </div>
 
   </div>
@@ -2157,12 +2442,132 @@ startDestroyBlock(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is triggered when a block
+             starts being destroyed.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the x coordinate of the block</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the y coordinate of the block</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>z</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the z coordinate of the block</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>blockSide</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the side of the block that was tapped</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -2180,6 +2585,8 @@ startDestroyBlock(<code class="signature"></code>)
 <div class="details">
 
 <ul>
+
+    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">confirm this and refine description</span></li>
 
   </ul>
 </div>
@@ -2208,7 +2615,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line280">line 280</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line292">line 292</a>
     </div>
 
   </div>
@@ -2217,9 +2624,8 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 <dd>
 
   <div class="description">
-    <p>Event listener that is triggered when an item is used
-             to tap or destroy a block. When the event is fired, the
-             following data is sent as arguments to this function:</p>
+    <p>Callback function that is triggered when an item is used
+             on a block.</p>
   </div>
 
 
@@ -2465,7 +2871,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Wed Nov 18 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Tue Nov 24 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>
