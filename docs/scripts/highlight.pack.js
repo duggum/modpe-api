@@ -1094,7 +1094,7 @@
         },
         {
           className:"starters",
-          begin:/\s(-|\+){1}\s/
+          begin:/\s(-|\+){1}/
         },
         {
           className:"modpe",

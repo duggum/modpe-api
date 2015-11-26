@@ -1,10 +1,8 @@
 /**
  *
  * @namespace   Hooks
- * @description Hook functions for the ModPE API. These functions are used to
- *              execute other functions when certain game events occur.
- *
- * @todo code examples
+ * @description Callback functions for the ModPE API. These functions are used to
+ *              execute other code when certain game events occur.
  *
  *////
 
@@ -13,10 +11,10 @@
  * @instance
  * @memberof    Hooks
  * @function    attackHook
- * @description Callback that is triggered when an entity is attacked.
+ * @description Callback function that is called when an entity is attacked.
  *
- * @param {long} attackerId - the attacker's native entity id
- * @param {long} victimId   - the victim's native entity id
+ * @param {long} attacker - the attacker's native entity ID
+ * @param {long} victim   - the victim's native entity ID
  *
  * @example
  * <caption>Credit: {@link https://goo.gl/4FYd5w|Connor4898}</caption>
@@ -37,7 +35,7 @@
  * @instance
  * @memberof    Hooks
  * @function    blockEventHook
- * @description Callback that is triggered when a chest is opened or closed.
+ * @description Callback function that is called when a chest is opened or closed.
  *
  * @param {int} x    - the chest's x coordiante
  * @param {int} y    - the chest's y coordiante
@@ -57,20 +55,19 @@
  *
  *////
 
-
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    chatHook
- * @description Callback that is triggered when a chat message is sent
+ * @description Callback function that is called when a chat message is sent.
  *
- * @param {string} text - the message text
+ * @param {string} str - the message text
  *
  * @example
  * // repeat after me
- * function chatHook(text) {
- *   clientMessage(ChatColor.RED + text);
+ * function chatHook(str) {
+ *   clientMessage(ChatColor.RED + str);
  * }
  *
  *////
@@ -80,82 +77,137 @@
  * @instance
  * @memberof    Hooks
  * @function    chatReceiveHook
- * @description ?
+ * @description Callback function that is called when a chat message is received.
+ *
+ * @param {string} str    - the message text
+ * @param {string} sender - the sender of the message
  *
  * @example
- * // code here
+ * // who said that?
+ * function chatReceiveHook(str, sender) {
+ *   clientMessage(ChatColor.RED + sender + " says: " + str);
+ * }
  *
  *////
-function chatReceiveHook(String_text, String_senderName) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    deathHook
- * @description ?
+ * @description Callback function that is called when an entity dies.
+ *
+ * @param {int} attacker - the attacker's native entity ID
+ * @param {int} victim   - the victim's native entity ID
  *
  * @example
- * // code here
+ * <caption>Credit: {@link https://goo.gl/0ORrpq|Connor4898}</caption>
+ *
+ * // shame on you!
+ * function deathHook(attacker, victim) {
+ *   if (Player.getEntity() == attacker) {
+ *     clientMessage("How could you?!");
+ *   }
+ * }
  *
  *////
-function deathHook(int_attackerId, int_victimId) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    destroyBlock
- * @description ?
+ * @description Callback function that is called when a block is destroyed.
+ *
+ * @param {int} x    - the x coordinate of the block
+ * @param {int} y    - the y coordinate of the block
+ * @param {int} z    - the z coordinate of the block
+ * @param {int} side - the side of the block that was targeted
  *
  * @example
- * // code here
+ * // let the world know a block was destroyed
+ * function destroyBlock(x, y, z, side) {
+ *   clientMessage("A block was destroyed at: " + x + ":" + y + ":" + z);
+ * }
  *
  *////
-function destroyBlock(int_x, int_y, int_z, int_side) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    eatHook
- * @description ?
+ * @description Callback function that is called when the player eats.
+ *
+ * @param {int}   foodPoints      - the number of half-drumsticks restored by the food item
+ * @param {float} saturationRatio - the level of saturation provided per food point
  *
  * @example
- * // code here
+ * // yummy food is yummy
+ * function eatHook(foodPoints, saturationRatio) {
+ *   clientMessage(
+ *     ChatColor.DARK_PURPLE +
+ *     "That yummy snack replenished " + foodPoints +
+ *     " half-drumsticks\nwith a saturation ratio of: " +
+ *     saturationRatio
+ *   );
+ * }
  *
  *////
-function eatHook(hearts, saturationRatio) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    entityAddedHook
- * @description ?
+ * @description Callback function that is called when an entity is added to the world.
+ *              This includes arrows and falling blocks.
+ *
+ * @param {long} entity - the native entity id
+ *
+ * @example
+ * // enderman warning
+ * function entityAddedHook(entity) {
+ *   var entityType = Entity.getEntityTypeId(entity);
+ *   if (entityType === 38) {
+ *     clientMessage(ChatColor.RED + "Enderman in da house!");
+ *   }
+ * }
  *
  *////
-function entityAddedHook(int_entityId) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    entityRemovedHook
- * @description ?
+ * @description Callback function that is called when an entity is despawns or dies.
+ *
+ * @param {long} entity - the native entity id
  *
  * @example
- * // code here
+ * // what a tragedy!
+ * function entityRemovedHook(entity) {
+ *   if (Entity.getEntityTypeId(entity) === 10) {
+ *     clientMessage("Another brave chicken has passed from this world.");
+ *   }
+ * }
  *
  *////
-function entityRemovedHook(int_entityId) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    explodeHook
- * @description ?
+ * @description Callback function that is called when
+ *
+ * @param {long}    entity -
+ * @param {float}   x      -
+ * @param {float}   y      -
+ * @param {float}   z      -
+ * @param {float}   power  -
+ * @param {boolean} onFire -
  *
  * @example
  * // code here
@@ -168,7 +220,7 @@ function explodeHook(entity, x, y, z, power, onFire) {}
  * @instance
  * @memberof    Hooks
  * @function    leaveGame
- * @description ?
+ * @description Callback function that is called when
  *
  * @example
  * // code here
@@ -183,7 +235,7 @@ function leaveGame() {}
  * @instance
  * @memberof    Hooks
  * @function    levelEventHook
- * @description Callback that is triggered when a door is opened or closed.
+ * @description Callback function that is called when a door is opened or closed.
  *
  * @param {int} player    - the player entity that activated the door
  * @param {int} eventType - the event type (seems to always be 1)
@@ -209,7 +261,7 @@ function leaveGame() {}
  * @instance
  * @memberof    Hooks
  * @function    modTick
- * @description ?
+ * @description Callback function that is called when
  *
  * @example
  * // code here
@@ -222,7 +274,7 @@ function modTick() {}
  * @instance
  * @memberof    Hooks
  * @function    newLevel
- * @description ?
+ * @description Callback function that is called when
  *
  * @example
  * // code here
@@ -235,7 +287,7 @@ function newLevel() {}
  * @instance
  * @memberof    Hooks
  * @function    procCmd
- * @description ?
+ * @description Callback function that is called when
  *
  * @example
  * // code here
@@ -248,7 +300,7 @@ function procCmd(String_cmd) {}
  * @instance
  * @memberof    Hooks
  * @function    selectLevelHook
- * @description ?
+ * @description Callback function that is called when
  *
  * @example
  * // code here
@@ -261,7 +313,7 @@ function selectLevelHook() {}
  * @instance
  * @memberof    Hooks
  * @function    serverMessageReceiveHook
- * @description ?
+ * @description Callback function that is called when
  *
  * @example
  * // code here
@@ -271,21 +323,24 @@ function serverMessageReceiveHook(String_str) {}
 
 /**
  *
- * @todo confirm this and refine description
+ * @todo confirm this - it doesn't seem to work as of BL 1.11b4
  *
  * @instance
  * @memberof    Hooks
  * @function    startDestroyBlock
- * @description Callback function that is triggered when a block
+ * @description Callback function function that is called when a block
  *              starts being destroyed.
  *
- * @param {int} x         - the x coordinate of the block
- * @param {int} y         - the y coordinate of the block
- * @param {int} z         - the z coordinate of the block
- * @param {int} blockSide - the side of the block that was tapped
+ * @param {int} x    - the x coordinate of the block
+ * @param {int} y    - the y coordinate of the block
+ * @param {int} z    - the z coordinate of the block
+ * @param {int} side - the side of the block that was targeted
  *
  * @example
- * // code here
+ * // let the world know a block is being destroyed
+ * function startDestroyBlock(x, y, z, side) {
+ *   clientMessage("A block is being destroyed at: " + x + ":" + y + ":" + z);
+ * }
  *
  *////
 
@@ -294,7 +349,7 @@ function serverMessageReceiveHook(String_str) {}
  * @instance
  * @memberof    Hooks
  * @function    useItem
- * @description Callback function that is triggered when an item is used
+ * @description Callback function function that is called when an item is used
  *              on a block.
  *
  * @param {int} x           - the x coordinate of the block

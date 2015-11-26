@@ -6,19 +6,13 @@
  *
  * @todo Move these to a manual or tutorial page
  *
- * ***/
-function Reference() {
+ *////
 
   /**
    *
-   * @lends    Reference.prototype
-   *
-   * ***/
-  var ref = {
-
-  /**
-   *
-   * BlockIds
+   * @instance
+   * @memberof    Reference
+   * @name        BlockIds
    * @description Block data values.
    *
    * @property {int} Air                                 - 0
@@ -169,14 +163,14 @@ function Reference() {
    * @property {int} Update&nbsp;Game&nbsp;Block         - 249
    * @property {int} info_reserved6                      - 255
    *
-   * ***/
-   BlockIds: {},
+   *////
 
   /**
    *
-   * BlockRenderTypes
-   * @description Block render types - determines the shape (NOT size) of a block;
-   *              useful when defining custom blocks.
+   * @instance
+   * @memberof    Reference
+   * @name        BlockRenderTypes
+   * @description The shape (NOT size) of a block; useful when defining custom blocks.
    *
    * @see {@link Block.defineBlock}, {@link Block.getRenderType}, {@link Block.setRenderType}
    *
@@ -196,12 +190,13 @@ function Reference() {
    * @property {int} Stem            - 19
    * @property {int} Fence&nbsp;Gate - 21
    *
-   * ***/
-   BlockRenderTypes: {},
+   *////
 
   /**
    *
-   * ItemIds
+   * @instance
+   * @memberof    Reference
+   * @name        ItemIds
    * @description Item data values.
    *
    * @property {int} Iron&nbsp;Shovel               - 256
@@ -342,7 +337,4 @@ function Reference() {
    * @property {int} Beetroot&nbsp;Seeds            - 458
    * @property {int} Beetroot&nbsp;Soup             - 459
    *
-   * ***/
-   ItemIds: {}
- };
-}
+   *////

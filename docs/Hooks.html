@@ -531,6 +531,8 @@
       
         <li data-name="Level.getSignText"><a href="Level.html#.getSignText">getSignText</a></li>
       
+        <li data-name="Level.getSpawnerEntityType"><a href="Level.html#.getSpawnerEntityType">getSpawnerEntityType</a></li>
+      
         <li data-name="Level.getTile"><a href="Level.html#.getTile">getTile</a></li>
       
         <li data-name="Level.getTime"><a href="Level.html#.getTime">getTime</a></li>
@@ -923,15 +925,13 @@
 
     
         
-            <div class="description"><p>Hook functions for the ModPE API. These functions are used to
-             execute other functions when certain game events occur.</p></div>
+            <div class="description"><p>Callback functions for the ModPE API. These functions are used to
+             execute other code when certain game events occur.</p></div>
         
         
 <div class="details">
 
 <ul>
-
-    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">code examples</span></li>
 
   </ul>
 </div>
@@ -962,11 +962,11 @@
 
     <h4 class="name" id="attackHook">
 
-attackHook(<code class="signature">attackerId, victimId</code>)
+attackHook(<code class="signature">attacker, victim</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line11">line 11</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line9">line 9</a>
     </div>
 
   </div>
@@ -975,7 +975,7 @@ attackHook(<code class="signature">attackerId, victimId</code>)
 <dd>
 
   <div class="description">
-    <p>Callback that is triggered when an entity is attacked.</p>
+    <p>Callback function that is called when an entity is attacked.</p>
   </div>
 
 
@@ -1005,7 +1005,7 @@ attackHook(<code class="signature">attackerId, victimId</code>)
 
         <tr>
             
-                <td class="name"><code>attackerId</code></td>
+                <td class="name"><code>attacker</code></td>
             
 
             <td class="type">
@@ -1022,14 +1022,14 @@ attackHook(<code class="signature">attackerId, victimId</code>)
 
             <td class="description last">
                 
-                <p>the attacker's native entity id</p></td>
+                <p>the attacker's native entity ID</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>victimId</code></td>
+                <td class="name"><code>victim</code></td>
             
 
             <td class="type">
@@ -1046,7 +1046,7 @@ attackHook(<code class="signature">attackerId, victimId</code>)
 
             <td class="description last">
                 
-                <p>the victim's native entity id</p></td>
+                <p>the victim's native entity ID</p></td>
         </tr>
 
 	
@@ -1106,7 +1106,7 @@ blockEventHook(<code class="signature">x, y, z, type, data</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line35">line 35</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line33">line 33</a>
     </div>
 
   </div>
@@ -1115,7 +1115,7 @@ blockEventHook(<code class="signature">x, y, z, type, data</code>)
 <dd>
 
   <div class="description">
-    <p>Callback that is triggered when a chest is opened or closed.</p>
+    <p>Callback function that is called when a chest is opened or closed.</p>
   </div>
 
 
@@ -1312,11 +1312,11 @@ function blockEventHook(x, y, z, eventType, data) {
 
     <h4 class="name" id="chatHook">
 
-chatHook(<code class="signature">text</code>)
+chatHook(<code class="signature">str</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line61">line 61</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line58">line 58</a>
     </div>
 
   </div>
@@ -1325,7 +1325,7 @@ chatHook(<code class="signature">text</code>)
 <dd>
 
   <div class="description">
-    <p>Callback that is triggered when a chat message is sent</p>
+    <p>Callback function that is called when a chat message is sent.</p>
   </div>
 
 
@@ -1355,7 +1355,7 @@ chatHook(<code class="signature">text</code>)
 
         <tr>
             
-                <td class="name"><code>text</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
@@ -1406,8 +1406,8 @@ chatHook(<code class="signature">text</code>)
 
     
       <pre><code>// repeat after me
-function chatHook(text) {
-  clientMessage(ChatColor.RED + text);
+function chatHook(str) {
+  clientMessage(ChatColor.RED + str);
 }</code></pre>
     
 
@@ -1422,11 +1422,11 @@ function chatHook(text) {
 
     <h4 class="name" id="chatReceiveHook">
 
-chatReceiveHook(<code class="signature"></code>)
+chatReceiveHook(<code class="signature">str, sender</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line78">line 78</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line75">line 75</a>
     </div>
 
   </div>
@@ -1435,12 +1435,83 @@ chatReceiveHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when a chat message is received.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#string">string</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the message text</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>sender</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#string">string</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the sender of the message</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1468,7 +1539,10 @@ chatReceiveHook(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// who said that?
+function chatReceiveHook(str, sender) {
+  clientMessage(ChatColor.RED + sender + " says: " + str);
+}</code></pre>
     
 
 
@@ -1482,11 +1556,11 @@ chatReceiveHook(<code class="signature"></code>)
 
     <h4 class="name" id="deathHook">
 
-deathHook(<code class="signature"></code>)
+deathHook(<code class="signature">attacker, victim</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line91">line 91</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line93">line 93</a>
     </div>
 
   </div>
@@ -1495,12 +1569,83 @@ deathHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when an entity dies.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>attacker</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the attacker's native entity ID</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>victim</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the victim's native entity ID</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1526,9 +1671,16 @@ deathHook(<code class="signature"></code>)
 
 <h5>Example</h5>
 
+        <p class="code-caption">Credit: <a target="_blank" href="https://goo.gl/0ORrpq">Connor4898</a></p>
+    
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// shame on you!
+function deathHook(attacker, victim) {
+  if (Player.getEntity() == attacker) {
+    clientMessage("How could you?!");
+  }
+}</code></pre>
     
 
 
@@ -1542,11 +1694,11 @@ deathHook(<code class="signature"></code>)
 
     <h4 class="name" id="destroyBlock">
 
-destroyBlock(<code class="signature"></code>)
+destroyBlock(<code class="signature">x, y, z, side</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line104">line 104</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line115">line 115</a>
     </div>
 
   </div>
@@ -1555,12 +1707,131 @@ destroyBlock(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when a block is destroyed.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the x coordinate of the block</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the y coordinate of the block</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>z</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the z coordinate of the block</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>side</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the side of the block that was targeted</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1588,7 +1859,10 @@ destroyBlock(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// let the world know a block was destroyed
+function destroyBlock(x, y, z, side) {
+  clientMessage("A block was destroyed at: " + x + ":" + y + ":" + z);
+}</code></pre>
     
 
 
@@ -1602,11 +1876,11 @@ destroyBlock(<code class="signature"></code>)
 
     <h4 class="name" id="eatHook">
 
-eatHook(<code class="signature"></code>)
+eatHook(<code class="signature">foodPoints, saturationRatio</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line117">line 117</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line135">line 135</a>
     </div>
 
   </div>
@@ -1615,12 +1889,83 @@ eatHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when the player eats.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>foodPoints</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the number of half-drumsticks restored by the food item</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>saturationRatio</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#float">float</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the level of saturation provided per food point</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1648,7 +1993,15 @@ eatHook(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// yummy food is yummy
+function eatHook(foodPoints, saturationRatio) {
+  clientMessage(
+    ChatColor.DARK_PURPLE +
+    "That yummy snack replenished " + foodPoints +
+    " half-drumsticks\nwith a saturation ratio of: " +
+    saturationRatio
+  );
+}</code></pre>
     
 
 
@@ -1662,11 +2015,11 @@ eatHook(<code class="signature"></code>)
 
     <h4 class="name" id="entityAddedHook">
 
-entityAddedHook(<code class="signature"></code>)
+entityAddedHook(<code class="signature">entity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line130">line 130</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line158">line 158</a>
     </div>
 
   </div>
@@ -1675,7 +2028,8 @@ entityAddedHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when an entity is added to the world.
+             This includes arrows and falling blocks.</p>
   </div>
 
 
@@ -1685,53 +2039,49 @@ entityAddedHook(<code class="signature"></code>)
 
 
 
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
 
+		<th>Type</th>
 
+		
 
+		<th class="last">Description</th>
+	</tr>
+	</thead>
 
+	<tbody>
+	
 
-
-
-
-
-
-<div class="details">
-
-<ul>
-
-  </ul>
-</div>
-
-
-
-</dd>
-
-        
+        <tr>
             
-<dt>
-  <div class="nameContainer">
+                <td class="name"><code>entity</code></td>
+            
 
-    <h4 class="name" id="entityRemovedHook">
-
-entityRemovedHook(<code class="signature"></code>)
-    </h4>
-
-    <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line140">line 140</a>
-    </div>
-
-  </div>
-
-</dt>
-<dd>
-
-  <div class="description">
-    <p>?</p>
-  </div>
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#long">long</a></span>
 
 
 
+            
+            </td>
 
+            
+
+            <td class="description last">
+                
+                <p>the native entity id</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1759,7 +2109,125 @@ entityRemovedHook(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// enderman warning
+function entityAddedHook(entity) {
+  var entityType = Entity.getEntityTypeId(entity);
+  if (entityType === 38) {
+    clientMessage(ChatColor.RED + "Enderman in da house!");
+  }
+}</code></pre>
+    
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id="entityRemovedHook">
+
+entityRemovedHook(<code class="signature">entity</code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line179">line 179</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>Callback function that is called when an entity is despawns or dies.</p>
+  </div>
+
+
+
+
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>entity</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the native entity id</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+<h5>Example</h5>
+
+
+    
+      <pre><code>// what a tragedy!
+function entityRemovedHook(entity) {
+  if (Entity.getEntityTypeId(entity) === 10) {
+    clientMessage("Another brave chicken has passed from this world.");
+  }
+}</code></pre>
     
 
 
@@ -1773,11 +2241,11 @@ entityRemovedHook(<code class="signature"></code>)
 
     <h4 class="name" id="explodeHook">
 
-explodeHook(<code class="signature"></code>)
+explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line153">line 153</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line198">line 198</a>
     </div>
 
   </div>
@@ -1786,12 +2254,179 @@ explodeHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>entity</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>-</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#float">float</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>-</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#float">float</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>-</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>z</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#float">float</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>-</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>power</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#float">float</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>-</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>onFire</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#boolean">boolean</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>-</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -1837,7 +2472,7 @@ leaveGame(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line166">line 166</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line218">line 218</a>
     </div>
 
   </div>
@@ -1846,7 +2481,7 @@ leaveGame(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
@@ -1897,7 +2532,7 @@ levelEventHook(<code class="signature">player, eventType, x, y, z, data</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line179">line 179</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line231">line 231</a>
     </div>
 
   </div>
@@ -1906,7 +2541,7 @@ levelEventHook(<code class="signature">player, eventType, x, y, z, data</code>)
 <dd>
 
   <div class="description">
-    <p>Callback that is triggered when a door is opened or closed.</p>
+    <p>Callback function that is called when a door is opened or closed.</p>
   </div>
 
 
@@ -2133,7 +2768,7 @@ modTick(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line207">line 207</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line259">line 259</a>
     </div>
 
   </div>
@@ -2142,7 +2777,7 @@ modTick(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
@@ -2193,7 +2828,7 @@ newLevel(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line220">line 220</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line272">line 272</a>
     </div>
 
   </div>
@@ -2202,7 +2837,7 @@ newLevel(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
@@ -2253,7 +2888,7 @@ procCmd(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line233">line 233</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line285">line 285</a>
     </div>
 
   </div>
@@ -2262,7 +2897,7 @@ procCmd(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
@@ -2313,7 +2948,7 @@ selectLevelHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line246">line 246</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line298">line 298</a>
     </div>
 
   </div>
@@ -2322,7 +2957,7 @@ selectLevelHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
@@ -2373,7 +3008,7 @@ serverMessageReceiveHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line259">line 259</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line311">line 311</a>
     </div>
 
   </div>
@@ -2382,7 +3017,7 @@ serverMessageReceiveHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>?</p>
+    <p>Callback function that is called when</p>
   </div>
 
 
@@ -2429,11 +3064,11 @@ serverMessageReceiveHook(<code class="signature"></code>)
 
     <h4 class="name" id="startDestroyBlock">
 
-startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
+startDestroyBlock(<code class="signature">x, y, z, side</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line272">line 272</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line324">line 324</a>
     </div>
 
   </div>
@@ -2442,7 +3077,7 @@ startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is triggered when a block
+    <p>Callback function function that is called when a block
              starts being destroyed.</p>
   </div>
 
@@ -2545,7 +3180,7 @@ startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
 
         <tr>
             
-                <td class="name"><code>blockSide</code></td>
+                <td class="name"><code>side</code></td>
             
 
             <td class="type">
@@ -2562,7 +3197,7 @@ startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
 
             <td class="description last">
                 
-                <p>the side of the block that was tapped</p></td>
+                <p>the side of the block that was targeted</p></td>
         </tr>
 
 	
@@ -2586,7 +3221,7 @@ startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
 
 <ul>
 
-    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">confirm this and refine description</span></li>
+    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">confirm this - it doesn't seem to work as of BL 1.11b4</span></li>
 
   </ul>
 </div>
@@ -2597,7 +3232,10 @@ startDestroyBlock(<code class="signature">x, y, z, blockSide</code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// let the world know a block is being destroyed
+function startDestroyBlock(x, y, z, side) {
+  clientMessage("A block is being destroyed at: " + x + ":" + y + ":" + z);
+}</code></pre>
     
 
 
@@ -2615,7 +3253,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line292">line 292</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line347">line 347</a>
     </div>
 
   </div>
@@ -2624,7 +3262,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 <dd>
 
   <div class="description">
-    <p>Callback function that is triggered when an item is used
+    <p>Callback function function that is called when an item is used
              on a block.</p>
   </div>
 
@@ -2871,7 +3509,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Tue Nov 24 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 26 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

@@ -531,6 +531,8 @@
       
         <li data-name="Level.getSignText"><a href="Level.html#.getSignText">getSignText</a></li>
       
+        <li data-name="Level.getSpawnerEntityType"><a href="Level.html#.getSpawnerEntityType">getSpawnerEntityType</a></li>
+      
         <li data-name="Level.getTile"><a href="Level.html#.getTile">getTile</a></li>
       
         <li data-name="Level.getTime"><a href="Level.html#.getTime">getTime</a></li>
@@ -1555,7 +1557,7 @@ Item.addShapedRecipe(
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line127">line 127</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line129">line 129</a>
     </div>
 
   </div>
@@ -1611,7 +1613,7 @@ Item.addShapedRecipe(
 
             <td class="description last">
                 
-                <p>the new item <code>id</code> (see: Reference.ItemIds)</p></td>
+                <p>the new item <code>id</code> (see: <a href="Reference.html#ItemIds">ItemIds</a>)</p></td>
         </tr>
 
 	
@@ -1852,11 +1854,11 @@ function procCmd(cmd) {
 
     <h4 class="name" id=".getName">
 
-<span class="type-signature static">static</span>Item.getName(<code class="signature">id, damage, raw</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#string">string</a>}</span>
+<span class="type-signature static">static</span>Item.getName(<code class="signature">id, <span class="optional">data</span>, <span class="optional">raw</span></code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#string">string</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line142">line 142</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line131">line 131</a>
     </div>
 
   </div>
@@ -1865,7 +1867,7 @@ function procCmd(cmd) {
 <dd>
 
   <div class="description">
-    <p>return the name of an item</p>
+    <p>Return the name of an item.</p>
   </div>
 
 
@@ -1884,6 +1886,8 @@ function procCmd(cmd) {
 
 		<th>Type</th>
 
+		
+		<th>Default</th>
 		
 
 		<th class="last">Description</th>
@@ -1909,17 +1913,26 @@ function procCmd(cmd) {
             </td>
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">
                 
-                <p>the item <code>id</code></p></td>
+                    
+                    
+
+                    
+                
+                <p>the item id</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>damage</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
@@ -1933,10 +1946,24 @@ function procCmd(cmd) {
             </td>
 
             
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
 
             <td class="description last">
                 
-                <p>the <code>damage</code> value of the item</p></td>
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+
+                    
+                
+                <p>additional data to describe item such as damage
+                               or sub category</p></td>
         </tr>
 
 	
@@ -1957,10 +1984,23 @@ function procCmd(cmd) {
             </td>
 
             
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
 
             <td class="description last">
                 
-                <p>if the returned data should be in the <code>raw</code> form</p></td>
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+
+                    
+                
+                <p>if the returned data should be in the raw form</p></td>
         </tr>
 
 	
@@ -2033,7 +2073,8 @@ function procCmd(cmd) {
       <pre><code>// get data in raw form
 clientMessage(Item.getName(263, 0, true)); // prints "item.coal.name"
 // get data in normal form
-clientMessage(Item.getName(263, 0, false)); // prints "Coal"</code></pre>
+clientMessage(Item.getName(263, 0, false)); // prints "Coal"
+clientMessage(Item.getName(263, 1));        // prints "Charcoal"</code></pre>
     
 
 
@@ -2051,7 +2092,7 @@ clientMessage(Item.getName(263, 0, false)); // prints "Coal"</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line155">line 155</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line164">line 164</a>
     </div>
 
   </div>
@@ -2198,7 +2239,7 @@ if (Item.isValidItem(263)) {
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line167">line 167</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line176">line 176</a>
     </div>
 
   </div>
@@ -2332,7 +2373,7 @@ crafting table interface</p>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line178">line 178</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line187">line 187</a>
     </div>
 
   </div>
@@ -2464,7 +2505,7 @@ Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line190">line 190</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line199">line 199</a>
     </div>
 
   </div>
@@ -2601,7 +2642,7 @@ Item.setMaxDamage(270, 10000);</code></pre>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Tue Nov 24 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 26 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

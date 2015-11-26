@@ -531,6 +531,8 @@
       
         <li data-name="Level.getSignText"><a href="Level.html#.getSignText">getSignText</a></li>
       
+        <li data-name="Level.getSpawnerEntityType"><a href="Level.html#.getSpawnerEntityType">getSpawnerEntityType</a></li>
+      
         <li data-name="Level.getTile"><a href="Level.html#.getTile">getTile</a></li>
       
         <li data-name="Level.getTime"><a href="Level.html#.getTime">getTime</a></li>
@@ -3607,6 +3609,30 @@ function entityAddedHook(entity) {
 	
         <tr>
             
+                <td class="name"><code>RABBIT</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>18</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
                 <td class="name"><code>SHEEP</code></td>
             
             
@@ -3973,7 +3999,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line182">line 182</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line183">line 183</a>
         </div>
         
     </div>
@@ -4162,7 +4188,7 @@ print(ItemCategory.FOOD);</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line199">line 199</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line200">line 200</a>
         </div>
         
     </div>
@@ -4801,7 +4827,7 @@ print(ItemCategory.FOOD);</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line235">line 235</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line236">line 236</a>
         </div>
         
     </div>
@@ -5653,7 +5679,7 @@ addItemInventory(<code class="signature">id, quantity, damage</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line284">line 284</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line285">line 285</a>
     </div>
 
   </div>
@@ -5811,7 +5837,7 @@ bl_setMobSkin(<code class="signature">entityId, skin</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line301">line 301</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line302">line 302</a>
     </div>
 
   </div>
@@ -5942,11 +5968,11 @@ bl_setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
 
     <h4 class="name" id="bl_spawnMob">
 
-bl_spawnMob(<code class="signature">x, y, z, entityId, skin</code>)
+bl_spawnMob(<code class="signature">x, y, z, entityId, skin</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#long">long</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line318">line 318</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line319">line 319</a>
     </div>
 
   </div>
@@ -6118,6 +6144,43 @@ bl_spawnMob(<code class="signature">x, y, z, entityId, skin</code>)
 
 
 
+<h5>Returns:</h5>
+
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        <!-- <a href="global.html#long">long</a> -->
+                        
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>the native entity ID of the spawned mob</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+
 
 
 <div class="details">
@@ -6154,7 +6217,7 @@ clientMessage(<code class="signature">message</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line339">line 339</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line342">line 342</a>
     </div>
 
   </div>
@@ -6266,7 +6329,7 @@ explode(<code class="signature">x, y, z, radius, hasFire</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line355">line 355</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line358">line 358</a>
     </div>
 
   </div>
@@ -6473,7 +6536,7 @@ getCarriedItem(<code class="signature"></code>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line376">line 376</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line379">line 379</a>
     </div>
 
   </div>
@@ -6575,7 +6638,7 @@ getLevel(<code class="signature"></code>)<span class="glyphicon glyphicon-circle
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line393">line 393</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line397">line 397</a>
     </div>
 
   </div>
@@ -6667,7 +6730,7 @@ getPitch(<code class="signature"><span class="optional">entity</span></code>)<sp
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line406">line 406</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line411">line 411</a>
     </div>
 
   </div>
@@ -6834,7 +6897,7 @@ getPlayerEnt(<code class="signature"></code>)<span class="glyphicon glyphicon-ci
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line427">line 427</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line433">line 433</a>
     </div>
 
   </div>
@@ -6890,7 +6953,7 @@ getPlayerEnt(<code class="signature"></code>)<span class="glyphicon glyphicon-ci
                     
             </td>
             <td class="description last"><ul>
-<li>the player's entity id</li>
+<li>the player's native entity id</li>
 </ul></td>
         </tr>
     
@@ -6937,7 +7000,7 @@ getPlayerX(<code class="signature"></code>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line445">line 445</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line452">line 452</a>
     </div>
 
   </div>
@@ -7038,7 +7101,7 @@ getPlayerY(<code class="signature"></code>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line461">line 461</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line469">line 469</a>
     </div>
 
   </div>
@@ -7139,7 +7202,7 @@ getPlayerZ(<code class="signature"></code>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line477">line 477</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line486">line 486</a>
     </div>
 
   </div>
@@ -7240,7 +7303,7 @@ getTile(<code class="signature">x, y, z</code>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line493">line 493</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line503">line 503</a>
     </div>
 
   </div>
@@ -7444,7 +7507,7 @@ getYaw(<code class="signature"><span class="optional">entity</span></code>)<span
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line520">line 520</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line531">line 531</a>
     </div>
 
   </div>
@@ -7643,7 +7706,7 @@ preventDefault(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line573">line 573</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line585">line 585</a>
     </div>
 
   </div>
@@ -7718,7 +7781,7 @@ print(<code class="signature">text</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line597">line 597</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line609">line 609</a>
     </div>
 
   </div>
@@ -7828,7 +7891,7 @@ rideAnimal(<code class="signature">rider, target</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line612">line 612</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line624">line 624</a>
     </div>
 
   </div>
@@ -7987,7 +8050,7 @@ setNightMode(<code class="signature">isNight</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line653">line 653</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line665">line 665</a>
     </div>
 
   </div>
@@ -8099,7 +8162,7 @@ setPosition(<code class="signature">entity, x, y, z</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line670">line 670</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line682">line 682</a>
     </div>
 
   </div>
@@ -8310,7 +8373,7 @@ setPositionRelative(<code class="signature">entity, x, y, z</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line717">line 717</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line729">line 729</a>
     </div>
 
   </div>
@@ -8520,7 +8583,7 @@ setRot(<code class="signature">entity, yaw, pitch</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line763">line 763</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line775">line 775</a>
     </div>
 
   </div>
@@ -8685,7 +8748,7 @@ setTile(<code class="signature">x, y, z, id, <span class="optional">damage</span
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line787">line 787</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line799">line 799</a>
     </div>
 
   </div>
@@ -8979,7 +9042,7 @@ setVelX(<code class="signature">entity, velocity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line843">line 843</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line855">line 855</a>
     </div>
 
   </div>
@@ -9136,7 +9199,7 @@ setVelY(<code class="signature">entity, velocity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line882">line 882</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line894">line 894</a>
     </div>
 
   </div>
@@ -9262,7 +9325,7 @@ setVelZ(<code class="signature">entity, velocity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line896">line 896</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line908">line 908</a>
     </div>
 
   </div>
@@ -9384,11 +9447,11 @@ setVelZ(<code class="signature">entity, velocity</code>)
 
     <h4 class="name" id="spawnChicken">
 
-spawnChicken(<code class="signature">x, y, z, skin</code>)
+spawnChicken(<code class="signature">x, y, z, skin</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#long">long</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line910">line 910</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line922">line 922</a>
     </div>
 
   </div>
@@ -9535,6 +9598,43 @@ spawnChicken(<code class="signature">x, y, z, skin</code>)
 
 
 
+<h5>Returns:</h5>
+
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        <!-- <a href="global.html#long">long</a> -->
+                        
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>the native entity ID of the spawned mob</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+
 
 
 <div class="details">
@@ -9586,11 +9686,11 @@ function useItem(x, y, z, itemId, blockId, side) {
 
     <h4 class="name" id="spawnCow">
 
-spawnCow(<code class="signature">x, y, z, skin</code>)
+spawnCow(<code class="signature">x, y, z, skin</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#long">long</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line948">line 948</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line962">line 962</a>
     </div>
 
   </div>
@@ -9737,6 +9837,43 @@ spawnCow(<code class="signature">x, y, z, skin</code>)
 
 
 
+<h5>Returns:</h5>
+
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        <!-- <a href="global.html#long">long</a> -->
+                        
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>the native entity ID of the spawned mob</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+
 
 
 <div class="details">
@@ -9788,11 +9925,11 @@ function useItem(x, y, z, itemId, blockId, side) {
 
     <h4 class="name" id="spawnPigZombie">
 
-spawnPigZombie(<code class="signature">x, y, z, heldItemId, skin</code>)
+spawnPigZombie(<code class="signature">x, y, z, heldItemId, skin</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#long">long</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line986">line 986</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line1002">line 1002</a>
     </div>
 
   </div>
@@ -9963,6 +10100,43 @@ spawnPigZombie(<code class="signature">x, y, z, heldItemId, skin</code>)
 
 
 
+
+
+
+<h5>Returns:</h5>
+
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        <!-- <a href="global.html#long">long</a> -->
+                        
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>the native entity ID of the spawned mob</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
 
@@ -10779,7 +10953,7 @@ spawnPigZombie(x, y, z, held, img);</code></pre>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Tue Nov 24 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 26 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

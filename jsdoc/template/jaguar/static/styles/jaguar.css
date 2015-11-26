@@ -458,9 +458,12 @@ h6 {
     color: #fff;
 }
 
-.main article li.icon,
-.main article dd ul > li {
+.main article li.icon {
     font-size: .8em;
+    list-style-type: none;
+}
+
+.main article dd ul > li {
     list-style-type: none;
 }
 
@@ -481,6 +484,7 @@ h6 {
 
 .main table td.name,
 .main table td.type,
+.main table td.description,
 .main table td.default,
 .main table td.attributes {
     font-size: .9em;
@@ -508,9 +512,6 @@ h6 {
     width: 100px;
     color: #aaa;
 }
-
-.main table .description {
-    font-size: .8em;}
 
 .main table .description p {
     margin: 0;

@@ -155,6 +155,7 @@
  * @property  {int} PIG_ZOMBIE        - 36
  * @property  {int} PLAYER            - 63
  * @property  {int} PRIMED_TNT        - 65
+ * @property  {int} RABBIT            - 18
  * @property  {int} SHEEP             - 13
  * @property  {int} SILVERFISH        - 39
  * @property  {int} SKELETON          - 34
@@ -323,12 +324,14 @@
  * @description Spawn a mob with a valid MCPE `entityId` at the specified
  *              `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
- * @param {double} x        - the x coordinate
- * @param {double} y        - the y coordinate
- * @param {double} z        - the z coordinate
- * @param {int}    entityId - the entity ID (see: {@link EntityType})
- * @param {string} skin     - the skin image path (usually an image found in the
+ * @param  {double} x        - the x coordinate
+ * @param  {double} y        - the y coordinate
+ * @param  {double} z        - the z coordinate
+ * @param  {int}    entityId - the entity ID (see: {@link EntityType})
+ * @param  {string} skin     - the skin image path (usually an image found in the
  *                            `../assets/images` folder of the MCPE apk)
+ *
+ * @return {long}            - the native entity ID of the spawned mob
  *
  * @example
  * // spawn a skeleton
@@ -380,6 +383,7 @@
  * @function    getCarriedItem
  * @description Return the id of the item or block the player is currently holding.
  *
+ *
  * @return {int} - the item or block ID
  *
  * @see {@link Player.getCarriedItemCount}, {@link Player.getCarriedItemData}
@@ -399,6 +403,7 @@
  * @function    getLevel
  * @description __THIS THROWS AN ERROR ON ANDROID; IS IT iOS ONLY???___
  *
+ *
  * @return {Object} - __`unknown`__ *
  *
  *////
@@ -411,6 +416,7 @@
  * @description Return the up/down head rotation of the given `entity` (range: \-90 to 90).
  *
  * @param  {long}   [entity = Player] - the entity to query
+ *
  * @return {double}                   - the pitch value
  *
  * @see {@link getYaw} for a more detailed example
@@ -432,7 +438,8 @@
  * @description Return the player's native entity id (*NOT* the
  *              same as {@link EntityType}).
  *
- * @return {long} - the player's entity id
+ *
+ * @return {long} - the player's native entity id
  *
  * @see {@link getYaw} for a more detailed example
  *
@@ -448,6 +455,7 @@
  *
  * @function    getPlayerX
  * @description Return the player's current x coordinate.
+ *
  *
  * @return {double} - the player's x coordinate
  *
@@ -465,6 +473,7 @@
  * @function    getPlayerY
  * @description Return the player's current y coordinate.
  *
+ *
  * @return {double} - the player's y coordinate
  *
  * @example
@@ -480,6 +489,7 @@
  *
  * @function    getPlayerZ
  * @description Return the player's current z coordinate.
+ *
  *
  * @return {double} - the player's z coordinate
  *
@@ -500,6 +510,7 @@
  * @param  {int} x - the x coordinate
  * @param  {int} y - the y coordinate
  * @param  {int} z - the z coordinate
+ *
  * @return {int}   - the block id
  *
  * @example
@@ -525,6 +536,7 @@
  * @description Return the left/right head rotation of the given `entity` (range: -∞ to ∞).
  *
  * @param  {long}   [entity = Player] - the entity to query
+ *
  * @return {double}                   - the yaw value
  *
  * @example
@@ -914,11 +926,13 @@
  * @function    spawnChicken
  * @description Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
- * @param {int} x          - the x coordinate
- * @param {int} y          - the y coordinate
- * @param {int} z          - the z coordinate
- * @param {string} skin    - the skin image path (usually an image found in the
+ * @param  {int} x       - the x coordinate
+ * @param  {int} y       - the y coordinate
+ * @param  {int} z       - the z coordinate
+ * @param  {string} skin - the skin image path (usually an image found in the
  *                           `../assets/images` folder of the MCPE apk)
+ *
+ * @return {long}        - the native entity ID of the spawned mob
  *
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
  *
@@ -952,11 +966,13 @@
  * @function    spawnCow
  * @description Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
- * @param {int} x          - the x coordinate
- * @param {int} y          - the y coordinate
- * @param {int} z          - the z coordinate
- * @param {string} skin    - the skin image path (usually an image found in the
+ * @param  {int} x       - the x coordinate
+ * @param  {int} y       - the y coordinate
+ * @param  {int} z       - the z coordinate
+ * @param  {string} skin - the skin image path (usually an image found in the
  *                           `../assets/images` folder of the MCPE apk)
+ *
+ * @return {long}        - the native entity ID of the spawned mob
  *
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
  *
@@ -991,12 +1007,14 @@
  *              The `heldItemId` parameter determines what the zombie
  *              pigman will be hold when spawned.
  *
- * @param {int} x          - the x coordinate
- * @param {int} y          - the y coordinate
- * @param {int} z          - the z coordinate
- * @param {int} heldItemId - the id for the held item
- * @param {string} skin    - the skin image path (usually an image found in the
+ * @param  {int} x          - the x coordinate
+ * @param  {int} y          - the y coordinate
+ * @param  {int} z          - the z coordinate
+ * @param  {int} heldItemId - the id for the held item
+ * @param  {string} skin    - the skin image path (usually an image found in the
  *                           `../assets/images` folder of the MCPE apk)
+ *
+ * @return {long}           - the native entity ID of the spawned mob
  *
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
  *

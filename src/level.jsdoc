@@ -55,6 +55,8 @@ function destroyBlock(int1, int2, int3, boolean_) {}
  * @memberof Level
  * @function
  *
+ * @return {long}
+ *
  *////
 function dropItem(double1, double2, double3, double4, int1, int2, int3) {}
 
@@ -208,6 +210,14 @@ function getRainLevel() {}
  *
  *////
 function getSignText(int1, int2, int3, int4) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
+function getSpawnerEntityType(par1int, par2int, par3int) {}
 
 /**
  *
@@ -379,11 +389,14 @@ function setTime(int1) {}
  * Spawn a chicken entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
  * @memberof Level
  * @function
- * @param {double} x    - the x coordinate
- * @param {double} y    - the y coordinate
- * @param {double} z    - the z coordinate
- * @param {string} skin - the skin image path (usually an image found in the
+ *
+ * @param  {double} x    - the x coordinate
+ * @param  {double} y    - the y coordinate
+ * @param  {double} z    - the z coordinate
+ * @param  {string} skin - the skin image path (usually an image found in the
  *                              `../assets/images` folder of the MCPE apk)
+ * @return {long}        - the native entity ID of the spawned mob
+ *
  * @see {@link Entity.spawnMob}, {@link bl_spawnMob}
  * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang}</caption>
  * var tb = false;
@@ -411,11 +424,14 @@ function spawnChicken(x, y, z, skin) {}
  * @memberof Level
  * @function spawnCow
  * @description Spawn a cow entity at the specified `x`, `y`, and `z` coordinates using the specified `skin` image.
- * @param {double} x    - the x coordinate
- * @param {double} y    - the y coordinate
- * @param {double} z    - the z coordinate
- * @param {string} skin - the skin image path (usually an image found in the
+ *
+ * @param  {double} x    - the x coordinate
+ * @param  {double} y    - the y coordinate
+ * @param  {double} z    - the z coordinate
+ * @param  {string} skin - the skin image path (usually an image found in the
  *                              `../assets/images` folder of the MCPE apk)
+ * @return {long}        - the native entity ID of the spawned mob
+ *
  * @see {@link Entity.spawnMob}, {@link Level.spawnMob}, {@link bl_spawnMob}
  * @example <caption>credit: {@link https://goo.gl/byNRuF|'Treebl' via Zhuowei Zhang}</caption>
  * var tb = false;
@@ -444,12 +460,14 @@ function spawnCow(x, y, z, skin) {}
  * @memberof Level
  * @function
  *
- * @param {number} x    - the x coordinate
- * @param {number} y    - the y coordinate
- * @param {number} z    - the z coordinate
- * @param {number} id   - the entity ID (see: {@link EntityType})
- * @param {string} skin - the skin image path (an image found in the
+ * @param  {number} x    - the x coordinate
+ * @param  {number} y    - the y coordinate
+ * @param  {number} z    - the z coordinate
+ * @param  {number} id   - the entity ID (see: {@link EntityType})
+ * @param  {string} skin - the skin image path (an image found in the
  *                        `../assets/images` folder of the MCPE apk)
+ * @return {long}        - the native entity ID of the spawned mob
+ *
  * @see {@link Entity.spawnMob}, {@link bl_spawnMob}
  * @example
  * // spawn a skeleton

@@ -8,7 +8,7 @@
 ## Version Compatibility
 
 - Minecraft Pocket Edition: `0.13.0`
-- BlockLauncher: `1.11-b3`  
+- BlockLauncher Pro: `1.11`  
 
 ## TODO
 #### General

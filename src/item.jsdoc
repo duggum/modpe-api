@@ -86,9 +86,10 @@ function addFurnaceRecipe(id, damge, source) {}
 function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
 
 /**
+ *
  * define custom armor
  * @memberof Item
- * @param {int}    id           - the new item `id` (see: {@link Reference.ItemIds})
+ * @param {int}    id           - the new item `id` (see: {@link Reference#ItemIds|ItemIds})
  * @param {string} iconName     - the name of the icon to use for this item
  * @param {int}    iconIndex    - the index of the icon to use for this item
  * @param {string} name         - the name of the new armor item
@@ -123,23 +124,31 @@ function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
  *     addItemInventory(414, 1);
  *   }
  * }
- */
+ *
+ *////
 function defineArmor( id, iconName, iconIndex, name, texture, damageReduce, maxDamage, type) {}
 
 /**
- * return the name of an item
- * @memberof Item
- * @param {int} id      - the item `id`
- * @param {int} damage  - the `damage` value of the item
- * @param {boolean} raw - if the returned data should be in the `raw` form
- * @return {string}     - the item name
+ *
+ * @memberof    Item
+ * @function    getName
+ * @description Return the name of an item.
+ *
+ * @param {int}     id          - the item id
+ * @param {int}     [data=null] - additional data to describe item such as damage
+ *                                or sub category
+ * @param {boolean} [raw=false] - if the returned data should be in the raw form
+ *
+ * @return {string}             - the item name
+ *
  * @example
  * // get data in raw form
  * clientMessage(Item.getName(263, 0, true)); // prints "item.coal.name"
  * // get data in normal form
  * clientMessage(Item.getName(263, 0, false)); // prints "Coal"
- */
-function getName(id, damage, raw) {}
+ * clientMessage(Item.getName(263, 1));        // prints "Charcoal"
+ *
+ *////
 
 /**
  * determine if an item is valid
