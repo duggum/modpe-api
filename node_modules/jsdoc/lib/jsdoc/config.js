@@ -12,7 +12,9 @@
 function mergeRecurse(target, source) {
     Object.keys(source).forEach(function(p) {
         if ( source[p].constructor === Object ) {
-            if ( !target[p] ) {  target[p] = {}; }
+            if ( !target[p] ) {
+                target[p] = {};
+            }
             mergeRecurse(target[p], source[p]);
         }
         else {
@@ -34,7 +36,7 @@ var defaults = {
         cleverLinks: false
     },
     source: {
-        includePattern: '.+\\.js(doc)?$',
+        includePattern: '.+\\.js(doc|x)?$',
         excludePattern: ''
     },
     plugins: []

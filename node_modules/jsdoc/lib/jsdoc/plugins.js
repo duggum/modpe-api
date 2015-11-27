@@ -1,4 +1,3 @@
-/*global app: true */
 /**
  * Utility functions to support the JSDoc plugin framework.
  * @module jsdoc/plugins
@@ -32,17 +31,6 @@ exports.installPlugins = function(plugins, parser) {
         // ...define tags
         if (plugin.defineTags) {
             plugin.defineTags(dictionary);
-        }
-
-        // ...add a Rhino node visitor (deprecated in JSDoc 3.3)
-        if (plugin.nodeVisitor) {
-            if ( !parser.addNodeVisitor ) {
-                logger.error('Unable to add the Rhino node visitor from %s, because JSDoc ' +
-                    'is not using the Rhino JavaScript parser.', plugins[i]);
-            }
-            else {
-                parser.addNodeVisitor(plugin.nodeVisitor);
-            }
         }
 
         // ...add a Mozilla Parser API node visitor

@@ -11,6 +11,7 @@
 
 var _ = require('underscore');
 var jsdoc = {
+    env: require('jsdoc/env'),
     name: require('jsdoc/name'),
     src: {
         astnode: require('jsdoc/src/astnode'),
@@ -39,14 +40,45 @@ function applyTag(doclet, tag) {
     }
 }
 
+function fakeMeta(node) {
+    return {
+        type: node ? node.type : null,
+        node: node
+    };
+}
+
 // use the meta info about the source code to guess what the doclet kind should be
+// TODO: set this elsewhere (maybe jsdoc/src/astnode.getInfo)
 function codeToKind(code) {
     var isFunction = jsdoc.src.astnode.isFunction;
     var kind = 'member';
     var node = code.node;
 
-    if ( isFunction(code.type) ) {
+    if ( isFunction(code.type) && code.type !== Syntax.MethodDefinition ) {
         kind = 'function';
+    }
+    else if (code.type === Syntax.MethodDefinition) {
+        if (code.node.kind === 'constructor') {
+            kind = 'class';
+        }
+        else if (code.node.kind !== 'get' && code.node.kind !== 'set') {
+            kind = 'function';
+        }
+    }
+    else if (code.type === Syntax.ClassDeclaration || code.type === Syntax.ClassExpression) {
+        kind = 'class';
+    }
+    else if (code.type === Syntax.ExportAllDeclaration) {
+        // this value will often be an Identifier for a variable, which isn't very useful
+        kind = codeToKind(fakeMeta(node.source));
+    }
+    else if (code.type === Syntax.ExportDefaultDeclaration ||
+        code.type === Syntax.ExportNamedDeclaration) {
+        kind = codeToKind(fakeMeta(node.declaration));
+    }
+    else if (code.type === Syntax.ExportSpecifier) {
+        // this value will often be an Identifier for a variable, which isn't very useful
+        kind = codeToKind(fakeMeta(node.local));
     }
     else if ( code.node && code.node.parent && isFunction(code.node.parent) ) {
         kind = 'param';
@@ -109,9 +141,15 @@ function toTags(docletSrc) {
     return tagData;
 }
 
-function fixDescription(docletSrc) {
+function fixDescription(docletSrc, meta) {
+    var isClass;
+
     if (!/^\s*@/.test(docletSrc) && docletSrc.replace(/\s/g, '').length) {
-        docletSrc = '@description ' + docletSrc;
+        isClass = meta.code &&
+            (meta.code.type === Syntax.ClassDeclaration ||
+            meta.code.type === Syntax.ClassExpression);
+
+        docletSrc = (isClass ? '@classdesc' : '@description') + ' ' + docletSrc;
     }
     return docletSrc;
 }
@@ -133,6 +171,8 @@ exports._replaceDictionary = function _replaceDictionary(dict) {
 /**
  * @class
  * @classdesc Represents a single JSDoc comment.
+ * @alias module:jsdoc/doclet.Doclet
+ *
  * @param {string} docletSrc - The raw source code of the jsdoc comment.
  * @param {object=} meta - Properties describing the code related to this comment.
  */
@@ -144,7 +184,7 @@ var Doclet = exports.Doclet = function(docletSrc, meta) {
     this.setMeta(meta);
 
     docletSrc = unwrap(docletSrc);
-    docletSrc = fixDescription(docletSrc);
+    docletSrc = fixDescription(docletSrc, meta);
 
     newTags = toTags.call(this, docletSrc);
 
@@ -224,7 +264,7 @@ function removeGlobal(longname) {
 Doclet.prototype.setMemberof = function(sid) {
     /**
      * The longname of the symbol that contains this one, if any.
-     * @type string
+     * @type {string}
      */
     this.memberof = removeGlobal(sid)
         .replace(/\.prototype/g, jsdoc.name.SCOPE.PUNC.INSTANCE);
@@ -238,7 +278,7 @@ Doclet.prototype.setMemberof = function(sid) {
 Doclet.prototype.setLongname = function(name) {
     /**
      * The fully resolved symbol name.
-     * @type string
+     * @type {string}
      */
     this.longname = removeGlobal(name);
     if (jsdoc.tag.dictionary.isNamespace(this.kind)) {
@@ -305,7 +345,7 @@ Doclet.prototype.borrow = function(source, target) {
     if (!this.borrowed) {
         /**
          * A list of symbols that are borrowed by this one, if any.
-         * @type Array.<string>
+         * @type {Array.<string>}
          */
         this.borrowed = [];
     }
@@ -381,26 +421,33 @@ Doclet.prototype.setMeta = function(meta) {
     if (meta.id) { this.meta.code.id = meta.id; }
     if (meta.code) {
         if (meta.code.name) {
-            /** The name of the symbol in the source code. */
+            /**
+             * The name of the symbol in the source code.
+             * @type {string}
+             */
             this.meta.code.name = meta.code.name;
         }
         if (meta.code.type) {
-            /** The type of the symbol in the source code. */
+            /**
+             * The type of the symbol in the source code.
+             * @type {string}
+             */
             this.meta.code.type = meta.code.type;
         }
-        // the AST node is only enumerable in debug mode, which reduces clutter for the
-        // --explain/-X option
         if (meta.code.node) {
             Object.defineProperty(this.meta.code, 'node', {
                 value: meta.code.node,
-                enumerable: global.env.opts.debug ? true : false
+                enumerable: false
             });
         }
         if (meta.code.funcscope) {
             this.meta.code.funcscope = meta.code.funcscope;
         }
         if (typeof meta.code.value !== 'undefined') {
-            /** The value of the symbol in the source code. */
+            /**
+             * The value of the symbol in the source code.
+             * @type {*}
+             */
             this.meta.code.value = meta.code.value;
         }
         if (meta.code.paramnames) {

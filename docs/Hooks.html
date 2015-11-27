@@ -2241,7 +2241,7 @@ function entityRemovedHook(entity) {
 
     <h4 class="name" id="explodeHook">
 
-explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
+explodeHook(<code class="signature">entity, x, y, z, radius, onFire</code>)
     </h4>
 
     <div class="tag-source">
@@ -2254,7 +2254,7 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called when an explosion occurs.</p>
   </div>
 
 
@@ -2301,7 +2301,7 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
             <td class="description last">
                 
-                <p>-</p></td>
+                <p>the native entity id of the entity that exploded</p></td>
         </tr>
 
 	
@@ -2325,7 +2325,7 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
             <td class="description last">
                 
-                <p>-</p></td>
+                <p>the x coordinate of the explosion</p></td>
         </tr>
 
 	
@@ -2349,7 +2349,7 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
             <td class="description last">
                 
-                <p>-</p></td>
+                <p>the y coordinate of the explosion</p></td>
         </tr>
 
 	
@@ -2373,14 +2373,14 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
             <td class="description last">
                 
-                <p>-</p></td>
+                <p>the z coordinate of the explosion</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>power</code></td>
+                <td class="name"><code>radius</code></td>
             
 
             <td class="type">
@@ -2397,7 +2397,7 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
             <td class="description last">
                 
-                <p>-</p></td>
+                <p>the radius of the explosion</p></td>
         </tr>
 
 	
@@ -2421,7 +2421,7 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
             <td class="description last">
                 
-                <p>-</p></td>
+                <p>whether or not the explosion caused a fire</p></td>
         </tr>
 
 	
@@ -2454,7 +2454,10 @@ explodeHook(<code class="signature">entity, x, y, z, power, onFire</code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// explosion notification
+function explodeHook(entity, x, y, z, power, onFire) {
+  clientMessage(ChatColor.RED + "An explosion occured at " + x + " : " + y + " : " + z);
+}</code></pre>
     
 
 
@@ -2472,7 +2475,7 @@ leaveGame(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line218">line 218</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line220">line 220</a>
     </div>
 
   </div>
@@ -2481,7 +2484,7 @@ leaveGame(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called when the player exits a world (i.e. Quit to Title).</p>
   </div>
 
 
@@ -2514,7 +2517,10 @@ leaveGame(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// say goodbye on exit
+function leaveGame() {
+  print("Goodbye");
+}</code></pre>
     
 
 
@@ -2532,7 +2538,7 @@ levelEventHook(<code class="signature">player, eventType, x, y, z, data</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line231">line 231</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line235">line 235</a>
     </div>
 
   </div>
@@ -2732,7 +2738,7 @@ levelEventHook(<code class="signature">player, eventType, x, y, z, data</code>)
 
 <ul>
 
-    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">better example once this is working in 0.13</span></li>
+    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">better example once this is working; broken in BL 1.11??</span></li>
 
   </ul>
 </div>
@@ -2768,7 +2774,7 @@ modTick(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line259">line 259</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line263">line 263</a>
     </div>
 
   </div>
@@ -2777,7 +2783,8 @@ modTick(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called every game tick. A game tick
+             is 1/20 of a second, therefore there are 20 ticks in a second.</p>
   </div>
 
 
@@ -2810,7 +2817,12 @@ modTick(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// keep an eye on hunger level
+function modTick() {
+  if (Player.getHunger() < 5) {
+    clientMessage(ChatColor.RED + "Warning! You are getting very hungry!");
+  }
+}</code></pre>
     
 
 
@@ -2828,7 +2840,7 @@ newLevel(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line272">line 272</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line281">line 281</a>
     </div>
 
   </div>
@@ -2837,7 +2849,7 @@ newLevel(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called when a game level is loaded</p>
   </div>
 
 
@@ -2870,7 +2882,10 @@ newLevel(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// friendly welcome message
+function newLevel() {
+  clientMessage("Welcome to  Minecraft PE!!");
+}</code></pre>
     
 
 
@@ -2884,11 +2899,11 @@ newLevel(<code class="signature"></code>)
 
     <h4 class="name" id="procCmd">
 
-procCmd(<code class="signature"></code>)
+procCmd(<code class="signature">cmd</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line285">line 285</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line296">line 296</a>
     </div>
 
   </div>
@@ -2897,12 +2912,59 @@ procCmd(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called when a chat command is issued.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>cmd</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#string">string</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the command without the leading slash (/)</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -2930,7 +2992,12 @@ procCmd(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// quick heal
+function procCmd(cmd) {
+  if (cmd === "heal") {
+    Entity.setHealth(Player.getEntity(), 20);
+  }
+}</code></pre>
     
 
 
@@ -2948,7 +3015,7 @@ selectLevelHook(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line298">line 298</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line315">line 315</a>
     </div>
 
   </div>
@@ -2957,7 +3024,9 @@ selectLevelHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called when a game world is selected.
+             This allows you to run initialization code before the selected
+             world is fully loaded.</p>
   </div>
 
 
@@ -2981,17 +3050,10 @@ selectLevelHook(<code class="signature"></code>)
 
 <ul>
 
+    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text">See the example at <a href="Block.html#.defineBlock">Block.defineBlock</a></span></li>
+
   </ul>
 </div>
-
-
-
-<h5>Example</h5>
-
-
-    
-      <pre><code>// code here</code></pre>
-    
 
 
 
@@ -3004,11 +3066,11 @@ selectLevelHook(<code class="signature"></code>)
 
     <h4 class="name" id="serverMessageReceiveHook">
 
-serverMessageReceiveHook(<code class="signature"></code>)
+serverMessageReceiveHook(<code class="signature">message</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line311">line 311</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line328">line 328</a>
     </div>
 
   </div>
@@ -3017,12 +3079,59 @@ serverMessageReceiveHook(<code class="signature"></code>)
 <dd>
 
   <div class="description">
-    <p>Callback function that is called when</p>
+    <p>Callback function that is called when the server sends a chat message.</p>
   </div>
 
 
 
 
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#string">string</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the message</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
@@ -3050,7 +3159,10 @@ serverMessageReceiveHook(<code class="signature"></code>)
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// announce a server message
+function serverMessageReceiveHook(message) {
+  clientMessage("Message from server: " + message);
+}</code></pre>
     
 
 
@@ -3068,7 +3180,7 @@ startDestroyBlock(<code class="signature">x, y, z, side</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line324">line 324</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line345">line 345</a>
     </div>
 
   </div>
@@ -3221,7 +3333,7 @@ startDestroyBlock(<code class="signature">x, y, z, side</code>)
 
 <ul>
 
-    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">confirm this - it doesn't seem to work as of BL 1.11b4</span></li>
+    <li class="icon"><i class="tag-todo icon-todo" title="TODO"></i><span class="icon-text">confirm this - it doesn't seem to work in BL 1.11</span></li>
 
   </ul>
 </div>
@@ -3249,11 +3361,11 @@ function startDestroyBlock(x, y, z, side) {
 
     <h4 class="name" id="useItem">
 
-useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage</code>)
+useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, itemData, blockData</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line347">line 347</a>
+      <a href="hooks.jsdoc.html">hooks.jsdoc</a>, <a href="hooks.jsdoc.html#line368">line 368</a>
     </div>
 
   </div>
@@ -3437,7 +3549,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 
         <tr>
             
-                <td class="name"><code>blockDamage</code></td>
+                <td class="name"><code>itemData</code></td>
             
 
             <td class="type">
@@ -3454,7 +3566,31 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 
             <td class="description last">
                 
-                <p>the damage data for the block</p></td>
+                <p>the damage/data for the item used</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>blockData</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the damage/data for the block</p></td>
         </tr>
 
 	
@@ -3485,9 +3621,29 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 
 <h5>Example</h5>
 
+        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/SdC24d">Zhuowei Zhang</a></p>
+    
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// Super pickaxe: tap on a block with a diamond pickaxe to mine
+// a 11x11x11 square around/above it
+function useItem(x, y, z, itemId, blockId) {
+  if (itemId != 278) return; // if not diamond pickaxe exit the method
+  for (var xx = x - 5; xx <= x + 5; xx++) {
+    for (var zz = z - 5; zz <= z + 5; zz++) {
+      for (var yy = y; yy < y + 11; yy++) {
+        var tile = getTile(xx, yy, zz);
+        if (tile != 0) {
+          setTile(xx, yy, zz, 0);
+          if (tile != 1 && tile != 2 && tile != 3) { // not stone, grass, dirt
+            addItemInventory(tile, 1);
+          }
+        }
+      }
+    }
+  }
+  preventDefault();
+}</code></pre>
     
 
 
@@ -3509,7 +3665,7 @@ useItem(<code class="signature">x, y, z, itemid, blockid, blockSide, blockDamage
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

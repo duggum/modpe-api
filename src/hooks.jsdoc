@@ -200,37 +200,41 @@
  * @instance
  * @memberof    Hooks
  * @function    explodeHook
- * @description Callback function that is called when
+ * @description Callback function that is called when an explosion occurs.
  *
- * @param {long}    entity -
- * @param {float}   x      -
- * @param {float}   y      -
- * @param {float}   z      -
- * @param {float}   power  -
- * @param {boolean} onFire -
+ * @param {long}    entity - the native entity id of the entity that exploded
+ * @param {float}   x      - the x coordinate of the explosion
+ * @param {float}   y      - the y coordinate of the explosion
+ * @param {float}   z      - the z coordinate of the explosion
+ * @param {float}   radius - the radius of the explosion
+ * @param {boolean} onFire - whether or not the explosion caused a fire
  *
  * @example
- * // code here
+ * // explosion notification
+ * function explodeHook(entity, x, y, z, power, onFire) {
+ *   clientMessage(ChatColor.RED + "An explosion occured at " + x + " : " + y + " : " + z);
+ * }
  *
  *////
-function explodeHook(entity, x, y, z, power, onFire) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    leaveGame
- * @description Callback function that is called when
+ * @description Callback function that is called when the player exits a world (i.e. Quit to Title).
  *
  * @example
- * // code here
+ * // say goodbye on exit
+ * function leaveGame() {
+ *   print("Goodbye");
+ * }
  *
  *////
-function leaveGame() {}
 
 /**
  *
- * @todo better example once this is working in 0.13
+ * @todo better example once this is working; broken in BL 1.11??
  *
  * @instance
  * @memberof    Hooks
@@ -261,69 +265,86 @@ function leaveGame() {}
  * @instance
  * @memberof    Hooks
  * @function    modTick
- * @description Callback function that is called when
+ * @description Callback function that is called every game tick. A game tick
+ *              is 1/20 of a second, therefore there are 20 ticks in a second.
  *
  * @example
- * // code here
+ * // keep an eye on hunger level
+ * function modTick() {
+ *   if (Player.getHunger() < 5) {
+ *     clientMessage(ChatColor.RED + "Warning! You are getting very hungry!");
+ *   }
+ * }
  *
  *////
-function modTick() {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    newLevel
- * @description Callback function that is called when
+ * @description Callback function that is called when a game level is loaded
  *
  * @example
- * // code here
+ * // friendly welcome message
+ * function newLevel() {
+ *   clientMessage("Welcome to  Minecraft PE!!");
+ * }
  *
  *////
-function newLevel() {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    procCmd
- * @description Callback function that is called when
+ * @description Callback function that is called when a chat command is issued.
+ *
+ * @param {string} cmd - the command without the leading slash (/)
  *
  * @example
- * // code here
+ * // quick heal
+ * function procCmd(cmd) {
+ *   if (cmd === "heal") {
+ *     Entity.setHealth(Player.getEntity(), 20);
+ *   }
+ * }
  *
  *////
-function procCmd(String_cmd) {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    selectLevelHook
- * @description Callback function that is called when
+ * @description Callback function that is called when a game world is selected.
+ *              This allows you to run initialization code before the selected
+ *              world is fully loaded.
  *
- * @example
- * // code here
+ * @see See the example at {@link Block.defineBlock}
  *
  *////
-function selectLevelHook() {}
 
 /**
  *
  * @instance
  * @memberof    Hooks
  * @function    serverMessageReceiveHook
- * @description Callback function that is called when
+ * @description Callback function that is called when the server sends a chat message.
+ *
+ * @param {string} message - the message
  *
  * @example
- * // code here
+ * // announce a server message
+ * function serverMessageReceiveHook(message) {
+ *   clientMessage("Message from server: " + message);
+ * }
  *
  *////
-function serverMessageReceiveHook(String_str) {}
 
 /**
  *
- * @todo confirm this - it doesn't seem to work as of BL 1.11b4
+ * @todo confirm this - it doesn't seem to work in BL 1.11
  *
  * @instance
  * @memberof    Hooks
@@ -352,15 +373,36 @@ function serverMessageReceiveHook(String_str) {}
  * @description Callback function function that is called when an item is used
  *              on a block.
  *
- * @param {int} x           - the x coordinate of the block
- * @param {int} y           - the y coordinate of the block
- * @param {int} z           - the z coordinate of the block
- * @param {int} itemid      - the ID of the item used
- * @param {int} blockid     - the ID of the block
- * @param {int} blockSide   - the side of the block that was tapped
- * @param {int} blockDamage - the damage data for the block
+ * @param {int} x         - the x coordinate of the block
+ * @param {int} y         - the y coordinate of the block
+ * @param {int} z         - the z coordinate of the block
+ * @param {int} itemid    - the ID of the item used
+ * @param {int} blockid   - the ID of the block
+ * @param {int} blockSide - the side of the block that was tapped
+ * @param {int} itemData  - the damage/data for the item used
+ * @param {int} blockData - the damage/data for the block
  *
  * @example
- * // code here
+ * <caption>credit: {@link https://goo.gl/SdC24d|Zhuowei Zhang}</caption>
+ *
+ * // Super pickaxe: tap on a block with a diamond pickaxe to mine
+ * // a 11x11x11 square around/above it
+ * function useItem(x, y, z, itemId, blockId) {
+ *   if (itemId != 278) return; // if not diamond pickaxe exit the method
+ *   for (var xx = x - 5; xx <= x + 5; xx++) {
+ *     for (var zz = z - 5; zz <= z + 5; zz++) {
+ *       for (var yy = y; yy < y + 11; yy++) {
+ *         var tile = getTile(xx, yy, zz);
+ *         if (tile != 0) {
+ *           setTile(xx, yy, zz, 0);
+ *           if (tile != 1 && tile != 2 && tile != 3) { // not stone, grass, dirt
+ *             addItemInventory(tile, 1);
+ *           }
+ *         }
+ *       }
+ *     }
+ *   }
+ *   preventDefault();
+ * }
  *
  *////

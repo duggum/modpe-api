@@ -217,7 +217,7 @@ function getSignText(int1, int2, int3, int4) {}
  * @function
  *
  *////
-function getSpawnerEntityType(par1int, par2int, par3int) {}
+function getSpawnerEntityType(x, y, z) {}
 
 /**
  *
