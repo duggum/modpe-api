@@ -15,7 +15,6 @@
 - improve code examples where necessary
 - tutorials and script examples
 - make sure to credit all sources of code and docs
-- make docset for Dash??
 - separate references into tutorials/help section (block IDs, block render types, textures, etc...)
 - improve README
 
@@ -24,7 +23,7 @@
 - `preventDefault`: need more info on what it does and a better example with explanatory details
 
 #### Hooks
-- still lots to do (everything)
+- fine tune examples and function/parameter descriptions
 
 #### Block API
 - `Block.setRenderLayer`: does translucency work (layer 2)?
