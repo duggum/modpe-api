@@ -456,22 +456,22 @@ function spawnCow(x, y, z, skin) {}
 
 /**
  *
- * spawn a valid MCPE entity at the specified x, y, and z coordinates using the specified skin image
- * @memberof Level
- * @function
+ * @memberof    Level
+ * @function    spawnMob
+ * @description Spawn a valid MCPE entity with the specified `id` at the given
+ *              `x`, `y`, and `z` coordinates using the specified `skin` image.
  *
- * @param  {number} x    - the x coordinate
- * @param  {number} y    - the y coordinate
- * @param  {number} z    - the z coordinate
- * @param  {number} id   - the entity ID (see: {@link EntityType})
- * @param  {string} skin - the skin image path (an image found in the
+ * @param {double} x    - the x coordinate
+ * @param {double} y    - the y coordinate
+ * @param {double} z    - the z coordinate
+ * @param {int}    id   - the entity ID (see: {@link EntityType})
+ * @param {string} skin - the skin image path (an image found in the
  *                        `../assets/images` folder of the MCPE apk)
- * @return {long}        - the native entity ID of the spawned mob
  *
  * @see {@link Entity.spawnMob}, {@link bl_spawnMob}
+ *
  * @example
  * // spawn a skeleton
  * Level.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
  *
  *////
-  function spawnMob(x, y, z, entityId, skinPath) {}

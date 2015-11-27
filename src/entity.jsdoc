@@ -38,8 +38,9 @@
 
 /**
  *
- * Return a list of all entity objects in the current world
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getAll
+ * @description Return a list of all entity objects in the current world.
  *
  * @return {long[]} - all entity objects currently in the game
  *
@@ -65,85 +66,136 @@
  * }
  *
  *////
-function getAll() {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getAnimalAge
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getAnimalAge(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getArmor
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getArmor(Object, int) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getArmorDamage
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getArmorDamage(Object, int) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getEntityTypeId
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getEntityTypeId(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getHealth
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getHealth(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getItemEntityCount
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getItemEntityCount(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getItemEntityData
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getItemEntityData(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getItemEntityId
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getItemEntityId(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getMobSkin
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getMobSkin(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getNameTag
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getNameTag(Object_) {}
 
 /**
  *
- * return the up/down head rotation of the given `entity` (range: \-90 to 90)
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getPitch
+ * @description Return the up/down head rotation of the given `entity` (range: \-90 to 90).
  *
- * @param  {Entity} [entity=Player] - the entity to query
- * @return {number} - the pitch value
+ * @param  {long}   [entity=Player] - the native entity id to query
+ *
+ * @return {double}                 - the pitch value
  *
  * @see {@link Entity.getYaw} for a more detailed example
  *
@@ -155,77 +207,124 @@ function getNameTag(Object_) {}
  * }
  *
  *////
-function getPitch(entity) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getRenderType
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getRenderType(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getRider
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getRider(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getRiding
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getRiding(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getUniqueId
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getUniqueId(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getVelX
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getVelX(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getVelY
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getVelY(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getVelZ
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getVelZ(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getX
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getX(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getY
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getY(Object_) {}
 
 /**
  *
- * return the left/right head rotation of the given `entity` (range: -∞ to ∞)
- * @memberof Entity
- * @param  {Entity} [entity=Player] - the entity to query
- * @return {number} - the yaw value
+ * @memberof    Entity
+ * @function    getYaw
+ * @description return the left/right head rotation of the given `entity` (range: -∞ to ∞)
+ *
+ * @param  {long}   [entity=Player] - the native entity id to query
+ *
+ * @return {double}                 - the yaw value
  *
  * @example
  * <caption>Based on {@link http://goo.gl/fcSYaQ|Anti's DebugPE mod}</caption>
@@ -269,157 +368,254 @@ function getY(Object_) {}
  * clientMessage(getDirection());
  *
  *////
-function getYaw(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    getZ
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function getZ(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    isSneaking
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function isSneaking(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    remove
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function remove(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    removeAllEffects
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function removeAllEffects(Object_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    removeEffect
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function removeEffect(Object_, int_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    rideAnimal
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function rideAnimal(Object1, Object2) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setAnimalAge
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setAnimalAge(Object_, int_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setArmor
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setArmor(Object, int1, int2, int3) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setCape
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setCape(Object_, String_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setCarriedItem
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setCarriedItem(Object_, int1, int2, int3) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setCollisionSize
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setCollisionSize(Object_, double1, double2) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setFireTicks
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setFireTicks(Object_, int_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setHealth
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setHealth(Object_, int_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setMaxHealth
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setMaxHealth(Object_, int_) {}
 
 /**
  *
- * Set the `skin` image for a valid MCPE entity `id`.
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setMobSkin
+ * @description Set the `skin` image for a valid MCPE entity `id`.
+ *
  * @param {int}    id   - the entity ID (see: {@link EntityType})
  * @param {string} skin - the skin image path (usually an image found in the
  *                        `../assets/images` folder of the MCPE apk)
+ *
  * @example
  * // make yourself look like a creeper
  * Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");
  *
  *////
-function setMobSkin(id, skin) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setNameTag
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setNameTag(Object_, String_) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setPosition
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setPosition(Object_, double_, double1, double2) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setPositionRelative
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setPositionRelative(Object_, double_, double1, double2) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setRenderType
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setRenderType(Object_, int_) {}
 
 /**
  *
- * Set the rotation of the specified `entity`'s head to the specified `yaw` and `pitch`.
- * If attackHook is not used, {@link Player.getEntity()} should be used as the entity parameter.
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setRot
+ * @description Set the rotation of the specified `entity`'s head to
+ *              the specified `yaw` and `pitch`. If attackHook is not
+ *              used, {@link Player.getEntity()} should be used as the
+ *              entity parameter.
+ *
  * @param {long}   entity - the target entity that will have its head rotation modified
  * @param {double} yaw    - the desired `yaw` of the entity
  * @param {double} pitch  - the desired `pitch` of the entity
+ *
  * @see {@link getYaw} for a more detailed example
+ *
  * @example
  * // the exorcist
  * var y = 0;
@@ -429,22 +625,32 @@ function setRenderType(Object_, int_) {}
  * }
  *
  *////
-function setRot(entity, yaw, pitch) {}
 
 /**
  *
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setSneaking
+ * @description desc
+ *
+ * @example
+ * // code here
  *
  *////
 function setSneaking(Object_, boolean_) {}
 
 /**
  *
- * Set the specified `entity`'s `velocity` along the X axis.
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setVelX
+ * @description Set the specified `entity`'s `velocity` along the X axis.
+ *
  * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
- * @example <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang}</caption>
+ *
+ * @example
+ * <caption>credit: {@link https://goo.gl/CWKplX|Zhuowei Zhang}</caption>
+ *
+ * // jetpack fun time
  * var playerDir = [0, 0, 0];
  * var DEG_TO_RAD = Math.PI / 180;
  * var playerFlySpeed = 1;
@@ -469,45 +675,50 @@ function setSneaking(Object_, boolean_) {}
  * }
  *
  *////
-function setVelX(entity, velocity) {}
 
 /**
  *
- * Set the specified `entity`'s `velocity` along the Y axis.
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setVelY
+ * @description Set the specified `entity`'s `velocity` along the Y axis.
+ *
  * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
- * @see Example at {@link Entity.setVelX}
+ *
+ * @see See example at {@link Entity.setVelX}
  *
  *////
-function setVelY(entity, velocity) {}
 
 /**
  *
- * Set the specified `entity`'s `velocity` along the Z axis.
- * @memberof Entity
+ * @memberof    Entity
+ * @function    setVelZ
+ * @description Set the specified `entity`'s `velocity` along the Z axis.
+ *
  * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
- * @see Example at {@link Entity.setVelX}
+ * @see See example at {@link Entity.setVelX}
  *
  *////
-function setVelZ(entity, velocity) {}
 
 /**
  *
- * spawn a valid MCPE entity with the specified `id` at the given `x`, `y`, and
- * `z` coordinates using the specified `skin` image
- * @memberof Entity
- * @param {number} x    - the x coordinate
- * @param {number} y    - the y coordinate
- * @param {number} z    - the z coordinate
- * @param {number} id   - the entity ID (see: {@link EntityType})
+ * @memberof    Entity
+ * @function    spawnMob
+ * @description Spawn a valid MCPE entity with the specified `id` at the given
+ *              `x`, `y`, and `z` coordinates using the specified `skin` image.
+ *
+ * @param {double} x    - the x coordinate
+ * @param {double} y    - the y coordinate
+ * @param {double} z    - the z coordinate
+ * @param {int}    id   - the entity ID (see: {@link EntityType})
  * @param {string} skin - the skin image path (an image found in the
  *                        `../assets/images` folder of the MCPE apk)
+ *
  * @see {@link Level.spawnMob}, {@link bl_spawnMob}
+ *
  * @example
  * // spawn a skeleton
  * Entity.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");
  *
  *////
-function spawnMob(x, y, z, id, skin) {}
