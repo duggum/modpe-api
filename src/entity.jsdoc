@@ -10,8 +10,8 @@
  * @todo get more info on `amplification`
  * @todo figure out what `ambient` is
  *
- * @function    addEffect
  * @memberof    Entity
+ * @function    addEffect
  * @description Add a potion effect with the specified `effectId` to the specified `entity`.
  *
  * @param {Object}  entity        - the entity to add the effect to
