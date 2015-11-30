@@ -71,7 +71,11 @@
  *
  * @memberof    Entity
  * @function    getAnimalAge
- * @description desc
+ * @description Return the age of a mob. Only works for animals and zombies/skeletons/pigmen.
+ *
+ * @param {long} entity - the native entity id of the animal
+ *
+ * @return {int} - the animal's age
  *
  * @example
  * // code here
@@ -83,13 +87,38 @@ function getAnimalAge(Object_) {}
  *
  * @memberof    Entity
  * @function    getArmor
- * @description desc
+ * @description Returns the Item ID of the armor in the given {@link ArmorType} slot.
+ *
+ * @param {long} entity    - the native entity id of the player/mob to check
+ * @param {int}  armorSlot - the {@link ArmorType} to check
+ *
+ * @return {int}           - the Item ID of the armor in the given slot
  *
  * @example
- * // code here
+ * // what's that mob wearing?
+ * var ent = Player.getPointedEntity();
+ * var eid = Entity.getEntityTypeId(ent);
+ * if (eid >= 10 && eid <= 90) {
+ *   for (var e in EntityType) {
+ *     if (EntityType[e] === eid) {
+ *       var armor = [];
+ *       var msg = "";
+ *       // check each armor slot
+ *       for (var t in ArmorType) {
+ *         var slot = Item.getName(Entity.getArmor(ent, t)) || "";
+ *         if (slot !== "") {
+ *           armor.push(slot);
+ *         }
+ *         if (armor[0]) {
+ *           msg = "The mob is wearing: " + armor.toString();
+ *         }
+ *       }
+ *       clientMessage(msg);
+ *     }
+ *   }
+ * }
  *
  *////
-function getArmor(Object, int) {}
 
 /**
  *
@@ -162,6 +191,18 @@ function getItemEntityData(Object_) {}
  *
  *////
 function getItemEntityId(Object_) {}
+
+/**
+ *
+ * @memberof    Entity
+ * @function    getMaxHealth
+ * @description desc
+ *
+ * @example
+ * // code here
+ *
+ *////
+function getMaxHealth(Object) {}
 
 /**
  *
@@ -697,6 +738,7 @@ function setSneaking(Object_, boolean_) {}
  *
  * @param {long}   entity   - the target entity
  * @param {double} velocity - the desired velocity
+ *
  * @see See example at {@link Entity.setVelX}
  *
  *////

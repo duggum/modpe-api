@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="BlockFace"><a href="global.html#BlockFace">BlockFace</a></li>
+      
         <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
       
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
@@ -199,6 +201,10 @@
       
         <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
       
+        <li data-name="Block.getDestroyTime"><a href="Block.html#.getDestroyTime">getDestroyTime</a></li>
+      
+        <li data-name="Block.getFriction"><a href="Block.html#.getFriction">getFriction</a></li>
+      
         <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
       
         <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
@@ -207,9 +213,13 @@
       
         <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
       
+        <li data-name="Block.setFriction"><a href="Block.html#.setFriction">setFriction</a></li>
+      
         <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
       
         <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRedstoneConsumer"><a href="Block.html#.setRedstoneConsumer">setRedstoneConsumer</a></li>
       
         <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
       
@@ -266,6 +276,8 @@
         <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
       
         <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMaxHealth"><a href="Entity.html#.getMaxHealth">getMaxHealth</a></li>
       
         <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
       
@@ -403,6 +415,8 @@
       
         <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
       
+        <li data-name="Hooks#redstoneUpdateHook"><a href="Hooks.html#redstoneUpdateHook">redstoneUpdateHook</a></li>
+      
         <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
       
         <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
@@ -459,6 +473,8 @@
       
         <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
       
+        <li data-name="Item.setProperties"><a href="Item.html#.setProperties">setProperties</a></li>
+      
       </ul>
       <ul class="events itemMembers">
       
@@ -492,6 +508,8 @@
         <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
       
         <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.canSeeSky"><a href="Level.html#.canSeeSky">canSeeSky</a></li>
       
         <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
       
@@ -736,6 +754,12 @@
         <li data-name="Player.getPointedBlockZ"><a href="Player.html#.getPointedBlockZ">getPointedBlockZ</a></li>
       
         <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
+      
+        <li data-name="Player.getPointedVecX"><a href="Player.html#.getPointedVecX">getPointedVecX</a></li>
+      
+        <li data-name="Player.getPointedVecY"><a href="Player.html#.getPointedVecY">getPointedVecY</a></li>
+      
+        <li data-name="Player.getPointedVecZ"><a href="Player.html#.getPointedVecZ">getPointedVecZ</a></li>
       
         <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
       
@@ -982,7 +1006,7 @@
 <dd>
 
   <div class="description">
-    <p>Define a custom block with the specified <code>blockId</code> and attributes.
+    <p>Define a custom block with the specified blockId and attributes.
              See <strong><em><a href="textures">MCPE Textures</a></em></strong> for a list of current textures.</p>
   </div>
 
@@ -1222,7 +1246,7 @@
 
 <h5>Example</h5>
 
-        <p class="code-caption">credit: <a target="_blank" href="https://goo.gl/58zbrm">Zhuowei Zhang</a></p>
+        <p class="code-caption">Credit: <a target="_blank" href="https://goo.gl/58zbrm">Zhuowei Zhang</a></p>
     
 
     
@@ -1341,9 +1365,9 @@ function selectLevelHook() {
 <dt>
   <div class="nameContainer">
 
-    <h4 class="name" id=".getRenderType">
+    <h4 class="name" id=".getDestroyTime">
 
-<span class="type-signature static">static</span>Block.getRenderType(<code class="signature">blockId</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
+<span class="type-signature static">static</span>Block.getDestroyTime(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
@@ -1356,7 +1380,109 @@ function selectLevelHook() {
 <dd>
 
   <div class="description">
-    <p>Return the render type (shape) of a block with the specified <code>blockId</code>.</p>
+    <p>desc</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".getFriction">
+
+<span class="type-signature static">static</span>Block.getFriction(<code class="signature"></code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line73">line 73</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>desc</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".getRenderType">
+
+<span class="type-signature static">static</span>Block.getRenderType(<code class="signature">blockId</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
+    </h4>
+
+    <div class="tag-source">
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line82">line 82</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>Return the render type (shape) of a block with the specified blockId.</p>
   </div>
 
 
@@ -1484,7 +1610,7 @@ function selectLevelHook() {
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line78">line 78</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line96">line 96</a>
     </div>
 
   </div>
@@ -1493,7 +1619,7 @@ function selectLevelHook() {
 <dd>
 
   <div class="description">
-    <p>Set the color of a block with the specified <code>blockId</code> and <code>color</code>.</p>
+    <p>Set the color of a block with the specified blockId and color.</p>
   </div>
 
 
@@ -1618,7 +1744,7 @@ Block.setColor(220, [0xFF0000])</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line95">line 95</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line113">line 113</a>
     </div>
 
   </div>
@@ -1627,7 +1753,7 @@ Block.setColor(220, [0xFF0000])</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the hardness of a block with the specified <code>blockId</code> and <code>hardness</code>.</p>
+    <p>Set the hardness of a block with the specified blockId and hardness.</p>
   </div>
 
 
@@ -1753,7 +1879,7 @@ Block.setDestroyTime(102, -1);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line113">line 113</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line131">line 131</a>
     </div>
 
   </div>
@@ -1762,7 +1888,7 @@ Block.setDestroyTime(102, -1);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the explosion resistance of a block with the specified <code>blockId</code> and <code>resistance</code>.</p>
+    <p>Set the explosion resistance of a block with the specified blockId and resistance.</p>
   </div>
 
 
@@ -1881,13 +2007,13 @@ Block.setExplosionResistance(102, 6000);</code></pre>
 <dt>
   <div class="nameContainer">
 
-    <h4 class="name" id=".setLightLevel">
+    <h4 class="name" id=".setFriction">
 
-<span class="type-signature static">static</span>Block.setLightLevel(<code class="signature">blockId, lightLevel</code>)
+<span class="type-signature static">static</span>Block.setFriction(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line130">line 130</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line148">line 148</a>
     </div>
 
   </div>
@@ -1896,7 +2022,58 @@ Block.setExplosionResistance(102, 6000);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the light level of a block with the specified <code>blockId</code> and <code>lightLevel</code>.</p>
+    <p>desc</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".setLightLevel">
+
+<span class="type-signature static">static</span>Block.setLightLevel(<code class="signature">blockId, lightLevel</code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line157">line 157</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>Set the light level of a block with the specified blockId and lightLevel.</p>
   </div>
 
 
@@ -2021,7 +2198,7 @@ Block.setLightLevel(89, 4);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line147">line 147</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line174">line 174</a>
     </div>
 
   </div>
@@ -2030,7 +2207,7 @@ Block.setLightLevel(89, 4);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the light opacity of a block with the specified <code>blockId</code> and <code>opacity</code>.</p>
+    <p>Set the light opacity of a block with the specified blockId and opacity.</p>
   </div>
 
 
@@ -2139,13 +2316,13 @@ Block.setLightLevel(89, 4);</code></pre>
 <dt>
   <div class="nameContainer">
 
-    <h4 class="name" id=".setRenderLayer">
+    <h4 class="name" id=".setRedstoneConsumer">
 
-<span class="type-signature static">static</span>Block.setRenderLayer(<code class="signature">blockId, layer</code>)
+<span class="type-signature static">static</span>Block.setRedstoneConsumer(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line160">line 160</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line187">line 187</a>
     </div>
 
   </div>
@@ -2154,7 +2331,58 @@ Block.setLightLevel(89, 4);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the render layer for a block with the specified <code>blockId</code> and <code>layer</code>.</p>
+    <p>desc</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".setRenderLayer">
+
+<span class="type-signature static">static</span>Block.setRenderLayer(<code class="signature">blockId, layer</code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line196">line 196</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>Set the render layer for a block with the specified blockId and layer.</p>
   </div>
 
 
@@ -2279,7 +2507,7 @@ Block.setRenderLayer(220, 1);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line177">line 177</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line213">line 213</a>
     </div>
 
   </div>
@@ -2288,7 +2516,7 @@ Block.setRenderLayer(220, 1);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set the render type for a block with the specified <code>blockId</code> and <code>type</code>.</p>
+    <p>Set the render type for a block with the specified blockId and type.</p>
   </div>
 
 
@@ -2412,7 +2640,7 @@ Block.setRenderType(220, 13);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line193">line 193</a>
+      <a href="block.jsdoc.html">block.jsdoc</a>, <a href="block.jsdoc.html#line229">line 229</a>
     </div>
 
   </div>
@@ -2664,7 +2892,7 @@ Block.setShape(45, 0, 0, 0, 1, 0.75, 1);</code></pre>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Mon Nov 30 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

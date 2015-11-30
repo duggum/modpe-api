@@ -90,6 +90,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     color: #f92672;
 }
 
+.hljs-built_in,
 .hljs-function .hljs-keyword,
 .hljs-class .hljs-keyword:first-child,
 .hljs-aspect .hljs-keyword:first-child,
@@ -116,7 +117,6 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-subst,
 .hljs-type,
 .ruby .hljs-class .hljs-parent,
-.hljs-built_in,
 .django .hljs-template_tag,
 .django .hljs-variable,
 .smalltalk .hljs-class,

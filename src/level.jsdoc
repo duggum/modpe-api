@@ -48,6 +48,14 @@ function biomeIdToName(int1) {}
  * @function
  *
  *////
+function canSeeSky(x, y, z) {}
+
+/**
+ *
+ * @memberof Level
+ * @function
+ *
+ *////
 function destroyBlock(int1, int2, int3, boolean_) {}
 
 /**

@@ -14,7 +14,7 @@
  *
  * @memberof    Block
  * @function    defineBlock
- * @description Define a custom block with the specified `blockId` and attributes.
+ * @description Define a custom block with the specified blockId and attributes.
  *              See __*[MCPE Textures](textures)*__ for a list of current textures.
  *
  * @param {int}                blockId          - a valid, unused block ID between 0 and 255;
@@ -30,7 +30,7 @@
  *                                                see: {@link Reference#BlockRenderTypes|BlockRenderTypes}
  *
  * @example
- * <caption>credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang}</caption>
+ * <caption>Credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang}</caption>
  *
  * // create new block at level startup
  * var initialized = false;
@@ -63,11 +63,29 @@
 
 /**
  *
+ * @memberof    Block
+ * @function    getDestroyTime
+ * @description desc
+ *
+ *////
+function getDestroyTime(par1int, par2int) {}
+
+/**
+ *
+ * @memberof    Block
+ * @function    getFriction
+ * @description desc
+ *
+ *////
+function getFriction(par1int, par2int) {}
+
+/**
+ *
  * @todo test this thing
  *
  * @memberof    Block
  * @function    getRenderType
- * @description Return the render type (shape) of a block with the specified `blockId`.
+ * @description Return the render type (shape) of a block with the specified blockId.
  *
  * @param  {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
  *
@@ -79,7 +97,7 @@
  *
  * @memberof    Block
  * @function    setColor
- * @description Set the color of a block with the specified `blockId` and `color`.
+ * @description Set the color of a block with the specified blockId and color.
  *
  * @param {int}      blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {number[]} color   - a hexadecimal color value in the form: `[0xRRGGBB]`
@@ -96,7 +114,7 @@
  *
  * @memberof    Block
  * @function    setDestroyTime
- * @description Set the hardness of a block with the specified `blockId` and `hardness`.
+ * @description Set the hardness of a block with the specified blockId and hardness.
  *
  * @param {int}    blockId  - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {double} hardness - the hardness (-1 = unbreakable; destroy time will
@@ -114,7 +132,7 @@
  *
  * @memberof    Block
  * @function    setExplosionResistance
- * @description Set the explosion resistance of a block with the specified `blockId` and `resistance`.
+ * @description Set the explosion resistance of a block with the specified blockId and resistance.
  *
  * @param {int}    blockId    - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {double} resistance - the explosion resistance
@@ -130,8 +148,17 @@
 /**
  *
  * @memberof    Block
+ * @function    setFriction
+ * @description desc
+ *
+ *////
+function setFriction(par1int, par2double) {}
+
+/**
+ *
+ * @memberof    Block
  * @function    setLightLevel
- * @description Set the light level of a block with the specified `blockId` and `lightLevel`.
+ * @description Set the light level of a block with the specified blockId and lightLevel.
  *
  * @param {int} blockId    - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {int} lightLevel - the light level of the block (0-15)
@@ -148,7 +175,7 @@
  *
  * @memberof    Block
  * @function    setLightOpacity
- * @description Set the light opacity of a block with the specified `blockId` and `opacity`.
+ * @description Set the light opacity of a block with the specified blockId and opacity.
  *
  * @param {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {int} opacity - the block's opacity to light passing through
@@ -159,11 +186,20 @@
 
 /**
  *
+ * @memberof    Block
+ * @function    setRedstoneConsumer
+ * @description desc
+ *
+ *////
+function setRedstoneConsumer(par1int, par2boolean) {}
+
+/**
+ *
  * @todo find out if translucent (2) is working
  *
  * @memberof    Block
  * @function    setRenderLayer
- * @description Set the render layer for a block with the specified `blockId` and `layer`.
+ * @description Set the render layer for a block with the specified blockId and layer.
  *
  * @param {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {int} layer   - the render layer [0: opaque, 1: transparent, 2 : translucent - __broken?__]
@@ -178,7 +214,7 @@
  *
  * @memberof    Block
  * @function    setRenderType
- * @description Set the render type for a block with the specified `blockId` and `type`.
+ * @description Set the render type for a block with the specified blockId and type.
  *
  * @param {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {int} type    - the type of block to render (see:
@@ -194,7 +230,7 @@
  *
  * @memberof    Block
  * @function    setShape
- * @descriptio * @license CC-BY-SA-4.0 * @license CC-BY-SA-4.0n Set the size of a block with the specified `blockId` and start/finish coordinates.
+ * @descriptio * @license CC-BY-SA-4.0 * @license CC-BY-SA-4.0n Set the size of a block with the specified blockId and start/finish coordinates.
  *
  * @param {int}    blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
  * @param {double} startX  - the starting x coordinate

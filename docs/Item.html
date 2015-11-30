@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="BlockFace"><a href="global.html#BlockFace">BlockFace</a></li>
+      
         <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
       
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
@@ -199,6 +201,10 @@
       
         <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
       
+        <li data-name="Block.getDestroyTime"><a href="Block.html#.getDestroyTime">getDestroyTime</a></li>
+      
+        <li data-name="Block.getFriction"><a href="Block.html#.getFriction">getFriction</a></li>
+      
         <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
       
         <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
@@ -207,9 +213,13 @@
       
         <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
       
+        <li data-name="Block.setFriction"><a href="Block.html#.setFriction">setFriction</a></li>
+      
         <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
       
         <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRedstoneConsumer"><a href="Block.html#.setRedstoneConsumer">setRedstoneConsumer</a></li>
       
         <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
       
@@ -266,6 +276,8 @@
         <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
       
         <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMaxHealth"><a href="Entity.html#.getMaxHealth">getMaxHealth</a></li>
       
         <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
       
@@ -403,6 +415,8 @@
       
         <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
       
+        <li data-name="Hooks#redstoneUpdateHook"><a href="Hooks.html#redstoneUpdateHook">redstoneUpdateHook</a></li>
+      
         <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
       
         <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
@@ -459,6 +473,8 @@
       
         <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
       
+        <li data-name="Item.setProperties"><a href="Item.html#.setProperties">setProperties</a></li>
+      
       </ul>
       <ul class="events itemMembers">
       
@@ -492,6 +508,8 @@
         <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
       
         <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.canSeeSky"><a href="Level.html#.canSeeSky">canSeeSky</a></li>
       
         <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
       
@@ -737,6 +755,12 @@
       
         <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
       
+        <li data-name="Player.getPointedVecX"><a href="Player.html#.getPointedVecX">getPointedVecX</a></li>
+      
+        <li data-name="Player.getPointedVecY"><a href="Player.html#.getPointedVecY">getPointedVecY</a></li>
+      
+        <li data-name="Player.getPointedVecZ"><a href="Player.html#.getPointedVecZ">getPointedVecZ</a></li>
+      
         <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
       
         <li data-name="Player.getSelectedSlotId"><a href="Player.html#.getSelectedSlotId">getSelectedSlotId</a></li>
@@ -936,15 +960,6 @@
 </div>
 
         
-            <h3>Example</h3>
-            
-
-    
-      <pre><code>Item.methodName([ arg1[, arg2[, ...argN] ] ]);</code></pre>
-    
-
-
-        
     
     </div>
 
@@ -974,7 +989,7 @@
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line23">line 23</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line8">line 8</a>
     </div>
 
   </div>
@@ -983,7 +998,7 @@
 <dd>
 
   <div class="description">
-    <p>add a new crafting recipe</p>
+    <p>Add a new crafting recipe</p>
   </div>
 
 
@@ -1030,7 +1045,7 @@
 
             <td class="description last">
                 
-                <p>the <code>id</code> of the item to make</p></td>
+                <p>the id of the item to make</p></td>
         </tr>
 
 	
@@ -1054,7 +1069,7 @@
 
             <td class="description last">
                 
-                <p>the <code>quantity</code> of items to produce</p></td>
+                <p>the quantity of items to produce</p></td>
         </tr>
 
 	
@@ -1078,7 +1093,7 @@
 
             <td class="description last">
                 
-                <p>the <code>damage</code> value of the new item</p></td>
+                <p>the damage value of the new item</p></td>
         </tr>
 
 	
@@ -1103,7 +1118,7 @@
             <td class="description last">
                 
                 <p>the items required to complete the recipe (max 9)
-                             as an array: <code>[id1, qty1, dmg1, id2, qty2, dmg2, ...]</code></p></td>
+                             as an array: [id1, qty1, dmg1, id2, qty2, dmg2, ...]</p></td>
         </tr>
 
 	
@@ -1159,7 +1174,7 @@ Item.addCraftRecipe(276, 1, 0, ingredients);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line35">line 35</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line30">line 30</a>
     </div>
 
   </div>
@@ -1168,7 +1183,7 @@ Item.addCraftRecipe(276, 1, 0, ingredients);</code></pre>
 <dd>
 
   <div class="description">
-    <p>add a new smelting recipe</p>
+    <p>Add a new smelting recipe</p>
   </div>
 
 
@@ -1215,7 +1230,7 @@ Item.addCraftRecipe(276, 1, 0, ingredients);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>id</code> of the item to make</p></td>
+                <p>the id of the item to make</p></td>
         </tr>
 
 	
@@ -1239,7 +1254,7 @@ Item.addCraftRecipe(276, 1, 0, ingredients);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>damage</code> value of the new item</p></td>
+                <p>the damage value of the new item</p></td>
         </tr>
 
 	
@@ -1263,7 +1278,7 @@ Item.addCraftRecipe(276, 1, 0, ingredients);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>source</code> ingredient</p></td>
+                <p>the source ingredient</p></td>
         </tr>
 
 	
@@ -1315,7 +1330,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line86">line 86</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line46">line 46</a>
     </div>
 
   </div>
@@ -1324,7 +1339,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 <dd>
 
   <div class="description">
-    <p>add a new smelting recipe</p>
+    <p>Add a new smelting recipe</p>
   </div>
 
 
@@ -1371,7 +1386,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>id</code> of the item to make</p></td>
+                <p>the id of the item to make</p></td>
         </tr>
 
 	
@@ -1395,7 +1410,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>quantity</code> of items to produce</p></td>
+                <p>the quantity of items to produce</p></td>
         </tr>
 
 	
@@ -1419,7 +1434,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>damage</code> value of the new item</p></td>
+                <p>the damage value of the new item</p></td>
         </tr>
 
 	
@@ -1443,7 +1458,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
             <td class="description last">
                 
-                <p>the layout of the ingredient <code>keys</code></p></td>
+                <p>the layout of the ingredient keys</p></td>
         </tr>
 
 	
@@ -1456,7 +1471,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
             <td class="type">
             
                 
-  <span class="param-type">Array</span>
+  <span class="param-type">Array.&lt;<a href="global.html#string">string</a>, <a href="global.html#int">int</a>></span>
 
 
 
@@ -1467,7 +1482,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
             <td class="description last">
                 
-                <p>the <code>ingredients</code></p></td>
+                <p>the ingredients</p></td>
         </tr>
 
 	
@@ -1491,8 +1506,6 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text">Original shaped recipe script by <a target="_blank" href="https://goo.gl/ApLbnm">Zhuowei Zhang</a></span></li>
-
   </ul>
 </div>
 
@@ -1500,15 +1513,20 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 
 <h5>Example</h5>
 
+        <p class="code-caption">Credit: <a target="_blank" href="https://goo.gl/ApLbnm">Zhuowei Zhang</a></p>
+    
 
     
       <pre><code>// make an enchantment table
 var ENCHANTMENT_TABLE_ID = 240;
-var currentWorkbenchX
-var currentWorkbenchY
+var currentWorkbenchX;
+var currentWorkbenchY;
 var currentWorkbenchZ;
-// define the table block with the textures in the following order: bottom, top, south, north, west, east
-// in this case, the side textures are the same, and the top/bottom textures are different.
+
+// define the table block with the textures in the following order:
+// bottom, top, south, north, west, east
+// in this case, the side textures are the same, and the top/bottom
+// textures are different.
 Block.defineBlock(
   ENCHANTMENT_TABLE_ID, "Enchantment Table",
   [
@@ -1533,7 +1551,8 @@ Item.addShapedRecipe(
     "dod",
     "ooo"
   ],
-  //specify what each character represents. b = book, d = diamond, o = obsidian
+  // specify what each character represents.
+  // b = book, d = diamond, o = obsidian
   [
     "b", 340, 0,
     "d", 264, 0,
@@ -1557,7 +1576,7 @@ Item.addShapedRecipe(
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line129">line 129</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line106">line 106</a>
     </div>
 
   </div>
@@ -1566,7 +1585,7 @@ Item.addShapedRecipe(
 <dd>
 
   <div class="description">
-    <p>define custom armor</p>
+    <p>Define custom armor</p>
   </div>
 
 
@@ -1613,7 +1632,7 @@ Item.addShapedRecipe(
 
             <td class="description last">
                 
-                <p>the new item <code>id</code> (see: <a href="Reference.html#ItemIds">ItemIds</a>)</p></td>
+                <p>the new item id (see: <a href="Reference.html#ItemIds">ItemIds</a>)</p></td>
         </tr>
 
 	
@@ -1781,7 +1800,7 @@ Item.addShapedRecipe(
 
             <td class="description last">
                 
-                <p>the <code>type</code> of armor this item is</p></td>
+                <p>the type of armor this item is</p></td>
         </tr>
 
 	
@@ -1805,8 +1824,6 @@ Item.addShapedRecipe(
 
 <ul>
 
-    <li class="icon"><i class="tag-see icon-see" title="See"></i><span class="icon-text">Original armor script by <a target="_blank" href="https://goo.gl/sTc5jr">Zhuowei Zhang</a></span></li>
-
   </ul>
 </div>
 
@@ -1814,6 +1831,8 @@ Item.addShapedRecipe(
 
 <h5>Example</h5>
 
+        <p class="code-caption">Credit: <a target="_blank" href="https://goo.gl/sTc5jr">Zhuowei Zhang</a></p>
+    
 
     
       <pre><code>// WOOT! Zombie armor!
@@ -1858,7 +1877,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line131">line 131</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line152">line 152</a>
     </div>
 
   </div>
@@ -2074,7 +2093,7 @@ function procCmd(cmd) {
 clientMessage(Item.getName(263, 0, true)); // prints "item.coal.name"
 // get data in normal form
 clientMessage(Item.getName(263, 0, false)); // prints "Coal"
-clientMessage(Item.getName(263, 1));        // prints "Charcoal"</code></pre>
+clientMessage(Item.getName(263, 1));        // prints "Charcoal" (item 263:1)</code></pre>
     
 
 
@@ -2092,7 +2111,7 @@ clientMessage(Item.getName(263, 1));        // prints "Charcoal"</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line164">line 164</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line174">line 174</a>
     </div>
 
   </div>
@@ -2101,7 +2120,7 @@ clientMessage(Item.getName(263, 1));        // prints "Charcoal"</code></pre>
 <dd>
 
   <div class="description">
-    <p>determine if an item is valid</p>
+    <p>Determine if an item is valid</p>
   </div>
 
 
@@ -2148,7 +2167,7 @@ clientMessage(Item.getName(263, 1));        // prints "Charcoal"</code></pre>
 
             <td class="description last">
                 
-                <p>the item <code>id</code></p></td>
+                <p>the item id</p></td>
         </tr>
 
 	
@@ -2239,7 +2258,7 @@ if (Item.isValidItem(263)) {
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line176">line 176</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line192">line 192</a>
     </div>
 
   </div>
@@ -2248,8 +2267,8 @@ if (Item.isValidItem(263)) {
 <dd>
 
   <div class="description">
-    <p>set the category for an item which will determine where it appears in the
-crafting table interface</p>
+    <p>Set the category for an item which will determine where
+             it appears in the crafting table interface</p>
   </div>
 
 
@@ -2296,7 +2315,7 @@ crafting table interface</p>
 
             <td class="description last">
                 
-                <p>the <code>id</code> of the item to change</p></td>
+                <p>the id of the item to change</p></td>
         </tr>
 
 	
@@ -2320,7 +2339,7 @@ crafting table interface</p>
 
             <td class="description last">
                 
-                <p>the new <code>category</code> the item will be assigned to</p></td>
+                <p>the new category the item will be assigned to</p></td>
         </tr>
 
 	
@@ -2355,7 +2374,8 @@ crafting table interface</p>
 
 
     
-      <pre><code>Item.setCategory(263, ItemCategory.FOOD);</code></pre>
+      <pre><code>// coal can be food, right?
+Item.setCategory(263, ItemCategory.FOOD);</code></pre>
     
 
 
@@ -2369,11 +2389,11 @@ crafting table interface</p>
 
     <h4 class="name" id=".setHandEquipped">
 
-<span class="type-signature static">static</span>Item.setHandEquipped(<code class="signature">id, set</code>)
+<span class="type-signature static">static</span>Item.setHandEquipped(<code class="signature">id, isHandEquipped</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line187">line 187</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line210">line 210</a>
     </div>
 
   </div>
@@ -2382,7 +2402,7 @@ crafting table interface</p>
 <dd>
 
   <div class="description">
-    <p>set an item to render as a tool</p>
+    <p>Set an item to render as a tool</p>
   </div>
 
 
@@ -2429,14 +2449,14 @@ crafting table interface</p>
 
             <td class="description last">
                 
-                <p>the item <code>id</code></p></td>
+                <p>the item id</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>set</code></td>
+                <td class="name"><code>isHandEquipped</code></td>
             
 
             <td class="type">
@@ -2453,7 +2473,7 @@ crafting table interface</p>
 
             <td class="description last">
                 
-                <p>whether or not the item should be <code>set</code> as hand equipped</p></td>
+                <p>whether or not the item should be set as hand equipped</p></td>
         </tr>
 
 	
@@ -2486,7 +2506,8 @@ crafting table interface</p>
 
 
     
-      <pre><code>var MY_CUSTOM_ITEM_ID = 220;
+      <pre><code>// make custom item hand equipable
+var MY_CUSTOM_ITEM_ID = 220;
 Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);</code></pre>
     
 
@@ -2505,7 +2526,7 @@ Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line199">line 199</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line226">line 226</a>
     </div>
 
   </div>
@@ -2514,8 +2535,8 @@ Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);</code></pre>
 <dd>
 
   <div class="description">
-    <p>set the amount of damage an item can sustain when used (i.e. the number of
-times it can be used before it breaks)</p>
+    <p>Set the amount of damage an item can sustain when used
+             (i.e. the number of times it can be used before it breaks)</p>
   </div>
 
 
@@ -2562,7 +2583,7 @@ times it can be used before it breaks)</p>
 
             <td class="description last">
                 
-                <p>the item <code>id</code></p></td>
+                <p>the item id</p></td>
         </tr>
 
 	
@@ -2586,7 +2607,7 @@ times it can be used before it breaks)</p>
 
             <td class="description last">
                 
-                <p>the maximum <code>damage</code></p></td>
+                <p>the maximum damage</p></td>
         </tr>
 
 	
@@ -2627,6 +2648,149 @@ Item.setMaxDamage(270, 10000);</code></pre>
 
 </dd>
 
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".setProperties">
+
+<span class="type-signature static">static</span>Item.setProperties(<code class="signature">id, properties</code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line242">line 242</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>Set custom propertires for an item using the same format as found
+             in the items.json file.</p>
+  </div>
+
+
+
+
+
+
+
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the item ID</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>properties</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>a JSON object describing the new properties</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+<h5>Example</h5>
+
+        <p class="code-caption">Credit: <a target="_blank" href="https://goo.gl/E0FnzE">Zhuowei Zhang</a></p>
+    
+
+    
+      <pre><code>// anything that can be specified in items.json can be specified here
+Item.setProperties(4014, {
+  "use_animation": "eat",
+  "use_duration": 32,
+  "food": {
+    "nutrition": shoesNutrition,
+    "saturation_modifier": "low",
+    "is_meat": false
+  }
+});</code></pre>
+    
+
+
+
+</dd>
+
         </dl>
     
 
@@ -2642,7 +2806,7 @@ Item.setMaxDamage(270, 10000);</code></pre>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Mon Nov 30 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

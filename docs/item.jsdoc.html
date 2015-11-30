@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="BlockFace"><a href="global.html#BlockFace">BlockFace</a></li>
+      
         <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
       
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
@@ -199,6 +201,10 @@
       
         <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
       
+        <li data-name="Block.getDestroyTime"><a href="Block.html#.getDestroyTime">getDestroyTime</a></li>
+      
+        <li data-name="Block.getFriction"><a href="Block.html#.getFriction">getFriction</a></li>
+      
         <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
       
         <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
@@ -207,9 +213,13 @@
       
         <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
       
+        <li data-name="Block.setFriction"><a href="Block.html#.setFriction">setFriction</a></li>
+      
         <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
       
         <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRedstoneConsumer"><a href="Block.html#.setRedstoneConsumer">setRedstoneConsumer</a></li>
       
         <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
       
@@ -266,6 +276,8 @@
         <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
       
         <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMaxHealth"><a href="Entity.html#.getMaxHealth">getMaxHealth</a></li>
       
         <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
       
@@ -403,6 +415,8 @@
       
         <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
       
+        <li data-name="Hooks#redstoneUpdateHook"><a href="Hooks.html#redstoneUpdateHook">redstoneUpdateHook</a></li>
+      
         <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
       
         <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
@@ -459,6 +473,8 @@
       
         <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
       
+        <li data-name="Item.setProperties"><a href="Item.html#.setProperties">setProperties</a></li>
+      
       </ul>
       <ul class="events itemMembers">
       
@@ -492,6 +508,8 @@
         <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
       
         <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.canSeeSky"><a href="Level.html#.canSeeSky">canSeeSky</a></li>
       
         <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
       
@@ -737,6 +755,12 @@
       
         <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
       
+        <li data-name="Player.getPointedVecX"><a href="Player.html#.getPointedVecX">getPointedVecX</a></li>
+      
+        <li data-name="Player.getPointedVecY"><a href="Player.html#.getPointedVecY">getPointedVecY</a></li>
+      
+        <li data-name="Player.getPointedVecZ"><a href="Player.html#.getPointedVecZ">getPointedVecZ</a></li>
+      
         <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
       
         <li data-name="Player.getSelectedSlotId"><a href="Player.html#.getSelectedSlotId">getSelectedSlotId</a></li>
@@ -908,19 +932,24 @@
 <section>
   <article>
     <pre><code>/**
- * Static methods for the Item API
- * @namespace Item
- * @example Item.methodName([ arg1[, arg2[, ...argN] ] ]);
- */
+ *
+ * @namespace   Item
+ * @description Static methods for the Item API
+ *
+ *////
 
 /**
- * add a new crafting recipe
- * @memberof Item
- * @param {int} id            - the `id` of the item to make
- * @param {int} quantity      - the `quantity` of items to produce
- * @param {int} damage        - the `damage` value of the new item
+ *
+ * @memberof    Item
+ * @function    addCraftRecipe
+ * @description Add a new crafting recipe
+ *
+ * @param {int}   id          - the id of the item to make
+ * @param {int}   quantity    - the quantity of items to produce
+ * @param {int}   damage      - the damage value of the new item
  * @param {int[]} ingredients - the items required to complete the recipe (max 9)
- *                              as an array: `[id1, qty1, dmg1, id2, qty2, dmg2, ...]`
+ *                              as an array: [id1, qty1, dmg1, id2, qty2, dmg2, ...]
+ *
  * @example
  * // make a diamond sword from 1 coal [263, 1, 0] and 3 torches [50, 3, 0]
  * var ingredients = [
@@ -928,38 +957,50 @@
  *   50, 3, 0
  * ];
  * Item.addCraftRecipe(276, 1, 0, ingredients);
- */
-function addCraftRecipe(id, quantity, damge, ingredients) {}
+ *
+ *////
 
 /**
- * add a new smelting recipe
- * @memberof Item
- * @param {int} id     - the `id` of the item to make
- * @param {int} damage - the `damage` value of the new item
- * @param {int} source - the `source` ingredient
+ *
+ * @memberof    Item
+ * @function    addFurnaceRecipe
+ * @description Add a new smelting recipe
+ *
+ * @param {int} id     - the id of the item to make
+ * @param {int} damage - the damage value of the new item
+ * @param {int} source - the source ingredient
+ *
  * @example
  * // make a diamond sword from a stick
  * Item.addFurnaceRecipe(276, 0, 280);
- */
-function addFurnaceRecipe(id, damge, source) {}
+ *
+ *////
 
 /**
- * add a new smelting recipe
- * @memberof Item
- * @param {int} id            - the `id` of the item to make
- * @param {int} quantity      - the `quantity` of items to produce
- * @param {int} damage        - the `damage` value of the new item
- * @param {string[]} keys     - the layout of the ingredient `keys`
- * @param {Array} ingredients - the `ingredients`
- * @see Original shaped recipe script by {@link https://goo.gl/ApLbnm|Zhuowei Zhang}
+ *
+ * @memberof    Item
+ * @function    addShapedRecipe
+ * @description Add a new smelting recipe
+ *
+ * @param {int}                id          - the id of the item to make
+ * @param {int}                quantity    - the quantity of items to produce
+ * @param {int}                damage      - the damage value of the new item
+ * @param {string[]}           keys        - the layout of the ingredient keys
+ * @param {Array&lt;string, int>} ingredients - the ingredients
+ *
  * @example
+ * &lt;caption>Credit: {@link https://goo.gl/ApLbnm|Zhuowei Zhang}&lt;/caption>
+ *
  * // make an enchantment table
  * var ENCHANTMENT_TABLE_ID = 240;
- * var currentWorkbenchX
- * var currentWorkbenchY
+ * var currentWorkbenchX;
+ * var currentWorkbenchY;
  * var currentWorkbenchZ;
- * // define the table block with the textures in the following order: bottom, top, south, north, west, east
- * // in this case, the side textures are the same, and the top/bottom textures are different.
+ *
+ * // define the table block with the textures in the following order:
+ * // bottom, top, south, north, west, east
+ * // in this case, the side textures are the same, and the top/bottom
+ * // textures are different.
  * Block.defineBlock(
  *   ENCHANTMENT_TABLE_ID, "Enchantment Table",
  *   [
@@ -984,30 +1025,35 @@ function addFurnaceRecipe(id, damge, source) {}
  *     "dod",
  *     "ooo"
  *   ],
- *   //specify what each character represents. b = book, d = diamond, o = obsidian
+ *   // specify what each character represents.
+ *   // b = book, d = diamond, o = obsidian
  *   [
  *     "b", 340, 0,
  *     "d", 264, 0,
  *     "o", 49, 0
  *   ]
  * );
- */
-function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
+ *
+ *////
 
 /**
  *
- * define custom armor
- * @memberof Item
- * @param {int}    id           - the new item `id` (see: {@link Reference#ItemIds|ItemIds})
+ * @memberof    Item
+ * @function    defineArmor
+ * @description Define custom armor
+ *
+ * @param {int}    id           - the new item id (see: {@link Reference#ItemIds|ItemIds})
  * @param {string} iconName     - the name of the icon to use for this item
  * @param {int}    iconIndex    - the index of the icon to use for this item
  * @param {string} name         - the name of the new armor item
  * @param {string} texture      - the texture to use for this item
  * @param {int}    damageReduce - how much damage is taken when hit
  * @param {int}    maxDamage    - the maximum amount of damage the item can sustain
- * @param {int}    type         - the `type` of armor this item is
- * @see Original armor script by {@link https://goo.gl/sTc5jr|Zhuowei Zhang}
+ * @param {int}    type         - the type of armor this item is
+ *
  * @example
+ * &lt;caption>Credit: {@link https://goo.gl/sTc5jr|Zhuowei Zhang}&lt;/caption>
+ *
  * // WOOT! Zombie armor!
  * Item.defineArmor(
  *   410, "empty_armor_slot_helmet", 0, "Zombie mask",
@@ -1035,7 +1081,6 @@ function addShapedRecipe(id, quantity, damage, keys, ingredients) {}
  * }
  *
  *////
-function defineArmor( id, iconName, iconIndex, name, texture, damageReduce, maxDamage, type) {}
 
 /**
  *
@@ -1055,57 +1100,103 @@ function defineArmor( id, iconName, iconIndex, name, texture, damageReduce, maxD
  * clientMessage(Item.getName(263, 0, true)); // prints "item.coal.name"
  * // get data in normal form
  * clientMessage(Item.getName(263, 0, false)); // prints "Coal"
- * clientMessage(Item.getName(263, 1));        // prints "Charcoal"
+ * clientMessage(Item.getName(263, 1));        // prints "Charcoal" (item 263:1)
  *
  *////
 
 /**
- * determine if an item is valid
- * @memberof Item
- * @param {int} id   - the item `id`
+ *
+ * @memberof    Item
+ * @function    isValidItem
+ * @description Determine if an item is valid
+ *
+ * @param {int} id   - the item id
+ *
  * @return {boolean} - true if the item is valid, false otherwise
+ *
  * @example
  * // see if coal is a valid item
  * if (Item.isValidItem(263)) {
  *   clientMessage("Yay, let's make torches!");
  * }
- */
-function isValidItem(id) {}
+ *
+ *////
 
 /**
- * set the category for an item which will determine where it appears in the
- * crafting table interface
- * @memberof Item
- * @param {int} id       - the `id` of the item to change
- * @param {int} category - the new `category` the item will be assigned to
- * @example
- * Item.setCategory(263, ItemCategory.FOOD);
+ *
+ * @memberof    Item
+ * @function    setCategory
+ * @description Set the category for an item which will determine where
+ *              it appears in the crafting table interface
+ *
+ * @param {int} id       - the id of the item to change
+ * @param {int} category - the new category the item will be assigned to
+ *
  * @see {@link ItemCategory}
- */
-function setCategory(id, category) {}
+ *
+ * @example
+ * // coal can be food, right?
+ * Item.setCategory(263, ItemCategory.FOOD);
+ *
+ *////
 
 /**
- * set an item to render as a tool
- * @memberof Item
- * @param {int} id      - the item `id`
- * @param {boolean} set - whether or not the item should be `set` as hand equipped
+ *
+ * @memberof    Item
+ * @function    setHandEquipped
+ * @description Set an item to render as a tool
+ *
+ * @param {int}     id             - the item id
+ * @param {boolean} isHandEquipped - whether or not the item should be set as hand equipped
+
  * @example
+ * // make custom item hand equipable
  * var MY_CUSTOM_ITEM_ID = 220;
  * Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);
- */
-function setHandEquipped(id, set) {}
+ *
+ *////
 
 /**
- * set the amount of damage an item can sustain when used (i.e. the number of
- * times it can be used before it breaks)
- * @memberof Item
- * @param {int} id     - the item `id`
- * @param {int} damage - the maximum `damage`
+ *
+ * @memberof    Item
+ * @function    setMaxDamage
+ * @description Set the amount of damage an item can sustain when used
+ *              (i.e. the number of times it can be used before it breaks)
+ *
+ * @param {int} id     - the item id
+ * @param {int} damage - the maximum damage
+ *
  * @example
  * // who says wooden pick axes are useless?
  * Item.setMaxDamage(270, 10000);
- */
-function setMaxDamage(id, damage) {}
+ *
+ *////
+
+/**
+ *
+ * @memberof    Item
+ * @function    setProperties
+ * @description Set custom propertires for an item using the same format as found
+ *              in the items.json file.
+ *
+ * @param {int}    id         - the item ID
+ * @param {Object} properties - a JSON object describing the new properties
+ *
+ * @example
+ * &lt;caption>Credit: {@link https://goo.gl/E0FnzE|Zhuowei Zhang}&lt;/caption>
+ *
+ * // anything that can be specified in items.json can be specified here
+ * Item.setProperties(4014, {
+ *   "use_animation": "eat",
+ *   "use_duration": 32,
+ *   "food": {
+ *     "nutrition": shoesNutrition,
+ *     "saturation_modifier": "low",
+ *     "is_meat": false
+ *   }
+ * });
+ *
+ *////
 </code></pre>
   </article>
 </section>
@@ -1116,7 +1207,7 @@ function setMaxDamage(id, damage) {}
 
         <footer>
           <p><a href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Mon Nov 30 2015</p>
           <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

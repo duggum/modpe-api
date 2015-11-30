@@ -166,6 +166,18 @@ function getPointedBlockZ() {}
 function getPointedEntity() {}
 
 /**
+ * @memberof Player
+ */function getPointedVecX() {}
+
+/**
+ * @memberof Player
+ */function getPointedVecY() {}
+
+/**
+ * @memberof Player
+ */function getPointedVecZ() {}
+
+/**
  * @since BL 1.10.4
  * @memberof Player
  */

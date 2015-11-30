@@ -41,7 +41,7 @@
  * @param {int} y    - the chest's y coordiante
  * @param {int} z    - the chest's z coordiante
  * @param {int} type - the event type (seems to always be 1)
- * @param {int} data - the open/close data (0 = closing, 1 = opening, 2 = open)
+ * @param {int} data - the open/close data (0 = closing, 1 = open)
  *
  * @example
  * // Announce the opening of a chest
@@ -311,6 +311,29 @@
  * }
  *
  *////
+
+/**
+ *
+ * @todo  test this and try to figure it out
+ *
+ * @instance
+ * @memberof    Hooks
+ * @function    redstoneUpdateHook
+ * @description Callback function that is called when ???
+ *
+ * @param {int} x                        - the x coordinate of the block
+ * @param {int} y                        - the y coordinate of the block
+ * @param {int} z                        - the z coordinate of the block
+ * @param {int} newCurrent               - ???
+ * @param {boolean} someBooleanIDontKnow - ???
+ * @param {int} blockId                  - the ID of the block
+ * @param {int} blockData                - the damage/data for the block
+ *
+ * @example
+ * // code here
+ *
+ *////
+function redstoneUpdateHook(x, y, z, newCurrent, someBooleanIDontKnow, blockId, blockData) {}
 
 /**
  *

@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="BlockFace"><a href="global.html#BlockFace">BlockFace</a></li>
+      
         <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
       
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
@@ -199,6 +201,10 @@
       
         <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
       
+        <li data-name="Block.getDestroyTime"><a href="Block.html#.getDestroyTime">getDestroyTime</a></li>
+      
+        <li data-name="Block.getFriction"><a href="Block.html#.getFriction">getFriction</a></li>
+      
         <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
       
         <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
@@ -207,9 +213,13 @@
       
         <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
       
+        <li data-name="Block.setFriction"><a href="Block.html#.setFriction">setFriction</a></li>
+      
         <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
       
         <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRedstoneConsumer"><a href="Block.html#.setRedstoneConsumer">setRedstoneConsumer</a></li>
       
         <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
       
@@ -266,6 +276,8 @@
         <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
       
         <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMaxHealth"><a href="Entity.html#.getMaxHealth">getMaxHealth</a></li>
       
         <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
       
@@ -403,6 +415,8 @@
       
         <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
       
+        <li data-name="Hooks#redstoneUpdateHook"><a href="Hooks.html#redstoneUpdateHook">redstoneUpdateHook</a></li>
+      
         <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
       
         <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
@@ -459,6 +473,8 @@
       
         <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
       
+        <li data-name="Item.setProperties"><a href="Item.html#.setProperties">setProperties</a></li>
+      
       </ul>
       <ul class="events itemMembers">
       
@@ -492,6 +508,8 @@
         <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
       
         <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.canSeeSky"><a href="Level.html#.canSeeSky">canSeeSky</a></li>
       
         <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
       
@@ -736,6 +754,12 @@
         <li data-name="Player.getPointedBlockZ"><a href="Player.html#.getPointedBlockZ">getPointedBlockZ</a></li>
       
         <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
+      
+        <li data-name="Player.getPointedVecX"><a href="Player.html#.getPointedVecX">getPointedVecX</a></li>
+      
+        <li data-name="Player.getPointedVecY"><a href="Player.html#.getPointedVecY">getPointedVecY</a></li>
+      
+        <li data-name="Player.getPointedVecZ"><a href="Player.html#.getPointedVecZ">getPointedVecZ</a></li>
       
         <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
       
@@ -1117,11 +1141,224 @@ print(ArmorType.chestplate);</code></pre>
             
 <dt>
     <div class="nameContainer">
-        <h4 class="name" id="ChatColor">ChatColor</h4>
+        <h4 class="name" id="BlockFace">BlockFace</h4>
 
         
         <div class="tag-source">
             <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line17">line 17</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Integer representation of each face of a game block.</p>
+    </div>
+    
+
+    
+<div class="details">
+
+  <h5 class="subsection-title">Properties:</h5>
+  <div class="properties">
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>DOWN</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>0</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>EAST</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>5</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>NORTH</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>2</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>SOUTH</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>3</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>UP</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>1</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>WEST</code></td>
+            
+            
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>4</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table></div>
+
+<ul>
+
+  </ul>
+</div>
+
+
+    
+        <h5>Example</h5>
+        
+
+    
+      <pre><code>// prints 1
+print(BlockFace.UP);</code></pre>
+    
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="ChatColor">ChatColor</h4>
+
+        
+        <div class="tag-source">
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line35">line 35</a>
         </div>
         
     </div>
@@ -1180,7 +1417,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§b&quot;</p></td>
+            <td class="description last"><p>§b</p></td>
         </tr>
 	
 	
@@ -1204,7 +1441,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§&quot;</p></td>
+            <td class="description last"><p>§</p></td>
         </tr>
 	
 	
@@ -1228,7 +1465,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§0&quot;</p></td>
+            <td class="description last"><p>§0</p></td>
         </tr>
 	
 	
@@ -1252,7 +1489,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§9&quot;</p></td>
+            <td class="description last"><p>§9</p></td>
         </tr>
 	
 	
@@ -1276,7 +1513,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§l&quot;</p></td>
+            <td class="description last"><p>§l</p></td>
         </tr>
 	
 	
@@ -1300,7 +1537,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§3&quot;</p></td>
+            <td class="description last"><p>§3</p></td>
         </tr>
 	
 	
@@ -1324,7 +1561,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§1&quot;</p></td>
+            <td class="description last"><p>§1</p></td>
         </tr>
 	
 	
@@ -1348,7 +1585,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§8&quot;</p></td>
+            <td class="description last"><p>§8</p></td>
         </tr>
 	
 	
@@ -1372,7 +1609,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§2&quot;</p></td>
+            <td class="description last"><p>§2</p></td>
         </tr>
 	
 	
@@ -1396,7 +1633,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§5&quot;</p></td>
+            <td class="description last"><p>§5</p></td>
         </tr>
 	
 	
@@ -1420,7 +1657,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§4&quot;</p></td>
+            <td class="description last"><p>§4</p></td>
         </tr>
 	
 	
@@ -1444,7 +1681,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§6&quot;</p></td>
+            <td class="description last"><p>§6</p></td>
         </tr>
 	
 	
@@ -1468,7 +1705,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§7&quot;</p></td>
+            <td class="description last"><p>§7</p></td>
         </tr>
 	
 	
@@ -1492,7 +1729,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§a&quot;</p></td>
+            <td class="description last"><p>§a</p></td>
         </tr>
 	
 	
@@ -1516,7 +1753,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§d&quot;</p></td>
+            <td class="description last"><p>§d</p></td>
         </tr>
 	
 	
@@ -1540,7 +1777,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§c&quot;</p></td>
+            <td class="description last"><p>§c</p></td>
         </tr>
 	
 	
@@ -1564,7 +1801,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§r&quot;</p></td>
+            <td class="description last"><p>§r</p></td>
         </tr>
 	
 	
@@ -1588,7 +1825,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§f&quot;</p></td>
+            <td class="description last"><p>§f</p></td>
         </tr>
 	
 	
@@ -1612,7 +1849,7 @@ print(ArmorType.chestplate);</code></pre>
             
             
             
-            <td class="description last"><p>&quot;§e&quot;</p></td>
+            <td class="description last"><p>§e</p></td>
         </tr>
 	
 	
@@ -1646,7 +1883,7 @@ clientMessage(ChatColor.RED + "There's a Magma Cube behind you!" + ChatColor.RES
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line48">line 48</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line66">line 66</a>
         </div>
         
     </div>
@@ -1763,7 +2000,7 @@ print(DimensionId.NETHER);</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line62">line 62</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line80">line 80</a>
         </div>
         
     </div>
@@ -2895,7 +3132,7 @@ function entityAddedHook(entity) {
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line125">line 125</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line143">line 143</a>
         </div>
         
     </div>
@@ -3999,7 +4236,7 @@ Level.spawnMob(x, y, z, EntityType.CREEPER, "mob/creeper.png");</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line183">line 183</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line201">line 201</a>
         </div>
         
     </div>
@@ -4188,7 +4425,7 @@ print(ItemCategory.FOOD);</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line200">line 200</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line218">line 218</a>
         </div>
         
     </div>
@@ -4827,7 +5064,7 @@ print(ItemCategory.FOOD);</code></pre>
 
         
         <div class="tag-source">
-            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line236">line 236</a>
+            <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line254">line 254</a>
         </div>
         
     </div>
@@ -5679,7 +5916,7 @@ addItemInventory(<code class="signature">id, quantity, damage</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line285">line 285</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line303">line 303</a>
     </div>
 
   </div>
@@ -5837,7 +6074,7 @@ bl_setMobSkin(<code class="signature">entityId, skin</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line302">line 302</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line320">line 320</a>
     </div>
 
   </div>
@@ -5972,7 +6209,7 @@ bl_spawnMob(<code class="signature">x, y, z, entityId, skin</code>)<span class="
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line319">line 319</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line337">line 337</a>
     </div>
 
   </div>
@@ -6217,7 +6454,7 @@ clientMessage(<code class="signature">message</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line342">line 342</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line360">line 360</a>
     </div>
 
   </div>
@@ -6329,7 +6566,7 @@ explode(<code class="signature">x, y, z, radius, hasFire</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line358">line 358</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line376">line 376</a>
     </div>
 
   </div>
@@ -6536,7 +6773,7 @@ getCarriedItem(<code class="signature"></code>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line379">line 379</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line397">line 397</a>
     </div>
 
   </div>
@@ -6638,7 +6875,7 @@ getLevel(<code class="signature"></code>)<span class="glyphicon glyphicon-circle
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line397">line 397</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line415">line 415</a>
     </div>
 
   </div>
@@ -6730,7 +6967,7 @@ getPitch(<code class="signature"><span class="optional">entity</span></code>)<sp
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line411">line 411</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line429">line 429</a>
     </div>
 
   </div>
@@ -6897,7 +7134,7 @@ getPlayerEnt(<code class="signature"></code>)<span class="glyphicon glyphicon-ci
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line433">line 433</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line451">line 451</a>
     </div>
 
   </div>
@@ -7000,7 +7237,7 @@ getPlayerX(<code class="signature"></code>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line452">line 452</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line470">line 470</a>
     </div>
 
   </div>
@@ -7101,7 +7338,7 @@ getPlayerY(<code class="signature"></code>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line469">line 469</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line487">line 487</a>
     </div>
 
   </div>
@@ -7202,7 +7439,7 @@ getPlayerZ(<code class="signature"></code>)<span class="glyphicon glyphicon-circ
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line486">line 486</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line504">line 504</a>
     </div>
 
   </div>
@@ -7303,7 +7540,7 @@ getTile(<code class="signature">x, y, z</code>)<span class="glyphicon glyphicon-
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line503">line 503</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line521">line 521</a>
     </div>
 
   </div>
@@ -7507,7 +7744,7 @@ getYaw(<code class="signature"><span class="optional">entity</span></code>)<span
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line531">line 531</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line549">line 549</a>
     </div>
 
   </div>
@@ -7706,7 +7943,7 @@ preventDefault(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line585">line 585</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line603">line 603</a>
     </div>
 
   </div>
@@ -7781,7 +8018,7 @@ print(<code class="signature">text</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line609">line 609</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line627">line 627</a>
     </div>
 
   </div>
@@ -7891,7 +8128,7 @@ rideAnimal(<code class="signature">rider, target</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line624">line 624</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line642">line 642</a>
     </div>
 
   </div>
@@ -8050,7 +8287,7 @@ setNightMode(<code class="signature">isNight</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line665">line 665</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line683">line 683</a>
     </div>
 
   </div>
@@ -8162,7 +8399,7 @@ setPosition(<code class="signature">entity, x, y, z</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line682">line 682</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line700">line 700</a>
     </div>
 
   </div>
@@ -8373,7 +8610,7 @@ setPositionRelative(<code class="signature">entity, x, y, z</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line729">line 729</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line747">line 747</a>
     </div>
 
   </div>
@@ -8583,7 +8820,7 @@ setRot(<code class="signature">entity, yaw, pitch</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line775">line 775</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line793">line 793</a>
     </div>
 
   </div>
@@ -8748,7 +8985,7 @@ setTile(<code class="signature">x, y, z, id, <span class="optional">damage</span
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line799">line 799</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line817">line 817</a>
     </div>
 
   </div>
@@ -9042,7 +9279,7 @@ setVelX(<code class="signature">entity, velocity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line855">line 855</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line873">line 873</a>
     </div>
 
   </div>
@@ -9199,7 +9436,7 @@ setVelY(<code class="signature">entity, velocity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line894">line 894</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line912">line 912</a>
     </div>
 
   </div>
@@ -9325,7 +9562,7 @@ setVelZ(<code class="signature">entity, velocity</code>)
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line908">line 908</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line926">line 926</a>
     </div>
 
   </div>
@@ -9451,7 +9688,7 @@ spawnChicken(<code class="signature">x, y, z, skin</code>)<span class="glyphicon
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line922">line 922</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line940">line 940</a>
     </div>
 
   </div>
@@ -9690,7 +9927,7 @@ spawnCow(<code class="signature">x, y, z, skin</code>)<span class="glyphicon gly
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line962">line 962</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line980">line 980</a>
     </div>
 
   </div>
@@ -9929,7 +10166,7 @@ spawnPigZombie(<code class="signature">x, y, z, heldItemId, skin</code>)<span cl
     </h4>
 
     <div class="tag-source">
-      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line1002">line 1002</a>
+      <a href="global.jsdoc.html">global.jsdoc</a>, <a href="global.jsdoc.html#line1020">line 1020</a>
     </div>
 
   </div>
@@ -10780,7 +11017,7 @@ spawnPigZombie(x, y, z, held, img);</code></pre>
     <div class="description">
         <p><strong><code>JavaScript</code></strong> According to the ECMAScript standard, there is only
              one number type: the double-precision 64-bit binary format IEEE 754
-             value (number between -(253 -1) and 253 -1).</p>
+             value (number between -(2<sup>53</sup> -1) and 2<sup>53</sup> -1).</p>
     </div>
     
 
@@ -10953,7 +11190,7 @@ spawnPigZombie(x, y, z, held, img);</code></pre>
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Mon Nov 30 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

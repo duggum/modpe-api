@@ -8,7 +8,7 @@
 ## Version Compatibility
 
 - Minecraft Pocket Edition: `0.13.0`
-- BlockLauncher Pro: `1.11`  
+- BlockLauncher Pro: `1.11.1-b3`  
 
 ## TODO
 #### General
@@ -62,7 +62,7 @@
 #### Minecrafter Font
 &emsp;Copyright &copy; 2014 by MadPixel Designs  
 &emsp;Author:   MadPixel Designs  
-&emsp;License:  [CC][(http://creativecommons.org/licenses)  
+&emsp;License:  [CC](http://creativecommons.org/licenses)  
 &emsp;Homepage: [dafont](http://www.dafont.com/minecrafter.font)
 
 #### Glyphicons Halflings

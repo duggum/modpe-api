@@ -1006,7 +1006,7 @@
       aliases: ['js'],
       keywords: {
         keyword:
-          'in of if for while finally var new function do return void else break catch ' +
+          'in of if for while finally new function do return void else break catch ' +
           'instanceof with throw case default try this switch continue typeof delete ' +
           'let yield const export super debugger as async await',
         literal:
@@ -1019,7 +1019,7 @@
           'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
           'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
           'module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect ' +
-          'Promise'
+          'Promise var'
       },
       contains: [
         {
@@ -1102,7 +1102,7 @@
         },
         {
           className:"modpe-static",
-          begin:/\b(ArmorType|ChatColor|DimensionId|EntityRenderType|EntityType|ItemCategory|MobEffect|ParticleType)\b/
+          begin:/\b(ArmorType|BlockFace|ChatColor|DimensionId|EntityRenderType|EntityType|ItemCategory|MobEffect|ParticleType)\b/
         },
         // end customizations
         {

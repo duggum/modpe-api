@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="BlockFace"><a href="global.html#BlockFace">BlockFace</a></li>
+      
         <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
       
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
@@ -199,6 +201,10 @@
       
         <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
       
+        <li data-name="Block.getDestroyTime"><a href="Block.html#.getDestroyTime">getDestroyTime</a></li>
+      
+        <li data-name="Block.getFriction"><a href="Block.html#.getFriction">getFriction</a></li>
+      
         <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
       
         <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
@@ -207,9 +213,13 @@
       
         <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
       
+        <li data-name="Block.setFriction"><a href="Block.html#.setFriction">setFriction</a></li>
+      
         <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
       
         <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRedstoneConsumer"><a href="Block.html#.setRedstoneConsumer">setRedstoneConsumer</a></li>
       
         <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
       
@@ -266,6 +276,8 @@
         <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
       
         <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMaxHealth"><a href="Entity.html#.getMaxHealth">getMaxHealth</a></li>
       
         <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
       
@@ -403,6 +415,8 @@
       
         <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
       
+        <li data-name="Hooks#redstoneUpdateHook"><a href="Hooks.html#redstoneUpdateHook">redstoneUpdateHook</a></li>
+      
         <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
       
         <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
@@ -459,6 +473,8 @@
       
         <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
       
+        <li data-name="Item.setProperties"><a href="Item.html#.setProperties">setProperties</a></li>
+      
       </ul>
       <ul class="events itemMembers">
       
@@ -492,6 +508,8 @@
         <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
       
         <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.canSeeSky"><a href="Level.html#.canSeeSky">canSeeSky</a></li>
       
         <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
       
@@ -736,6 +754,12 @@
         <li data-name="Player.getPointedBlockZ"><a href="Player.html#.getPointedBlockZ">getPointedBlockZ</a></li>
       
         <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
+      
+        <li data-name="Player.getPointedVecX"><a href="Player.html#.getPointedVecX">getPointedVecX</a></li>
+      
+        <li data-name="Player.getPointedVecY"><a href="Player.html#.getPointedVecY">getPointedVecY</a></li>
+      
+        <li data-name="Player.getPointedVecZ"><a href="Player.html#.getPointedVecZ">getPointedVecZ</a></li>
       
         <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
       
@@ -1317,7 +1341,7 @@ function procCmd(cmd) {
 
     <h4 class="name" id=".getAnimalAge">
 
-<span class="type-signature static">static</span>Entity.getAnimalAge(<code class="signature"></code>)
+<span class="type-signature static">static</span>Entity.getAnimalAge(<code class="signature">entity</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
     </h4>
 
     <div class="tag-source">
@@ -1330,7 +1354,7 @@ function procCmd(cmd) {
 <dd>
 
   <div class="description">
-    <p>desc</p>
+    <p>Return the age of a mob. Only works for animals and zombies/skeletons/pigmen.</p>
   </div>
 
 
@@ -1340,11 +1364,95 @@ function procCmd(cmd) {
 
 
 
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>entity</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the native entity id of the animal</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
 
 
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        <!-- <a href="global.html#int">int</a> -->
+                        
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>the animal's age</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
 
@@ -1377,11 +1485,11 @@ function procCmd(cmd) {
 
     <h4 class="name" id=".getArmor">
 
-<span class="type-signature static">static</span>Entity.getArmor(<code class="signature"></code>)
+<span class="type-signature static">static</span>Entity.getArmor(<code class="signature">entity, armorSlot</code>)<span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="global.html#int">int</a>}</span>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line82">line 82</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line86">line 86</a>
     </div>
 
   </div>
@@ -1390,7 +1498,7 @@ function procCmd(cmd) {
 <dd>
 
   <div class="description">
-    <p>desc</p>
+    <p>Returns the Item ID of the armor in the given <a href="global.html#ArmorType">ArmorType</a> slot.</p>
   </div>
 
 
@@ -1400,11 +1508,119 @@ function procCmd(cmd) {
 
 
 
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>entity</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#long">long</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the native entity id of the player/mob to check</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>armorSlot</code></td>
+            
+
+            <td class="type">
+            
+                
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>the <a href="global.html#ArmorType">ArmorType</a> to check</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
 
 
 
 
 
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        <!-- <a href="global.html#int">int</a> -->
+                        
+  <span class="param-type"><a href="global.html#int">int</a></span>
+
+
+
+                        
+                    
+            </td>
+            <td class="description last"><ul>
+<li>the Item ID of the armor in the given slot</li>
+</ul></td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
 
@@ -1423,7 +1639,28 @@ function procCmd(cmd) {
 
 
     
-      <pre><code>// code here</code></pre>
+      <pre><code>// what's that mob wearing?
+var ent = Player.getPointedEntity();
+var eid = Entity.getEntityTypeId(ent);
+if (eid >= 10 && eid <= 90) {
+  for (var e in EntityType) {
+    if (EntityType[e] === eid) {
+      var armor = [];
+      var msg = "";
+      // check each armor slot
+      for (var t in ArmorType) {
+        var slot = Item.getName(Entity.getArmor(ent, t)) || "";
+        if (slot !== "") {
+          armor.push(slot);
+        }
+        if (armor[0]) {
+          msg = "The mob is wearing: " + armor.toString();
+        }
+      }
+      clientMessage(msg);
+    }
+  }
+}</code></pre>
     
 
 
@@ -1441,7 +1678,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line94">line 94</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line123">line 123</a>
     </div>
 
   </div>
@@ -1501,7 +1738,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line106">line 106</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line135">line 135</a>
     </div>
 
   </div>
@@ -1561,7 +1798,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line118">line 118</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line147">line 147</a>
     </div>
 
   </div>
@@ -1621,7 +1858,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line130">line 130</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line159">line 159</a>
     </div>
 
   </div>
@@ -1681,7 +1918,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line142">line 142</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line171">line 171</a>
     </div>
 
   </div>
@@ -1741,7 +1978,67 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line154">line 154</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line183">line 183</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+  <div class="description">
+    <p>desc</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+<h5>Example</h5>
+
+
+    
+      <pre><code>// code here</code></pre>
+    
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
+    <h4 class="name" id=".getMaxHealth">
+
+<span class="type-signature static">static</span>Entity.getMaxHealth(<code class="signature"></code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line195">line 195</a>
     </div>
 
   </div>
@@ -1801,7 +2098,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line166">line 166</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line207">line 207</a>
     </div>
 
   </div>
@@ -1861,7 +2158,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line178">line 178</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line219">line 219</a>
     </div>
 
   </div>
@@ -1921,7 +2218,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line190">line 190</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line231">line 231</a>
     </div>
 
   </div>
@@ -2086,7 +2383,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line211">line 211</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line252">line 252</a>
     </div>
 
   </div>
@@ -2146,7 +2443,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line223">line 223</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line264">line 264</a>
     </div>
 
   </div>
@@ -2206,7 +2503,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line235">line 235</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line276">line 276</a>
     </div>
 
   </div>
@@ -2266,7 +2563,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line247">line 247</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line288">line 288</a>
     </div>
 
   </div>
@@ -2326,7 +2623,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line259">line 259</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line300">line 300</a>
     </div>
 
   </div>
@@ -2386,7 +2683,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line271">line 271</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line312">line 312</a>
     </div>
 
   </div>
@@ -2446,7 +2743,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line283">line 283</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line324">line 324</a>
     </div>
 
   </div>
@@ -2506,7 +2803,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line295">line 295</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line336">line 336</a>
     </div>
 
   </div>
@@ -2566,7 +2863,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line307">line 307</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line348">line 348</a>
     </div>
 
   </div>
@@ -2626,7 +2923,7 @@ if (pitch < -30) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line319">line 319</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line360">line 360</a>
     </div>
 
   </div>
@@ -2823,7 +3120,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line372">line 372</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line413">line 413</a>
     </div>
 
   </div>
@@ -2883,7 +3180,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line384">line 384</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line425">line 425</a>
     </div>
 
   </div>
@@ -2943,7 +3240,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line396">line 396</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line437">line 437</a>
     </div>
 
   </div>
@@ -3003,7 +3300,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line408">line 408</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line449">line 449</a>
     </div>
 
   </div>
@@ -3063,7 +3360,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line420">line 420</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line461">line 461</a>
     </div>
 
   </div>
@@ -3123,7 +3420,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line432">line 432</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line473">line 473</a>
     </div>
 
   </div>
@@ -3183,7 +3480,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line444">line 444</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line485">line 485</a>
     </div>
 
   </div>
@@ -3243,7 +3540,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line456">line 456</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line497">line 497</a>
     </div>
 
   </div>
@@ -3303,7 +3600,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line468">line 468</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line509">line 509</a>
     </div>
 
   </div>
@@ -3363,7 +3660,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line480">line 480</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line521">line 521</a>
     </div>
 
   </div>
@@ -3423,7 +3720,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line492">line 492</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line533">line 533</a>
     </div>
 
   </div>
@@ -3483,7 +3780,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line504">line 504</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line545">line 545</a>
     </div>
 
   </div>
@@ -3543,7 +3840,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line516">line 516</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line557">line 557</a>
     </div>
 
   </div>
@@ -3603,7 +3900,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line528">line 528</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line569">line 569</a>
     </div>
 
   </div>
@@ -3663,7 +3960,7 @@ clientMessage(getDirection());</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line540">line 540</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line581">line 581</a>
     </div>
 
   </div>
@@ -3796,7 +4093,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line556">line 556</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line597">line 597</a>
     </div>
 
   </div>
@@ -3856,7 +4153,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line568">line 568</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line609">line 609</a>
     </div>
 
   </div>
@@ -3916,7 +4213,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line580">line 580</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line621">line 621</a>
     </div>
 
   </div>
@@ -3976,7 +4273,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line592">line 592</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line633">line 633</a>
     </div>
 
   </div>
@@ -4036,7 +4333,7 @@ Entity.setMobSkin(Player.getEntity(), "mob/creeper.png");</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line604">line 604</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line645">line 645</a>
     </div>
 
   </div>
@@ -4201,7 +4498,7 @@ while (y <= 360) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line629">line 629</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line670">line 670</a>
     </div>
 
   </div>
@@ -4261,7 +4558,7 @@ while (y <= 360) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line641">line 641</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line682">line 682</a>
     </div>
 
   </div>
@@ -4416,7 +4713,7 @@ function toDirectionalVector(vector, yaw, pitch) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line679">line 679</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line720">line 720</a>
     </div>
 
   </div>
@@ -4540,7 +4837,7 @@ function toDirectionalVector(vector, yaw, pitch) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line693">line 693</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line733">line 733</a>
     </div>
 
   </div>
@@ -4664,7 +4961,7 @@ function toDirectionalVector(vector, yaw, pitch) {
     </h4>
 
     <div class="tag-source">
-      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line706">line 706</a>
+      <a href="entity.jsdoc.html">entity.jsdoc</a>, <a href="entity.jsdoc.html#line746">line 746</a>
     </div>
 
   </div>
@@ -4876,7 +5173,7 @@ Entity.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");</code></p
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Mon Nov 30 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

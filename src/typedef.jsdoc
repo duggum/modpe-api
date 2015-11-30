@@ -140,7 +140,7 @@
  * @typedef     {number} number
  * @description __`JavaScript`__ According to the ECMAScript standard, there is only
  *              one number type: the double-precision 64-bit binary format IEEE 754
- *              value (number between -(253 -1) and 253 -1).
+ *              value (number between -(2<sup>53</sup> -1) and 2<sup>53</sup> -1).
  *
  * @see {@link https://goo.gl/OBvlsb|JavaScript Number}
  *

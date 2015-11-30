@@ -53,6 +53,8 @@
       
         <li data-name="ArmorType"><a href="global.html#ArmorType">ArmorType</a></li>
       
+        <li data-name="BlockFace"><a href="global.html#BlockFace">BlockFace</a></li>
+      
         <li data-name="ChatColor"><a href="global.html#ChatColor">ChatColor</a></li>
       
         <li data-name="DimensionId"><a href="global.html#DimensionId">DimensionId</a></li>
@@ -199,6 +201,10 @@
       
         <li data-name="Block.getAllBlockIds"><a href="Block.html#.getAllBlockIds">getAllBlockIds</a></li>
       
+        <li data-name="Block.getDestroyTime"><a href="Block.html#.getDestroyTime">getDestroyTime</a></li>
+      
+        <li data-name="Block.getFriction"><a href="Block.html#.getFriction">getFriction</a></li>
+      
         <li data-name="Block.getRenderType"><a href="Block.html#.getRenderType">getRenderType</a></li>
       
         <li data-name="Block.setColor"><a href="Block.html#.setColor">setColor</a></li>
@@ -207,9 +213,13 @@
       
         <li data-name="Block.setExplosionResistance"><a href="Block.html#.setExplosionResistance">setExplosionResistance</a></li>
       
+        <li data-name="Block.setFriction"><a href="Block.html#.setFriction">setFriction</a></li>
+      
         <li data-name="Block.setLightLevel"><a href="Block.html#.setLightLevel">setLightLevel</a></li>
       
         <li data-name="Block.setLightOpacity"><a href="Block.html#.setLightOpacity">setLightOpacity</a></li>
+      
+        <li data-name="Block.setRedstoneConsumer"><a href="Block.html#.setRedstoneConsumer">setRedstoneConsumer</a></li>
       
         <li data-name="Block.setRenderLayer"><a href="Block.html#.setRenderLayer">setRenderLayer</a></li>
       
@@ -266,6 +276,8 @@
         <li data-name="Entity.getItemEntityData"><a href="Entity.html#.getItemEntityData">getItemEntityData</a></li>
       
         <li data-name="Entity.getItemEntityId"><a href="Entity.html#.getItemEntityId">getItemEntityId</a></li>
+      
+        <li data-name="Entity.getMaxHealth"><a href="Entity.html#.getMaxHealth">getMaxHealth</a></li>
       
         <li data-name="Entity.getMobSkin"><a href="Entity.html#.getMobSkin">getMobSkin</a></li>
       
@@ -403,6 +415,8 @@
       
         <li data-name="Hooks#procCmd"><a href="Hooks.html#procCmd">procCmd</a></li>
       
+        <li data-name="Hooks#redstoneUpdateHook"><a href="Hooks.html#redstoneUpdateHook">redstoneUpdateHook</a></li>
+      
         <li data-name="Hooks#selectLevelHook"><a href="Hooks.html#selectLevelHook">selectLevelHook</a></li>
       
         <li data-name="Hooks#serverMessageReceiveHook"><a href="Hooks.html#serverMessageReceiveHook">serverMessageReceiveHook</a></li>
@@ -459,6 +473,8 @@
       
         <li data-name="Item.setMaxDamage"><a href="Item.html#.setMaxDamage">setMaxDamage</a></li>
       
+        <li data-name="Item.setProperties"><a href="Item.html#.setProperties">setProperties</a></li>
+      
       </ul>
       <ul class="events itemMembers">
       
@@ -492,6 +508,8 @@
         <li data-name="Level.addParticle"><a href="Level.html#.addParticle">addParticle</a></li>
       
         <li data-name="Level.biomeIdToName"><a href="Level.html#.biomeIdToName">biomeIdToName</a></li>
+      
+        <li data-name="Level.canSeeSky"><a href="Level.html#.canSeeSky">canSeeSky</a></li>
       
         <li data-name="Level.destroyBlock"><a href="Level.html#.destroyBlock">destroyBlock</a></li>
       
@@ -736,6 +754,12 @@
         <li data-name="Player.getPointedBlockZ"><a href="Player.html#.getPointedBlockZ">getPointedBlockZ</a></li>
       
         <li data-name="Player.getPointedEntity"><a href="Player.html#.getPointedEntity">getPointedEntity</a></li>
+      
+        <li data-name="Player.getPointedVecX"><a href="Player.html#.getPointedVecX">getPointedVecX</a></li>
+      
+        <li data-name="Player.getPointedVecY"><a href="Player.html#.getPointedVecY">getPointedVecY</a></li>
+      
+        <li data-name="Player.getPointedVecZ"><a href="Player.html#.getPointedVecZ">getPointedVecZ</a></li>
       
         <li data-name="Player.getSaturation"><a href="Player.html#.getSaturation">getSaturation</a></li>
       
@@ -1289,13 +1313,60 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
 <dt>
   <div class="nameContainer">
 
+    <h4 class="name" id=".canSeeSky">
+
+<span class="type-signature static">static</span>Level.canSeeSky(<code class="signature"></code>)
+    </h4>
+
+    <div class="tag-source">
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line51">line 51</a>
+    </div>
+
+  </div>
+
+</dt>
+<dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="details">
+
+<ul>
+
+  </ul>
+</div>
+
+
+
+</dd>
+
+        
+            
+<dt>
+  <div class="nameContainer">
+
     <h4 class="name" id=".destroyBlock">
 
 <span class="type-signature static">static</span>Level.destroyBlock(<code class="signature"></code>)
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line51">line 51</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line59">line 59</a>
     </div>
 
   </div>
@@ -1342,7 +1413,7 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line61">line 61</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line69">line 69</a>
     </div>
 
   </div>
@@ -1424,7 +1495,7 @@ Level.addParticle(ParticleType.heart, x, y, z, 0, 0, 0, 1);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line63">line 63</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line71">line 71</a>
     </div>
 
   </div>
@@ -1629,7 +1700,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line92">line 92</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line100">line 100</a>
     </div>
 
   </div>
@@ -1719,7 +1790,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line100">line 100</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line108">line 108</a>
     </div>
 
   </div>
@@ -1766,7 +1837,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line108">line 108</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line116">line 116</a>
     </div>
 
   </div>
@@ -1813,7 +1884,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line116">line 116</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line124">line 124</a>
     </div>
 
   </div>
@@ -1860,7 +1931,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line124">line 124</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line132">line 132</a>
     </div>
 
   </div>
@@ -1907,7 +1978,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line132">line 132</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line140">line 140</a>
     </div>
 
   </div>
@@ -1954,7 +2025,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line140">line 140</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line148">line 148</a>
     </div>
 
   </div>
@@ -2001,7 +2072,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line148">line 148</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line156">line 156</a>
     </div>
 
   </div>
@@ -2048,7 +2119,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line156">line 156</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line164">line 164</a>
     </div>
 
   </div>
@@ -2095,7 +2166,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line164">line 164</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line172">line 172</a>
     </div>
 
   </div>
@@ -2142,7 +2213,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line172">line 172</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line180">line 180</a>
     </div>
 
   </div>
@@ -2189,7 +2260,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line180">line 180</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line188">line 188</a>
     </div>
 
   </div>
@@ -2236,7 +2307,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line188">line 188</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line196">line 196</a>
     </div>
 
   </div>
@@ -2283,7 +2354,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line196">line 196</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line204">line 204</a>
     </div>
 
   </div>
@@ -2330,7 +2401,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line204">line 204</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line212">line 212</a>
     </div>
 
   </div>
@@ -2377,7 +2448,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line212">line 212</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line220">line 220</a>
     </div>
 
   </div>
@@ -2424,7 +2495,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line220">line 220</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line228">line 228</a>
     </div>
 
   </div>
@@ -2471,7 +2542,7 @@ Level.explode(127, 8, 45, 256, false);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line245">line 245</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line253">line 253</a>
     </div>
 
   </div>
@@ -2673,7 +2744,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line253">line 253</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line261">line 261</a>
     </div>
 
   </div>
@@ -2720,7 +2791,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line261">line 261</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line269">line 269</a>
     </div>
 
   </div>
@@ -2767,7 +2838,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line269">line 269</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line277">line 277</a>
     </div>
 
   </div>
@@ -2814,7 +2885,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line277">line 277</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line285">line 285</a>
     </div>
 
   </div>
@@ -2861,7 +2932,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line285">line 285</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line293">line 293</a>
     </div>
 
   </div>
@@ -2908,7 +2979,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line293">line 293</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line301">line 301</a>
     </div>
 
   </div>
@@ -2955,7 +3026,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line301">line 301</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line309">line 309</a>
     </div>
 
   </div>
@@ -3002,7 +3073,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line309">line 309</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line317">line 317</a>
     </div>
 
   </div>
@@ -3049,7 +3120,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line317">line 317</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line325">line 325</a>
     </div>
 
   </div>
@@ -3096,7 +3167,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line327">line 327</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line335">line 335</a>
     </div>
 
   </div>
@@ -3194,7 +3265,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line335">line 335</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line343">line 343</a>
     </div>
 
   </div>
@@ -3241,7 +3312,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line345">line 345</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line353">line 353</a>
     </div>
 
   </div>
@@ -3339,7 +3410,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line353">line 353</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line361">line 361</a>
     </div>
 
   </div>
@@ -3386,7 +3457,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line361">line 361</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line369">line 369</a>
     </div>
 
   </div>
@@ -3433,7 +3504,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line369">line 369</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line377">line 377</a>
     </div>
 
   </div>
@@ -3480,7 +3551,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line377">line 377</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line385">line 385</a>
     </div>
 
   </div>
@@ -3527,7 +3598,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line385">line 385</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line393">line 393</a>
     </div>
 
   </div>
@@ -3574,7 +3645,7 @@ function modTick() {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line420">line 420</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line428">line 428</a>
     </div>
 
   </div>
@@ -3810,7 +3881,7 @@ function useItem(x, y, z, itemId, blockId, side) {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line422">line 422</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line430">line 430</a>
     </div>
 
   </div>
@@ -4046,7 +4117,7 @@ function useItem(x, y, z, itemId, blockId, side) {
     </h4>
 
     <div class="tag-source">
-      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line457">line 457</a>
+      <a href="level.jsdoc.html">level.jsdoc</a>, <a href="level.jsdoc.html#line465">line 465</a>
     </div>
 
   </div>
@@ -4258,7 +4329,7 @@ Level.spawnMob(152, 48, 73, EntityType.SKELETON, "mob/skeleton.png");</code></pr
 
         <footer>
           <p><a target="_blank" href="https://github.com/duggum/modpe-api">ModPE API Documentation</a> &copy; <span id="cyear">2015</span> <a target="_blank" href="https://duggum.com">David Jopson</a></p>
-          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Thu Nov 26 2015</p>
+          <p>Generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> :: Mon Nov 30 2015</p>
           <p><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
         </footer>
       </div>

@@ -16,28 +16,46 @@
 
 /**
  *
+ * @member      BlockFace
+ * @description Integer representation of each face of a game block.
+ *
+ * @property {int} DOWN  - 0
+ * @property {int} EAST  - 5
+ * @property {int} NORTH - 2
+ * @property {int} SOUTH - 3
+ * @property {int} UP    - 1
+ * @property {int} WEST  - 4
+ *
+ * @example
+ * // prints 1
+ * print(BlockFace.UP);
+ *
+ *////
+
+/**
+ *
  * @member      ChatColor
  * @description Chat colors for `clientMessage();`.
  *
- * @property {string} AQUA         - "§b"
- * @property {string} BEGIN        - "§"
- * @property {string} BLACK        - "§0"
- * @property {string} BLUE         - "§9"
- * @property {string} BOLD         - "§l"
- * @property {string} DARK_AQUA    - "§3"
- * @property {string} DARK_BLUE    - "§1"
- * @property {string} DARK_GRAY    - "§8"
- * @property {string} DARK_GREEN   - "§2"
- * @property {string} DARK_PURPLE  - "§5"
- * @property {string} DARK_RED     - "§4"
- * @property {string} GOLD         - "§6"
- * @property {string} GRAY         - "§7"
- * @property {string} GREEN        - "§a"
- * @property {string} LIGHT_PURPLE - "§d"
- * @property {string} RED          - "§c"
- * @property {string} RESET        - "§r"
- * @property {string} WHITE        - "§f"
- * @property {string} YELLOW       - "§e"
+ * @property {string} AQUA         - §b
+ * @property {string} BEGIN        - §
+ * @property {string} BLACK        - §0
+ * @property {string} BLUE         - §9
+ * @property {string} BOLD         - §l
+ * @property {string} DARK_AQUA    - §3
+ * @property {string} DARK_BLUE    - §1
+ * @property {string} DARK_GRAY    - §8
+ * @property {string} DARK_GREEN   - §2
+ * @property {string} DARK_PURPLE  - §5
+ * @property {string} DARK_RED     - §4
+ * @property {string} GOLD         - §6
+ * @property {string} GRAY         - §7
+ * @property {string} GREEN        - §a
+ * @property {string} LIGHT_PURPLE - §d
+ * @property {string} RED          - §c
+ * @property {string} RESET        - §r
+ * @property {string} WHITE        - §f
+ * @property {string} YELLOW       - §e
  *
  * @example
  * // you better RUN!
