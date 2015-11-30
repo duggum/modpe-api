@@ -8,7 +8,7 @@
 ## Version Compatibility
 
 - Minecraft Pocket Edition: `0.13.0`
-- BlockLauncher Pro: `1.11.1-b3`  
+- BlockLauncher Pro: `1.11.1-b5`  
 
 ## TODO
 #### General
@@ -32,7 +32,7 @@
 - still lots to do
 
 #### Item API
-- done except for fine tuning
+- done, including new `Item.setProperties()`
 
 #### Level API
 - `Level.addParticle`: better description of how velocity settings work
