@@ -18,16 +18,16 @@
  *              See __*[MCPE Textures](textures)*__ for a list of current textures.
  *
  * @param {int}                blockId          - a valid, unused block ID between 0 and 255;
- *                                                see: {@link Reference#BlockIds|BlockIds}
+ *                                                see: {@tutorial block-ids}
  * @param {string}             blockName        - the block name
  * @param {Array<string, int>} texture          - the texture and offset used to decorate this block
  * @param {int}                [materialSource] - the material (block ID) this block is
  *                                                based on (useful for determining which
  *                                                tool is best used to break your block;
- *                                                see: {@link Reference#BlockIds|BlockIds})
+ *                                                see: {@tutorial block-ids})
  * @param {boolean}            [isOpaque]       - opaque if true, transparent if false
  * @param {int}                [renderType]     - the type of block to render
- *                                                see: {@link Reference#BlockRenderTypes|BlockRenderTypes}
+ *                                                see: {@tutorial block-render-types}
  *
  * @example
  * <caption>Credit: {@link https://goo.gl/58zbrm|Zhuowei Zhang}</caption>
@@ -59,6 +59,8 @@
  *
  * @return {int[]} - the block IDs
  *
+ * @see {@link Block.getRenderType} for example
+ *
  *////
 
 /**
@@ -81,15 +83,27 @@ function getFriction(par1int, par2int) {}
 
 /**
  *
- * @todo test this thing
- *
  * @memberof    Block
  * @function    getRenderType
  * @description Return the render type (shape) of a block with the specified blockId.
  *
- * @param  {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param  {int} blockId - the block ID (see: {@tutorial block-ids})
  *
- * @return {int}         - the render type (see: {@link Reference#BlockRenderTypes|BlockRenderTypes})
+ * @return {int}         - the render type (see: {@tutorial block-render-types})
+ *
+ * @example
+ * // write all render types to a file
+ * function writeRenderTypes() {
+ *   var bids = Block.getAllBlockIds();
+ *   var file = "rendertypes.txt";
+ *   var bw = new java.io.BufferedWriter(new java.io.FileWriter(file));
+ *   for (var i = 0; i < bids.length; i++) {
+ *     var rt = Block.getRenderType(bids[i]);
+ *     var name = Item.getName(bids[i], 0, false);
+ *     bw.write(name + " - " + rt + "\n");
+ *   }
+ *   bw.close();
+ * }
  *
  *////
 
@@ -99,7 +113,7 @@ function getFriction(par1int, par2int) {}
  * @function    setColor
  * @description Set the color of a block with the specified blockId and color.
  *
- * @param {int}      blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int}      blockId - the block ID (see: {@tutorial block-ids})
  * @param {number[]} color   - a hexadecimal color value in the form: `[0xRRGGBB]`
  *
  * @see {@link http://html-color-codes.info|HTML Color Codes}
@@ -116,7 +130,7 @@ function getFriction(par1int, par2int) {}
  * @function    setDestroyTime
  * @description Set the hardness of a block with the specified blockId and hardness.
  *
- * @param {int}    blockId  - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int}    blockId  - the block ID (see: {@tutorial block-ids})
  * @param {double} hardness - the hardness (-1 = unbreakable; destroy time will
  *                            vary depending on tool used)
  *
@@ -134,7 +148,7 @@ function getFriction(par1int, par2int) {}
  * @function    setExplosionResistance
  * @description Set the explosion resistance of a block with the specified blockId and resistance.
  *
- * @param {int}    blockId    - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int}    blockId    - the block ID (see: {@tutorial block-ids})
  * @param {double} resistance - the explosion resistance
  *
  * @see {@link http://minecraft.gamepedia.com/Explosion#Blast_resistance|Blast Resistance}
@@ -160,7 +174,7 @@ function setFriction(par1int, par2double) {}
  * @function    setLightLevel
  * @description Set the light level of a block with the specified blockId and lightLevel.
  *
- * @param {int} blockId    - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int} blockId    - the block ID (see: {@tutorial block-ids})
  * @param {int} lightLevel - the light level of the block (0-15)
  *
  * @see {@link http://minecraft.gamepedia.com/Light#Brightness|Brightness}
@@ -177,7 +191,7 @@ function setFriction(par1int, par2double) {}
  * @function    setLightOpacity
  * @description Set the light opacity of a block with the specified blockId and opacity.
  *
- * @param {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int} blockId - the block ID (see: {@tutorial block-ids})
  * @param {int} opacity - the block's opacity to light passing through
  *                        (0-10 where 0 = most light can pass through,
  *                        10 = least light can pass through)
@@ -201,7 +215,7 @@ function setRedstoneConsumer(par1int, par2boolean) {}
  * @function    setRenderLayer
  * @description Set the render layer for a block with the specified blockId and layer.
  *
- * @param {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int} blockId - the block ID (see: {@tutorial block-ids})
  * @param {int} layer   - the render layer [0: opaque, 1: transparent, 2 : translucent - __broken?__]
  *
  * @example
@@ -216,9 +230,9 @@ function setRedstoneConsumer(par1int, par2boolean) {}
  * @function    setRenderType
  * @description Set the render type for a block with the specified blockId and type.
  *
- * @param {int} blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int} blockId - the block ID (see: {@tutorial block-ids})
  * @param {int} type    - the type of block to render (see:
- *                        {@link Reference#BlockRenderTypes|BlockRenderTypes})
+ *                        {@tutorial block-render-types})
  *
  * @example
  * // render custom block with blockId 220 using the cactus shape
@@ -232,7 +246,7 @@ function setRedstoneConsumer(par1int, par2boolean) {}
  * @function    setShape
  * @descriptio * @license CC-BY-SA-4.0 * @license CC-BY-SA-4.0n Set the size of a block with the specified blockId and start/finish coordinates.
  *
- * @param {int}    blockId - the block ID (see: {@link Reference#BlockIds|BlockIds})
+ * @param {int}    blockId - the block ID (see: {@tutorial block-ids})
  * @param {double} startX  - the starting x coordinate
  * @param {double} startY  - the starting y coordinate
  * @param {double} startZ  - the starting z coordinate

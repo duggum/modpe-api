@@ -10,12 +10,16 @@
 - Minecraft Pocket Edition: `0.13.0`
 - BlockLauncher Pro: `1.11.1-b5`  
 
+## Reference Documentation
+- {@tutorial data-values}
+- {@tutorial textures}
+
 ## TODO
 #### General
 - improve code examples where necessary
 - tutorials and script examples
 - make sure to credit all sources of code and docs
-- separate references into tutorials/help section (block IDs, block render types, textures, etc...)
+- ~~separate references into tutorials/help section (block IDs, block render types, textures, etc...)~~
 - improve README
 
 #### Global Namespace

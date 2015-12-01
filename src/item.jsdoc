@@ -49,11 +49,11 @@
  * @function    addShapedRecipe
  * @description Add a new smelting recipe
  *
- * @param {int}                id          - the id of the item to make
- * @param {int}                quantity    - the quantity of items to produce
- * @param {int}                damage      - the damage value of the new item
- * @param {string[]}           keys        - the layout of the ingredient keys
- * @param {Array<string, int>} ingredients - the ingredients
+ * @param {int}               id          - the id of the item to make
+ * @param {int}               quantity    - the quantity of items to produce
+ * @param {int}               damage      - the damage value of the new item
+ * @param {string[]}          keys        - the layout of the ingredient keys
+ * @param {Array<string|int>} ingredients - the ingredients
  *
  * @example
  * <caption>Credit: {@link https://goo.gl/ApLbnm|Zhuowei Zhang}</caption>
@@ -109,7 +109,7 @@
  * @function    defineArmor
  * @description Define custom armor
  *
- * @param {int}    id           - the new item id (see: {@link Reference#ItemIds|ItemIds})
+ * @param {int}    id           - the new item id (see: {@tutorial item-ids})
  * @param {string} iconName     - the name of the icon to use for this item
  * @param {int}    iconIndex    - the index of the icon to use for this item
  * @param {string} name         - the name of the new armor item

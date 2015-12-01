@@ -1,2 +1,19 @@
 {
+  "data-values": {
+    "title": "Data Values",
+    "children": {
+      "block-ids": {
+         "title": "Block IDs"
+      },
+      "block-render-types": {
+         "title": "Block Render Types"
+      },
+      "item-ids": {
+         "title": "Item IDs"
+      }
+    }
+  },
+  "textures": {
+     "title": "MCPE Textures"
+  }
 }
