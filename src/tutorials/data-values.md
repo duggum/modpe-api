@@ -1,2 +1,2 @@
-MCPE data values not specifically included in BlockLauncher (i.e. {@link ChatColor}).  
+MCPE data values not specifically included in BlockLauncher (e.g., {@link ChatColor}).  
 

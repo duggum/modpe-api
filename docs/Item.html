@@ -913,7 +913,7 @@
 
     
         
-            <div class="description"><p>Static methods for the Item API</p></div>
+            <div class="description"><p>Static methods for the Item API.</p></div>
         
         
 <div class="details">
@@ -962,7 +962,7 @@
 <dd>
 
   <div class="description">
-    <p>Add a new crafting recipe</p>
+    <p>Add a new crafting recipe.</p>
   </div>
 
 
@@ -1147,7 +1147,7 @@ Item.addCraftRecipe(276, 1, 0, ingredients);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Add a new smelting recipe</p>
+    <p>Add a new smelting recipe.</p>
   </div>
 
 
@@ -1303,7 +1303,7 @@ Item.addFurnaceRecipe(276, 0, 280);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Add a new smelting recipe</p>
+    <p>Add a new smelting recipe.</p>
   </div>
 
 
@@ -1491,17 +1491,14 @@ var currentWorkbenchZ;
 // bottom, top, south, north, west, east
 // in this case, the side textures are the same, and the top/bottom
 // textures are different.
-Block.defineBlock(
-  ENCHANTMENT_TABLE_ID, "Enchantment Table",
-  [
-    ["enchanting_table_bottom", 0],
-    ["enchanting_table_top", 0],
-    ["enchanting_table_side", 0],
-    ["enchanting_table_side", 0],
-    ["enchanting_table_side", 0],
-    ["enchanting_table_side", 0]
-  ]
-);
+Block.defineBlock(ENCHANTMENT_TABLE_ID, "Enchantment Table", [
+  ["enchanting_table_bottom" , 0],
+  ["enchanting_table_top"    , 0],
+  ["enchanting_table_side"   , 0],
+  ["enchanting_table_side"   , 0],
+  ["enchanting_table_side"   , 0],
+  ["enchanting_table_side"   , 0]
+]);
 Block.setShape(ENCHANTMENT_TABLE_ID, 0, 0, 0, 1, 3/4, 1);
 Block.setDestroyTime(ENCHANTMENT_TABLE_ID, 1);
 
@@ -1540,7 +1537,7 @@ Item.addShapedRecipe(
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line106">line 106</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line103">line 103</a>
     </div>
 
   </div>
@@ -1549,7 +1546,7 @@ Item.addShapedRecipe(
 <dd>
 
   <div class="description">
-    <p>Define custom armor</p>
+    <p>Define custom armor.</p>
   </div>
 
 
@@ -1596,7 +1593,7 @@ Item.addShapedRecipe(
 
             <td class="description last">
                 
-                <p>the new item id (see: <a href="tutorial-item-ids.html">Item IDs</a>)</p></td>
+                <p>the new, unique item id (see: <a href="tutorial-item-ids.html">Item IDs</a>)</p></td>
         </tr>
 
 	
@@ -1800,22 +1797,10 @@ Item.addShapedRecipe(
 
     
       <pre><code>// WOOT! Zombie armor!
-Item.defineArmor(
-  410, "empty_armor_slot_helmet", 0, "Zombie mask",
-  "mob/zombie.png", 1, 10, ArmorType.helmet
-);
-Item.defineArmor(
-  411, "empty_armor_slot_chestplate", 0, "Zombie shirt",
-  "mob/zombie.png", 1, 10, ArmorType.chestplate
-);
-Item.defineArmor(
-  412, "empty_armor_slot_leggings", 0, "Zombie pants",
-  "mob/zombie.png", 1, 10, ArmorType.leggings
-);
-Item.defineArmor(
-  413, "empty_armor_slot_boots", 0, "Zombie shoes",
-  "mob/zombie.png", 1, 10, ArmorType.boots
-);
+Item.defineArmor(410 , "empty_armor_slot_helmet"     , 0 , "Zombie mask"  , "mob/zombie.png" , 1 , 10 , ArmorType.helmet);
+Item.defineArmor(411 , "empty_armor_slot_chestplate" , 0 , "Zombie shirt" , "mob/zombie.png" , 1 , 10 , ArmorType.chestplate);
+Item.defineArmor(412 , "empty_armor_slot_leggings"   , 0 , "Zombie pants" , "mob/zombie.png" , 1 , 10 , ArmorType.leggings);
+Item.defineArmor(413 , "empty_armor_slot_boots"      , 0 , "Zombie shoes" , "mob/zombie.png" , 1 , 10 , ArmorType.boots);
 function procCmd(cmd) {
   if (cmd == "zombiegear") {
     addItemInventory(411, 1);
@@ -1841,7 +1826,7 @@ function procCmd(cmd) {
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line152">line 152</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line137">line 137</a>
     </div>
 
   </div>
@@ -1946,7 +1931,7 @@ function procCmd(cmd) {
                     
                 
                 <p>additional data to describe item such as damage
-                               or sub category</p></td>
+                               or sub-item</p></td>
         </tr>
 
 	
@@ -2075,7 +2060,7 @@ clientMessage(Item.getName(263, 1));        // prints "Charcoal" (item 263:1)</c
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line174">line 174</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line159">line 159</a>
     </div>
 
   </div>
@@ -2084,7 +2069,7 @@ clientMessage(Item.getName(263, 1));        // prints "Charcoal" (item 263:1)</c
 <dd>
 
   <div class="description">
-    <p>Determine if an item is valid</p>
+    <p>Determine if an item is valid.</p>
   </div>
 
 
@@ -2222,7 +2207,7 @@ if (Item.isValidItem(263)) {
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line192">line 192</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line177">line 177</a>
     </div>
 
   </div>
@@ -2232,7 +2217,8 @@ if (Item.isValidItem(263)) {
 
   <div class="description">
     <p>Set the category for an item which will determine where
-             it appears in the crafting table interface</p>
+             it appears in the crafting table interface, as well as
+             how it can be used (e.g., food can be eaten).</p>
   </div>
 
 
@@ -2357,7 +2343,7 @@ Item.setCategory(263, ItemCategory.FOOD);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line210">line 210</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line196">line 196</a>
     </div>
 
   </div>
@@ -2366,7 +2352,7 @@ Item.setCategory(263, ItemCategory.FOOD);</code></pre>
 <dd>
 
   <div class="description">
-    <p>Set an item to render as a tool</p>
+    <p>Set an item to render as a tool.</p>
   </div>
 
 
@@ -2490,7 +2476,7 @@ Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line226">line 226</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line212">line 212</a>
     </div>
 
   </div>
@@ -2500,7 +2486,7 @@ Item.setHandEquipped(MY_CUSTOM_ITEM_ID, true);</code></pre>
 
   <div class="description">
     <p>Set the amount of damage an item can sustain when used
-             (i.e. the number of times it can be used before it breaks)</p>
+             (i.e., the number of times it can be used before it breaks).</p>
   </div>
 
 
@@ -2623,7 +2609,7 @@ Item.setMaxDamage(270, 10000);</code></pre>
     </h4>
 
     <div class="tag-source">
-      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line242">line 242</a>
+      <a href="item.jsdoc.html">item.jsdoc</a>, <a href="item.jsdoc.html#line228">line 228</a>
     </div>
 
   </div>
@@ -2704,7 +2690,7 @@ Item.setMaxDamage(270, 10000);</code></pre>
 
             <td class="description last">
                 
-                <p>a JSON object describing the new properties</p></td>
+                <p>an object literal describing the new properties</p></td>
         </tr>
 
 	
@@ -2739,7 +2725,14 @@ Item.setMaxDamage(270, 10000);</code></pre>
     
 
     
-      <pre><code>// anything that can be specified in items.json can be specified here
+      <pre><code>// make zombie shoes edible
+Item.defineArmor(4014, "empty_armor_slot_boots", 0, "Zombie shoes", "mob/zombie.png", 1, 10, ArmorType.boots);
+Item.setCategory(4014, ItemCategory.FOOD);
+Player.addItemCreativeInv(4014, 1, 0);
+
+var shoesNutrition = 4;
+
+// anything that can be specified in items.json can be specified here
 Item.setProperties(4014, {
   "use_animation": "eat",
   "use_duration": 32,

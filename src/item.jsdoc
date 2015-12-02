@@ -1,7 +1,7 @@
 /**
  *
  * @namespace   Item
- * @description Static methods for the Item API
+ * @description Static methods for the Item API.
  *
  *////
 
@@ -9,7 +9,7 @@
  *
  * @memberof    Item
  * @function    addCraftRecipe
- * @description Add a new crafting recipe
+ * @description Add a new crafting recipe.
  *
  * @param {int}   id          - the id of the item to make
  * @param {int}   quantity    - the quantity of items to produce
@@ -31,7 +31,7 @@
  *
  * @memberof    Item
  * @function    addFurnaceRecipe
- * @description Add a new smelting recipe
+ * @description Add a new smelting recipe.
  *
  * @param {int} id     - the id of the item to make
  * @param {int} damage - the damage value of the new item
@@ -47,7 +47,7 @@
  *
  * @memberof    Item
  * @function    addShapedRecipe
- * @description Add a new smelting recipe
+ * @description Add a new smelting recipe.
  *
  * @param {int}               id          - the id of the item to make
  * @param {int}               quantity    - the quantity of items to produce
@@ -68,17 +68,14 @@
  * // bottom, top, south, north, west, east
  * // in this case, the side textures are the same, and the top/bottom
  * // textures are different.
- * Block.defineBlock(
- *   ENCHANTMENT_TABLE_ID, "Enchantment Table",
- *   [
- *     ["enchanting_table_bottom", 0],
- *     ["enchanting_table_top", 0],
- *     ["enchanting_table_side", 0],
- *     ["enchanting_table_side", 0],
- *     ["enchanting_table_side", 0],
- *     ["enchanting_table_side", 0]
- *   ]
- * );
+ * Block.defineBlock(ENCHANTMENT_TABLE_ID, "Enchantment Table", [
+ *   ["enchanting_table_bottom" , 0],
+ *   ["enchanting_table_top"    , 0],
+ *   ["enchanting_table_side"   , 0],
+ *   ["enchanting_table_side"   , 0],
+ *   ["enchanting_table_side"   , 0],
+ *   ["enchanting_table_side"   , 0]
+ * ]);
  * Block.setShape(ENCHANTMENT_TABLE_ID, 0, 0, 0, 1, 3/4, 1);
  * Block.setDestroyTime(ENCHANTMENT_TABLE_ID, 1);
  *
@@ -107,9 +104,9 @@
  *
  * @memberof    Item
  * @function    defineArmor
- * @description Define custom armor
+ * @description Define custom armor.
  *
- * @param {int}    id           - the new item id (see: {@tutorial item-ids})
+ * @param {int}    id           - the new, unique item id (see: {@tutorial item-ids})
  * @param {string} iconName     - the name of the icon to use for this item
  * @param {int}    iconIndex    - the index of the icon to use for this item
  * @param {string} name         - the name of the new armor item
@@ -122,22 +119,10 @@
  * <caption>Credit: {@link https://goo.gl/sTc5jr|Zhuowei Zhang}</caption>
  *
  * // WOOT! Zombie armor!
- * Item.defineArmor(
- *   410, "empty_armor_slot_helmet", 0, "Zombie mask",
- *   "mob/zombie.png", 1, 10, ArmorType.helmet
- * );
- * Item.defineArmor(
- *   411, "empty_armor_slot_chestplate", 0, "Zombie shirt",
- *   "mob/zombie.png", 1, 10, ArmorType.chestplate
- * );
- * Item.defineArmor(
- *   412, "empty_armor_slot_leggings", 0, "Zombie pants",
- *   "mob/zombie.png", 1, 10, ArmorType.leggings
- * );
- * Item.defineArmor(
- *   413, "empty_armor_slot_boots", 0, "Zombie shoes",
- *   "mob/zombie.png", 1, 10, ArmorType.boots
- * );
+ * Item.defineArmor(410 , "empty_armor_slot_helmet"     , 0 , "Zombie mask"  , "mob/zombie.png" , 1 , 10 , ArmorType.helmet);
+ * Item.defineArmor(411 , "empty_armor_slot_chestplate" , 0 , "Zombie shirt" , "mob/zombie.png" , 1 , 10 , ArmorType.chestplate);
+ * Item.defineArmor(412 , "empty_armor_slot_leggings"   , 0 , "Zombie pants" , "mob/zombie.png" , 1 , 10 , ArmorType.leggings);
+ * Item.defineArmor(413 , "empty_armor_slot_boots"      , 0 , "Zombie shoes" , "mob/zombie.png" , 1 , 10 , ArmorType.boots);
  * function procCmd(cmd) {
  *   if (cmd == "zombiegear") {
  *     addItemInventory(411, 1);
@@ -157,7 +142,7 @@
  *
  * @param {int}     id          - the item id
  * @param {int}     [data=null] - additional data to describe item such as damage
- *                                or sub category
+ *                                or sub-item
  * @param {boolean} [raw=false] - if the returned data should be in the raw form
  *
  * @return {string}             - the item name
@@ -175,7 +160,7 @@
  *
  * @memberof    Item
  * @function    isValidItem
- * @description Determine if an item is valid
+ * @description Determine if an item is valid.
  *
  * @param {int} id   - the item id
  *
@@ -194,7 +179,8 @@
  * @memberof    Item
  * @function    setCategory
  * @description Set the category for an item which will determine where
- *              it appears in the crafting table interface
+ *              it appears in the crafting table interface, as well as
+ *              how it can be used (e.g., food can be eaten).
  *
  * @param {int} id       - the id of the item to change
  * @param {int} category - the new category the item will be assigned to
@@ -211,7 +197,7 @@
  *
  * @memberof    Item
  * @function    setHandEquipped
- * @description Set an item to render as a tool
+ * @description Set an item to render as a tool.
  *
  * @param {int}     id             - the item id
  * @param {boolean} isHandEquipped - whether or not the item should be set as hand equipped
@@ -228,7 +214,7 @@
  * @memberof    Item
  * @function    setMaxDamage
  * @description Set the amount of damage an item can sustain when used
- *              (i.e. the number of times it can be used before it breaks)
+ *              (i.e., the number of times it can be used before it breaks).
  *
  * @param {int} id     - the item id
  * @param {int} damage - the maximum damage
@@ -247,10 +233,17 @@
  *              in the items.json file.
  *
  * @param {int}    id         - the item ID
- * @param {Object} properties - a JSON object describing the new properties
+ * @param {Object} properties - an object literal describing the new properties
  *
  * @example
  * <caption>Credit: {@link https://goo.gl/E0FnzE|Zhuowei Zhang}</caption>
+ *
+ * // make zombie shoes edible
+ * Item.defineArmor(4014, "empty_armor_slot_boots", 0, "Zombie shoes", "mob/zombie.png", 1, 10, ArmorType.boots);
+ * Item.setCategory(4014, ItemCategory.FOOD);
+ * Player.addItemCreativeInv(4014, 1, 0);
+ *
+ * var shoesNutrition = 4;
  *
  * // anything that can be specified in items.json can be specified here
  * Item.setProperties(4014, {

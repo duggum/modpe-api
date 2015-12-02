@@ -231,7 +231,7 @@
  * @property {int}                  digSlowdown      - 4
  * @property {int}                  digSpeed         - 3
  * @property {HashMap<int, string>} effectIds        - all type IDs; *NOT* in numerical order
- *                                                     (i.e. `{8=jump, ..., 20=wither} )
+ *                                                     (i.e., `{8=jump, ..., 20=wither} )
  * @property {int}                  fireResistance   - 12
  * @property {int}                  harm             - 7
  * @property {int}                  heal             - 6
