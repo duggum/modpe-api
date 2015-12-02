@@ -593,10 +593,9 @@ ol.linenums > li {
 ol.linenums > li:before {
     font-size: 1em;
     float: left;
-    text-align: right;
     background-color: #323227;
     border-right: 2px solid #006E85;
-    padding-right: .5em;
+    padding-left: 10px;
     margin-right: 1em;
 }
 

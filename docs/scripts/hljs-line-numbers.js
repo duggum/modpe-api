@@ -37,17 +37,17 @@
             var width;
             var len = numbered.length;
             if (len < 100) {
-              width = "2.3em";
+              width = "2.5em";
             } else if (len >= 100 && len < 1000) {
-              width = "3em";
+              width = "3.5em";
             } else if (len >= 1000 && len < 10000) {
-              width = "3.6em";
+              width = "4em";
             } else if (len >= 10000 && len < 100000) {
-              width = "4.2em";
+              width = "4.5em";
             } else if (len >= 100000 && len < 1000000) {
-              width = "4.8em";
+              width = "5em";
             } else {
-              width = "5.4em";
+              width = "5.5em";
             }
 
             // inject css rules to display line numbers
