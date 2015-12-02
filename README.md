@@ -10,9 +10,12 @@
 - Minecraft Pocket Edition: `0.13.0`
 - BlockLauncher Pro: `1.11.1-b5`  
 
-## Reference Documentation
+## References Documentation
 - {@tutorial data-values}
 - {@tutorial textures}
+
+## Helpful Stuff
+- [Sublime Text Completions](https://gist.github.com/duggum/bce10dfa0adb49e71315)
 
 ## TODO
 #### General
