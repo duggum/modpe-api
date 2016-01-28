@@ -1,3 +1,9 @@
+# NOTICE:
+
+### I am working on a new JSDoc Template that better suits my needs for documenting the ModPE API. This proiject will not be worked until I am able to complete the new template. Sorry for the delay!
+
+---
+
 # Documentation for the ModPE API
 
 #### v0.0.3
