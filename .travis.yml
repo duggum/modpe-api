@@ -10,5 +10,5 @@ node_js:
   - "4.2.1"
 before_install: npm install -g grunt-cli
 install: npm install
-before-script: grunt jsdoc:dist
+before-script: grunt default
 script: bash ./travis-deploy.sh
